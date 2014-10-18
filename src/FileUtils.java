@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 public class FileUtils {
@@ -24,8 +23,14 @@ public class FileUtils {
 	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
 	 * @param replaceString key-原文字 value-需要替换的文字
 	 */
-	static void replaceStringOfJava(String keyString,
-			HashMap<String, String> replaceString) {
+	static void replaceStringOfJava(String proPath, String keyString,
+			Map<String, String> replaceString) {
+		try {
+			FileUtils.getAllFiles(new File(proPath));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		for (File javaFile : javaAllFiles) {
 			if (!javaFile.exists()) {
 				continue;
@@ -43,7 +48,75 @@ public class FileUtils {
 							entry.getValue());
 				}
 			}
-			 whiteString2File(result, javaFile);
+			 writeString2File(result, javaFile);
+		}
+	}
+	
+	/**
+	 * 替换文字
+	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
+	 * @param replaceString key-原文字 value-需要替换的文字
+	 */
+	static void replaceStringOfXml(String proPath, String keyString,
+			Map<String, String> replaceString) {
+		try {
+			FileUtils.getAllFiles(new File(proPath));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		for (File javaFile : xmlAllFiles) {
+			if (!javaFile.exists()) {
+				continue;
+			}
+			String fileContent = readToString(javaFile, "UTF-8");
+			String result = null;
+			
+			if (!fileContent.contains(keyString)) {
+				continue;
+			}
+			
+			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
+				if (fileContent.contains(entry.getKey())) {
+					result = fileContent.replace(entry.getKey(),
+							entry.getValue());
+				}
+			}
+			writeString2File(result, javaFile);
+		}
+	}
+	
+	/**
+	 * 替换文字,支持正则
+	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
+	 * @param replaceString key-原文字(支持正则) value-需要替换的文字
+	 */
+	static void replaceAllStringOfJava(String proPath, String keyString,
+			Map<String, String> replaceString) {
+		try {
+			FileUtils.getAllFiles(new File(proPath));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		for (File javaFile : javaAllFiles) {
+			if (!javaFile.exists()) {
+				continue;
+			}
+			String fileContent = readToString(javaFile);
+			String result = null;
+			
+			if (!fileContent.contains(keyString)) {
+				continue;
+			}
+			
+			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
+				if (fileContent.contains(entry.getKey())) {
+					result = fileContent.replaceAll(entry.getKey(),
+							entry.getValue());
+				}
+			}
+			writeString2File(result, javaFile);
 		}
 	}
 
@@ -206,6 +279,8 @@ public class FileUtils {
 	 * @throws Exception
 	 */
 	static void getAllFiles(File dir) throws Exception {
+		long start = System.currentTimeMillis();
+		System.out.println("-----------开始遍历全部文件------------");
 		File[] fs = dir.listFiles();
 		for (int i = 0; i < fs.length; i++) {
 			File file = fs[i];
@@ -218,11 +293,13 @@ public class FileUtils {
 				}
 			} else {
 				if (absolutePath.endsWith(".java")
-						&& file.getParent().contains("\\src\\")
+						&& !file.getParent().contains("\\gen\\")
+						&& !file.getParent().contains("\\bin\\")
 						&& !javaAllFiles.contains(file)) {
 					javaAllFiles.add(file);
 				} else if (absolutePath.endsWith(".xml")
-						&& file.getParent().contains("\\res\\")
+						&& !file.getParent().contains("\\gen\\")
+						&& !file.getParent().contains("\\bin\\")
 						&& !getName(file).equals("ids")
 						&& !getName(file).equals("strings")
 						&& !getName(file).equals("stringArrays")
@@ -234,6 +311,7 @@ public class FileUtils {
 				}
 			}
 		}
+		System.out.println("-----------遍历全部文件结束,共耗时"+(System.currentTimeMillis()-start)+"------------");
 	}
 	
 	static File getXmlFileByName(String proPath, String filename) {
@@ -300,7 +378,30 @@ public class FileUtils {
 			e.printStackTrace();
 		}
 		try {
-			return new String(filecontent, Main.fileCharCode);
+			String charSet = getCharSet(file);
+//			System.out.println(file.getName() + " char code = " + charSet);
+			return new String(filecontent, charSet);
+		} catch (UnsupportedEncodingException e) {
+			System.err.println("The OS does not support ");
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	static String readToString(File file, String charSet) {
+		Long filelength = file.length();
+		byte[] filecontent = new byte[filelength.intValue()];
+		try {
+			FileInputStream in = new FileInputStream(file);
+			in.read(filecontent);
+			in.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			return new String(filecontent, charSet);
 		} catch (UnsupportedEncodingException e) {
 			System.err.println("The OS does not support ");
 			e.printStackTrace();
@@ -325,7 +426,7 @@ public class FileUtils {
 		return chatSet;
 	}
 
-	static void whiteString2File(String str, File file) {
+	static void writeString2File(String str, File file) {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(file);
