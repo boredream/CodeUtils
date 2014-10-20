@@ -19,9 +19,9 @@ public class FileUtils {
 	static ArrayList<File> pngAllFiles = new ArrayList<File>();
 
 	/**
-	 * Ìæ»»ÎÄ×Ö
-	 * @param keyString	¹ıÂËÎÄ×Ö,Ö»Ìæ»»°üº¬´Ë×Ö·ûµÄÎÄ¼şÏÂÄÚÈİ
-	 * @param replaceString key-Ô­ÎÄ×Ö value-ĞèÒªÌæ»»µÄÎÄ×Ö
+	 * æ›¿æ¢æ–‡å­—
+	 * @param keyString	è¿‡æ»¤æ–‡å­—,åªæ›¿æ¢åŒ…å«æ­¤å­—ç¬¦çš„æ–‡ä»¶ä¸‹å†…å®¹
+	 * @param replaceString key-åŸæ–‡å­— value-éœ€è¦æ›¿æ¢çš„æ–‡å­—
 	 */
 	static void replaceStringOfJava(String proPath, String keyString,
 			Map<String, String> replaceString) {
@@ -53,9 +53,9 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Ìæ»»ÎÄ×Ö
-	 * @param keyString	¹ıÂËÎÄ×Ö,Ö»Ìæ»»°üº¬´Ë×Ö·ûµÄÎÄ¼şÏÂÄÚÈİ
-	 * @param replaceString key-Ô­ÎÄ×Ö value-ĞèÒªÌæ»»µÄÎÄ×Ö
+	 * æ›¿æ¢æ–‡å­—
+	 * @param keyString	è¿‡æ»¤æ–‡å­—,åªæ›¿æ¢åŒ…å«æ­¤å­—ç¬¦çš„æ–‡ä»¶ä¸‹å†…å®¹
+	 * @param replaceString key-åŸæ–‡å­— value-éœ€è¦æ›¿æ¢çš„æ–‡å­—
 	 */
 	static void replaceStringOfXml(String proPath, String keyString,
 			Map<String, String> replaceString) {
@@ -87,9 +87,9 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Ìæ»»ÎÄ×Ö,Ö§³ÖÕıÔò
-	 * @param keyString	¹ıÂËÎÄ×Ö,Ö»Ìæ»»°üº¬´Ë×Ö·ûµÄÎÄ¼şÏÂÄÚÈİ
-	 * @param replaceString key-Ô­ÎÄ×Ö(Ö§³ÖÕıÔò) value-ĞèÒªÌæ»»µÄÎÄ×Ö
+	 * æ›¿æ¢æ–‡å­—,æ”¯æŒæ­£åˆ™
+	 * @param keyString	è¿‡æ»¤æ–‡å­—,åªæ›¿æ¢åŒ…å«æ­¤å­—ç¬¦çš„æ–‡ä»¶ä¸‹å†…å®¹
+	 * @param replaceString key-åŸæ–‡å­—(æ”¯æŒæ­£åˆ™) value-éœ€è¦æ›¿æ¢çš„æ–‡å­—
 	 */
 	static void replaceAllStringOfJava(String proPath, String keyString,
 			Map<String, String> replaceString) {
@@ -121,7 +121,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * É¾³ıÎŞÓÃxmlÎÄ¼ş
+	 * åˆ é™¤æ— ç”¨xmlæ–‡ä»¶
 	 */
 	static void delNoUseXmlFile() {
 		for (File file : xmlAllFiles) {
@@ -157,7 +157,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * É¾³ıÎŞÓÃjavaÎÄ¼ş
+	 * åˆ é™¤æ— ç”¨javaæ–‡ä»¶
 	 */
 	static void delNoUseJavaFile() {
 		for (File file : javaAllFiles) {
@@ -204,7 +204,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * É¾³ıÎŞÓÃpngÍ¼Æ¬
+	 * åˆ é™¤æ— ç”¨pngå›¾ç‰‡
 	 */
 	static void delNoUsePngFile() {
 		for (File file : pngAllFiles) {
@@ -239,7 +239,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * »ñÈ¡´úÂëĞĞÊı java xml²¿·Ö
+	 * è·å–ä»£ç è¡Œæ•° java xmléƒ¨åˆ†
 	 * 
 	 * @param path
 	 */
@@ -273,14 +273,13 @@ public class FileUtils {
 	}
 
 	/**
-	 * »ñÈ¡µ½È«²¿java png xmlÎÄ¼ş ²¢±£´æÖÁ¶ÔÓ¦¼¯ºÏ
+	 * è·å–åˆ°å…¨éƒ¨java png xmlæ–‡ä»¶ å¹¶ä¿å­˜è‡³å¯¹åº”é›†åˆ
 	 * 
 	 * @param dir
 	 * @throws Exception
 	 */
 	static void getAllFiles(File dir) throws Exception {
 		long start = System.currentTimeMillis();
-		System.out.println("-----------¿ªÊ¼±éÀúÈ«²¿ÎÄ¼ş------------");
 		File[] fs = dir.listFiles();
 		for (int i = 0; i < fs.length; i++) {
 			File file = fs[i];
@@ -300,9 +299,6 @@ public class FileUtils {
 				} else if (absolutePath.endsWith(".xml")
 						&& !file.getParent().contains("\\gen\\")
 						&& !file.getParent().contains("\\bin\\")
-						&& !getName(file).equals("ids")
-						&& !getName(file).equals("strings")
-						&& !getName(file).equals("stringArrays")
 						&& !xmlAllFiles.contains(file)) {
 					xmlAllFiles.add(file);
 				} else if (absolutePath.endsWith(".png")
@@ -311,7 +307,6 @@ public class FileUtils {
 				}
 			}
 		}
-		System.out.println("-----------±éÀúÈ«²¿ÎÄ¼ş½áÊø,¹²ºÄÊ±"+(System.currentTimeMillis()-start)+"------------");
 	}
 	
 	static File getXmlFileByName(String proPath, String filename) {

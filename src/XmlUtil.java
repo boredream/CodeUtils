@@ -19,24 +19,24 @@ public class XmlUtil {
 	static SAXReader saxReader = new SAXReader();
 
 	/**
-	 * »ñµÃXml ÎÄµµ¶ÔÏó
+	 * è·å¾—Xml æ–‡æ¡£å¯¹è±¡
 	 * 
 	 * @param xmlFile
-	 *            Ö¸Ïòxml ÎÄ¼şµÄÒıÓÃ
-	 * @return xmlDoc ´ÓÎÄ¼ş¶ÁÈ¡xml Document
+	 *            æŒ‡å‘xml æ–‡ä»¶çš„å¼•ç”¨
+	 * @return xmlDoc ä»æ–‡ä»¶è¯»å–xml Document
 	 */
 	public static Document read(File xmlFile) {
 		Document document = null;
 		try {
 			document = saxReader.read(xmlFile);
 		} catch (DocumentException e) {
-			System.out.println("Í¨¹ıÖ¸ÏòxmlÎÄ¼şµÄÎÄ¼ş»ñµÃDocument¶ÔÏóÊ±³ö´í !");
+			System.out.println("é€šè¿‡æŒ‡å‘xmlæ–‡ä»¶çš„æ–‡ä»¶è·å¾—Documentå¯¹è±¡æ—¶å‡ºé”™ !");
 		}
 		return document;
 	}
 
 	/**
-	 * Í¨¹ıxml ÎÄ¼şµÄÃû×Ö¶ÁÈ¡Document¶ÔÏó
+	 * é€šè¿‡xml æ–‡ä»¶çš„åå­—è¯»å–Documentå¯¹è±¡
 	 * 
 	 * @param xmlFileName
 	 * @return Document
@@ -46,7 +46,7 @@ public class XmlUtil {
 	}
 
 	/**
-	 * Í¨¹ıÖ¸Ïòxml ÎÄ¼şµÄURL»ñµÃDocument¶ÔÏó
+	 * é€šè¿‡æŒ‡å‘xml æ–‡ä»¶çš„URLè·å¾—Documentå¯¹è±¡
 	 * 
 	 * @param url
 	 * @return Document
@@ -56,7 +56,7 @@ public class XmlUtil {
 		try {
 			document = saxReader.read(url);
 		} catch (DocumentException e) {
-			System.out.println("Í¨¹ıÖ¸ÏòxmlÎÄ¼şµÄURL»ñµÃDocument¶ÔÏóÊ±³ö´í...");
+			System.out.println("é€šè¿‡æŒ‡å‘xmlæ–‡ä»¶çš„URLè·å¾—Documentå¯¹è±¡æ—¶å‡ºé”™...");
 		}
 		return document;
 	}
@@ -73,7 +73,7 @@ public class XmlUtil {
 	}
 	
 	/**
-	 * »ñÈ¡xmlÎÄ¼şÏÂÈ«²¿element
+	 * è·å–xmlæ–‡ä»¶ä¸‹å…¨éƒ¨element
 	 * @param proPath
 	 * @param xmlFileName
 	 * @return
@@ -88,7 +88,7 @@ public class XmlUtil {
 	}
 	
 	/**
-	 * »ñÈ¡documentÏÂÈ«²¿element
+	 * è·å–documentä¸‹å…¨éƒ¨element
 	 * @param Document
 	 * @return
 	 */
@@ -102,9 +102,9 @@ public class XmlUtil {
 	
 	
 	/**
-	 * ÊÇ·ñ°üº¬Ä³ÊôĞÔÖµ
-	 * @param element	ĞèÒª²éÑ¯µÄ½Úµã
-	 * @param attrName	²ÎÊıÃû(×¢android:ÕâÑùµÄÇ°×º²»ÓÃ¼Ó)
+	 * æ˜¯å¦åŒ…å«æŸå±æ€§å€¼
+	 * @param element	éœ€è¦æŸ¥è¯¢çš„èŠ‚ç‚¹
+	 * @param attrName	å‚æ•°å(æ³¨android:è¿™æ ·çš„å‰ç¼€ä¸ç”¨åŠ )
 	 * @return
 	 */
 	public static boolean hasAttribute(Element element, String attrName) {
@@ -118,7 +118,7 @@ public class XmlUtil {
 	}
 	
 	/**
-	 * ½«DocumentĞ´»ØÖÁxmlÎÄ¼ş
+	 * å°†Documentå†™å›è‡³xmlæ–‡ä»¶
 	 * @param file
 	 * @param doc
 	 */
@@ -135,5 +135,30 @@ public class XmlUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * æ›¿æ¢XMLæ–‡ä»¶ä¸­attributeçš„valueå€¼
+	 * @param tarDoc		ç›®æ ‡document
+	 * @param target		ç›®æ ‡æ›¿æ¢æ–‡å­—
+	 * @param replacement	æ›¿æ¢æˆçš„å†…å®¹
+	 * @return æ˜¯å¦æœ‰æ›¿æ¢æ“ä½œ
+	 */
+	@SuppressWarnings("unchecked")
+	public static boolean replaceAttrValue(Document tarDoc, String target, String replacement) {
+		boolean hasReplace = false;
+		
+		List<Element> tarElements = tarDoc.getRootElement().elements();
+		for(Element element : tarElements) {
+			List<Attribute> attrs = element.attributes();
+			for(Attribute attr : attrs) {
+				String attrValue = attr.getValue();
+				if(attrValue.equals(target)) {
+					attr.setValue(replacement);
+					hasReplace = true;
+				}
+			}
+		}
+		return hasReplace;
 	}
 }

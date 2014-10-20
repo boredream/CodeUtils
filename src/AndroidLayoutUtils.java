@@ -11,12 +11,12 @@ import org.dom4j.Element;
 public class AndroidLayoutUtils {
 
 	/**
-	 * ÉèÖÃ²¼¾ÖÎÄ¼şµÄid
+	 * è®¾ç½®å¸ƒå±€æ–‡ä»¶çš„id
 	 * <p>
-	 * ½«ÉèÖÃÈ«²¿ViewµÄid,idÃû×Ö¸ñÊ½Îª²¼¾ÖÎÄ¼şÃû_¿Ø¼şÃû_index
+	 * å°†è®¾ç½®å…¨éƒ¨Viewçš„id,idåå­—æ ¼å¼ä¸ºå¸ƒå±€æ–‡ä»¶å_æ§ä»¶å_index
 	 * 
-	 * @param proPath		ÏîÄ¿¾ø¶ÔÂ·¾¶
-	 * @param layoutXml		²¼¾ÖÎÄ¼şÃû³Æ,Èçmain.xml
+	 * @param proPath		é¡¹ç›®ç»å¯¹è·¯å¾„
+	 * @param layoutXml		å¸ƒå±€æ–‡ä»¶åç§°,å¦‚main.xml
 	 */
 	public static void setLayoutId(String proPath, String layoutXml) {
 		String layoutName = layoutXml.substring(0, layoutXml.indexOf("."));
@@ -39,10 +39,10 @@ public class AndroidLayoutUtils {
 	}
 	
 	/**
-	 * ×Ô¶¯±éÀúxmlÖĞËùÓĞ´øidµÄ¿Ø¼ş,ÔÚactivityÎÄ¼şÖĞÉèÖÃ¶ÔÓ¦±äÁ¿,±äÁ¿ÃûÎªidÃû
-	 * @param proPath		ÏîÄ¿¾ø¶ÔÂ·¾¶
-	 * @param layoutXml		²¼¾ÖÎÄ¼şÃû³Æ,Èçmain.xml
-	 * @param activityFile	ActivityÀàÎÄ¼şÃû,ÈçMainActivity.java
+	 * è‡ªåŠ¨éå†xmlä¸­æ‰€æœ‰å¸¦idçš„æ§ä»¶,åœ¨activityæ–‡ä»¶ä¸­è®¾ç½®å¯¹åº”å˜é‡,å˜é‡åä¸ºidå
+	 * @param proPath		é¡¹ç›®ç»å¯¹è·¯å¾„
+	 * @param layoutXml		å¸ƒå±€æ–‡ä»¶åç§°,å¦‚main.xml
+	 * @param activityFile	Activityç±»æ–‡ä»¶å,å¦‚MainActivity.java
 	 */
 	public static void autoFindViewById(String proPath, String layoutXml, String activityFile) {
 		File javaFile = FileUtils.getJavaFileByName(proPath, activityFile);
@@ -90,12 +90,12 @@ public class AndroidLayoutUtils {
 	}
 	
 //	/**
-//	 * ¸ù¾İ²¼¾ÖÎÄ¼şÖĞµÄidÃû³ÆÉú³É¶ÔÓ¦µÄ±äÁ¿Ãû
+//	 * æ ¹æ®å¸ƒå±€æ–‡ä»¶ä¸­çš„idåç§°ç”Ÿæˆå¯¹åº”çš„å˜é‡å
 //	 * <p>
-//	 * Ö»×ª»»×Ô¶¯Éú³ÉµÄidÃû³Æ,²¼¾ÖÃû_¿Ø¼şÃû_xx,»á½«Æä×ª»»³ÉÍÕ·åĞÎÊ½µÄ"¿Ø¼şÃûXx"<br>
-//	 * Èçid=main_textview_name -> textviewName
-//	 * @param layoutName	idÃûËùÔÚµÄ²¼¾ÖÎÄ¼şÃû
-//	 * @param idName		idÃû³Æ
+//	 * åªè½¬æ¢è‡ªåŠ¨ç”Ÿæˆçš„idåç§°,å¸ƒå±€å_æ§ä»¶å_xx,ä¼šå°†å…¶è½¬æ¢æˆé©¼å³°å½¢å¼çš„"æ§ä»¶åXx"<br>
+//	 * å¦‚id=main_textview_name -> textviewName
+//	 * @param layoutName	idåæ‰€åœ¨çš„å¸ƒå±€æ–‡ä»¶å
+//	 * @param idName		idåç§°
 //	 * @return
 //	 */
 //	private static String createFieldName(String layoutName, String idName) {
@@ -106,18 +106,19 @@ public class AndroidLayoutUtils {
 	
 	
 	/**
-	 * ½«²ÎÊıÖµ³éÈ¡µ½valuesÎÄ¼ş¼ĞÏÂ
-	 * <p>ÈçtextColor=#ff00aa,½«#ff00aaÕâÑùµÄ¾ßÌåÖµÌæ»»Îª@color/colorname
-	 * <br>²¢ÔÚcolor.xmlÎÄ¼şÄÚ´´½¨Ò»¸ö¶ÔÓ¦ÑÕÉ«item
+	 * å°†å‚æ•°å€¼æŠ½å–åˆ°valuesæ–‡ä»¶å¤¹ä¸‹
+	 * <p>å¦‚textColor=#ff00aa,å°†#ff00aaè¿™æ ·çš„å…·ä½“å€¼æ›¿æ¢ä¸º@color/colorname
+	 * <br>å¹¶åœ¨color.xmlæ–‡ä»¶å†…åˆ›å»ºä¸€ä¸ªå¯¹åº”é¢œè‰²item
 	 * 
-	 * @param proPath			ÏîÄ¿¾ø¶ÔÂ·¾¶
-	 * @param valuesXml			valuesÎÄ¼şÃû³Æ,Èçstrings.xml dimens.xmlµÈ
-	 * @param type				³éÈ¡ÄÚÈİµÄÇ°×º,Èç@color
-	 * @param itemName			valuesÎÄ¼şÄÚitemµÄÃû³Æ
-	 * @param itemAttrName		valuesÎÄ¼şÄÚitemµÄ²ÎÊı,Ò»°ã¶¼ÊÇname
-	 * @param itemAttrValue		valuesÎÄ¼şÄÚitemµÄ²ÎÊıÖµ,Ò²ÊÇ³éÈ¡ÖµºóÌæ»»µÄÃû³Æ
-	 * @param itemValue			valuesÎÄ¼şÄÚitemµÄÖµ
+	 * @param proPath			é¡¹ç›®ç»å¯¹è·¯å¾„
+	 * @param valuesXml			valuesæ–‡ä»¶åç§°,å¦‚strings.xml dimens.xmlç­‰
+	 * @param type				æŠ½å–å†…å®¹çš„å‰ç¼€,å¦‚@color/,åˆ™typeå‚æ•°å°±è¾“å…¥"color"
+	 * @param itemName			valuesæ–‡ä»¶å†…itemçš„åç§°
+	 * @param itemAttrName		valuesæ–‡ä»¶å†…itemçš„å‚æ•°,ä¸€èˆ¬éƒ½æ˜¯name
+	 * @param itemAttrValue		valuesæ–‡ä»¶å†…itemçš„å‚æ•°å€¼,ä¹Ÿæ˜¯æŠ½å–å€¼åæ›¿æ¢çš„åç§°
+	 * @param itemValue			valuesæ–‡ä»¶å†…itemçš„å€¼
 	 */
+	@SuppressWarnings("unchecked")
 	public static void extract2values(String proPath, String valuesXml, String type,
 			String itemName, String itemAttrName, String itemAttrValue, String itemValue) {
 		try {
@@ -129,7 +130,7 @@ public class AndroidLayoutUtils {
 		String valuesPath = proPath + "/res/values/" + valuesXml;
 		File valuesFile = new File(valuesPath);
 		if(!valuesFile.exists()) {
-			System.out.println("ÎÄ¼ş²»´æÔÚ,ÇëÈ·¶¨ÎÄ¼ş["+valuesXml+"]Î»ÓÚ/res/values/ÎÄ¼ş¼ĞÏÂ,ÇÒÎÄ¼şÃû³ÆÕıÈ·");
+			System.out.println("æ–‡ä»¶ä¸å­˜åœ¨,è¯·ç¡®å®šæ–‡ä»¶["+valuesXml+"]ä½äº/res/values/æ–‡ä»¶å¤¹ä¸‹,ä¸”æ–‡ä»¶åç§°æ­£ç¡®");
 			return;
 		}
 		
@@ -139,46 +140,53 @@ public class AndroidLayoutUtils {
 				continue;
 			}
 			
-			String fileContent = FileUtils.readToString(file);
-			if(!fileContent.contains(itemValue)) {
+			Document tarDoc = XmlUtil.read(file);
+			// æ˜¯å¦æœ‰æ›¿æ¢æ“ä½œ
+			boolean isReplace = XmlUtil.replaceAttrValue(tarDoc, itemValue, "@"+type+"/"+itemAttrValue);
+			
+			if(!isReplace) {
 				continue;
 			}
 			
-			fileContent = fileContent.replace(itemValue, "@"+type+"/"+itemAttrValue);
-			FileUtils.writeString2File(fileContent, file);
+			XmlUtil.write2xml(file, tarDoc);
 			
-			Document docValues = XmlUtil.read(valuesFile);
-			Element rootElement = docValues.getRootElement();
+			Document valuesDoc = XmlUtil.read(valuesFile);
+			Element rootElement = valuesDoc.getRootElement();
 			List<Element> elements = rootElement.elements();
 			
-			boolean hasColor = false;
+			// æ˜¯å¦åœ¨values/xx.xmlå¯¹åº”æ–‡ä»¶ä¸‹ä¸‹å·²æœ‰æŸä¸ªæŠ½å–è¿‡çš„å€¼
+			boolean hasInValues = false;
 			for(Element element : elements) {
-				String color = element.attributeValue(itemAttrName);
-				if(color.equals(itemAttrValue)) {
-					hasColor = true;
+				String attrValue = element.attributeValue(itemAttrName);
+				if(attrValue.equals(itemValue)) {
+					hasInValues = true;
 					break;
 				}
 			}
 			
-			if(!hasColor) {
+			if(!hasInValues) {
 				Element element = rootElement.addElement(itemName);
 				element.addAttribute(itemAttrName, itemAttrValue);
 				element.setText(itemValue);
 				
-				XmlUtil.write2xml(valuesFile, docValues);
+				XmlUtil.write2xml(valuesFile, valuesDoc);
 			}
 			
 			extractFileCount ++;
 		}
 		
-		System.out.println("½«[" + itemValue 
-				+ "]³éÈ¡Îª[" + valuesXml 
-				+ "]ÎÄ¼şÏÂµÄ[" + itemAttrValue + "]");
-		System.out.println("¹²³éÈ¡ÁË" + extractFileCount + "¸öÎÄ¼şÏÂµÄÄÚÈİ");
+		System.out.println("å°†[" + itemValue 
+				+ "]æŠ½å–ä¸º[" + valuesXml 
+				+ "]æ–‡ä»¶ä¸‹çš„[" + itemAttrValue + "]");
+		System.out.println("å…±æŠ½å–äº†" + extractFileCount + "ä¸ªæ–‡ä»¶ä¸‹çš„å†…å®¹");
 		System.out.println("-------------------------");
 	}
 	
-	public static void extractColor(String proPath, String colorXml, String colorName, String RGB) {
+	public static void extract2Color(String proPath, String colorXml, String colorName, String RGB) {
 		extract2values(proPath, colorXml, "color", "color", "name", colorName, RGB);
+	}
+	
+	public static void extract2String(String proPath, String stringXml, String stringName, String stringValue) {
+		extract2values(proPath, stringXml, "string", "string", "name", stringName, stringValue);
 	}
 }
