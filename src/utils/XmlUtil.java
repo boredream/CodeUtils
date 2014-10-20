@@ -152,7 +152,7 @@ public class XmlUtil {
 	public static boolean replaceAttrValue(Document tarDoc, List<String> targetList, String replacement) {
 		boolean hasReplace = false;
 		
-		List<Element> tarElements = tarDoc.getRootElement().elements();
+		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
 		for(Element element : tarElements) {
 			List<Attribute> attrs = element.attributes();
 			for(Attribute attr : attrs) {
