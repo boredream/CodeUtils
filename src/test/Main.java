@@ -19,7 +19,9 @@ public class Main {
 		
 //		AndroidLayoutUtils.extract2Color(proPath, "colors.xml", "mycolor1", "#ffffff");
 		
-		AndroidLayoutUtils.extract2String(proPath, "strings.xml", "testtttt", "为什么为什么为什么");
+//		AndroidLayoutUtils.extract2String(proPath, "strings.xml", "testtttt", "为什么为什么为什么");
+		
+		AndroidLayoutUtils.extract2Dimen(proPath, "dimens.xml", "txt_size", "22sp");
 		
 //		Map<String, String> maps = new HashMap<String, String>();
 //		maps.put("bg_bluea", "blue");

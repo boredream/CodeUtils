@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.dom4j.Attribute;
@@ -143,12 +144,12 @@ public class XmlUtil {
 	/**
 	 * 替换XML文件中attribute的value值
 	 * @param tarDoc		目标document
-	 * @param target		目标替换文字
+	 * @param targetList		目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
 	 * @param replacement	替换成的内容
 	 * @return 是否有替换操作
 	 */
 	@SuppressWarnings("unchecked")
-	public static boolean replaceAttrValue(Document tarDoc, String target, String replacement) {
+	public static boolean replaceAttrValue(Document tarDoc, List<String> targetList, String replacement) {
 		boolean hasReplace = false;
 		
 		List<Element> tarElements = tarDoc.getRootElement().elements();
@@ -156,7 +157,8 @@ public class XmlUtil {
 			List<Attribute> attrs = element.attributes();
 			for(Attribute attr : attrs) {
 				String attrValue = attr.getValue();
-				if(attrValue.equals(target)) {
+				int index = targetList.indexOf(attrValue);
+				if(index != -1) {
 					attr.setValue(replacement);
 					hasReplace = true;
 				}

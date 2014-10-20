@@ -1,4 +1,9 @@
 package utils;
+
+/**
+ * 控件名称-id名称实体类
+ *
+ */
 public class IdNamingBean {
 
 	public String viewName;
