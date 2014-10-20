@@ -1,3 +1,4 @@
+package utils;
 public class IdNamingBean {
 
 	public String viewName;

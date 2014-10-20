@@ -1,3 +1,4 @@
+package utils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -63,6 +64,7 @@ public class XmlUtil {
 	
 	static List<Element> elements = new ArrayList<Element>();
 	public static void getChildElements(Element parentElement) {
+		@SuppressWarnings("unchecked")
 		List<Element> elementList = parentElement.elements();
 		for(Element element : elementList) {
 			elements.add(element);
@@ -108,6 +110,7 @@ public class XmlUtil {
 	 * @return
 	 */
 	public static boolean hasAttribute(Element element, String attrName) {
+		@SuppressWarnings("unchecked")
 		List<Attribute> attributes = element.attributes();
 		for(Attribute attr : attributes) {
 			if(attrName.equals(attr.getName())) {

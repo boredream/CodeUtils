@@ -1,3 +1,4 @@
+package utils;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,18 +13,18 @@ import java.util.Map;
 
 public class FileUtils {
 
-	static ArrayList<File> javaAllFiles = new ArrayList<File>();
+	public static ArrayList<File> javaAllFiles = new ArrayList<File>();
 
-	static ArrayList<File> xmlAllFiles = new ArrayList<File>();
+	public static ArrayList<File> xmlAllFiles = new ArrayList<File>();
 
-	static ArrayList<File> pngAllFiles = new ArrayList<File>();
+	public static ArrayList<File> pngAllFiles = new ArrayList<File>();
 
 	/**
 	 * 替换文字
 	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
 	 * @param replaceString key-原文字 value-需要替换的文字
 	 */
-	static void replaceStringOfJava(String proPath, String keyString,
+	public static void replaceStringOfJava(String proPath, String keyString,
 			Map<String, String> replaceString) {
 		try {
 			FileUtils.getAllFiles(new File(proPath));
@@ -57,7 +58,7 @@ public class FileUtils {
 	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
 	 * @param replaceString key-原文字 value-需要替换的文字
 	 */
-	static void replaceStringOfXml(String proPath, String keyString,
+	public static void replaceStringOfXml(String proPath, String keyString,
 			Map<String, String> replaceString) {
 		try {
 			FileUtils.getAllFiles(new File(proPath));
@@ -91,7 +92,7 @@ public class FileUtils {
 	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
 	 * @param replaceString key-原文字(支持正则) value-需要替换的文字
 	 */
-	static void replaceAllStringOfJava(String proPath, String keyString,
+	public static void replaceAllStringOfJava(String proPath, String keyString,
 			Map<String, String> replaceString) {
 		try {
 			FileUtils.getAllFiles(new File(proPath));
@@ -123,7 +124,7 @@ public class FileUtils {
 	/**
 	 * 删除无用xml文件
 	 */
-	static void delNoUseXmlFile() {
+	public static void delNoUseXmlFile() {
 		for (File file : xmlAllFiles) {
 			boolean used = false;
 			for (File javaFile : javaAllFiles) {
@@ -159,7 +160,7 @@ public class FileUtils {
 	/**
 	 * 删除无用java文件
 	 */
-	static void delNoUseJavaFile() {
+	public static void delNoUseJavaFile() {
 		for (File file : javaAllFiles) {
 			boolean used = false;
 			for (File javaFile : javaAllFiles) {
@@ -206,7 +207,7 @@ public class FileUtils {
 	/**
 	 * 删除无用png图片
 	 */
-	static void delNoUsePngFile() {
+	public static void delNoUsePngFile() {
 		for (File file : pngAllFiles) {
 			boolean used = false;
 			for (File javaFile : javaAllFiles) {
@@ -243,7 +244,7 @@ public class FileUtils {
 	 * 
 	 * @param path
 	 */
-	static void getCodeLines(String path) {
+	public static void getCodeLines(String path) {
 		int allLines = 0;
 		try {
 			getAllFiles(new File(path));
@@ -261,7 +262,7 @@ public class FileUtils {
 		System.out.println(allLines);
 	}
 
-	static int getLines(File file) throws IOException {
+	public static int getLines(File file) throws IOException {
 		int lines = 0;
 		FileReader fr = new FileReader(file);
 		BufferedReader bufferedreader = new BufferedReader(fr);
@@ -278,8 +279,7 @@ public class FileUtils {
 	 * @param dir
 	 * @throws Exception
 	 */
-	static void getAllFiles(File dir) throws Exception {
-		long start = System.currentTimeMillis();
+	public static void getAllFiles(File dir) throws Exception {
 		File[] fs = dir.listFiles();
 		for (int i = 0; i < fs.length; i++) {
 			File file = fs[i];
@@ -309,7 +309,7 @@ public class FileUtils {
 		}
 	}
 	
-	static File getXmlFileByName(String proPath, String filename) {
+	public static File getXmlFileByName(String proPath, String filename) {
 		File tarFile = null;
 		
 		try {
@@ -330,7 +330,7 @@ public class FileUtils {
 		return tarFile;
 	}
 	
-	static File getJavaFileByName(String proPath, String filename) {
+	public static File getJavaFileByName(String proPath, String filename) {
 		File tarFile = null;
 		
 		try {
@@ -351,7 +351,7 @@ public class FileUtils {
 		return tarFile;
 	}
 
-	static String getName(File file) {
+	public static String getName(File file) {
 		String name = file.getName();
 		name = name.substring(0, name.lastIndexOf("."));
 		if (name.endsWith(".9")) {
@@ -360,7 +360,7 @@ public class FileUtils {
 		return name;
 	}
 
-	static String readToString(File file) {
+	public static String readToString(File file) {
 		Long filelength = file.length();
 		byte[] filecontent = new byte[filelength.intValue()];
 		try {
@@ -383,7 +383,7 @@ public class FileUtils {
 		}
 	}
 	
-	static String readToString(File file, String charSet) {
+	public static String readToString(File file, String charSet) {
 		Long filelength = file.length();
 		byte[] filecontent = new byte[filelength.intValue()];
 		try {
@@ -421,7 +421,7 @@ public class FileUtils {
 		return chatSet;
 	}
 
-	static void writeString2File(String str, File file) {
+	public static void writeString2File(String str, File file) {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(file);
