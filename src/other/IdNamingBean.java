@@ -1,4 +1,4 @@
-package utils;
+package other;
 
 /**
  * 控件名称-id名称实体类

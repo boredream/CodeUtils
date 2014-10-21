@@ -1,14 +1,20 @@
 package test;
 
+import java.io.File;
+
+import org.dom4j.Document;
+
 import utils.AndroidLayoutUtils;
+import utils.FileUtils;
+import utils.XmlUtil;
 
 
 
 public class Main {
 
-	private static String proPath = "E:\\ConvenientPos";
-	private static String layout = "myhome_setting.xml";
-	private static String activity = "MyHomeSettingActivity.java";
+	private static String proPath = "E:\\workspace\\ConvenientPos";
+//	private static String layout = "myhome_setting.xml";
+//	private static String activity = "MyHomeSettingActivity.java";
 
 	/**
 	 * @param args
@@ -21,8 +27,8 @@ public class Main {
 		
 //		AndroidLayoutUtils.extract2String(proPath, "strings.xml", "testtttt", "为什么为什么为什么");
 		
-		AndroidLayoutUtils.extract2Dimen(proPath, "dimens.xml", "txt_size", "22sp");
-		
+//		AndroidLayoutUtils.extract2Dimen(proPath, "dimens.xml", "txtsize_little", "18sp");
+
 //		Map<String, String> maps = new HashMap<String, String>();
 //		maps.put("bg_bluea", "blue");
 //		FileUtils.replaceStringOfXml(proPath, "bg_bluea", maps);

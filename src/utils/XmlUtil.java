@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import org.dom4j.Attribute;
@@ -21,27 +20,22 @@ public class XmlUtil {
 	static SAXReader saxReader = new SAXReader();
 
 	/**
-	 * 获得Xml 文档对象
-	 * 
-	 * @param xmlFile
-	 *            指向xml 文件的引用
-	 * @return xmlDoc 从文件读取xml Document
+	 * 获得Xml文档对象
 	 */
 	public static Document read(File xmlFile) {
 		Document document = null;
 		try {
 			document = saxReader.read(xmlFile);
 		} catch (DocumentException e) {
-			System.out.println("通过指向xml文件的文件获得Document对象时出错 !");
+			e.printStackTrace();
 		}
 		return document;
 	}
 
 	/**
-	 * 通过xml 文件的名字读取Document对象
+	 * 获得Xml文档对象
 	 * 
-	 * @param xmlFileName
-	 * @return Document
+	 * @param xmlFileName xml文件的绝对路径
 	 */
 	public static Document read(String xmlFileName) {
 		return read(new File(xmlFileName));
@@ -58,36 +52,29 @@ public class XmlUtil {
 		try {
 			document = saxReader.read(url);
 		} catch (DocumentException e) {
-			System.out.println("通过指向xml文件的URL获得Document对象时出错...");
+			e.printStackTrace();
 		}
 		return document;
 	}
 	
+	/**
+	 * 递归获取到的element集合
+	 */
 	static List<Element> elements = new ArrayList<Element>();
-	public static void getChildElements(Element parentElement) {
+	/**
+	 * 递归获取全部element
+	 * 
+	 * @param parentElement	发起递归的根element
+	 */
+	public static void getElements(Element parentElement) {
 		@SuppressWarnings("unchecked")
 		List<Element> elementList = parentElement.elements();
 		for(Element element : elementList) {
 			elements.add(element);
 			if(element.elements().size() > 0) {
-				getChildElements(element);
+				getElements(element);
 			}
 		}
-	}
-	
-	/**
-	 * 获取xml文件下全部element
-	 * @param proPath
-	 * @param xmlFileName
-	 * @return
-	 */
-	public static List<Element> getAllElements(String proPath, String xmlFileName) {
-		File file = FileUtils.getXmlFileByName(proPath, xmlFileName);
-		Document doc = XmlUtil.read(file);
-		Element rootElement = doc.getRootElement();
-		
-		getChildElements(rootElement);
-		return elements;
 	}
 	
 	/**
@@ -99,7 +86,7 @@ public class XmlUtil {
 		Element rootElement = doc.getRootElement();
 		
 		elements = new ArrayList<Element>();
-		getChildElements(rootElement);
+		getElements(rootElement);
 		return elements;
 	}
 	
@@ -107,7 +94,7 @@ public class XmlUtil {
 	/**
 	 * 是否包含某属性值
 	 * @param element	需要查询的节点
-	 * @param attrName	参数名(注android:这样的前缀不用加)
+	 * @param attrName	参数名(注android:这样的命名空间不用加)
 	 * @return
 	 */
 	public static boolean hasAttribute(Element element, String attrName) {
@@ -144,12 +131,13 @@ public class XmlUtil {
 	/**
 	 * 替换XML文件中attribute的value值
 	 * @param tarDoc		目标document
-	 * @param targetList		目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
+	 * @param targetList	目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
 	 * @param replacement	替换成的内容
+	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值
 	 * @return 是否有替换操作
 	 */
 	@SuppressWarnings("unchecked")
-	public static boolean replaceAttrValue(Document tarDoc, List<String> targetList, String replacement) {
+	public static boolean replaceAttrValue(Document tarDoc, List<String> targetList, String replacement, String matchAttr) {
 		boolean hasReplace = false;
 		
 		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
@@ -158,7 +146,7 @@ public class XmlUtil {
 			for(Attribute attr : attrs) {
 				String attrValue = attr.getValue();
 				int index = targetList.indexOf(attrValue);
-				if(index != -1) {
+				if(index != -1 && attr.getName().equals(matchAttr+"")) {
 					attr.setValue(replacement);
 					hasReplace = true;
 				}

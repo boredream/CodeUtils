@@ -3,12 +3,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
+
+import other.IdNamingBean;
 
 
 public class AndroidLayoutUtils {
@@ -25,41 +25,43 @@ public class AndroidLayoutUtils {
 	/**
 	 * 设置布局文件的id
 	 * <p>
-	 * 将设置全部View的id,id名字格式为布局文件名_控件名_index
+	 * 将设置全部View的id,id名字格式为:布局文件名_view名称_自增整数(全部小写)
 	 * 
 	 * @param proPath		项目绝对路径
-	 * @param layoutXml		布局文件名称,如main.xml
+	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
 	 */
 	public static void setLayoutId(String proPath, String layoutXml) {
 		String layoutName = layoutXml.substring(0, layoutXml.indexOf("."));
+		File layoutFile = new File(layoutXml);
 		
-		File file = FileUtils.getXmlFileByName(proPath, layoutXml);
-		Document doc = XmlUtil.read(file);
+		Document doc = XmlUtil.read(layoutFile);
 		List<Element> allElement = XmlUtil.getAllElements(doc);
 		
 		int index = 0;
 		for (Element element : allElement) {
 			if(!XmlUtil.hasAttribute(element, "id")) {
 				String idValue = "@+id/" + layoutName 
-						+ "_" + element.getName().toLowerCase(Locale.CHINESE) 
+						+ "_" + element.getName() 
 						+ "_" + (index++);
-				element.addAttribute("android:id", idValue);
+				element.addAttribute("android:id", idValue.toLowerCase(Locale.CHINESE));
 			}
 		}
 
-		XmlUtil.write2xml(file, doc);
+		XmlUtil.write2xml(layoutFile, doc);
 	}
 	
 	/**
 	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
 	 * @param proPath		项目绝对路径
-	 * @param layoutXml		布局文件名称,如main.xml
-	 * @param activityFile	Activity类文件名,如MainActivity.java
+	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
+	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
 	 */
 	public static void autoFindViewById(String proPath, String layoutXml, String activityFile) {
-		File javaFile = FileUtils.getJavaFileByName(proPath, activityFile);
-		List<Element> allElement = XmlUtil.getAllElements(proPath, layoutXml);
+		File javaFile = new File(activityFile);
+		Document document = XmlUtil.read(layoutXml);
+		List<Element> allElement = XmlUtil.getAllElements(document);
 		
+		// 将view名称和对应的id名封装为一个实体类,并存至集合中
 		List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
 		for (Element element : allElement) {
 			Attribute attribute = element.attribute("id");
@@ -73,8 +75,10 @@ public class AndroidLayoutUtils {
 			}
 		}
 		
+		// 读取java文件的字符串
 		String fileContent = FileUtils.readToString(javaFile);
 		
+		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
 		StringBuilder sb = new StringBuilder();
 		for(IdNamingBean bean : idNamingBeans) {
 			sb.append("private ")
@@ -85,8 +89,8 @@ public class AndroidLayoutUtils {
 				.append("\n");
 		}
 		
+		// 生成initView自定义方法,并在其中依次findViewById为view成员变量赋值
 		sb.append("private void initView(){");
-		
 		for(IdNamingBean bean : idNamingBeans) {
 			sb.append(bean.idName)
 				.append(" = ")
@@ -94,28 +98,12 @@ public class AndroidLayoutUtils {
 				.append("findViewById(R.id." + bean.idName + ")")
 				.append(";\n");
 		}
-		
 		sb.append("}");
 		
+		// 将生成的内容写入至java类文件内的起始端
 		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString());
 		FileUtils.writeString2File(fileContent, javaFile);
 	}
-	
-//	/**
-//	 * 根据布局文件中的id名称生成对应的变量名
-//	 * <p>
-//	 * 只转换自动生成的id名称,布局名_控件名_xx,会将其转换成驼峰形式的"控件名Xx"<br>
-//	 * 如id=main_textview_name -> textviewName
-//	 * @param layoutName	id名所在的布局文件名
-//	 * @param idName		id名称
-//	 * @return
-//	 */
-//	private static String createFieldName(String layoutName, String idName) {
-//		String fieldname = null;
-//		//
-//		return fieldname;
-//	}
-	
 	
 	/**
 	 * 将参数值抽取到values文件夹下
@@ -130,15 +118,13 @@ public class AndroidLayoutUtils {
 	 * @param itemAttrValue		values文件内item的参数值,也是抽取值后替换的名称
 	 * @param itemValue			values文件内item的值,即替换后的值
 	 * @param values			被替换的内容,支持模糊替换,只要匹配集合里中其中一个就会被抽取替换,最终抽取成一个值itemValue
+	 * @param matchAttr			匹配参数名,即只会替换该参数名对应的值
 	 */
 	@SuppressWarnings("unchecked")
 	public static void extract2values(String proPath, String valuesXml, String type,
-			String itemName, String itemAttrName, String itemAttrValue, String itemValue, List<String> values) {
-		try {
-			FileUtils.getAllFiles(new File(proPath));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+			String itemName, String itemAttrName, String itemAttrValue, String itemValue, 
+			List<String> values, String matchAttr) {
+		List<File> files = FileUtils.getAllFiles(new File(proPath));
 		
 		String valuesPath = proPath + "/res/values/" + valuesXml;
 		File valuesFile = new File(valuesPath);
@@ -148,14 +134,19 @@ public class AndroidLayoutUtils {
 		}
 		
 		int extractFileCount = 0;
-		for(File file : FileUtils.xmlAllFiles) {
+		for(File file : files) {
+			if(!file.getName().endsWith(".xml")) {
+				continue;
+			}
+			
 			if(file.getName().equals(valuesXml)) {
 				continue;
 			}
 			
 			Document tarDoc = XmlUtil.read(file);
+			
 			// 是否有替换操作
-			boolean isReplace = XmlUtil.replaceAttrValue(tarDoc, values, "@"+type+"/"+itemAttrValue);
+			boolean isReplace = XmlUtil.replaceAttrValue(tarDoc, values, "@"+type+"/"+itemAttrValue, matchAttr);
 			
 			if(!isReplace) {
 				continue;
@@ -210,7 +201,7 @@ public class AndroidLayoutUtils {
 	 * @param dimenValue	dimens.xml文件内item的值,即被抽取替换的值
 	 */
 	public static void extract2Dimen(String proPath, String dimenXml, String dimenName, String dimenValue) {
-		extract2Dimen(proPath,dimenXml, dimenName, dimenValue, 0, 0);
+		extract2Dimen(proPath,dimenXml, dimenName, dimenValue, 0, 0, "");
 	}
 	
 	/**
@@ -226,8 +217,10 @@ public class AndroidLayoutUtils {
 	 * @param dimenValue	dimens.xml文件内item的值,即抽取前的中心值
 	 * @param belowScope	抽取匹配范围最小差值
 	 * @param aboveScope	抽取匹配范围最大差值
+	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值
 	 */
-	public static void extract2Dimen(String proPath, String dimenXml, String dimenName, String dimenValue, int belowScope, int aboveScope) {
+	public static void extract2Dimen(String proPath, String dimenXml, String dimenName, String dimenValue, 
+			int belowScope, int aboveScope, String matchAttr) {
 		int index = dimenUnits.indexOf(dimenValue.replaceAll("\\d+", ""));
 		if(index == -1) {
 			System.out.println("被抽取dimen值的单位不合法,必须为px/sp/dip/dp其中一种");
@@ -243,14 +236,18 @@ public class AndroidLayoutUtils {
 			values.add(i+unit);
 		}
 		
-		extract2values(proPath, dimenXml, "dimen", "dimen", "name", dimenName, dimenValue, values);
+		extract2values(proPath, dimenXml, "dimen", "dimen", "name", dimenName, dimenValue, values, matchAttr);
 	}
 	
 	public static void extract2Color(String proPath, String colorXml, String colorName, String RGB) {
-//		extract2values(proPath, colorXml, "color", "color", "name", colorName, RGB);
+		List<String> values = new ArrayList<String>();
+		values.add(RGB);
+		extract2values(proPath, colorXml, "color", "color", "name", colorName, RGB, values, "");
 	}
 	
 	public static void extract2String(String proPath, String stringXml, String stringName, String stringValue) {
-//		extract2values(proPath, stringXml, "string", "string", "name", stringName, stringValue);
+		List<String> values = new ArrayList<String>();
+		values.add(stringValue);
+		extract2values(proPath, stringXml, "string", "string", "name", stringName, stringValue, values, "");
 	}
 }

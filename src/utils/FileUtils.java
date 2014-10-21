@@ -9,340 +9,208 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class FileUtils {
-
-	public static ArrayList<File> javaAllFiles = new ArrayList<File>();
-
-	public static ArrayList<File> xmlAllFiles = new ArrayList<File>();
-
-	public static ArrayList<File> pngAllFiles = new ArrayList<File>();
+	
+	/**
+	 * 递归获取的文件列表集合
+	 */
+	private static List<File> allFiles = new ArrayList<File>();
+	
+	/**
+	 * 获取指定目录下全部文件
+	 * 
+	 * @param rootFile	根目录路径
+	 * @return			获取到的文件列表
+	 */
+	public static List<File> getAllFiles(String dir) {
+		return getAllFiles(new File(dir));
+	}
 
 	/**
-	 * 替换文字
-	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
-	 * @param replaceString key-原文字 value-需要替换的文字
+	 * 获取指定目录下全部文件
+	 * 
+	 * @param rootFile	根目录文件
+	 * @return			获取到的文件列表
 	 */
-	public static void replaceStringOfJava(String proPath, String keyString,
-			Map<String, String> replaceString) {
+	public static List<File> getAllFiles(File rootFile) {
+		allFiles = new ArrayList<File>();
 		try {
-			FileUtils.getAllFiles(new File(proPath));
+			getFiles(rootFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		for (File javaFile : javaAllFiles) {
-			if (!javaFile.exists()) {
-				continue;
-			}
-			String fileContent = readToString(javaFile);
-			String result = null;
-
-			if (!fileContent.contains(keyString)) {
-				continue;
-			}
-
-			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
-				if (fileContent.contains(entry.getKey())) {
-					result = fileContent.replace(entry.getKey(),
-							entry.getValue());
-				}
-			}
-			 writeString2File(result, javaFile);
-		}
+		return allFiles;
 	}
 	
 	/**
-	 * 替换文字
-	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
-	 * @param replaceString key-原文字 value-需要替换的文字
-	 */
-	public static void replaceStringOfXml(String proPath, String keyString,
-			Map<String, String> replaceString) {
-		try {
-			FileUtils.getAllFiles(new File(proPath));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		for (File javaFile : xmlAllFiles) {
-			if (!javaFile.exists()) {
-				continue;
-			}
-			String fileContent = readToString(javaFile, "UTF-8");
-			String result = null;
-			
-			if (!fileContent.contains(keyString)) {
-				continue;
-			}
-			
-			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
-				if (fileContent.contains(entry.getKey())) {
-					result = fileContent.replace(entry.getKey(),
-							entry.getValue());
-				}
-			}
-			writeString2File(result, javaFile);
-		}
-	}
-	
-	/**
-	 * 替换文字,支持正则
-	 * @param keyString	过滤文字,只替换包含此字符的文件下内容
-	 * @param replaceString key-原文字(支持正则) value-需要替换的文字
-	 */
-	public static void replaceAllStringOfJava(String proPath, String keyString,
-			Map<String, String> replaceString) {
-		try {
-			FileUtils.getAllFiles(new File(proPath));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		for (File javaFile : javaAllFiles) {
-			if (!javaFile.exists()) {
-				continue;
-			}
-			String fileContent = readToString(javaFile);
-			String result = null;
-			
-			if (!fileContent.contains(keyString)) {
-				continue;
-			}
-			
-			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
-				if (fileContent.contains(entry.getKey())) {
-					result = fileContent.replaceAll(entry.getKey(),
-							entry.getValue());
-				}
-			}
-			writeString2File(result, javaFile);
-		}
-	}
-
-	/**
-	 * 删除无用xml文件
-	 */
-	public static void delNoUseXmlFile() {
-		for (File file : xmlAllFiles) {
-			boolean used = false;
-			for (File javaFile : javaAllFiles) {
-				String fileContent = readToString(javaFile);
-				if (fileContent.contains(getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-			for (File xmlFile : xmlAllFiles) {
-				if (!xmlFile.exists()) {
-					continue;
-				}
-				String fileContent = readToString(xmlFile);
-				if (fileContent.contains(getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-
-			String name = getName(file);
-			boolean delete = file.delete();
-			System.out.println(name + " ... delete=" + delete);
-		}
-	}
-
-	/**
-	 * 删除无用java文件
-	 */
-	public static void delNoUseJavaFile() {
-		for (File file : javaAllFiles) {
-			boolean used = false;
-			for (File javaFile : javaAllFiles) {
-				if (!javaFile.exists()) {
-					continue;
-				}
-				if (file.equals(javaFile)) {
-					continue;
-				}
-				String fileContent = readToString(javaFile);
-				if (fileContent.contains(getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-			for (File xmlFile : xmlAllFiles) {
-				if (!xmlFile.exists()) {
-					continue;
-				}
-				if (file.equals(xmlFile)) {
-					continue;
-				}
-				String fileContent = readToString(xmlFile);
-				if (fileContent.contains(getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-
-			System.out.println(file.getAbsolutePath());
-
-			// String name = getName(file);
-			// boolean delete = file.delete();
-			// System.out.println(name + " ... delete=" + delete);
-		}
-	}
-
-	/**
-	 * 删除无用png图片
-	 */
-	public static void delNoUsePngFile() {
-		for (File file : pngAllFiles) {
-			boolean used = false;
-			for (File javaFile : javaAllFiles) {
-				String fileContent = readToString(javaFile);
-				if (fileContent.contains("R.drawable." + getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-			for (File xmlFile : xmlAllFiles) {
-				String fileContent = readToString(xmlFile);
-				if (fileContent.contains(getName(file))) {
-					used = true;
-					break;
-				}
-			}
-			if (used) {
-				continue;
-			}
-
-			// pngNoUseFiles.add(pngFile);
-			// System.out.println(getName(pngFile));
-
-			boolean delete = file.delete();
-			System.out.println(getName(file) + " ... delete=" + delete);
-		}
-	}
-
-	/**
-	 * 获取代码行数 java xml部分
+	 * 递归dir下全部文件并保存至allFiles
 	 * 
-	 * @param path
+	 * @param dir		发起递归的根目录
 	 */
-	public static void getCodeLines(String path) {
-		int allLines = 0;
-		try {
-			getAllFiles(new File(path));
-			for (File javaFile : javaAllFiles) {
-				int lines = getLines(javaFile);
-				allLines += lines;
-			}
-			for (File xmlFile : xmlAllFiles) {
-				int lines = getLines(xmlFile);
-				allLines += lines;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println(allLines);
-	}
-
-	public static int getLines(File file) throws IOException {
-		int lines = 0;
-		FileReader fr = new FileReader(file);
-		BufferedReader bufferedreader = new BufferedReader(fr);
-		while ((bufferedreader.readLine()) != null) {
-			lines++;
-		}
-		fr.close();
-		return lines;
-	}
-
-	/**
-	 * 获取到全部java png xml文件 并保存至对应集合
-	 * 
-	 * @param dir
-	 * @throws Exception
-	 */
-	public static void getAllFiles(File dir) throws Exception {
+	public static void getFiles(File dir) throws Exception {
 		File[] fs = dir.listFiles();
 		for (int i = 0; i < fs.length; i++) {
 			File file = fs[i];
-			String absolutePath = file.getAbsolutePath();
 			if (fs[i].isDirectory()) {
 				try {
-					getAllFiles(fs[i]);
+					getFiles(fs[i]);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			} else {
-				if (absolutePath.endsWith(".java")
-						&& !file.getParent().contains("\\gen\\")
-						&& !file.getParent().contains("\\bin\\")
-						&& !javaAllFiles.contains(file)) {
-					javaAllFiles.add(file);
-				} else if (absolutePath.endsWith(".xml")
-						&& !file.getParent().contains("\\gen\\")
-						&& !file.getParent().contains("\\bin\\")
-						&& !xmlAllFiles.contains(file)) {
-					xmlAllFiles.add(file);
-				} else if (absolutePath.endsWith(".png")
-						&& !pngAllFiles.contains(file)) {
-					pngAllFiles.add(file);
+				allFiles.add(file);
+			}
+		}
+	}
+
+
+	/**
+	 * 替换指定目录下全部java文件内符合自定义条件的字符串
+	 * 
+	 * @param rootPath		根目录的绝对路径
+	 * @param replaceString	key-原文字 value-需要替换的文字
+	 */
+	public static void replaceStringOfJava(String rootPath, Map<String, String> replaceString) {
+		// 获取全部文件
+		List<File> files = FileUtils.getAllFiles(rootPath);
+		
+		for (File file : files) {
+			// 如果不是java后缀的文件,则跳过
+			if(!file.getName().endsWith(".java")) {
+				continue;
+			}
+			
+			// 将文件读取为一整个字符串
+			String fileContent = readToString(file);
+
+			// 是否有替换操作
+			boolean hasReplace = false;
+			// 遍历替换map,依次替换全部字符串
+			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
+				if (fileContent.contains(entry.getKey())) {
+					fileContent = fileContent.replace(entry.getKey(), entry.getValue());
+					hasReplace = true;
 				}
 			}
-		}
-	}
-	
-	public static File getXmlFileByName(String proPath, String filename) {
-		File tarFile = null;
-		
-		try {
-			FileUtils.getAllFiles(new File(proPath));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		for(File file : FileUtils.xmlAllFiles) {
-			String fileName = file.getName();
-			if(fileName.equals(filename)) {
-				System.out.println("get the file ... " + fileName);
-				tarFile = file;
-				break;
+			
+			// 如果有替换操作,则将替换后的新文件内容字符串写入回文件中去
+			if(hasReplace) {
+				writeString2File(fileContent, file);
 			}
 		}
-		
-		return tarFile;
 	}
 	
-	public static File getJavaFileByName(String proPath, String filename) {
-		File tarFile = null;
+	/**
+	 * 替换指定目录下全部java文件内符合自定义条件的字符串,支持正则
+	 * 
+	 * @param rootPath		根目录的绝对路径
+	 * @param replaceString	key-原文字 value-需要替换的文字
+	 */
+	public static void replaceAllStringOfJava(String rootPath, Map<String, String> replaceString) {
+		// 获取全部文件
+		List<File> files = FileUtils.getAllFiles(rootPath);
 		
+		for (File file : files) {
+			// 如果不是java后缀的文件,则跳过
+			if(!file.getName().endsWith(".java")) {
+				continue;
+			}
+			
+			// 将文件读取为一整个字符串
+			String fileContent = readToString(file);
+
+			// 是否有替换操作
+			boolean hasReplace = false;
+			// 遍历替换map,依次替换全部字符串
+			for (Map.Entry<String, String> entry : replaceString.entrySet()) {
+				if (fileContent.contains(entry.getKey())) {
+					fileContent = fileContent.replaceAll(entry.getKey(), entry.getValue());
+					hasReplace = true;
+				}
+			}
+			
+			// 如果有替换操作,则将替换后的新文件内容字符串写入回文件中去
+			if(hasReplace) {
+				writeString2File(fileContent, file);
+			}
+		}
+	}
+	
+
+	/**
+	 * 删除无用xml文件
+	 * 
+	 * @param rootPath		根目录的绝对路径
+	 */
+	public static void delNoUseXmlFile(String rootPath) {
+		List<File> files = getAllFiles(rootPath);
+		out:
+		for (File file : files) {
+			if(!file.getName().endsWith(".xml")) {
+				continue;
+			}
+			
+			for (File compareFile : files) {
+				// 如果包含文件名,则视为有使用
+				String fileContent = readToString(compareFile);
+				if (fileContent.contains(getName(file))) {
+					continue out;
+				}
+			}
+
+			String absname = file.getAbsoluteFile().getName();
+			boolean delete = file.delete();
+			System.out.println(absname + " ... delete=" + delete);
+		}
+	}
+
+	/**
+	 * 获取代码行数,只统计java/xml后缀的文件
+	 * 
+	 * @param rootPath	根目录的绝对路径
+	 */
+	public static void getCodeLines(String rootPath) {
+		int allLines = 0;
+		List<File> files = getAllFiles(rootPath);
+		for (File file : files) {
+			if(file.getName().endsWith(".java") || file.getName().endsWith(".xml")) {
+				int lines = getLines(file);
+				allLines += lines;
+			}
+		}
+		System.out.println(allLines);
+	}
+
+	/**
+	 * 获取文件内文本的行数
+	 */
+	public static int getLines(File file) {
+		int lines = 0;
+		FileReader fr;
 		try {
-			FileUtils.getAllFiles(new File(proPath));
-		} catch (Exception e) {
+			fr = new FileReader(file);
+			BufferedReader bufferedreader = new BufferedReader(fr);
+			while ((bufferedreader.readLine()) != null) {
+				lines++;
+			}
+			fr.close();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return lines;
+	}
+	
+	public static File getFileByName(String proPath, String filename) {
+		File tarFile = null;
 		
-		for(File file : FileUtils.javaAllFiles) {
+		List<File> files = FileUtils.getAllFiles(proPath);
+		
+		for(File file : files) {
 			String fileName = file.getName();
 			if(fileName.equals(filename)) {
-				System.out.println("get the file ... " + fileName);
 				tarFile = file;
 				break;
 			}
@@ -351,15 +219,22 @@ public class FileUtils {
 		return tarFile;
 	}
 
+	/**
+	 * 获取文件名,去除后缀部分
+	 */
 	public static String getName(File file) {
 		String name = file.getName();
 		name = name.substring(0, name.lastIndexOf("."));
-		if (name.endsWith(".9")) {
+		// 如果是.9.png结尾的,则在去除.png后缀之后还需要去除.9的后缀
+		if (file.getName().endsWith(".9.png")) {
 			name = name.substring(0, name.lastIndexOf("."));
 		}
 		return name;
 	}
 
+	/**
+	 * 将文件读取为字符串
+	 */
 	public static String readToString(File file) {
 		Long filelength = file.length();
 		byte[] filecontent = new byte[filelength.intValue()];
@@ -373,16 +248,18 @@ public class FileUtils {
 			e.printStackTrace();
 		}
 		try {
+			// 获取文件的编码格式,再根据编码格式生成字符串
 			String charSet = getCharSet(file);
-//			System.out.println(file.getName() + " char code = " + charSet);
 			return new String(filecontent, charSet);
 		} catch (UnsupportedEncodingException e) {
-			System.err.println("The OS does not support ");
 			e.printStackTrace();
 			return null;
 		}
 	}
 	
+	/**
+	 * 根据指定编码格式将文件读取为字符串
+	 */
 	public static String readToString(File file, String charSet) {
 		Long filelength = file.length();
 		byte[] filecontent = new byte[filelength.intValue()];
@@ -398,12 +275,14 @@ public class FileUtils {
 		try {
 			return new String(filecontent, charSet);
 		} catch (UnsupportedEncodingException e) {
-			System.err.println("The OS does not support ");
 			e.printStackTrace();
 			return null;
 		}
 	}
 
+	/**
+	 * 获取文件编码格式,暂只判断gbk/utf-8
+	 */
 	public static String getCharSet(File file) {
 		String chatSet = null;
 		try {
@@ -421,6 +300,9 @@ public class FileUtils {
 		return chatSet;
 	}
 
+	/**
+	 * 将字符串写入文件
+	 */
 	public static void writeString2File(String str, File file) {
 		FileWriter writer = null;
 		try {
