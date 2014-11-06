@@ -139,32 +139,32 @@ public class FileUtils {
 		}
 	}
 	
-
+	
 	/**
-	 * 删除无用xml文件
+	 * 删除无用java文件
 	 * 
 	 * @param rootPath		根目录的绝对路径
 	 */
-	public static void delNoUseXmlFile(String rootPath) {
+	public static void delNoUseJavaFile(String rootPath) {
 		List<File> files = getAllFiles(rootPath);
 		out:
-		for (File file : files) {
-			if(!file.getName().endsWith(".xml")) {
-				continue;
-			}
-			
-			for (File compareFile : files) {
-				// 如果包含文件名,则视为有使用
-				String fileContent = readToString(compareFile);
-				if (fileContent.contains(getName(file))) {
-					continue out;
+			for (File file : files) {
+				if(!file.getName().endsWith(".java")) {
+					continue;
 				}
+				
+				for (File compareFile : files) {
+					// 如果包含文件名,则视为有使用
+					String fileContent = readToString(compareFile);
+					if (fileContent.contains(getName(file))) {
+						continue out;
+					}
+				}
+				
+				String absname = file.getAbsoluteFile().getName();
+				boolean delete = file.delete();
+				System.out.println(absname + " ... delete=" + delete);
 			}
-
-			String absname = file.getAbsoluteFile().getName();
-			boolean delete = file.delete();
-			System.out.println(absname + " ... delete=" + delete);
-		}
 	}
 
 	/**

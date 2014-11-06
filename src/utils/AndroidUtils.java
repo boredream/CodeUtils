@@ -11,7 +11,7 @@ import org.dom4j.Element;
 import other.IdNamingBean;
 
 
-public class AndroidLayoutUtils {
+public class AndroidUtils {
 	
 	/** DIMEN单位 */
 	public static List<String> dimenUnits = new ArrayList<String>();
@@ -249,5 +249,109 @@ public class AndroidLayoutUtils {
 		List<String> values = new ArrayList<String>();
 		values.add(stringValue);
 		extract2values(proPath, stringXml, "string", "string", "name", stringName, stringValue, values, "");
+	}
+	
+	public static void relaceLayoutViewNames(String proPath, List<String> tarList, String replacement) {
+		List<File> allFiles = FileUtils.getAllFiles(proPath);
+		for(File file : allFiles) {
+			// 如果是xml文件,且在layout..目录下,则视为布局文件
+			if(file.getName().endsWith(".xml") 
+					&& file.getParentFile().getName().startsWith("layout")) {
+				Document document = XmlUtil.read(file);
+				boolean hasReplace = XmlUtil.replaceElementName(document, tarList, replacement);
+				if(hasReplace) {
+					XmlUtil.write2xml(file, document);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * 删除无用的src文件
+	 * 
+	 * @param rootPath		根目录的绝对路径
+	 */
+	public static void delNoUseSrcFile(String rootPath) {
+		List<File> files = FileUtils.getAllFiles(rootPath);
+		out:
+			for (File file : files) {
+				String name = file.getName();
+				// 只需要删除src包下的文件
+				if(!file.getPath().contains("\\src\\")) {
+					continue;
+				}
+				
+				for (File compareFile : files) {
+					String compareName = compareFile.getName();
+					if(name.equals(compareName)) {
+						// 自己跟自己不匹配
+						continue;
+					}
+					
+					// 只需要对比src包和layout包下的文件
+					if(!compareFile.getPath().contains("\\src\\")
+							&& !compareFile.getPath().contains("\\layout")) {
+						continue;
+					}
+					
+					if(!compareFile.exists()) {
+						continue;
+					}
+					
+					// 如果对比文件的本文内容中包含文件名,则视为有使用
+					String fileContent = FileUtils.readToString(compareFile);
+					if (fileContent.contains(FileUtils.getName(file))) {
+						continue out;
+					}
+				}
+				
+				// 删除没使用过的文件
+				String absname = file.getAbsoluteFile().getName();
+				boolean delete = file.delete();
+				System.out.println(absname + " ... delete=" + delete);
+			}
+	}
+
+	/**
+	 * 删除无用的布局xml文件
+	 * 
+	 * @param rootPath		根目录的绝对路径
+	 */
+	public static void delNoUseLayoutFile(String rootPath) {
+		List<File> files = FileUtils.getAllFiles(rootPath);
+		out:
+		for (File file : files) {
+			String name = file.getName();
+			// 只需要删除layout包下的xml文件
+			if(!name.endsWith(".xml") 
+					|| !file.getPath().contains("\\layout")) {
+				continue;
+			}
+			
+			for (File compareFile : files) {
+				String compareName = compareFile.getName();
+				if(name.equals(compareName)) {
+					// 自己跟自己不匹配
+					continue;
+				}
+				
+				// 只需要对比src包下和layout包下文件
+				if(!compareFile.getPath().contains("\\layout") 
+						&& !compareFile.getPath().contains("\\src\\")) {
+					continue;
+				}
+				
+				// 如果对比文件的本文内容中包含文件名,则视为有使用
+				String fileContent = FileUtils.readToString(compareFile, "UTF-8");
+				if (fileContent.contains(FileUtils.getName(file))) {
+					continue out;
+				}
+			}
+
+			// 删除没使用过的文件
+			String absname = file.getAbsoluteFile().getName()+"";
+			boolean delete = file.delete();
+			System.out.println(absname + " ... delete=" + delete);
+		}
 	}
 }

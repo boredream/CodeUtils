@@ -7,6 +7,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -131,25 +133,95 @@ public class XmlUtil {
 	/**
 	 * 替换XML文件中attribute的value值
 	 * @param tarDoc		目标document
-	 * @param targetList	目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
+	 * @param targetString	目标替换文字
 	 * @param replacement	替换成的内容
 	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值
 	 * @return 是否有替换操作
 	 */
+	public static boolean replaceAttrValue(Document tarDoc, String targetString, String replacement, String matchAttr) {
+		List<String> targetList = new ArrayList<String>();
+		targetList.add(targetString);
+		return replaceAttrValue(tarDoc, targetList, replacement, matchAttr);
+	}
+	
+	/**
+	 * 替换XML文件中attribute的value值
+	 * @param tarDoc		目标document
+	 * @param tarStrList	目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
+	 * @param replacement	替换成的内容
+	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值,null时不做筛选
+	 * @return 是否有替换操作
+	 */
 	@SuppressWarnings("unchecked")
-	public static boolean replaceAttrValue(Document tarDoc, List<String> targetList, String replacement, String matchAttr) {
+	public static boolean replaceAttrValue(Document tarDoc, List<String> tarStrList, String replacement, String matchAttr) {
 		boolean hasReplace = false;
 		
 		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
 		for(Element element : tarElements) {
 			List<Attribute> attrs = element.attributes();
 			for(Attribute attr : attrs) {
+				if(matchAttr == null || !attr.getName().equals(matchAttr+"")) {
+					continue;
+				}
 				String attrValue = attr.getValue();
-				int index = targetList.indexOf(attrValue);
-				if(index != -1 && attr.getName().equals(matchAttr+"")) {
+				int index = tarStrList.indexOf(attrValue);
+				if(index != -1) {
 					attr.setValue(replacement);
 					hasReplace = true;
 				}
+			}
+		}
+		return hasReplace;
+	}
+	
+	/**
+	 * 替换XML文件中attribute的value值中部分字符串
+	 * @param tarDoc		目标document
+	 * @param tarStr		目标替换文字正则
+	 * @param replacement	替换成的内容
+	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值,null时不做筛选
+	 * @return 是否有替换操作
+	 */
+	@SuppressWarnings("unchecked")
+	public static boolean replacePartAttrValue(Document tarDoc, String tarStr, String replacement, String matchAttr) {
+		boolean hasReplace = false;
+		
+		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
+		for(Element element : tarElements) {
+			List<Attribute> attrs = element.attributes();
+			for(Attribute attr : attrs) {
+				if(matchAttr == null || !attr.getName().equals(matchAttr+"")) {
+					continue;
+				}
+				
+				String attrValue = attr.getValue();
+				if(attrValue.contains(tarStr)) {
+					hasReplace = true;
+					attr.setValue(attrValue.replace(tarStr, replacement));
+				}
+			}
+		}
+		return hasReplace;
+	}
+	
+	
+	/**
+	 * 替换指定目录下全部xml文件内符合自定义条件的Element名称
+	 * 
+	 * @param tarDoc		目标document
+	 * @param targetList	目标替换文字,模糊替换,即只要匹配list集合里中其中一个就会被抽取替换
+	 * @param replacement	替换成的内容
+	 * @return 是否有替换操作
+	 */
+	public static boolean replaceElementName(Document tarDoc, List<String> targetList, String replacement) {
+		boolean hasReplace = false;
+		
+		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
+		for(Element element : tarElements) {
+			int index = targetList.indexOf(element.getName());
+			if(index != -1) {
+				element.setName(replacement);
+				hasReplace = true;
 			}
 		}
 		return hasReplace;
