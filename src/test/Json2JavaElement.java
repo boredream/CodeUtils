@@ -14,6 +14,18 @@ public class Json2JavaElement {
 	 */
 	private boolean isArray;
 	private JsonElement arrayItemJe;
+	/**
+	 * 数组深度,
+	 */
+	private int arrayDeep;
+
+	public int getArrayDeep() {
+		return arrayDeep;
+	}
+
+	public void setArrayDeep(int arrayDeep) {
+		this.arrayDeep = arrayDeep;
+	}
 
 	/**
 	 * 自定义类名
@@ -95,9 +107,9 @@ public class Json2JavaElement {
 	@Override
 	public String toString() {
 		return "\n"
-				+ "JsonBean [customClassName=" + customClassName + ", souceJo="
-				+ souceJo + ", parentJb=" + (parentJb==null?"null":parentJb.getName()) + ", name=" + name
-				+ ", type=" + type + "]";
+				+ "Json2JavaElement [level=" + level + ", isArray=" + isArray
+				+ ", arrayDeep=" + arrayDeep + ", name=" + name + ", type="
+				+ type + "]";
 	}
-	
+
 }

@@ -2,16 +2,15 @@ package test;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map.Entry;
-import java.util.logging.Level;
+import java.util.Set;
 
 import utils.FileUtils;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -53,53 +52,57 @@ public class Main {
 //		}
 		
 		
-		ArrayList<String> string = FileUtils.readToStringLines(new File("Json\\JsonStrings.txt"));
+//		ArrayList<String> string = FileUtils.readToStringLines(new File("Json\\JsonStrings.txt"));
+		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
 		JsonParser parser = new JsonParser();
-		JsonElement element = parser.parse(string.get(2));
+		JsonElement element = parser.parse(string);
 		JsonObject jo = element.getAsJsonObject();
 		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jo);
 //		
-////		System.out.println(jsonBeanTree);
-//		createJavaBean(jsonBeanTree);
+		System.out.println(jsonBeanTree);
+		createJavaBean(jsonBeanTree);
 	}
 	
 	private static void createJavaBean(List<Json2JavaElement> jsonBeanTree) {
 		StringBuilder sb = new StringBuilder();
 		boolean hasCustomeClass = false;
+		List<String> customClassNames = new ArrayList<String>();
 		
 		sb.append("public class JsonBeans {\n");
 		
 		Iterator<Json2JavaElement> iterator = jsonBeanTree.iterator();
 		while(iterator.hasNext()) {
 			Json2JavaElement jb = iterator.next();
-			if(jb.getLevel() > 0) {
+			
+			if(jb.getCustomClassName() != null && !customClassNames.contains(jb.getCustomClassName())) {
+				customClassNames.add(jb.getCustomClassName());
+			}
+			
+			if(jb.getParentJb() != null) {
 				hasCustomeClass = true;
 				continue;
 			}
+			
+			// 第一轮只设置根变量
 			sb.append("\tprivate ")
 				.append(getTypeName(jb))
 				.append(" ")
 				.append(jb.getName())
 				.append(";\n");
+			// 移除根变量,方便后续循环设置自定义类,可以减少后续循环次数
 			iterator.remove();
 		}
 		
+		// 设置所有自定义类
 		if(hasCustomeClass) {
-			while(jsonBeanTree.size() > 0) {
-				Json2JavaElement parentJb = jsonBeanTree.get(0).getParentJb();
-				String customClassName = parentJb.getCustomClassName();
-				if(customClassName == null) {
-					throw new RuntimeException("root element didn't oprate");
-				}
-				
-				sb.append("\n\t/*sub class*/class ")
+			for(String customClassName : customClassNames) {
+				sb.append("\n\t/*sub class*/\n");
+				sb.append("\tpublic class ")
 					.append(customClassName)
 					.append(" {\n");
 				Iterator<Json2JavaElement> customIterator = jsonBeanTree.iterator();
 				while(customIterator.hasNext()) {
 					Json2JavaElement jb = customIterator.next();
-					
-//					System.out.println(jb.getName() + " ... " + jb.getParentJb().getName() + " = " + customClassName);
 					
 					if(!firstToUpperCase(jb.getParentJb().getName()).equals(customClassName)) {
 						continue;
@@ -119,48 +122,102 @@ public class Main {
 		FileUtils.writeString2File(sb.toString(), new File("Json\\JsonBeans.java"));
 	}
 	
-	// temp
-	private static HashMap<String, List<Json2JavaElement>> JsonBeanMap = new HashMap<String, List<Json2JavaElement>>();
 	private static List<Json2JavaElement> getJsonBeanTree(JsonObject rootJo) {
-		level = -1;
 		jsonBeans = new ArrayList<Json2JavaElement>();
 		recursionJson(rootJo, null);
 		return jsonBeans;
 	}
 	
-	private static int level = -1;
 	private static List<Json2JavaElement> jsonBeans = new ArrayList<Json2JavaElement>(); 
 	private static void recursionJson(JsonObject jo, Json2JavaElement parentJb) {
-		level ++;
 		for (Entry<String, JsonElement> entry : jo.entrySet()) {
-			Json2JavaElement jb = getJsonType(entry);
+			String name = entry.getKey();
+			JsonElement je = entry.getValue();
 			
-			jb.setLevel(level);
+			Json2JavaElement jb = new Json2JavaElement();
+			Class<?> type = getJsonType(je);
+			
+			jb.setName(name);
 			if(parentJb != null) {
 				jb.setParentJb(parentJb);
 			}
 			
-			// 如果是集合类型
-			if(jb.isArray()) {
-				JsonElement arrayItemJe = jb.getArrayItemJe();
-				if(arrayItemJe.isJsonObject()) {
-					// 集合里面是自定义类型
-					recursionJson(arrayItemJe.getAsJsonObject(), jb);
-					return;
-				} else {
-					
-				}
-			}
-			
-			// 如果jo非空,代表类型是自定义类型
-			if(jb.getSouceJo() != null) {
+			// 自定义类
+			if(type == null) {
+				jb.setCustomClassName(firstToUpperCase(name));
+				jb.setSouceJo(je.getAsJsonObject());
 				jsonBeans.add(jb);
-				recursionJson(jb.getSouceJo(), jb);
-				return;
+				// recursion
+				recursionJson(je.getAsJsonObject(), jb);
+			} else if(type.equals(JsonArray.class)) {
+				// clear
+				deepLevel = 0;
+				arrayType = new ArrayType();
+				getJsonArrayType(je.getAsJsonArray());
+				
+				jb.setArray(true);
+				jb.setArrayDeep(deepLevel);
+				
+				if(arrayType.jo != null) {
+					jb.setCustomClassName(firstToUpperCase(name));
+					// 数组内的末点元素类型为自定义类
+					recursionJson(arrayType.jo, jb);
+				} else {
+					jb.setType(arrayType.getType());
+				}
+				jsonBeans.add(jb);
+			} else {
+				jb.setType(type);
+				jsonBeans.add(jb);
 			}
-			
-			jsonBeans.add(jb);
 		}
+	}
+	
+	private static int deepLevel = 0;
+	private static ArrayType arrayType = new ArrayType();
+	@SuppressWarnings("unused")
+	private static void getJsonArrayType(JsonArray jsonArray) {
+		deepLevel ++;
+		// 如果数组为空,则数组内元素类型直接设为Object
+		if (jsonArray.size() == 0) {
+			arrayType.setArrayDeep(deepLevel);
+			arrayType.setType(Object.class);
+		} else {
+			// 非空则取出第一个元素
+			JsonElement childJe = jsonArray.get(0);
+			Class<?> type = getJsonType(childJe);
+			
+			if(type == null) {
+				arrayType.jo = childJe.getAsJsonObject();
+				arrayType.setArrayDeep(deepLevel);
+			} else if (type.equals(JsonArray.class)) {
+				// recursion 如果数组里面还是数组,则递归本方法
+				getJsonArrayType(childJe.getAsJsonArray());
+				return;
+			} else {
+				arrayType.setArrayDeep(deepLevel);
+				arrayType.setType(type);
+			}
+
+		}
+	}
+	
+	private static Class<?> getJsonType(JsonElement je) {
+		Class<?> clazz = null;
+		
+		if(je.isJsonNull()) {
+			// type视为object类型
+			clazz = Object.class;
+		} else if(je.isJsonPrimitive()) {
+			// primitive类型可能是数字或者是布尔型
+			clazz = getJsonPrimitiveType(je);
+		} else if(je.isJsonObject()) {
+			// 自定义类型参数,返回null
+			clazz = null;
+		} else if(je.isJsonArray()) {
+			clazz = JsonArray.class;
+		}
+		return clazz;
 	}
 	
 	private static Json2JavaElement getJsonType(Entry<String, JsonElement> entry) {
@@ -249,7 +306,16 @@ public class Main {
 				name = name.substring(lastIndexOf + 1);
 			}
 		}
-		return name;
+
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<jb.getArrayDeep(); i++) {
+			sb.append("ArrayList<");
+		}
+		sb.append(name);
+		for(int i=0; i<jb.getArrayDeep(); i++) {
+			sb.append(">");
+		}
+		return sb.toString();
 	}
 
 }

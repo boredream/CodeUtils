@@ -1,10 +1,22 @@
 package test;
 
-import java.util.ArrayList;
-
 public class JsonBeans {
-//	{"desc":"OK","status":2147483648,"week":["w1", "w2", "w3"]}
 	private String desc;
 	private long status;
-	private ArrayList<String> week;
+	private Data data;
+
+	/*sub class*/class Data {
+		private String wendu;
+		private String ganmao;
+		private Forecast forecast;
+	}
+
+	/*sub class*/class Forecast {
+		private String fengxiang;
+		private String fengli;
+		private String high;
+		private String type;
+		private String low;
+		private String date;
+	}
 }
