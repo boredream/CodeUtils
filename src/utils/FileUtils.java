@@ -279,6 +279,40 @@ public class FileUtils {
 			return null;
 		}
 	}
+	
+	/**
+	 * 将文件内容以行为单位读取
+	 */
+	public static ArrayList<String> readToStringLines(File file) {
+		ArrayList<String> strs = new ArrayList<String>();
+
+		FileReader fr = null;
+		BufferedReader br = null;
+		try {
+			fr = new FileReader(file);
+			br = new BufferedReader(fr);
+			String line;
+			while ((line = br.readLine()) != null) {
+				strs.add(line);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			if(br != null) {
+				try {
+					br.close();
+				} catch (IOException ignored) { }
+			}
+			if(fr != null) {
+				try {
+					fr.close();
+				} catch (IOException ignored) { }
+			}
+		}
+		
+		return strs;
+	}
 
 	/**
 	 * 获取文件编码格式,暂只判断gbk/utf-8

@@ -52,11 +52,10 @@ public class AndroidUtils {
 	
 	/**
 	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
-	 * @param proPath		项目绝对路径
 	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
 	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
 	 */
-	public static void autoFindViewById(String proPath, String layoutXml, String activityFile) {
+	public static void autoFindViewById(String layoutXml, String activityFile) {
 		File javaFile = new File(activityFile);
 		Document document = XmlUtil.read(layoutXml);
 		List<Element> allElement = XmlUtil.getAllElements(document);
