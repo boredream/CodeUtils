@@ -1,4 +1,4 @@
-package other;
+package entity;
 
 /**
  * 控件名称-id名称实体类

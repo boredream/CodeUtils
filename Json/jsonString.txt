@@ -1,159 +1,63 @@
 {
-	"ret": "0",
-	"ret_msg": "",
-	"order_infos": [{
-		"RECEIPT_FLAG": 0,
-		"CLASS_NAME": "特价舱",
-		"DEPARTURE_TIME": "07:20:00",
-		"ARRIVAL_DATE": "2014-11-29",
-		"PHONENUM": "15950523385",
-		"PAY_STATUS": 2,
-		"GOODS_NAME": "飞机票",
-		"PLANE_TYPE": "319",
-		"z_list": [{
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "许晴",
-			"IDCARDS": "330900198205011291",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 310
-		}, {
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "徐强",
-			"IDCARDS": "610723198010115251",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 310
+	"desc": "OK",
+	"status": 2147483648,
+	"emptyobj": {
+		
+	},
+	"nulldata": null,
+	"llist": [["s1", "s2"], ["s1", "s2"], ["s1", "s2"]],
+	"data": {
+		"wendu": "13",
+		"ganmao": "昼夜温差很大，易发生感冒，请注意适当增减衣服，加强自我防护避免感冒。",
+		"forecast": [{
+			"fengxiang": "无持续风向",
+			"fengli": "微风级",
+			"high": "高温 13℃",
+			"type": "晴",
+			"low": "低温 -1℃",
+			"date": "18日星期二"
+		},
+		{
+			"fengxiang": "无持续风向",
+			"fengli": "微风级",
+			"high": "高温 10℃",
+			"type": "多云",
+			"low": "低温 1℃",
+			"date": "19日星期三"
+		},
+		{
+			"fengxiang": "无持续风向",
+			"fengli": "微风级",
+			"high": "高温 12℃",
+			"type": "阴",
+			"low": "低温 0℃",
+			"date": "20日星期四"
+		},
+		{
+			"fengxiang": "无持续风向",
+			"fengli": "微风级",
+			"high": "高温 11℃",
+			"type": "晴",
+			"low": "低温 -2℃",
+			"date": "21日星期五"
+		},
+		{
+			"fengxiang": "无持续风向",
+			"fengli": "微风级",
+			"high": "高温 11℃",
+			"type": "晴",
+			"low": "低温 1℃",
+			"date": "22日星期六"
 		}],
-		"SALE_PRICES": 660,
-		"ORDER_ID": "A2014111910324668067090",
-		"OP_TIME": "2014-11-19 10:32:46",
-		"AIRPLANE_NUM": "MU2504",
-		"DEPARTURE_DATE": "2014-11-29",
-		"ARRIVAL_TIME": "09:00:00",
-		"TICKET_NUM": 2,
-		"TO_AIRPORT": "天河国际机场",
-		"POLICY_ID": "0",
-		"FROM_AIRPORT": "浦东国际机场"
-	}, {
-		"RECEIPT_FLAG": 0,
-		"CLASS_NAME": "特价舱",
-		"DEPARTURE_TIME": "07:20:00",
-		"ARRIVAL_DATE": "2014-12-18",
-		"PHONENUM": "15950523385",
-		"PAY_STATUS": 2,
-		"GOODS_NAME": "飞机票",
-		"PLANE_TYPE": "319",
-		"z_list": [{
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "雨归拢",
-			"IDCARDS": "321081199109096857",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 310
-		}, {
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "汪念慈",
-			"IDCARDS": "410221198603304149",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 310
-		}],
-		"SALE_PRICES": 660,
-		"ORDER_ID": "A2014111909211855952836",
-		"OP_TIME": "2014-11-19 09:21:18",
-		"AIRPLANE_NUM": "MU2504",
-		"DEPARTURE_DATE": "2014-12-18",
-		"ARRIVAL_TIME": "09:00:00",
-		"TICKET_NUM": 2,
-		"TO_AIRPORT": "天河国际机场",
-		"POLICY_ID": "0",
-		"FROM_AIRPORT": "浦东国际机场"
-	}, {
-		"RECEIPT_FLAG": 1,
-		"CLASS_NAME": "特价舱",
-		"DEPARTURE_TIME": "21:30:00",
-		"ARRIVAL_DATE": "2014-11-27",
-		"PHONENUM": "15195955573",
-		"PAY_STATUS": 2,
-		"GOODS_NAME": "飞机票",
-		"PLANE_TYPE": "738",
-		"z_list": [{
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "菜小二",
-			"IDCARDS": "510304200707025825",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 240
-		}, {
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "菜小一",
-			"IDCARDS": "321023200808271011",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 240
-		}],
-		"SALE_PRICES": 540,
-		"ORDER_ID": "A2014111817550134714147",
-		"OP_TIME": "2014-11-18 17:55:01",
-		"AIRPLANE_NUM": "CZ3544",
-		"DEPARTURE_DATE": "2014-11-27",
-		"ARRIVAL_TIME": "23:25:00",
-		"TICKET_NUM": 2,
-		"TO_AIRPORT": "天河国际机场",
-		"POLICY_ID": "61504855",
-		"FROM_AIRPORT": "浦东国际机场"
-	}, {
-		"RECEIPT_FLAG": 1,
-		"CLASS_NAME": "特价舱",
-		"DEPARTURE_TIME": "08:05:00",
-		"ARRIVAL_DATE": "2014-11-28",
-		"PHONENUM": "15195955573",
-		"PAY_STATUS": 2,
-		"GOODS_NAME": "飞机票",
-		"PLANE_TYPE": "320",
-		"z_list": [{
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "菜二",
-			"IDCARDS": "320324199103250671",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 410
-		}, {
-			"IS_INSURANCE": 1,
-			"CONTACT_NAME": "菜一",
-			"IDCARDS": "320982199103176965",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 410
-		}],
-		"SALE_PRICES": 880,
-		"ORDER_ID": "A2014111817272888223140",
-		"OP_TIME": "2014-11-18 17:27:28",
-		"AIRPLANE_NUM": "HO1117",
-		"DEPARTURE_DATE": "2014-11-28",
-		"ARRIVAL_TIME": "10:00:00",
-		"TICKET_NUM": 2,
-		"TO_AIRPORT": "天河国际机场",
-		"POLICY_ID": "63629746",
-		"FROM_AIRPORT": "浦东国际机场"
-	}, {
-		"RECEIPT_FLAG": 1,
-		"CLASS_NAME": "特价舱",
-		"DEPARTURE_TIME": "07:20:00",
-		"ARRIVAL_DATE": "2014-12-14",
-		"PHONENUM": "15195955573",
-		"PAY_STATUS": 2,
-		"GOODS_NAME": "飞机票",
-		"PLANE_TYPE": "319",
-		"z_list": [{
-			"IS_INSURANCE": 2,
-			"CONTACT_NAME": "菜小一",
-			"IDCARDS": "510304200707025825",
-			"PAY_STATUS": 2,
-			"SALE_PRICE": 240
-		}],
-		"SALE_PRICES": 260,
-		"ORDER_ID": "A2014111817135270318293",
-		"OP_TIME": "2014-11-18 17:13:52",
-		"AIRPLANE_NUM": "MU2504",
-		"DEPARTURE_DATE": "2014-12-14",
-		"ARRIVAL_TIME": "09:00:00",
-		"TICKET_NUM": 1,
-		"TO_AIRPORT": "天河国际机场",
-		"POLICY_ID": "0",
-		"FROM_AIRPORT": "浦东国际机场"
-	}]
+		"yesterday": {
+			"fl": "微风",
+			"fx": "无持续风向",
+			"high": "高温 12℃",
+			"type": "晴",
+			"low": "低温 -2℃",
+			"date": "17日星期一"
+		},
+		"aqi": "83",
+		"city": "北京"
+	}
 }

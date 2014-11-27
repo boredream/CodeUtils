@@ -9,7 +9,9 @@ import java.util.Locale;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import utils.AndroidUtils;
 import utils.FileUtils;
+import utils.JsonUtils;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -50,6 +52,13 @@ public class Main {
 //				System.out.println(file.getAbsoluteFile());
 //			}
 //		}
+		
+//		JsonUtils.parseJson2Java();
+		
+		AndroidUtils.extract2Dimen("", "", "", "12sp", "");
+		AndroidUtils.extract2Dimen("", "", "", "12.5dp", "");
+		AndroidUtils.extract2Dimen("", "", "", "0.22dip", "");
+		AndroidUtils.extract2Dimen("", "", "", "999.111px", "");
 
 	}
 	

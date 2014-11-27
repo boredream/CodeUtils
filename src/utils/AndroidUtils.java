@@ -2,13 +2,15 @@ package utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
-import other.IdNamingBean;
+import entity.IdNamingBean;
+
 
 
 public class AndroidUtils {
@@ -23,35 +25,8 @@ public class AndroidUtils {
 	}
 
 	/**
-	 * 设置布局文件的id
-	 * <p>
-	 * 将设置全部View的id,id名字格式为:布局文件名_view名称_自增整数(全部小写)
-	 * 
-	 * @param proPath		项目绝对路径
-	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
-	 */
-	public static void setLayoutId(String proPath, String layoutXml) {
-		String layoutName = layoutXml.substring(0, layoutXml.indexOf("."));
-		File layoutFile = new File(layoutXml);
-		
-		Document doc = XmlUtil.read(layoutFile);
-		List<Element> allElement = XmlUtil.getAllElements(doc);
-		
-		int index = 0;
-		for (Element element : allElement) {
-			if(!XmlUtil.hasAttribute(element, "id")) {
-				String idValue = "@+id/" + layoutName 
-						+ "_" + element.getName() 
-						+ "_" + (index++);
-				element.addAttribute("android:id", idValue.toLowerCase(Locale.CHINESE));
-			}
-		}
-
-		XmlUtil.write2xml(layoutFile, doc);
-	}
-	
-	/**
 	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
+	 * 
 	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
 	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
 	 */
@@ -189,23 +164,6 @@ public class AndroidUtils {
 	/**
 	 * 抽取为dimen值
 	 * 
-	 * <p>一般抽取的都是size参数,如20sp,60px,500dp等,范围替换使用带int belowScope, int aboveScope的重载方法
-	 * <br>例如:dimenValue=50sp,dimenName=txt_size_large, dimenXml="dimens.xml" 
-	 * <br>则将会把xml文件中的所有50sp都替换为@dimen/txt_size_large
-	 * <br>并在dimens.xml下创建一个对应的< dimen name="txt_size_large">50sp< /dimen>"
-	 * 
-	 * @param proPath		项目绝对路径
-	 * @param dimenXml		保存dimen的xml文件名称,一般都是dimens.xml
-	 * @param dimenName		dimens.xml文件内item的参数值,也是抽取值后替换的名称
-	 * @param dimenValue	dimens.xml文件内item的值,即被抽取替换的值
-	 */
-	public static void extract2Dimen(String proPath, String dimenXml, String dimenName, String dimenValue) {
-		extract2Dimen(proPath,dimenXml, dimenName, dimenValue, 0, 0, "");
-	}
-	
-	/**
-	 * 抽取为dimen值
-	 * 
 	 * <p>一般抽取的都是size参数,如20sp,60px,500dp等,支持范围替换
 	 * <br>例如:dimenValue=50sp,belowScope=2;aboveScope=4,
 	 * <br>则只要是48dp~54dp范围的值都会替换成dimenValue值
@@ -213,27 +171,25 @@ public class AndroidUtils {
 	 * @param proPath		项目绝对路径
 	 * @param dimenXml		保存dimen的xml文件名称,一般都是dimens.xml
 	 * @param dimenName		dimens.xml文件内item的参数值,也是抽取值后替换的名称
-	 * @param dimenValue	dimens.xml文件内item的值,即抽取前的中心值
-	 * @param belowScope	抽取匹配范围最小差值
-	 * @param aboveScope	抽取匹配范围最大差值
+	 * @param dimenValue	dimens.xml文件内item的值,即抽取前值
 	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值
 	 */
-	public static void extract2Dimen(String proPath, String dimenXml, String dimenName, String dimenValue, 
-			int belowScope, int aboveScope, String matchAttr) {
+	public static void extract2Dimen(String proPath, 
+			String dimenXml, String dimenName, String dimenValue, String matchAttr) {
+		// 浮点型单位值
+		String regex = "^(-?\\d+)(\\.\\d+)?(dp|dip|sp|px)$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(dimenValue);
+		System.out.println(matcher.matches());
+		
 		int index = dimenUnits.indexOf(dimenValue.replaceAll("\\d+", ""));
 		if(index == -1) {
 			System.out.println("被抽取dimen值的单位不合法,必须为px/sp/dip/dp其中一种");
 			return;
 		}
 		
-		int splitIndex = dimenValue.indexOf(dimenUnits.get(index));
-		int num = Integer.parseInt(dimenValue.substring(0, splitIndex));
-		String unit = dimenValue.substring(splitIndex);
-		
 		List<String> values = new ArrayList<String>();
-		for(int i=num-belowScope; i<=num+aboveScope; i++) {
-			values.add(i+unit);
-		}
+		values.add(dimenValue);
 		
 		extract2values(proPath, dimenXml, "dimen", "dimen", "name", dimenName, dimenValue, values, matchAttr);
 	}

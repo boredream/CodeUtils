@@ -164,44 +164,13 @@ public class XmlUtil {
 				String attrValue = attr.getValue();
 				int index = tarStrList.indexOf(attrValue);
 				if(index != -1) {
-					attr.setValue(replacement);
+					attr.setValue(attrValue.replace(tarStrList.get(index), replacement));
 					hasReplace = true;
 				}
 			}
 		}
 		return hasReplace;
 	}
-	
-	/**
-	 * 替换XML文件中attribute的value值中部分字符串
-	 * @param tarDoc		目标document
-	 * @param tarStr		目标替换文字正则
-	 * @param replacement	替换成的内容
-	 * @param matchAttr		匹配参数名,即只会替换该参数名对应的值,null时不做筛选
-	 * @return 是否有替换操作
-	 */
-	@SuppressWarnings("unchecked")
-	public static boolean replacePartAttrValue(Document tarDoc, String tarStr, String replacement, String matchAttr) {
-		boolean hasReplace = false;
-		
-		List<Element> tarElements = XmlUtil.getAllElements(tarDoc);
-		for(Element element : tarElements) {
-			List<Attribute> attrs = element.attributes();
-			for(Attribute attr : attrs) {
-				if(matchAttr == null || !attr.getName().equals(matchAttr+"")) {
-					continue;
-				}
-				
-				String attrValue = attr.getValue();
-				if(attrValue.contains(tarStr)) {
-					hasReplace = true;
-					attr.setValue(attrValue.replace(tarStr, replacement));
-				}
-			}
-		}
-		return hasReplace;
-	}
-	
 	
 	/**
 	 * 替换指定目录下全部xml文件内符合自定义条件的Element名称

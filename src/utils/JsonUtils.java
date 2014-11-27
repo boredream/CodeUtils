@@ -7,8 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map.Entry;
 
-import test.ArrayType;
-import test.Json2JavaElement;
+
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -16,21 +15,30 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
+import entity.ArrayType;
+import entity.Json2JavaElement;
+
 public class JsonUtils {
 	
+	/**
+	 * 将json字符串拷贝至 /Json/JsonString.txt 文件中去,然后调用该方法,<br>
+	 * 就会在/Json/JsonString.txt中生成一个对应的JavaBean类<br><br>
+	 * 注意: 如果json字符串中有null或者空数组[]这种无法判断类型的,会统一使用Object类型
+	 */
 	public static void parseJson2Java() {
-//		ArrayList<String> string = FileUtils.readToStringLines(new File("Json\\JsonStrings.txt"));
 		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
+		// 解析获取整个json结构
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(string);
 		JsonObject jo = element.getAsJsonObject();
 		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jo);
-//		
-		System.out.println(jsonBeanTree);
-		createJavaBean(jsonBeanTree);
+		// 利用获取到的json结构创建对应的javabean文件内容
+		String javaBeanStr = createJavaBean(jsonBeanTree);
+		// 将生成的内容写入到文件中去
+		FileUtils.writeString2File(javaBeanStr, new File("Json\\JsonBean.java"));
 	}
 	
-	private static void createJavaBean(List<Json2JavaElement> jsonBeanTree) {
+	private static String createJavaBean(List<Json2JavaElement> jsonBeanTree) {
 		StringBuilder sb = new StringBuilder();
 		boolean hasCustomeClass = false;
 		List<String> customClassNames = new ArrayList<String>();
@@ -86,7 +94,7 @@ public class JsonUtils {
 		}
 		
 		sb.append("}");
-		FileUtils.writeString2File(sb.toString(), new File("Json\\JsonBeans.java"));
+		return sb.toString();
 	}
 	
 	private static List<Json2JavaElement> getJsonBeanTree(JsonObject rootJo) {
@@ -114,10 +122,9 @@ public class JsonUtils {
 				jb.setCustomClassName(firstToUpperCase(name));
 				jb.setSouceJo(je.getAsJsonObject());
 				jsonBeans.add(jb);
-				// recursion
+				// 自定义类, 递归
 				recursionJson(je.getAsJsonObject(), jb);
 			} else if(type.equals(JsonArray.class)) {
-				// clear
 				deepLevel = 0;
 				arrayType = new ArrayType();
 				getJsonArrayType(je.getAsJsonArray());
@@ -127,7 +134,7 @@ public class JsonUtils {
 				
 				if(arrayType.getJo() != null) {
 					jb.setCustomClassName(firstToUpperCase(name));
-					// 数组内的末点元素类型为自定义类
+					// 数组内的末点元素类型为自定义类, 递归
 					recursionJson(arrayType.getJo(), jb);
 				} else {
 					jb.setType(arrayType.getType());

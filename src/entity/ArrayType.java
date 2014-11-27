@@ -1,4 +1,4 @@
-package test;
+package entity;
 
 import com.google.gson.JsonObject;
 
