@@ -231,6 +231,14 @@ public class FileUtils {
 		}
 		return name;
 	}
+	
+	/**
+	 * 获取文件名,去除后缀部分
+	 */
+	public static String getName(String fileAbsPath) {
+		File file = new File(fileAbsPath);
+		return getName(file);
+	}
 
 	/**
 	 * 将文件读取为字符串

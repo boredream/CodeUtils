@@ -1,29 +1,18 @@
 package test;
 
+
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map.Entry;
-import java.util.Set;
 
 import utils.AndroidUtils;
 import utils.FileUtils;
-import utils.JsonUtils;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonPrimitive;
 
 
 
 public class Main {
 
 //	private static String proPath = "E:\\workspace\\ConvenientPos";
+	private static String proPath = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\sources\\android-20";
 	private static String activityPath = "E:\\workspace\\PosTest\\src\\com\\example\\postest\\TestActivity.java";
 	private static String layoutPath = "E:\\workspace\\PosTest\\res\\layout\\test.xml";
 
@@ -48,18 +37,27 @@ public class Main {
 //		List<File> allFiles = FileUtils.getAllFiles(proPath);
 //		for(File file : allFiles) {
 //			String string = FileUtils.readToString(file);
-//			if(string.contains("croller.fling(")) {
+//			if(string.contains("drawText")) {
 //				System.out.println(file.getAbsoluteFile());
 //			}
 //		}
 		
+//		AndroidUtils.autoFindViewById("E:\\ConvenientPos\\res\\layout\\activity_write_bankcard.xml", 
+//				"E:\\ConvenientPos\\src\\com\\convenient\\pos\\purse\\WriteBankCardInfoActivity.java");
+		AndroidUtils.autoCreateAdapter("E:\\ConvenientPos\\res\\layout\\item_bg.xml", 
+				"E:\\ConvenientPos\\src\\com\\convenient\\pos\\homepage\\BgAdapter.java");
+		
 //		JsonUtils.parseJson2Java();
 		
-		AndroidUtils.extract2Dimen("", "", "", "12sp", "");
-		AndroidUtils.extract2Dimen("", "", "", "12.5dp", "");
-		AndroidUtils.extract2Dimen("", "", "", "0.22dip", "");
-		AndroidUtils.extract2Dimen("", "", "", "999.111px", "");
-
+//		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
+//		JsonBean fromJson = new Gson().fromJson(string, JsonBean.class);
+//		System.out.println(fromJson.getCode());
+		
+//		AndroidUtils.extract2Dimen("", "", "", "12sp", "");
+//		AndroidUtils.extract2Dimen("", "", "", "12.5dp", "");
+//		AndroidUtils.extract2Dimen("", "", "", "0.22dip", "");
+//		AndroidUtils.extract2Dimen("", "", "", "999.111px", "");
 	}
 	
 }
+

@@ -23,6 +23,22 @@ public class AndroidUtils {
 		dimenUnits.add("dip");
 		dimenUnits.add("dp");
 	}
+	
+	/**
+	 * 将string按需要格式化,前面加缩进符,后面加换行符
+	 * @param tabNum 缩进量
+	 * @param srcString
+	 * @return
+	 */
+	private static String formatSingleLine(int tabNum, String srcString) {
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<tabNum; i++) {
+			sb.append("\t");
+		}
+		sb.append(srcString);
+		sb.append("\n");
+		return sb.toString();
+	}
 
 	/**
 	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
@@ -76,6 +92,130 @@ public class AndroidUtils {
 		
 		// 将生成的内容写入至java类文件内的起始端
 		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString());
+		FileUtils.writeString2File(fileContent, javaFile);
+	}
+	
+	/**
+	 * 自动遍历xml中所有带id的控件,在adapter文件中生成最基本的代码
+	 * 
+	 * @param layoutXml		item布局文件的绝对路径,如xxx/res/layout/item.xml
+	 * @param adapterFile	Adapter类文件名,如xxx/src/.../MyAdapter.java
+	 */
+	public static void autoCreateAdapter(String layoutXml, String adapterFile) {
+		File javaFile = new File(adapterFile);
+		Document document = XmlUtil.read(layoutXml);
+		List<Element> allElement = XmlUtil.getAllElements(document);
+		
+		// 将view名称和对应的id名封装为一个实体类,并存至集合中
+		List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
+		for (Element element : allElement) {
+			Attribute attribute = element.attribute("id");
+			if(attribute != null) {
+				String value = attribute.getValue();
+				String idName = value.substring(value.indexOf("/") + 1);
+				IdNamingBean bean = new IdNamingBean(element.getName(), idName);
+				if(!idNamingBeans.contains(bean)) {
+					idNamingBeans.add(bean);
+				}
+			}
+		}
+		
+		// 读取java文件的字符串
+		String fileContent = FileUtils.readToString(javaFile);
+		
+		StringBuilder sbAdapterInfo = new StringBuilder();
+		sbAdapterInfo.append("\n");
+		
+		// 成员变量,只设置最基本的集合类和context
+		sbAdapterInfo.append(formatSingleLine(1, "private Context context;"));
+		sbAdapterInfo.append(formatSingleLine(1, "private List<MyItem> datas;"));
+		sbAdapterInfo.append("\n");
+		
+		// 根据成员变量创建的构造函数
+		sbAdapterInfo.append(formatSingleLine(1, "public MyAdapter(Context context, List<MyItem> datas) {"));
+		sbAdapterInfo.append(formatSingleLine(2, "this.context = context;"));
+		sbAdapterInfo.append(formatSingleLine(2, "this.datas = datas;"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写getCount方法
+		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(formatSingleLine(1, "public int getCount() {"));
+		sbAdapterInfo.append(formatSingleLine(2, "return datas.size();"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写getItem方法
+		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(formatSingleLine(1, "public MyItem getItem(int position) {"));
+		sbAdapterInfo.append(formatSingleLine(2, "return datas.get(position);"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写getItemId方法
+		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(formatSingleLine(1, "public long getItemId(int position) {"));
+		sbAdapterInfo.append(formatSingleLine(2, "return position;"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写getView方法,并进行优化处理
+		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(formatSingleLine(1, "public View getView(int position, View convertView, ViewGroup parent) {"));
+		sbAdapterInfo.append(formatSingleLine(2, "ViewHolder holder;"));
+		sbAdapterInfo.append(formatSingleLine(2, "if(convertView == null) {"));
+		sbAdapterInfo.append(formatSingleLine(3, "holder = new ViewHolder();"));
+		sbAdapterInfo.append(formatSingleLine(3, "convertView = View.inflate(context, R.layout."+FileUtils.getName(layoutXml)+", null);"));
+		
+		// getView中viewholder的变量赋值处理
+		// 根据view名-id名的实体类,依次生成控件对应的holder变量,变量名取id名称赋值
+		StringBuilder sbSetHolder = new StringBuilder();
+		for(IdNamingBean bean : idNamingBeans) {
+			// holder.item_tv = (TextView) convertView.findViewById(R.id.item_tv);
+			sbSetHolder.append("\t\t\t")
+				.append("holder.")
+				.append(bean.idName)
+				.append(" = (")
+				.append(bean.viewName)
+				.append(") ")
+				.append("convertView.findViewById(R.id.")
+				.append(bean.idName)
+				.append(");\n");
+		}
+		sbSetHolder.append(formatSingleLine(2, "} else {"));
+		sbSetHolder.append(formatSingleLine(3, "holder = (ViewHolder) convertView.getTag();"));
+		sbSetHolder.append(formatSingleLine(2, "}"));
+		
+		sbSetHolder.append("\n");
+		sbSetHolder.append(formatSingleLine(2, "// set data"));
+		sbSetHolder.append("\n");
+		
+		sbSetHolder.append(formatSingleLine(2, "return convertView;"));
+		sbSetHolder.append(formatSingleLine(1, "}"));
+
+		
+		// ViewHolder class的申明处理
+		StringBuilder sbHolderClass = new StringBuilder();
+		sbSetHolder.append("\n");
+		sbHolderClass.append(formatSingleLine(1, "public static class ViewHolder{"));
+		for(IdNamingBean bean : idNamingBeans) {
+			// public TextView item_tv;
+			sbHolderClass.append("\t\t")
+				.append("public ")
+				.append(bean.viewName)
+				.append(" ")
+				.append(bean.idName)
+				.append(";\n");
+		}
+		sbHolderClass.append(formatSingleLine(1, "}"));
+
+		// 合并所有的文件内容
+		sbAdapterInfo.append(sbSetHolder);
+		sbAdapterInfo.append(sbHolderClass);
+		
+		// 将生成的内容写入至java类文件内的起始端
+		fileContent = fileContent.replaceFirst("\\{", "\\{\n" + sbAdapterInfo.toString());
+		// 写入回文件
 		FileUtils.writeString2File(fileContent, javaFile);
 	}
 	
