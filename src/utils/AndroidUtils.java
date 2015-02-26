@@ -96,6 +96,16 @@ public class AndroidUtils {
 	}
 	
 	/**
+	 * 根据layout.xml自动申明所有带id的变量,以及进行最基本的click点击事件等代码处理
+	 * 
+	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
+	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
+	 */
+	public static void autoCreateActivity(String layoutXml, String activityFile) {
+		
+	}
+	
+	/**
 	 * 自动遍历xml中所有带id的控件,在adapter文件中生成最基本的代码
 	 * 
 	 * @param layoutXml		item布局文件的绝对路径,如xxx/res/layout/item.xml
@@ -169,10 +179,9 @@ public class AndroidUtils {
 		
 		// getView中viewholder的变量赋值处理
 		// 根据view名-id名的实体类,依次生成控件对应的holder变量,变量名取id名称赋值
-		StringBuilder sbSetHolder = new StringBuilder();
 		for(IdNamingBean bean : idNamingBeans) {
 			// holder.item_tv = (TextView) convertView.findViewById(R.id.item_tv);
-			sbSetHolder.append("\t\t\t")
+			sbAdapterInfo.append("\t\t\t")
 				.append("holder.")
 				.append(bean.idName)
 				.append(" = (")
@@ -182,37 +191,34 @@ public class AndroidUtils {
 				.append(bean.idName)
 				.append(");\n");
 		}
-		sbSetHolder.append(formatSingleLine(2, "} else {"));
-		sbSetHolder.append(formatSingleLine(3, "holder = (ViewHolder) convertView.getTag();"));
-		sbSetHolder.append(formatSingleLine(2, "}"));
+		sbAdapterInfo.append(formatSingleLine(3, "convertView.setTag(holder);"));
+		sbAdapterInfo.append(formatSingleLine(2, "} else {"));
+		sbAdapterInfo.append(formatSingleLine(3, "holder = (ViewHolder) convertView.getTag();"));
+		sbAdapterInfo.append(formatSingleLine(2, "}"));
 		
-		sbSetHolder.append("\n");
-		sbSetHolder.append(formatSingleLine(2, "// set data"));
-		sbSetHolder.append("\n");
+		sbAdapterInfo.append("\n");
+		sbAdapterInfo.append(formatSingleLine(2, "// set data"));
+		sbAdapterInfo.append("\n");
 		
-		sbSetHolder.append(formatSingleLine(2, "return convertView;"));
-		sbSetHolder.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append(formatSingleLine(2, "return convertView;"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		sbAdapterInfo.append("\n");
 
 		
 		// ViewHolder class的申明处理
-		StringBuilder sbHolderClass = new StringBuilder();
-		sbSetHolder.append("\n");
-		sbHolderClass.append(formatSingleLine(1, "public static class ViewHolder{"));
+		sbAdapterInfo.append(formatSingleLine(1, "public static class ViewHolder{"));
 		for(IdNamingBean bean : idNamingBeans) {
 			// public TextView item_tv;
-			sbHolderClass.append("\t\t")
+			sbAdapterInfo.append("\t\t")
 				.append("public ")
 				.append(bean.viewName)
 				.append(" ")
 				.append(bean.idName)
 				.append(";\n");
 		}
-		sbHolderClass.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append(formatSingleLine(1, "}"));
 
-		// 合并所有的文件内容
-		sbAdapterInfo.append(sbSetHolder);
-		sbAdapterInfo.append(sbHolderClass);
-		
 		// 将生成的内容写入至java类文件内的起始端
 		fileContent = fileContent.replaceFirst("\\{", "\\{\n" + sbAdapterInfo.toString());
 		// 写入回文件
