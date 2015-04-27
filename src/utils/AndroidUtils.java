@@ -58,7 +58,7 @@ public class AndroidUtils {
 			if(attribute != null) {
 				String value = attribute.getValue();
 				String idName = value.substring(value.indexOf("/") + 1);
-				IdNamingBean bean = new IdNamingBean(element.getName(), idName);
+				IdNamingBean bean = new IdNamingBean(element.getName(), idName, element);
 				if(!idNamingBeans.contains(bean)) {
 					idNamingBeans.add(bean);
 				}
@@ -88,10 +88,41 @@ public class AndroidUtils {
 				.append("findViewById(R.id." + bean.idName + ")")
 				.append(";\n");
 		}
-		sb.append("}");
+		
+		sb.append("\n");
+		
+		// 点击事件复写的onclick方法
+		StringBuilder sbOnClick = new StringBuilder();
+		sbOnClick.append("@Override\n")
+			.append("public void onClick(View v) {\n")
+			.append("switch (v.getId()) {\n");
+		
+		boolean hasClickView = false;
+		// 自动设置监听事件,默认只设置button的点击事件,和参数包含clickable=true的控件
+		for(IdNamingBean bean : idNamingBeans) {
+			Attribute attrClickable = bean.element.attribute("clickable");
+			if(bean.viewName.contains("button") || bean.viewName.contains("Button")
+					|| (attrClickable != null && attrClickable.getValue().equals("true"))) {
+				sb.append(bean.idName)
+					.append(".setOnClickListener(this);\n");
+				
+				sbOnClick.append("case R.id." + bean.idName + ":\n")
+					.append("\n")
+					.append("break;\n");
+				
+				hasClickView = true;
+			}
+		}
+		
+		sbOnClick.append("}\n");
+		sbOnClick.append("}\n");
+		
+		sb.append("}\n");
+		
 		
 		// 将生成的内容写入至java类文件内的起始端
-		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString());
+		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString() + "\n" + 
+				(hasClickView ? sbOnClick.toString() : ""));
 		FileUtils.writeString2File(fileContent, javaFile);
 	}
 	
@@ -123,7 +154,7 @@ public class AndroidUtils {
 			if(attribute != null) {
 				String value = attribute.getValue();
 				String idName = value.substring(value.indexOf("/") + 1);
-				IdNamingBean bean = new IdNamingBean(element.getName(), idName);
+				IdNamingBean bean = new IdNamingBean(element.getName(), idName, element);
 				if(!idNamingBeans.contains(bean)) {
 					idNamingBeans.add(bean);
 				}
