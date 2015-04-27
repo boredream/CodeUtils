@@ -1,12 +1,15 @@
 package utils;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -265,6 +268,22 @@ public class FileUtils {
 		}
 	}
 	
+	public static String parseCharset(String oldString, String oldCharset, String newCharset) {
+		byte[] bytes;
+		try {
+			bytes = oldString.getBytes(oldCharset);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			throw new RuntimeException("UnsupportedEncodingException - oldCharset is wrong");
+		}
+		try {
+			return new String(bytes, newCharset);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			throw new RuntimeException("UnsupportedEncodingException - newCharset is wrong");
+		}
+	}
+	
 	/**
 	 * 根据指定编码格式将文件读取为字符串
 	 */
@@ -345,21 +364,31 @@ public class FileUtils {
 	/**
 	 * 将字符串写入文件
 	 */
-	public static void writeString2File(String str, File file) {
-		FileWriter writer = null;
-		try {
-			writer = new FileWriter(file);
+	public static void writeString2File(String str, File file, String encoding) {
+        BufferedWriter writer = null;
+        try {
+        	if(!file.exists()) {
+				file.createNewFile();
+        	}
+        	
+			writer = new BufferedWriter(new OutputStreamWriter(  
+	                new FileOutputStream(file), encoding));
 			writer.write(str);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-
-		try {
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-			writer = null;
+		} finally {
+			try {
+				writer.close();
+			} catch (IOException e) {
+				writer = null;
+				e.printStackTrace();
+			}
 		}
 	}
+	
+    public static void writeString2File(String str, File file) {  
+    	writeString2File(str, file, getCharSet(file));
+    } 
 
 }
