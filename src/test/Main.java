@@ -1,11 +1,7 @@
 package test;
 
 
-import java.io.File;
-import java.util.List;
 
-import utils.AndroidUtils;
-import utils.FileUtils;
 
 
 
@@ -13,9 +9,14 @@ public class Main {
 
 //	private static String proPath = "E:\\workspace\\ConvenientPos";
 	private static String proPath = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\sources\\android-20";
-	private static String activityPath = "E:\\workspace\\PosTest\\src\\com\\example\\postest\\TestActivity.java";
-	private static String layoutPath = "E:\\workspace\\PosTest\\res\\layout\\test.xml";
-
+	private static String activityPath = "E:\\ConvenientMobile\\src\\com\\sfbm\\convenientmobile\\";
+	private static String layoutPath = "E:\\ConvenientMobile\\res\\layout\\";
+	private static String kugou = "E:\\反编译\\酷狗";
+	private static String lofter = "E:\\反编译\\Lofter\\lofter";
+	
+	private static String weiboSrc = "E:\\GitHub\\GeekSchool\\MyWeibo\\Demo4Eclipse\\src\\com\\boredream\\boreweibo\\";
+	private static String weiboLayout = "E:\\GitHub\\GeekSchool\\MyWeibo\\Demo4Eclipse\\res\\layout\\";
+	
 	/**
 	 * @param args
 	 */
@@ -33,25 +34,18 @@ public class Main {
 //		}
 		
 //		AndroidUtils.delNoUseSrcFile(proPath);
-//		
-//		List<File> allFiles = FileUtils.getAllFiles(proPath);
-//		for(File file : allFiles) {
-//			String string = FileUtils.readToString(file);
-//			if(string.contains("drawText")) {
-//				System.out.println(file.getAbsoluteFile());
-//			}
-//		}
 		
-//		AndroidUtils.autoFindViewById("E:\\ConvenientPos\\res\\layout\\activity_write_bankcard.xml", 
-//				"E:\\ConvenientPos\\src\\com\\convenient\\pos\\purse\\WriteBankCardInfoActivity.java");
-		AndroidUtils.autoCreateAdapter("E:\\ConvenientPos\\res\\layout\\item_bg.xml", 
-				"E:\\ConvenientPos\\src\\com\\convenient\\pos\\homepage\\BgAdapter.java");
+		
+//		AndroidUtils.autoFindViewById(layoutPath + "activity_guide.xml", 
+//				activityPath + "activity\\GuideActivity.java");
+//		AndroidUtils.autoFindViewById(weiboLayout + "activity_write_status.xml",
+//				weiboSrc + "activity\\WriteStatusActivity.java");
+//		AndroidUtils.autoCreateAdapter(weiboLayout + "item_message.xml", 
+//				weiboSrc + "adapter\\MessageAdapter.java");
 		
 //		JsonUtils.parseJson2Java();
 		
-//		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
-//		JsonBean fromJson = new Gson().fromJson(string, JsonBean.class);
-//		System.out.println(fromJson.getCode());
+//		FileUtils.getCodeLines("E:\\GitHub\\GeekSchool\\MyWeibo\\Demo4Eclipse");
 		
 //		AndroidUtils.extract2Dimen("", "", "", "12sp", "");
 //		AndroidUtils.extract2Dimen("", "", "", "12.5dp", "");

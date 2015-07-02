@@ -4,10 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map.Entry;
-
-
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -79,7 +76,7 @@ public class JsonUtils {
 				while(customIterator.hasNext()) {
 					Json2JavaElement jb = customIterator.next();
 					
-					if(!firstToUpperCase(jb.getParentJb().getName()).equals(customClassName)) {
+					if(!StringUtils.firstToUpperCase(jb.getParentJb().getName()).equals(customClassName)) {
 						continue;
 					}
 					sb.append("\t\tprivate ")
@@ -119,7 +116,7 @@ public class JsonUtils {
 			
 			// 自定义类
 			if(type == null) {
-				jb.setCustomClassName(firstToUpperCase(name));
+				jb.setCustomClassName(StringUtils.firstToUpperCase(name));
 				jb.setSouceJo(je.getAsJsonObject());
 				jsonBeans.add(jb);
 				// 自定义类, 递归
@@ -133,7 +130,7 @@ public class JsonUtils {
 				jb.setArrayDeep(deepLevel);
 				
 				if(arrayType.getJo() != null) {
-					jb.setCustomClassName(firstToUpperCase(name));
+					jb.setCustomClassName(StringUtils.firstToUpperCase(name));
 					// 数组内的末点元素类型为自定义类, 递归
 					recursionJson(arrayType.getJo(), jb);
 				} else {
@@ -192,10 +189,6 @@ public class JsonUtils {
 		return clazz;
 	}
 
-	private static String firstToUpperCase(String key) {
-		return key.substring(0, 1).toUpperCase(Locale.CHINA) + key.substring(1);
-	}
-	
 	private static Class<?> getJsonPrimitiveType(JsonElement je) {
 		Class<?> clazz = Object.class;
 		JsonPrimitive jp = je.getAsJsonPrimitive();

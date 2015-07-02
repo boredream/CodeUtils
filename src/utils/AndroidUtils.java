@@ -30,7 +30,7 @@ public class AndroidUtils {
 	 * @param srcString
 	 * @return
 	 */
-	private static String formatSingleLine(int tabNum, String srcString) {
+	public static String formatSingleLine(int tabNum, String srcString) {
 		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<tabNum; i++) {
 			sb.append("\t");
