@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -68,6 +69,40 @@ public class FileUtils {
 		}
 	}
 
+	/**
+	 * 使用文件通道的方式复制文件
+	 * 
+	 * @param srcFile
+	 *            源文件
+	 * @param tarFile
+	 *            复制到的新文件
+	 */
+	public static void copyFileByChannel(File srcFile, File tarFile) {
+		FileInputStream fi = null;
+		FileOutputStream fo = null;
+		FileChannel in = null;
+		FileChannel out = null;
+
+		try {
+			fi = new FileInputStream(srcFile);
+			fo = new FileOutputStream(tarFile);
+			in = fi.getChannel();// 得到对应的文件通道
+			out = fo.getChannel();// 得到对应的文件通道
+			// 连接两个通道，并且从in通道读取，然后写入out通道
+			in.transferTo(0, in.size(), out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fi.close();
+				in.close();
+				fo.close();
+				out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/**
 	 * 替换指定目录下全部java文件内符合自定义条件的字符串
@@ -241,6 +276,25 @@ public class FileUtils {
 		File file = new File(fileAbsPath);
 		return getName(file);
 	}
+	
+	/**
+	 * 文件名和后缀分开
+	 */
+	public static String[] getNameMap(File file) {
+		String[] nameMap = new String[2];
+		
+		String name = file.getName();
+		name = name.substring(0, name.lastIndexOf("."));
+		// 如果是.9.png结尾的,则在去除.png后缀之后还需要去除.9的后缀
+		if (file.getName().endsWith(".9.png")) {
+			name = name.substring(0, name.lastIndexOf("."));
+		}
+		
+		nameMap[0] = name;
+		nameMap[1] = file.getName().replaceFirst(name, "");
+		
+		return nameMap;
+	}
 
 	/**
 	 * 将文件读取为字符串
@@ -338,6 +392,22 @@ public class FileUtils {
 		}
 		
 		return strs;
+	}
+	
+	/**
+	 * 搜索某目录下所有文件的文本中,是否包含某个字段,如果包含打印改文件路径
+	 * 
+	 * @param path 搜索目录
+	 * @param key 包含字段
+	 */
+	public static void searchFileContent(String path, String key) {
+		List<File> allFiles = FileUtils.getAllFiles(path);
+		for(File file : allFiles) {
+			String string = FileUtils.readToString(file);
+			if(string.contains(key)) {
+				System.out.println(file.getAbsoluteFile());
+			}
+		}
 	}
 
 	/**

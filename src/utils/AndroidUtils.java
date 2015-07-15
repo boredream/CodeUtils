@@ -2,11 +2,13 @@ package utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 
 import entity.IdNamingBean;
@@ -254,6 +256,95 @@ public class AndroidUtils {
 		fileContent = fileContent.replaceFirst("\\{", "\\{\n" + sbAdapterInfo.toString());
 		// 写入回文件
 		FileUtils.writeString2File(fileContent, javaFile);
+	}
+	
+	/**
+	 * 批量修改图片sel文件名,复制的方式拷贝到同级目录下的sel文件夹中
+	 * <br>修改成功后请再使用batchCreateSelFiles方法生成对应的sel.xml文件
+	 * 
+	 * @param nPath normal普通状态图片的文件夹
+	 * @param pPath pressed按下状态图片的文件夹
+	 * @param pre 需要添加的前缀
+	 */
+	public static void batchRenameSelFiles(String nPath, String pPath, String pre, String end) {
+		String savePath = nPath.substring(0, nPath.lastIndexOf("\\"));
+		File saveDir = new File(savePath, "sel");
+		if(!saveDir.exists()) {
+			saveDir.mkdirs();
+		}
+		
+		List<File> files = FileUtils.getAllFiles(nPath);
+		for(File file : files) {
+			String fileName = pre + "_" + file.getName();
+			fileName = fileName.replace(" ", "_").toLowerCase(Locale.CHINESE);
+			
+			File nFile = new File(saveDir, fileName);
+//			file.renameTo(nFile); // rename 直接移动文件,我们希望是复制并重命名
+			FileUtils.copyFileByChannel(file, nFile);
+		}
+		List<File> filePresses = FileUtils.getAllFiles(pPath);
+		for(File file : filePresses) {
+			String[] nameMap = FileUtils.getNameMap(file);
+			
+			String fileName = pre + "_" + nameMap[0] + "_" + end + nameMap[1];
+			fileName = fileName.replace(" ", "_").toLowerCase(Locale.CHINESE);
+			
+			File nFile = new File(saveDir, fileName);
+//			file.renameTo(nFile); // rename 直接移动文件,我们希望是复制并重命名
+			FileUtils.copyFileByChannel(file, nFile);
+		}
+	}
+	
+	/**
+	 * 批量生成sel的xml文件
+	 * <br>比如图片名字是ic_img.png和按下的ic_img_pressed.png,那么最终生成的就是封装好的ic_img_sel.xml
+	 * 
+	 * @param path 包含全部图片的文件路径
+	 * @param end 特殊图片的后缀名称,比如按下是pressed,选中是checked
+	 */
+	public static void batchCreateSelFiles(String path, String end) {
+		List<File> files = FileUtils.getAllFiles(path);
+		for(File file : files) {
+			String fileName = FileUtils.getName(file);
+			// 用normal状态的图片名生成对应的_sel.xml文件
+			if(!fileName.endsWith(end)) {
+				Document doc = createSelector(fileName, end);
+//				fileName + "_" + end
+				File nFile = new File(path, fileName + "_sel.xml");
+				XmlUtil.write2xml(nFile, doc);
+			}
+		}
+	}
+	
+	/**
+	 * 生成sel的document
+	 * 
+	 * @param nName normal普通状态的图片名
+	 * @param end 特殊图片的后缀名称,最后拼成的就是:普通名字_后缀名
+	 * @return
+	 */
+	public static Document createSelector(String nName, String end) {
+		Document doc = XmlUtil.read("res\\drawable\\sel.xml");
+		List<Element> elements = XmlUtil.getAllElements(doc);
+		
+		for(Element element : elements) {
+			Attribute attr = element.attribute("drawable");
+			String value = attr.getStringValue();
+			if(value.contains(end)) {
+				// 替换特殊状态(pressed/checked)的item加后缀
+				value = value.replace(end, nName + "_" + end);
+				attr.setValue(value);
+			} else if(element.attributeCount() > 1){
+				// 移除不需要的element
+				doc.getRootElement().remove(element);
+			} else {
+				// normal状态的item不加后缀
+				value = value.replace("normal", nName);
+				attr.setValue(value);
+			}
+		}
+		
+		return doc;
 	}
 	
 	/**
