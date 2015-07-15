@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 
 import entity.IdNamingBean;
@@ -262,18 +261,19 @@ public class AndroidUtils {
 	 * 批量修改图片sel文件名,复制的方式拷贝到同级目录下的sel文件夹中
 	 * <br>修改成功后请再使用batchCreateSelFiles方法生成对应的sel.xml文件
 	 * 
-	 * @param nPath normal普通状态图片的文件夹
-	 * @param pPath pressed按下状态图片的文件夹
+	 * @param normalPath normal普通状态图片的文件夹
+	 * @param specialPath 特殊状态(pressed按下/checked选中)图片的文件夹
 	 * @param pre 需要添加的前缀
+	 * @param end 特殊状态(pressed按下/checked选中)后缀名
 	 */
-	public static void batchRenameSelFiles(String nPath, String pPath, String pre, String end) {
-		String savePath = nPath.substring(0, nPath.lastIndexOf("\\"));
+	public static void batchRenameSelFiles(String normalPath, String specialPath, String pre, String end) {
+		String savePath = normalPath.substring(0, normalPath.lastIndexOf("\\"));
 		File saveDir = new File(savePath, "sel");
 		if(!saveDir.exists()) {
 			saveDir.mkdirs();
 		}
 		
-		List<File> files = FileUtils.getAllFiles(nPath);
+		List<File> files = FileUtils.getAllFiles(normalPath);
 		for(File file : files) {
 			String fileName = pre + "_" + file.getName();
 			fileName = fileName.replace(" ", "_").toLowerCase(Locale.CHINESE);
@@ -282,7 +282,7 @@ public class AndroidUtils {
 //			file.renameTo(nFile); // rename 直接移动文件,我们希望是复制并重命名
 			FileUtils.copyFileByChannel(file, nFile);
 		}
-		List<File> filePresses = FileUtils.getAllFiles(pPath);
+		List<File> filePresses = FileUtils.getAllFiles(specialPath);
 		for(File file : filePresses) {
 			String[] nameMap = FileUtils.getNameMap(file);
 			
@@ -300,7 +300,7 @@ public class AndroidUtils {
 	 * <br>比如图片名字是ic_img.png和按下的ic_img_pressed.png,那么最终生成的就是封装好的ic_img_sel.xml
 	 * 
 	 * @param path 包含全部图片的文件路径
-	 * @param end 特殊图片的后缀名称,比如按下是pressed,选中是checked
+	 * @param end 特殊状态(pressed按下/checked选中)后缀名
 	 */
 	public static void batchCreateSelFiles(String path, String end) {
 		List<File> files = FileUtils.getAllFiles(path);
@@ -308,7 +308,7 @@ public class AndroidUtils {
 			String fileName = FileUtils.getName(file);
 			// 用normal状态的图片名生成对应的_sel.xml文件
 			if(!fileName.endsWith(end)) {
-				Document doc = createSelector(fileName, end);
+				Document doc = createSelector(fileName, fileName + "_" + end, end);
 //				fileName + "_" + end
 				File nFile = new File(path, fileName + "_sel.xml");
 				XmlUtil.write2xml(nFile, doc);
@@ -317,14 +317,93 @@ public class AndroidUtils {
 	}
 	
 	/**
-	 * 生成sel的document
+	 * 自动创建实心矩形sel,包括普通和按下状态的形状和总的sel,生成的xml文件保存在temp文件夹中
 	 * 
-	 * @param nName normal普通状态的图片名
-	 * @param end 特殊图片的后缀名称,最后拼成的就是:普通名字_后缀名
+	 * @param normalColorName 普通状态时的填充颜色
+	 * @param specialColorName 特殊状态时的填充颜色
+	 * @param cornersRadius 矩形圆角半径,需要带单位,比如4dp
+	 * @param end 特殊状态(pressed按下/checked选中)后缀名
+	 */
+	public static void createShapeSel(String normalColorName, String specialColorName, 
+			String cornersRadius, String end) {
+		String shape = "rectangle";
+		
+		Document normalShapeDoc = createShape(shape, cornersRadius, null, null, "@color/" + normalColorName);
+		Document specialShapeDoc = createShape(shape, cornersRadius, null, null, "@color/" + specialColorName);
+		
+		String normalShapeName = shape + "_" + normalColorName;
+		String specialShapeName = shape + "_" + specialColorName;
+		
+		String path = "temp";
+		File normalShapeFile = new File(path, normalShapeName + ".xml");
+		File specialShapeFile = new File(path, specialShapeName + ".xml");
+		XmlUtil.write2xml(normalShapeFile, normalShapeDoc);
+		XmlUtil.write2xml(specialShapeFile, specialShapeDoc);
+		
+		Document selDoc = AndroidUtils.createSelector(normalShapeName, specialShapeName, "pressed");
+		File selFile = new File(path, shape + "_" + normalColorName + "2" + specialColorName + "_sel.xml");
+		XmlUtil.write2xml(selFile, selDoc);
+	}
+	
+	/**
+	 * 自动生成shape(只考虑shape,corner,stroke,solid参数)
+	 * 
+	 * @param shape 形状,一共有四种:rectangle矩形,oval圆,line线,ring环
+	 * @param cornersRadius 圆角边半径,需要带单位,比如4dp
+	 * @param strokeWidth 边线宽度,需要带单位,比如1px(stroke为可选,不要边线时传入空即可)
+	 * @param strokeColor 边线颜色(可以是#ARGB或者是@color/颜色名)
+	 * @param solidColor 填充颜色(可以是#ARGB或者是@color/颜色名)
 	 * @return
 	 */
-	public static Document createSelector(String nName, String end) {
+	public static Document createShape(String shape, String cornersRadius, 
+			String strokeWidth, String strokeColor, String solidColor) {
+//		<?xml version="1.0" encoding="utf-8"?>
+//		<shape xmlns:android="http://schemas.android.com/apk/res/android"
+//		    android:shape="rectangle" >
+//
+//		    <corners android:radius="4dp" />
+//
+//		    <stroke
+//		        android:width="1px"
+//		        android:color="@color/white" />
+//
+//		    <solid android:color="@color/transparent" />
+//
+//		</shape>
+		
+		Document doc = XmlUtil.read("res\\drawable\\shape_correct.xml");
+		Element rootElement = doc.getRootElement();
+		rootElement.attribute("shape").setValue(shape);
+		
+		Element cornerElement = rootElement.element("corners");
+		cornerElement.attribute("radius").setValue(cornersRadius);
+		
+		Element strokeElement = rootElement.element("stroke");
+		if(strokeWidth == null || strokeWidth.length() == 0) {
+			rootElement.remove(strokeElement);
+		} else {
+			strokeElement.attribute("width").setValue(strokeWidth);
+			strokeElement.attribute("color").setValue(strokeColor);
+		}
+		
+		Element solidElement = rootElement.element("solid");
+		solidElement.attribute("color").setValue(solidColor);
+		
+		return doc;
+	}
+	
+	/**
+	 * 生成sel的document
+	 * 
+	 * @param normalName normal普通状态的图片名
+	 * @param specialName 特殊状态(pressed按下/checked选中)的图片名
+	 * @param end 特殊状态(pressed按下/checked选中)后缀名
+	 * @return
+	 */
+	public static Document createSelector(String normalName, String specialName, String end) {
 		Document doc = XmlUtil.read("res\\drawable\\sel.xml");
+		Element rootElement = doc.getRootElement();
+		
 		List<Element> elements = XmlUtil.getAllElements(doc);
 		
 		for(Element element : elements) {
@@ -332,14 +411,14 @@ public class AndroidUtils {
 			String value = attr.getStringValue();
 			if(value.contains(end)) {
 				// 替换特殊状态(pressed/checked)的item加后缀
-				value = value.replace(end, nName + "_" + end);
+				value = value.replace(end, specialName);
 				attr.setValue(value);
 			} else if(element.attributeCount() > 1){
 				// 移除不需要的element
-				doc.getRootElement().remove(element);
+				rootElement.remove(element);
 			} else {
 				// normal状态的item不加后缀
-				value = value.replace("normal", nName);
+				value = value.replace("normal", normalName);
 				attr.setValue(value);
 			}
 		}

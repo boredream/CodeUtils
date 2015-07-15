@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -13,10 +12,10 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
+import utils.AndroidUtils;
 import utils.CharacterParser;
 import utils.FileUtils;
 import utils.XmlUtil;
@@ -63,17 +62,6 @@ public class TempUtils {
 		for(File file : files) {
 			File nFile = new File(file.getParent(), "ic_" + file.getName());
 			file.renameTo(nFile);
-		}
-	}
-	
-	public static void batchCopyFiles() {
-		List<File> allFiles = FileUtils.getAllFiles("E:\\GitHub\\NoDrinkOut\\src\\com\\boredream\\nodrinkout\\fragment");
-		for(File file : allFiles) {
-			String string = FileUtils.readToString(file);
-			FileUtils.writeString2File(
-					string,
-					new File("E:\\GitHub\\GeekSchool\\MyWeibo\\Demo4Eclipse\\src\\com\\boredream\\boreweibo\\fragment\\" + file.getName()),
-					"UTF-8");
 		}
 	}
 	

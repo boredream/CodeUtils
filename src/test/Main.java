@@ -46,12 +46,14 @@ public class Main {
 //		AndroidUtils.extract2Dimen("", "", "", "0.22dip", "");
 //		AndroidUtils.extract2Dimen("", "", "", "999.111px", "");
 		
-		String rPath = "C:\\Users\\root\\Documents\\QQEIM Files\\2851657065\\FileRecv\\images_7.14";
-		String nPath = rPath + "\\normal";
-		String pPath = rPath + "\\pressdown";
-		AndroidUtils.batchRenameSelFiles(nPath, pPath, "ic", "pressed");
-		AndroidUtils.batchCreateSelFiles(rPath + "\\sel", "pressed");
+		// 自动处理图片sel
+//		String rootPath = "C:\\Users\\root\\Documents\\QQEIM Files\\2851657065\\FileRecv\\images_7.14";
+//		String normalPath = rootPath + "\\normal";
+//		String specialPath = rootPath + "\\pressdown";
+//		AndroidUtils.batchRenameSelFiles(normalPath, specialPath, "ic", "checked");
+//		AndroidUtils.batchCreateSelFiles(rootPath + "\\sel", "checked");
 		
+		AndroidUtils.createShapeSel("blue", "blue_dark", "4dp", "pressed");
 	}
 	
 }
