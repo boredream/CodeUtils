@@ -127,6 +127,7 @@ public class AndroidUtils {
 		//    }
 		// } 
 		StringBuilder sbOnClick = new StringBuilder();
+		sbOnClick.append("\n");
 		sbOnClick.append(formatSingleLine(1, "@Override"));
 		sbOnClick.append(formatSingleLine(1, "public void onClick(View v) {"));
 		sbOnClick.append(formatSingleLine(2, "switch (v.getId()) {"));
@@ -151,11 +152,51 @@ public class AndroidUtils {
 		sbOnClick.append(formatSingleLine(2, "}"));
 		sbOnClick.append(formatSingleLine(1, "}"));
 		
+		
+		// 是否包含RadioGroup/Button等控件,如果包含,自动生成onCheckChanged相关代码
+		boolean hasCheckedView = false;
+		// 点击事件复写的onclick方法
+		// @Override
+		// public void onCheckedChanged(RadioGroup group, int checkedId) {
+		//    switch (checkedId) {
+		//    case R.id.rb_home:
+		// 		// doSomething
+		// 		break;
+		//    }
+		// }
+		StringBuilder sbOnChecked = new StringBuilder();
+		sbOnChecked.append("\n");
+		sbOnChecked.append(formatSingleLine(1, "@Override"));
+		sbOnChecked.append(formatSingleLine(1, "public void onCheckedChanged(RadioGroup group, int checkedId) {"));
+		sbOnChecked.append(formatSingleLine(2, "switch (checkedId) {"));
+		
+		for(IdNamingBean bean : idNamingBeans) {
+			// 只设置Button的点击事件,和参数包含clickable=true的控件
+			if(bean.getViewName().equals("RadioGroup")) {
+				// 设置监听
+				// rg.setOnCheckedChangeListener(this);
+				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnCheckedChangeListener(this);"));
+				
+				hasCheckedView = true;
+			} else if(bean.getViewName().equals("RadioButton")) {
+				// 在onCheckedChanged中分别处理不同id的选中
+				sbOnChecked.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+				sbOnChecked.append("\n");
+				sbOnChecked.append(formatSingleLine(3, "break;"));
+				
+				hasCheckedView = true;
+			}
+		}
+		sbOnChecked.append(formatSingleLine(2, "}"));
+		sbOnChecked.append(formatSingleLine(1, "}"));
+		
 		sb.append(formatSingleLine(1, "}\n"));
 		
 		// 将生成的内容写入至java类文件内的起始端
-		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString() + "\n" + 
-				(hasClickView ? sbOnClick.toString() : ""));
+		fileContent = fileContent.replaceFirst("\\{", "\\{" + 
+				sb.toString() + "\n" + 
+				(hasClickView ? sbOnClick.toString() : "") + 
+				(hasCheckedView ? sbOnChecked.toString() : ""));
 		FileUtils.writeString2File(fileContent, javaFile);
 	}
 	
