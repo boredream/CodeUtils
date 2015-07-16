@@ -41,23 +41,34 @@ public class AndroidUtils {
 		return sb.toString();
 	}
 
+	private static List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
 	/**
-	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
+	 * 递归获取layout中全部控件
 	 * 
 	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
-	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
+	 * @param include		是否将include引用的布局中内容也获取到
 	 */
-	public static void autoFindViewById(String layoutXml, String activityFile) {
-		File javaFile = new File(activityFile);
+	public static void parseElementFromXml(String layoutXml, boolean include) {
 		Document document = XmlUtil.read(layoutXml);
-		List<Element> allElement = XmlUtil.getAllElements(document);
+		List<Element> docElements = XmlUtil.getAllElements(document);
 		
 		// 将view名称和对应的id名封装为一个实体类,并存至集合中
-		List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
-		for (Element element : allElement) {
-			Attribute attribute = element.attribute("id");
-			if(attribute != null) {
-				String value = attribute.getValue();
+		for (Element element : docElements) {
+			Attribute attrID = element.attribute("id");
+			
+			// 如果包含include并且需要获取其中内容则进行递归获取
+			if(element.getName().equals("include") && include) {
+				Attribute attribute = element.attribute("layout");
+				// 原布局路径和include中的布局拼成新的路径
+				String includeLayoutXml = layoutXml.substring(0, layoutXml.lastIndexOf("\\") + 1)
+						+ attribute.getValue().substring(attribute.getValue().indexOf("/") + 1) + ".xml";
+				// 继续递归获取include的布局中控件
+				parseElementFromXml(includeLayoutXml, include);
+			}
+			
+			// 保存有id的控件信息
+			if(attrID != null) {
+				String value = attrID.getValue();
 				String idName = value.substring(value.indexOf("/") + 1);
 				IdNamingBean bean = new IdNamingBean(element.getName(), idName, element);
 				if(!idNamingBeans.contains(bean)) {
@@ -65,61 +76,82 @@ public class AndroidUtils {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
+	 * 
+	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
+	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
+	 * @param include		是否将include引用的布局中内容也获取到
+	 */
+	public static void autoFindViewById(String layoutXml, String activityFile, boolean include) {
+		// 获取layout中控件信息
+		parseElementFromXml(layoutXml, include);
 		
+		// 获取activity文件
+		File javaFile = new File(activityFile);
 		// 读取java文件的字符串
 		String fileContent = FileUtils.readToString(javaFile);
 		
-		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
 		StringBuilder sb = new StringBuilder();
-		for(IdNamingBean bean : idNamingBeans) {
-			sb.append("private ")
-				.append(bean.viewName)
-				.append(" ")
-				.append(bean.idName)
-				.append(";")
-				.append("\n");
-		}
+		sb.append("\n\n");
 		
-		// 生成initView自定义方法,并在其中依次findViewById为view成员变量赋值
-		sb.append("private void initView(){");
+		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
+		// private TextView tv_name;
 		for(IdNamingBean bean : idNamingBeans) {
-			sb.append(bean.idName)
-				.append(" = ")
-				.append("(" + bean.viewName + ")")
-				.append("findViewById(R.id." + bean.idName + ")")
-				.append(";\n");
+			sb.append(formatSingleLine(1, "private " + bean.getViewName() + " " + bean.getIdName() + ";"));
 		}
-		
 		sb.append("\n");
 		
-		// 点击事件复写的onclick方法
-		StringBuilder sbOnClick = new StringBuilder();
-		sbOnClick.append("@Override\n")
-			.append("public void onClick(View v) {\n")
-			.append("switch (v.getId()) {\n");
-		
-		boolean hasClickView = false;
-		// 自动设置监听事件,默认只设置button的点击事件,和参数包含clickable=true的控件
+		// 生成initView自定义方法,并在其中依次findViewById为view成员变量赋值
+		// private void initView() {
+		//    tv_name = (TextView)findViewById(R.id.tv_name);
+		// }
+		sb.append(formatSingleLine(1, "private void initView() {"));
 		for(IdNamingBean bean : idNamingBeans) {
-			Attribute attrClickable = bean.element.attribute("clickable");
-			if(bean.viewName.contains("button") || bean.viewName.contains("Button")
-					|| (attrClickable != null && attrClickable.getValue().equals("true"))) {
-				sb.append(bean.idName)
-					.append(".setOnClickListener(this);\n");
-				
-				sbOnClick.append("case R.id." + bean.idName + ":\n")
-					.append("\n")
-					.append("break;\n");
+			sb.append(formatSingleLine(2, bean.getIdName() + " = " +
+					"(" + bean.getViewName() + ") findViewById(R.id." + bean.getIdName() + ");"));
+		}
+		sb.append("\n");
+
+		// 是否包含可点击的控件,如果包含,自动生成onClick相关代码
+		boolean hasClickView = false;
+		// 点击事件复写的onclick方法
+		// @Override
+		// public void onClick(View v) {
+		//    switch (v.getId()) {
+		//    case R.id.btn_ok:
+		// 		// doSomething
+		// 		break;
+		//    }
+		// } 
+		StringBuilder sbOnClick = new StringBuilder();
+		sbOnClick.append(formatSingleLine(1, "@Override"));
+		sbOnClick.append(formatSingleLine(1, "public void onClick(View v) {"));
+		sbOnClick.append(formatSingleLine(2, "switch (v.getId()) {"));
+		
+		for(IdNamingBean bean : idNamingBeans) {
+			Attribute attrClickable = bean.getElement().attribute("clickable");
+			// 只设置Button的点击事件,和参数包含clickable=true的控件
+			if(bean.getViewName().equals("Button")
+					|| (attrClickable != null 
+					&& attrClickable.getValue().equals("true"))) {
+				// 设置监听
+				// btn_ok.setOnClickListener(this);
+				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnClickListener(this);"));
+				// 在onclick中分别处理不同id的点击
+				sbOnClick.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+				sbOnClick.append("\n");
+				sbOnClick.append(formatSingleLine(3, "break;"));
 				
 				hasClickView = true;
 			}
 		}
+		sbOnClick.append(formatSingleLine(2, "}"));
+		sbOnClick.append(formatSingleLine(1, "}"));
 		
-		sbOnClick.append("}\n");
-		sbOnClick.append("}\n");
-		
-		sb.append("}\n");
-		
+		sb.append(formatSingleLine(1, "}\n"));
 		
 		// 将生成的内容写入至java类文件内的起始端
 		fileContent = fileContent.replaceFirst("\\{", "\\{" + sb.toString() + "\n" + 
@@ -144,23 +176,9 @@ public class AndroidUtils {
 	 * @param adapterFile	Adapter类文件名,如xxx/src/.../MyAdapter.java
 	 */
 	public static void autoCreateAdapter(String layoutXml, String adapterFile) {
-		File javaFile = new File(adapterFile);
-		Document document = XmlUtil.read(layoutXml);
-		List<Element> allElement = XmlUtil.getAllElements(document);
+		parseElementFromXml(layoutXml, true);
 		
-		// 将view名称和对应的id名封装为一个实体类,并存至集合中
-		List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
-		for (Element element : allElement) {
-			Attribute attribute = element.attribute("id");
-			if(attribute != null) {
-				String value = attribute.getValue();
-				String idName = value.substring(value.indexOf("/") + 1);
-				IdNamingBean bean = new IdNamingBean(element.getName(), idName, element);
-				if(!idNamingBeans.contains(bean)) {
-					idNamingBeans.add(bean);
-				}
-			}
-		}
+		File javaFile = new File(adapterFile);
 		
 		// 读取java文件的字符串
 		String fileContent = FileUtils.readToString(javaFile);
@@ -215,12 +233,12 @@ public class AndroidUtils {
 			// holder.item_tv = (TextView) convertView.findViewById(R.id.item_tv);
 			sbAdapterInfo.append("\t\t\t")
 				.append("holder.")
-				.append(bean.idName)
+				.append(bean.getIdName())
 				.append(" = (")
-				.append(bean.viewName)
+				.append(bean.getViewName())
 				.append(") ")
 				.append("convertView.findViewById(R.id.")
-				.append(bean.idName)
+				.append(bean.getIdName())
 				.append(");\n");
 		}
 		sbAdapterInfo.append(formatSingleLine(3, "convertView.setTag(holder);"));
@@ -244,9 +262,9 @@ public class AndroidUtils {
 			// public TextView item_tv;
 			sbAdapterInfo.append("\t\t")
 				.append("public ")
-				.append(bean.viewName)
+				.append(bean.getViewName())
 				.append(" ")
-				.append(bean.idName)
+				.append(bean.getIdName())
 				.append(";\n");
 		}
 		sbAdapterInfo.append(formatSingleLine(1, "}"));

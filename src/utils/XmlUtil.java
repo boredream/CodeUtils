@@ -86,6 +86,7 @@ public class XmlUtil {
 		Element rootElement = doc.getRootElement();
 		
 		elements = new ArrayList<Element>();
+		elements.add(rootElement);
 		getElements(rootElement);
 		return elements;
 	}
