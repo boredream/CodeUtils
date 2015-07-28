@@ -3,7 +3,7 @@
 代码工具,编译时非运行时(BufferKnife等框架属于运行时)工具
 原理是根据需求生成String的代码字符串,然后利用FileIO流写入到文件中
 
-已有核心功能包括
+# 已有核心功能包括
 AndroidUtils:
 1.自动遍历layout布局文件,生成findViewById的代码
 2.自动根据item的布局生成一个最基础的BaseAdapter适配器类
