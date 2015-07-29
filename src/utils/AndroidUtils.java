@@ -215,9 +215,10 @@ public class AndroidUtils {
 	 * 
 	 * @param layoutXml		item布局文件的绝对路径,如xxx/res/layout/item.xml
 	 * @param adapterFile	Adapter类文件名,如xxx/src/.../MyAdapter.java
+	 * @param include		是否将include引用的布局中内容也获取到
 	 */
-	public static void autoCreateAdapter(String layoutXml, String adapterFile) {
-		parseElementFromXml(layoutXml, true);
+	public static void autoCreateAdapter(String layoutXml, String adapterFile, boolean include) {
+		parseElementFromXml(layoutXml, include);
 		
 		File javaFile = new File(adapterFile);
 		

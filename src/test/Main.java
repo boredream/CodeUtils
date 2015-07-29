@@ -39,7 +39,7 @@ public class Main {
 		
 //		JsonUtils.parseJson2Java();
 		
-//		FileUtils.getCodeLines("E:\\GitHub\\GeekSchool\\MyWeibo\\Demo4Eclipse");
+//		FileUtils.getCodeLines("E:\\workspace\\GifView");
 		
 //		AndroidUtils.extract2Dimen("", "", "", "12sp", "");
 //		AndroidUtils.extract2Dimen("", "", "", "12.5dp", "");
@@ -53,7 +53,27 @@ public class Main {
 //		AndroidUtils.batchRenameSelFiles(normalPath, specialPath, "ic", "checked");
 //		AndroidUtils.batchCreateSelFiles(rootPath + "\\sel", "checked");
 		
-		AndroidUtils.createShapeSel("blue", "blue_dark", "4dp", "pressed");
+//		AndroidUtils.createShapeSel("blue", "blue_dark", "4dp", "pressed");
+		
+		String boreIM = "E:\\GitHub\\BoreIM\\";
+//		AndroidUtils.autoFindViewById(
+//				boreIM + "res\\layout\\activity_main.xml", 
+//				boreIM + "src\\com\\boredream\\im\\activity\\TestActivity.java",
+//				true);
+//		AndroidUtils.autoCreateAdapter(
+//				boreIM + "res\\layout\\item_conversation.xml", 
+//				boreIM + "src\\com\\boredream\\im\\adapter\\MessageRecentAdapter.java",
+//				true);
+		
+		String cm = "E:\\ConvenientMobile\\";
+		AndroidUtils.autoFindViewById(
+				cm + "res\\layout\\activity_psw_setting.xml", 
+				cm + "src\\com\\sfbm\\convenientmobile\\activity\\PaySettingActvity.java",
+				true);
+//		AndroidUtils.autoCreateAdapter(
+//				cm + "res\\layout\\item_conversation.xml", 
+//				cm + "src\\com\\boredream\\im\\adapter\\MessageRecentAdapter.java",
+//				true);
 	}
 	
 }
