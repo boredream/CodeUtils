@@ -44,7 +44,7 @@ FileUtils:
 
 以最常用的两个功能为例
 
-自动遍历layout布局文件,生成findViewById的代码
+一. 自动遍历layout布局文件,生成findViewById的代码
 步骤:
 
 1.布局文件xml部分自己手动编码
@@ -60,3 +60,19 @@ FileUtils:
 6.run运行代码工具类(run as Java Application)
 
 然后打开Activity文件刷新一下就可以看到自动生成的代码了
+
+
+二. 自动生成Json字符串对应的JavaBean类
+步骤:
+
+1.将json字符串(服务器给的文档示范中,或者先调用接口之后返回的字符串)复制到代码工具的Json文件夹中jsonString.txt文件中
+
+2.在代码工具的Main类的main方法中,使用方法JsonUtils.parseJson2Java
+
+3.run运行代码工具类(run as Java Application)
+
+4.打开代码工具的Json文件夹中的JsonBean.java文件,刷新一下
+
+5.将JsonBean.java中生成的javabean复制到项目里修改下类名称即可
+
+之后就可以直接用gson等工具直接把json字符串解析成我们生成的javabean根据自己的需要去使用了
