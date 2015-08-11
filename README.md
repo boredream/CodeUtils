@@ -53,11 +53,10 @@ FileUtils:
 
 3.分别右键两个文件->properties,然后复制Location文件地址
 
-4.在代码工具的Main类的main方法中,使用方法AndroidUtils.autoFindViewById
+4.在代码工具的Main类的main方法中,使用方法AndroidUtils.autoFindViewById,
+参数分别传入之前复制的布局文件地址和Activity类文件地址,最后一个参数为是否解析布局里include标签中包含的控件内容
 
-5.参数分别传入之前复制的布局文件地址和Activity类文件地址,最后一个参数为是否解析布局里include标签中包含的控件内容
-
-6.run运行代码工具类(run as Java Application)
+5.run运行代码工具类(run as Java Application)
 
 然后打开Activity文件刷新一下就可以看到自动生成的代码了
 
