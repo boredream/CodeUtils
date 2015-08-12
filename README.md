@@ -42,7 +42,7 @@ FileUtils:
 
 # 使用方法
 
-以最常用的两个功能为例,其他功能直接看注释就可以,所有方法都已添加详细的注释
+以最常用的功能为例,其他功能直接看注释就可以,所有方法都已添加详细的注释
 
 一. 自动遍历layout布局文件,生成findViewById的代码
 步骤:
@@ -59,6 +59,7 @@ FileUtils:
 5.run运行代码工具类(run as Java Application)
 
 然后打开Activity文件刷新一下就可以看到自动生成的代码了
+自动遍历item布局文件,生成BaseAdapter代码步骤和上面一样,方法换成autoCreateAdapter
 
 
 二. 自动生成Json字符串对应的JavaBean类
