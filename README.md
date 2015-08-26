@@ -62,6 +62,11 @@ FileUtils:
 
 自动遍历item布局文件,生成BaseAdapter代码步骤和上面一样,方法换成autoCreateAdapter
 
+无参数型用法
+1. 手动复制layout内容到代码工具Android/layout.xml中(生成adapter对应的是item.xml), 运行无参方法
+
+2. 打开代码工具Android/Activity.java(生成adapter对应的是Adapter.java),复制内容回项目中
+
 
 二. 自动生成Json字符串对应的JavaBean类
 步骤:
