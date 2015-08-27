@@ -50,8 +50,8 @@ JavaProject ,属于编译时(ButterKnife等框架属于运行时)工具。
 具体方法的使用以最常用的功能为例,步骤如下
 
 (其他功能直接看注释就可以,所有方法都已添加详细的注释)
-
-
+\<br>
+\<br>
 * 自动生成Activity代码 (autoCreateActivity)
 
 　　　1. 布局文件xml部分自己手动编码
@@ -64,16 +64,15 @@ JavaProject ,属于编译时(ButterKnife等框架属于运行时)工具。
 
 　　　5. 将自动生成的内容复制回项目中
 
-　　　注意: 有参数型方法会直接修改目标文件,因为是直接修改文件无法用eclipse进行撤回操作,如果使用要注意先用svn等保存内容
-
-
-
+　　　注意: 有参数型方法会直接修改目标文件,因为是直接修改文件无法用eclipse进行撤回操作,
+　　　　　　\<br>如果使用要注意先用svn等保存内容
+\<br>
+\<br>
 * 自动生成Adapter代码 (autoCreateAdapter)
 
 　　　与自动生成Activity代码同理,布局拷贝至item.layout,代码最后会生成在Android/Adapter.java中
-
-
-
+\<br>
+\<br>
 * 自动生成Json字符串对应的JavaBean类
 
 　　　1. 将json字符串复制到代码工具的Json文件夹中jsonString.txt文件中
