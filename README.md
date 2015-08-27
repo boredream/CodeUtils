@@ -1,4 +1,5 @@
-## CodeUtils
+CodeUtils
+=======
 
 代码工具,一键自动生成完整代码。
 
@@ -10,9 +11,10 @@ JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 
 
 
-## 已有核心功能包括
+已有核心功能包括
+=======
 
-# AndroidUtils:
+`AndroidUtils:`
 
 * 自动遍历layout布局文件,生成findViewById的代码
 
