@@ -3,7 +3,7 @@ CodeUtils
 
 代码工具,一键自动生成完整代码。
 
-JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
+JavaProject ,属于编译时(ButterKnife等框架属于运行时)工具。
 
 原理是根据功能需要生成代码文本,然后利用FileIO流写入到文件中。
 
@@ -25,7 +25,7 @@ JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 * 自动遍历文件中#RGB颜色,或DP/SP的大小,将其抽取到dimens.xml和colors.xml文件中
 
 
-# FileUtils:
+`FileUtils:`
 
 * 遍历路径下全部文件
 
@@ -34,7 +34,7 @@ JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 * 获取项目代码行数(统计全部.xml和.java文件)
 
 
-# 其他:
+`其他:`
 
 * 自动根据服务器返回的json字符串生成对应的类文件
 
@@ -42,15 +42,16 @@ JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 
 
 
-## 使用方法
+使用方法
+=======
 
-    在eclipse中导入成 JavaProject
-    具体方法的使用以最常用的功能为例,步骤如下
-    其他功能直接看注释就可以,所有方法都已添加详细的注释
+在eclipse中导入成 JavaProject
+
+具体方法的使用以最常用的功能为例,步骤如下
+
+(其他功能直接看注释就可以,所有方法都已添加详细的注释)
 
 * 自动生成Activity代码 (autoCreateActivity)
-
-步骤:
 
 1. 布局文件xml部分自己手动编码
 
@@ -71,8 +72,6 @@ JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 
 
 * 自动生成Json字符串对应的JavaBean类
-
-步骤:
 
 1. 将json字符串复制到代码工具的Json文件夹中jsonString.txt文件中
 
