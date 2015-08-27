@@ -51,38 +51,32 @@ JavaProject ,属于编译时(ButterKnife等框架属于运行时)工具。
 
 (其他功能直接看注释就可以,所有方法都已添加详细的注释)
 
+`自动生成Activity代码 (autoCreateActivity)`
 
+　1. 布局文件xml部分自己手动编码
 
-* 自动生成Activity代码 (autoCreateActivity)
+　2. 手动复制layout内容到代码工具Android/layout.xml中
 
-　　　1. 布局文件xml部分自己手动编码
+　3. 在代码工具的Main类的main方法中,使用无参数方法 autoCreateActivity
 
-　　　2. 手动复制layout内容到代码工具Android/layout.xml中
+　4. 打开代码工具Android/Activity.java,刷新一下
 
-　　　3. 在代码工具的Main类的main方法中,使用无参数方法 autoCreateActivity
+　5. 将自动生成的内容复制回项目中
 
-　　　4. 打开代码工具Android/Activity.java,刷新一下
+　注意: 有参数型方法会直接修改目标文件,无法用eclipse进行撤回,需要配合svn使用
 
-　　　5. 将自动生成的内容复制回项目中
+`自动生成Adapter代码 (autoCreateAdapter)`
 
-　　　注意: 有参数型方法会直接修改目标文件,无法用eclipse进行撤回,需要配合svn使用
+　与自动生成Activity代码同理,布局拷贝至item.layout,代码最后会生成在Android/Adapter.java中
 
+`自动生成Json字符串对应的JavaBean类 (parseJson2Java)`
 
+　1. 将json字符串复制到代码工具的Json文件夹中jsonString.txt文件中
 
-* 自动生成Adapter代码 (autoCreateAdapter)
+　2. 在代码工具的Main类的main方法中,使用方法JsonUtils.parseJson2Java
 
-　　　与自动生成Activity代码同理,布局拷贝至item.layout,代码最后会生成在Android/Adapter.java中
+　3. 打开代码工具的Json文件夹中的JsonBean.java文件,刷新一下
 
+　4. 将JsonBean.java中生成的javabean复制到项目里修改下类名称即可
 
-
-* 自动生成Json字符串对应的JavaBean类
-
-　　　1. 将json字符串复制到代码工具的Json文件夹中jsonString.txt文件中
-
-　　　2. 在代码工具的Main类的main方法中,使用方法JsonUtils.parseJson2Java
-
-　　　3. 打开代码工具的Json文件夹中的JsonBean.java文件,刷新一下
-
-　　　4. 将JsonBean.java中生成的javabean复制到项目里修改下类名称即可
-
-　　　之后就可以直接用gson等工具直接把json字符串解析成我们生成的javabean根据自己的需要去使用了
+　之后就可以直接用gson等工具直接把json字符串解析成我们生成的javabean根据自己的需要去使用了
