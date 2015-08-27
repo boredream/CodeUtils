@@ -1,13 +1,13 @@
 # CodeUtils
 
-代码工具,编译时(ButterKnife等框架属于运行时)工具
-原理是根据功能需要生成代码文本,然后利用FileIO流写入到文件中
+代码工具,一键自动生成完整代码。
 
-最终生成的代码和手写基本一模一样,因此基本上无任何学习成本
+JavaProject,属于编译时(ButterKnife等框架属于运行时)工具。
 
-注意:
-由于是通过文件流的方式直接修改,所以eclipse等编译工具无法进行撤回操作
-切记一定要配合github或者svn等代码管理工具一起使用
+原理是根据功能需要生成代码文本,然后利用FileIO流写入到文件中。
+
+最终生成的代码和手写基本一模一样,因此基本上无任何学习成本。
+
 
 
 # 已有核心功能包括
@@ -44,41 +44,38 @@ FileUtils:
 
 以最常用的功能为例,其他功能直接看注释就可以,所有方法都已添加详细的注释
 
-一. 自动遍历layout布局文件,生成findViewById的代码
+一. 自动生成Activity代码 (autoCreateActivity)
+
 步骤:
 
 1. 布局文件xml部分自己手动编码
 
-2. 新建一个Activity的.java文件
+2. 手动复制layout内容到代码工具Android/layout.xml中
 
-3. 分别右键两个文件->properties,然后复制Location文件地址
+3. 在代码工具的Main类的main方法中,使用无参数方法 autoCreateActivity
 
-4. 在代码工具的Main类的main方法中,使用方法AndroidUtils.autoFindViewById,
-参数分别传入之前复制的布局文件地址和Activity类文件地址,最后一个参数为是否解析布局里include标签中包含的控件内容
+4. 打开代码工具Android/Activity.java,刷新一下
 
-5. run运行代码工具类(run as Java Application)
+5. 将自动生成的内容复制回项目中
 
-然后打开Activity文件刷新一下就可以看到自动生成的代码了
-
-自动遍历item布局文件,生成BaseAdapter代码步骤和上面一样,方法换成autoCreateAdapter
-
-无参数型用法
-1. 手动复制layout内容到代码工具Android/layout.xml中(生成adapter对应的是item.xml), 运行无参方法
-
-2. 打开代码工具Android/Activity.java(生成adapter对应的是Adapter.java),复制内容回项目中
+注意: 有参数型方法会直接修改目标文件,因为是直接修改文件无法用eclipse进行撤回操作,如果使用要注意先用svn等保存内容
 
 
-二. 自动生成Json字符串对应的JavaBean类
+二. 自动生成Adapter代码 (autoCreateAdapter)
+
+与自动生成Activity代码同理,布局拷贝至item.layout,代码最后会生成在Android/Adapter.java中
+
+
+三. 自动生成Json字符串对应的JavaBean类
+
 步骤:
 
-1. 将json字符串(服务器给的文档示范中,或者先调用接口之后返回的字符串)复制到代码工具的Json文件夹中jsonString.txt文件中
+1. 将json字符串复制到代码工具的Json文件夹中jsonString.txt文件中
 
 2. 在代码工具的Main类的main方法中,使用方法JsonUtils.parseJson2Java
 
-3. run运行代码工具类(run as Java Application)
+3. 打开代码工具的Json文件夹中的JsonBean.java文件,刷新一下
 
-4. 打开代码工具的Json文件夹中的JsonBean.java文件,刷新一下
-
-5. 将JsonBean.java中生成的javabean复制到项目里修改下类名称即可
+4. 将JsonBean.java中生成的javabean复制到项目里修改下类名称即可
 
 之后就可以直接用gson等工具直接把json字符串解析成我们生成的javabean根据自己的需要去使用了
