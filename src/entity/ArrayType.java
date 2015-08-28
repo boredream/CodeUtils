@@ -2,17 +2,20 @@ package entity;
 
 import com.google.gson.JsonObject;
 
+/**
+ * 集合类型数据
+ */
 public class ArrayType {
 	/**
-	 * 类型为数组中泛型类型
+	 * 集合中泛型的类型
 	 */
 	private Class<?> type;
 	/**
-	 * 如果数组泛型为自定义类型,用此参数保存数据
+	 * 如果集合泛型为自定义类型,用此参数保存数据
 	 */
 	private JsonObject jo;
 	/**
-	 * 数组深度,如果是3则为ArrayList<ArrayList<ArrayList<>>>
+	 * 集合深度,如果是3则为ArrayList<ArrayList<ArrayList<>>>
 	 */
 	private int arrayDeep;
 

@@ -18,73 +18,107 @@ import entity.Json2JavaElement;
 public class JsonUtils {
 	
 	/**
-	 * 将json字符串拷贝至 /Json/JsonString.txt 文件中去,然后调用该方法,<br>
-	 * 就会在/Json/JsonString.txt中生成一个对应的JavaBean类<br><br>
-	 * 注意: 如果json字符串中有null或者空数组[]这种无法判断类型的,会统一使用Object类型
+	 * 将json字符串转换为对应的javabean
+	 * 
+	 * <p>
+	 * 用法:<br>
+	 * 将json字符串拷贝至本项目中/Json/JsonString.txt 文件中去,然后调用该方法,<br>
+	 * 就会在本项目中/Json/JsonBean.java中生成一个对应的JavaBean类<br><br>
+	 * 注意:<br>
+	 * 如果json字符串中有null或者空集合[]这种无法判断类型的,会统一使用Object类型
 	 */
 	public static void parseJson2Java() {
+		/// 读取json字符串
 		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
-		// 解析获取整个json结构
+		
+		// 解析获取整个json结构集合
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(string);
 		JsonObject jo = element.getAsJsonObject();
 		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jo);
-		// 利用获取到的json结构创建对应的javabean文件内容
+		
+		// 利用获取到的json结构集合,创建对应的javabean文件内容
 		String javaBeanStr = createJavaBean(jsonBeanTree);
+		
 		// 将生成的内容写入到文件中去
 		FileUtils.writeString2File(javaBeanStr, new File("Json\\JsonBean.java"));
 	}
 	
+	/**
+	 * 根据解析好的数据创建生成对应的javabean类字符串
+	 * 
+	 * @param jsonBeanTree 解析好的数据集合
+	 * @return 生成的javabean类字符串
+	 */
 	private static String createJavaBean(List<Json2JavaElement> jsonBeanTree) {
 		StringBuilder sb = new StringBuilder();
+		
+		// 是否包含自定义子类
 		boolean hasCustomeClass = false;
 		List<String> customClassNames = new ArrayList<String>();
 		
 		sb.append("public class JsonBeans {\n");
 		
+		// 由于在循环的时候有移除操作,所以使用迭代器遍历
 		Iterator<Json2JavaElement> iterator = jsonBeanTree.iterator();
 		while(iterator.hasNext()) {
-			Json2JavaElement jb = iterator.next();
+			Json2JavaElement j2j = iterator.next();
 			
-			if(jb.getCustomClassName() != null && !customClassNames.contains(jb.getCustomClassName())) {
-				customClassNames.add(jb.getCustomClassName());
+			// 保存自定义类名称至集合中,注意已经包含的不再添加
+			if(j2j.getCustomClassName() != null && !customClassNames.contains(j2j.getCustomClassName())) {
+				customClassNames.add(j2j.getCustomClassName());
 			}
 			
-			if(jb.getParentJb() != null) {
+			if(j2j.getParentJb() != null) {
+				// 如果有parent,则为自定义子类,设置标识符不做其他操作
 				hasCustomeClass = true;
-				continue;
+			} else {
+				// 如果不是自定义子类,则根据类型名和控件对象名生成变量申明语句
+				// private TextView tv_name;
+				sb.append("\tprivate ")
+					.append(getTypeName(j2j))
+					.append(" ")
+					.append(j2j.getName())
+					.append(";\n");
+				
+				// 已经使用的数据会移除,则集合中只会剩下自定义子类相关的元素数据,将在后续的循环中处理
+				iterator.remove();
 			}
-			
-			// 第一轮只设置根变量
-			sb.append("\tprivate ")
-				.append(getTypeName(jb))
-				.append(" ")
-				.append(jb.getName())
-				.append(";\n");
-			// 移除根变量,方便后续循环设置自定义类,可以减少后续循环次数
-			iterator.remove();
 		}
 		
 		// 设置所有自定义类
 		if(hasCustomeClass) {
 			for(String customClassName : customClassNames) {
+				// 根据名称申明子类
+				
+				// /*sub class*/
+				// public class CustomClass {
 				sb.append("\n\t/*sub class*/\n");
 				sb.append("\tpublic class ")
 					.append(customClassName)
 					.append(" {\n");
+				
+				// 循环余下的集合
 				Iterator<Json2JavaElement> customIterator = jsonBeanTree.iterator();
 				while(customIterator.hasNext()) {
-					Json2JavaElement jb = customIterator.next();
+					Json2JavaElement j2j = customIterator.next();
 					
-					if(!StringUtils.firstToUpperCase(jb.getParentJb().getName()).equals(customClassName)) {
-						continue;
+					// 根据当前数据的parent名称,首字母转为大写生成parent的类名
+					String parentClassName = StringUtils.firstToUpperCase(j2j.getParentJb().getName());
+					
+					// 如果当前数据属于本次外层循环需要处理的子类
+					if(parentClassName.equals(customClassName)) {
+						// 根据类型名和控件对象名生成变量申明语句
+						// private TextView tv_name;
+						sb.append("\t\tprivate ")
+							.append(getTypeName(j2j))
+							.append(" ")
+							.append(j2j.getName())
+							.append(";\n");
+						
+						// 已经使用的数据会移除,减少下一次外层循环的遍历次数
+						customIterator.remove();
 					}
-					sb.append("\t\tprivate ")
-						.append(getTypeName(jb))
-						.append(" ")
-						.append(jb.getName())
-						.append(";\n");
-					customIterator.remove();
 				}
 				sb.append("\t}\n");
 			}
@@ -94,107 +128,170 @@ public class JsonUtils {
 		return sb.toString();
 	}
 	
+	/**
+	 *  递归遍历整个json数据结构,保存至jsonBeans集合中
+	 *  
+	 *  @param rootJo 根json对象
+	 *  @return 解析好的数据集合
+	 */
 	private static List<Json2JavaElement> getJsonBeanTree(JsonObject rootJo) {
 		jsonBeans = new ArrayList<Json2JavaElement>();
 		recursionJson(rootJo, null);
 		return jsonBeans;
 	}
 	
+	/**
+	 * 保存递归获取到数据的集合
+	 */
 	private static List<Json2JavaElement> jsonBeans = new ArrayList<Json2JavaElement>(); 
-	private static void recursionJson(JsonObject jo, Json2JavaElement parentJb) {
+	/**
+	 * 递归获取json数据
+	 * 
+	 * @param jo 当前递归解析的json对象
+	 * @param parent 已经解析好的上一级数据,无上一级时传入null
+	 */
+	private static void recursionJson(JsonObject jo, Json2JavaElement parent) {
+		// 循环整个json对象的键值对
 		for (Entry<String, JsonElement> entry : jo.entrySet()) {
+			// json对象的键值对建构为 {"key":value}
+			// 其中,值可能是基础类型,也可能是集合或者对象,先解析为json元素
 			String name = entry.getKey();
 			JsonElement je = entry.getValue();
 			
-			Json2JavaElement jb = new Json2JavaElement();
-			Class<?> type = getJsonType(je);
-			
-			jb.setName(name);
-			if(parentJb != null) {
-				jb.setParentJb(parentJb);
+			Json2JavaElement j2j = new Json2JavaElement();
+			j2j.setName(name);
+			if(parent != null) {
+				j2j.setParentJb(parent);
 			}
 			
-			// 自定义类
+			// 获取json元素的类型,可能为多种情况,如下
+			Class<?> type = getJsonType(je);
 			if(type == null) {
-				jb.setCustomClassName(StringUtils.firstToUpperCase(name));
-				jb.setSouceJo(je.getAsJsonObject());
-				jsonBeans.add(jb);
-				// 自定义类, 递归
-				recursionJson(je.getAsJsonObject(), jb);
+				// 自定义类型
+				
+				// json键值的首字母转为大写,作为自定义类名
+				j2j.setCustomClassName(StringUtils.firstToUpperCase(name));
+				// ?
+				j2j.setSouceJo(je.getAsJsonObject());
+				jsonBeans.add(j2j);
+				
+				// 自定义类需要继续递归,解析自定义类中的json结构
+				recursionJson(je.getAsJsonObject(), j2j);
 			} else if(type.equals(JsonArray.class)) {
+				// 集合类型
+				
+				// 重置集合数据,并获取当前json元素的集合类型信息
 				deepLevel = 0;
 				arrayType = new ArrayType();
 				getJsonArrayType(je.getAsJsonArray());
 				
-				jb.setArray(true);
-				jb.setArrayDeep(deepLevel);
+				j2j.setArray(true);
+				j2j.setArrayDeep(deepLevel);
 				
 				if(arrayType.getJo() != null) {
-					jb.setCustomClassName(StringUtils.firstToUpperCase(name));
-					// 数组内的末点元素类型为自定义类, 递归
-					recursionJson(arrayType.getJo(), jb);
+					j2j.setCustomClassName(StringUtils.firstToUpperCase(name));
+					// 集合内的末点元素类型为自定义类, 递归
+					recursionJson(arrayType.getJo(), j2j);
 				} else {
-					jb.setType(arrayType.getType());
+					j2j.setType(arrayType.getType());
 				}
-				jsonBeans.add(jb);
+				jsonBeans.add(j2j);
 			} else {
-				jb.setType(type);
-				jsonBeans.add(jb);
+				// 其他情况,一般都是String,int等基础数据类型
+				
+				j2j.setType(type);
+				jsonBeans.add(j2j);
 			}
 		}
 	}
 	
+	/**
+	 * 集合深度,如果是3则为ArrayList<ArrayList<ArrayList<>>>
+	 */
 	private static int deepLevel = 0;
+	/**
+	 * 集合类型数据,用于保存递归获取到的集合信息
+	 */
 	private static ArrayType arrayType = new ArrayType();
+	/**
+	 * 递归获取集合的深度和类型等信息
+	 * 
+	 * @param jsonArray json集合数据
+	 */
 	private static void getJsonArrayType(JsonArray jsonArray) {
+		// 每次递归,集合深度+1
 		deepLevel ++;
-		// 如果数组为空,则数组内元素类型直接设为Object
+		
 		if (jsonArray.size() == 0) {
+			// 如果集合为空,则集合内元素类型无法判断,直接设为Object
 			arrayType.setArrayDeep(deepLevel);
 			arrayType.setType(Object.class);
 		} else {
-			// 非空则取出第一个元素
+			// 如果集合非空则取出第一个元素进行判断
 			JsonElement childJe = jsonArray.get(0);
+			
+			// 获取json元素的类型
 			Class<?> type = getJsonType(childJe);
 			
 			if(type == null) {
+				// 自定义类型
+				
+				// 设置整个json对象,用于后续进行进一步解析处理
 				arrayType.setJo(childJe.getAsJsonObject());
 				arrayType.setArrayDeep(deepLevel);
 			} else if (type.equals(JsonArray.class)) {
-				// recursion 如果数组里面还是数组,则递归本方法
+				// 集合类型
+				
+				// 如果集合里面还是集合,则递归本方法
 				getJsonArrayType(childJe.getAsJsonArray());
-				return;
 			} else {
+				// 其他情况,一般都是String,int等基础数据类型
+				
 				arrayType.setArrayDeep(deepLevel);
 				arrayType.setType(type);
 			}
 		}
 	}
 	
+	/**
+	 * 获取json元素的类型
+	 * 
+	 * @param je json元素
+	 * @return 类型
+	 */
 	private static Class<?> getJsonType(JsonElement je) {
 		Class<?> clazz = null;
 		
 		if(je.isJsonNull()) {
-			// type视为object类型
+			// 数据为null时,无法获取类型,则视为object类型
 			clazz = Object.class;
 		} else if(je.isJsonPrimitive()) {
-			// primitive类型可能是数字或者是布尔型
+			// primitive类型为基础数据类型,如String,int等
 			clazz = getJsonPrimitiveType(je);
 		} else if(je.isJsonObject()) {
-			// 自定义类型参数,返回null
+			// 自定义类型参数则返回null,让json的解析递归进行进一步处理
 			clazz = null;
 		} else if(je.isJsonArray()) {
+			// json集合类型
 			clazz = JsonArray.class;
 		}
 		return clazz;
 	}
 
+	/**
+	 * 将json元素中的json基础类型,转换为String.class,int.class等具体的类型
+	 * 
+	 * @param je json元素
+	 * @return 具体数据类型,无法预估的类型统一视为Object.class类型
+	 */
 	private static Class<?> getJsonPrimitiveType(JsonElement je) {
 		Class<?> clazz = Object.class;
 		JsonPrimitive jp = je.getAsJsonPrimitive();
+		// json中的类型会将数字集合成一个总的number类型,需要分别判断
 		if(jp.isNumber()) {
 			String num = jp.getAsString();
 			if(num.contains(".")) {
+				// 如果包含"."则为小数,先尝试解析成float,如果失败则视为double
 				try {
 					Float.parseFloat(num);
 					clazz = float.class;
@@ -202,6 +299,7 @@ public class JsonUtils {
 					clazz = double.class;
 				}
 			} else {
+				// 如果不包含"."则为整数,先尝试解析成int,如果失败则视为long
 				try {
 					Integer.parseInt(num);
 					clazz = int.class;
@@ -214,19 +312,25 @@ public class JsonUtils {
 		} else if(jp.isString()) {
 			clazz = String.class;
 		}
+		// json中没有其他具体类型如byte等
 		return clazz;
 	}
 	
-	private static String getTypeName(Json2JavaElement jb) {
-		// 无法获取类型时,默认Object
+	/**
+	 * 获取类型名称字符串
+	 * 
+	 * @param j2j 转换数据元素
+	 * @return 类型名称,无法获取时,默认Object
+	 */
+	private static String getTypeName(Json2JavaElement j2j) {
 		String name = "Object";
 		
-		Class<?> type = jb.getType();
-		if(jb.getCustomClassName() != null && jb.getCustomClassName().length() > 0) {
-			// 自定义类,类型名称直接用自定义的名称customClassName
-			name = jb.getCustomClassName();
+		Class<?> type = j2j.getType();
+		if(j2j.getCustomClassName() != null && j2j.getCustomClassName().length() > 0) {
+			// 自定义类,直接用自定义的名称customClassName
+			name = j2j.getCustomClassName();
 		} else {
-			// 非自定义类即可以获取类型,则解析类型class名称
+			// 非自定义类即可以获取类型,解析类型class的名称,如String.class就对应String
 			name = type.getName();
 			int lastIndexOf = name.lastIndexOf(".");
 			if(lastIndexOf != -1) {
@@ -234,12 +338,14 @@ public class JsonUtils {
 			}
 		}
 
+		// 如果集合深度大于0,则为集合数据,根据深度进行ArrayList嵌套
+		// 深度为3就是ArrayList<ArrayList<ArrayList<type>>>
 		StringBuilder sb = new StringBuilder();
-		for(int i=0; i<jb.getArrayDeep(); i++) {
+		for(int i=0; i<j2j.getArrayDeep(); i++) {
 			sb.append("ArrayList<");
 		}
 		sb.append(name);
-		for(int i=0; i<jb.getArrayDeep(); i++) {
+		for(int i=0; i<j2j.getArrayDeep(); i++) {
 			sb.append(">");
 		}
 		return sb.toString();

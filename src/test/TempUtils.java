@@ -4,14 +4,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
@@ -19,6 +21,7 @@ import utils.AndroidUtils;
 import utils.CharacterParser;
 import utils.FileUtils;
 import utils.XmlUtil;
+import entity.IdNamingBean;
 
 public class TempUtils {
 
@@ -135,6 +138,144 @@ public class TempUtils {
 		}
 		
 		System.out.println(sb.toString());
+	}
+	
+	/**
+	 * 自动生成TextView size设置代码
+	 * 
+	 * @param isAutoSetId 是否自动给没有id的TextView添加id
+	 */
+	public static void autoCreateSizeSet(boolean isAutoSetId) {
+		// TODO 自动设置文字id的前缀
+		String tvId4SetSizePre = "@+id/tv_set_size";
+		// 自动设置文字id的后缀
+		int tvId4SetSizeEnd = 1;
+		
+		// TODO 项目中的文字大小数组,项目中如果有变化需要修改此处
+		Integer[] TEXT_SIZE = { 20, 18, 16, 14, 12, 28 };
+		// 数组转成集合,方便indexOf操作
+		List<Integer> TEXT_SIZE_LIST = Arrays.asList(TEXT_SIZE);
+		// TODO 如果size不在集合中,则默认获取的索引
+		int defaultIndex = 3;
+		
+		Document document = XmlUtil.read("temp\\SetSize\\layout_size.xml");
+		List<Element> docElements = XmlUtil.getAllElements(document);
+		
+		List<IdNamingBean> tvIdNameBeans = new ArrayList<IdNamingBean>();
+		StringBuilder sbSetTextSize = new StringBuilder();
+		
+		// 遍历layout中全部元素
+		for (int i=0; i<docElements.size(); i++) {
+			Element element = docElements.get(i);
+			
+			// 如果不是TextView,跳过
+			if(!element.getName().equals("TextView")) {
+				continue;
+			}
+			
+			//////////////	 处理textSize	 ////////////////
+			Attribute attrTextSize = element.attribute("textSize");
+
+			// TODO 另一种处理,没有textSize参数时不做setSize操作
+//			if(attrTextSize == null) {
+//				System.out.println("布局内第" + i + "个控件TextView未设置textSize");
+//				continue;
+//			}
+
+			int indexOf = -1;
+			if(attrTextSize == null) {
+				// 没有textSize参数时,取默认的size
+				indexOf = defaultIndex;
+			} else {
+				// 有textSize再去数据中获取索引
+				
+				int textSizeNum = -1;
+				// 获取文字大小
+				String textSize = attrTextSize.getValue()
+						// 排除单位
+						.replace("dp", "")
+						.replace("dip", "")
+						.replace("px", "")
+						.replace("sp", "");
+				try {
+					textSizeNum = Integer.parseInt(textSize);
+				} catch (Exception e) {
+					textSizeNum = -1;
+				}
+				
+				if(textSizeNum == -1) {
+					System.out.println("布局内第" + i + "个控件TextView的textSize格式不对");
+					continue;
+				}
+				
+				indexOf = TEXT_SIZE_LIST.indexOf(textSizeNum);
+				if(indexOf == -1) {
+					// TODO 另一种处理,获取不到时不做setSize操作
+//					System.out.println("布局内第" + i + "个TextView的textSize不在TEXT_SIZE数组中");
+//					continue;
+					
+					// 获取不到时,去默认索引位置的size
+					indexOf = defaultIndex;
+				}
+			}
+			
+			//////////////	处理id	 ////////////////
+			Attribute attrID = element.attribute("id");
+				
+			String id = null;
+			if(attrID == null) {
+				// 如果没有id,且需要自动设置一个
+				if(isAutoSetId) {
+					id = tvId4SetSizePre + (tvId4SetSizeEnd++);
+					element.addAttribute("android:id", id);
+				}
+			} else {
+				// 如果已有id
+				id = attrID.getValue();
+			}
+			
+			if(id == null) {
+				System.out.println("布局内第" + i + "个控件TextView没有id的不做处理");
+				continue;
+			}
+			
+			// 去除"@+id/"后的id名称
+			String idName = id.replace("@+id/", "");
+
+			tvIdNameBeans.add(new IdNamingBean(element.getName(), idName, element));
+			
+			// 例 tv_set_size1.setTextSize(Constant.TEXT_SIZE[0] * TxtManager.getInstance().getTxtSize(context));
+			String setSizeLine = idName + ".setTextSize(Constant.TEXT_SIZE[" + indexOf + 
+					"] * TxtManager.getInstance().getTxtSize(context));";
+			sbSetTextSize.append(AndroidUtils.formatSingleLine(2, setSizeLine));
+		}
+		
+		// 如果要自动setId则将设置好id的xml写回布局layout_size_new.xml中
+		if(isAutoSetId) {
+			XmlUtil.write2xml(new File("temp\\SetSize\\layout_size_new.xml"), document);
+		}
+		
+		AndroidUtils.idNamingBeans = tvIdNameBeans;
+		// 解析idNamingBeans集合中的信息,生成页面文本信息
+		String activityContent = AndroidUtils.createActivityContent();
+		
+		// 封装到onResume里
+//		@Override
+//		protected void onResume() {
+//			super.onResume();
+//			tv_set_size1.setTextSize(Constant.TEXT_SIZE[0] * TxtManager.getInstance().getTxtSize(context))
+//		}
+		sbSetTextSize.insert(0, AndroidUtils.formatSingleLine(2, "super.onResume();"));
+		sbSetTextSize.insert(0, AndroidUtils.formatSingleLine(1, "protected void onResume() {"));
+		sbSetTextSize.insert(0, AndroidUtils.formatSingleLine(1, "@Override"));
+		sbSetTextSize.append(AndroidUtils.formatSingleLine(1, "}"));
+		
+		activityContent += sbSetTextSize.toString();
+		
+		FileUtils.writeString2File(activityContent, new File("temp\\SetSize\\Layout_Size.java"));
+		
+		System.out.println("--------------");
+		System.out.println("代码生成正确,请在SetSize/Layout_Size.java中查看");
 	}
 	
 }

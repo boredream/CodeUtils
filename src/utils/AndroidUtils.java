@@ -41,7 +41,7 @@ public class AndroidUtils {
 		return sb.toString();
 	}
 
-	private static List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
+	public static List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
 	/**
 	 * 递归获取layout中全部控件
 	 * 
@@ -79,21 +79,53 @@ public class AndroidUtils {
 	}
 	
 	/**
+	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名<br>
+	 * <br>
+	 * 使用前需要将xml文件内容复制到本项目里的Android文件夹下的layout.xml文件中<br>
+	 * 运行该方法后,根据布局文件生成的相关代码会在Android文件夹下Activity.java中查看,可以复制到自己项目里使用
+	 */
+	public static void autoCreateActivity() {
+		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		parseElementFromXml("Android\\layout.xml", false);
+		
+		// 解析idNamingBeans集合中的信息,生成页面文本信息
+		String activityContent = createActivityContent();
+		
+		// 获取activity文件
+		File javaFile = new File("Android\\Activity.java");
+		
+		// 将生成的内容写入至java类文件中
+		FileUtils.writeString2File(activityContent, javaFile);
+	}
+	
+	/**
 	 * 自动遍历xml中所有带id的控件,在activity文件中设置对应变量,变量名为id名
 	 * 
 	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
 	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
 	 * @param include		是否将include引用的布局中内容也获取到
 	 */
-	public static void autoFindViewById(String layoutXml, String activityFile, boolean include) {
-		// 获取layout中控件信息
+	public static void autoCreateActivity(String layoutXml, String activityFile, boolean include) {
+		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
 		parseElementFromXml(layoutXml, include);
+		
+		// 解析idNamingBeans集合中的信息,生成页面文本信息
+		String activityContent = createActivityContent();
 		
 		// 获取activity文件
 		File javaFile = new File(activityFile);
 		// 读取java文件的字符串
 		String fileContent = FileUtils.readToString(javaFile);
 		
+		// 将生成的内容写入至java类文件内的起始端
+		fileContent = fileContent.replaceFirst("\\{", "\\{" + activityContent);
+		FileUtils.writeString2File(fileContent, javaFile);
+	}
+
+	/**
+	 * 生成activity文件内容
+	 */
+	public static String createActivityContent() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("\n\n");
 		
@@ -192,22 +224,32 @@ public class AndroidUtils {
 		
 		sb.append(formatSingleLine(1, "}\n"));
 		
-		// 将生成的内容写入至java类文件内的起始端
-		fileContent = fileContent.replaceFirst("\\{", "\\{" + 
-				sb.toString() + "\n" + 
+		String activityContent = sb.toString() + "\n" + 
 				(hasClickView ? sbOnClick.toString() : "") + 
-				(hasCheckedView ? sbOnChecked.toString() : ""));
-		FileUtils.writeString2File(fileContent, javaFile);
+				(hasCheckedView ? sbOnChecked.toString() : "");
+		return activityContent;
 	}
 	
 	/**
-	 * 根据layout.xml自动申明所有带id的变量,以及进行最基本的click点击事件等代码处理
-	 * 
-	 * @param layoutXml		布局文件的绝对路径,如xxx/res/layout/main.xml
-	 * @param activityFile	Activity类文件名,如xxx/src/.../MainActivity.java
+	 * 自动遍历xml中所有带id的控件,在adapter文件中生成最基本的代码<br>
+	 * <br>
+	 * 使用前需要将xml文件内容复制到本项目里的Android文件夹下的item.xml文件中<br>
+	 * 运行该方法后,根据布局文件生成的相关代码会在Android文件夹下Adapter.java中查看,可以复制到自己项目里使用
 	 */
-	public static void autoCreateActivity(String layoutXml, String activityFile) {
+	public static void autoCreateAdapter() {
+		String layoutXml = "Android\\item.xml";
 		
+		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		parseElementFromXml(layoutXml, false);
+		
+		// 解析idNamingBeans集合中的信息,生成适配器文本信息
+		String adapterContent = createAdapterContent(layoutXml);
+		
+		// 获取adapter文件
+		File javaFile = new File("Android\\Adapter.java");
+		
+		// 将生成的内容写入至java类文件中
+		FileUtils.writeString2File(adapterContent, javaFile);
 	}
 	
 	/**
@@ -220,16 +262,28 @@ public class AndroidUtils {
 	public static void autoCreateAdapter(String layoutXml, String adapterFile, boolean include) {
 		parseElementFromXml(layoutXml, include);
 		
-		File javaFile = new File(adapterFile);
+		String adapterContent = createAdapterContent(layoutXml);
 		
 		// 读取java文件的字符串
+		File javaFile = new File(adapterFile);
 		String fileContent = FileUtils.readToString(javaFile);
-		
+
+		// 将生成的内容写入至java类文件内的起始端
+		fileContent = fileContent.replaceFirst("\\{", "\\{\n" + adapterContent);
+		// 写入回文件
+		FileUtils.writeString2File(fileContent, javaFile);
+	}
+
+	/**
+	 * 生成adapter文件内容
+	 */
+	private static String createAdapterContent(String layoutXml) {
 		StringBuilder sbAdapterInfo = new StringBuilder();
 		sbAdapterInfo.append("\n");
 		
 		// 成员变量,只设置最基本的集合类和context
 		sbAdapterInfo.append(formatSingleLine(1, "private Context context;"));
+		sbAdapterInfo.append(formatSingleLine(1, "// TODO change the MyItem class to your data bean class"));
 		sbAdapterInfo.append(formatSingleLine(1, "private List<MyItem> datas;"));
 		sbAdapterInfo.append("\n");
 		
@@ -310,11 +364,8 @@ public class AndroidUtils {
 				.append(";\n");
 		}
 		sbAdapterInfo.append(formatSingleLine(1, "}"));
-
-		// 将生成的内容写入至java类文件内的起始端
-		fileContent = fileContent.replaceFirst("\\{", "\\{\n" + sbAdapterInfo.toString());
-		// 写入回文件
-		FileUtils.writeString2File(fileContent, javaFile);
+		
+		return sbAdapterInfo.toString();
 	}
 	
 	/**

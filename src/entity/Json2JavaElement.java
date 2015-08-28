@@ -3,29 +3,28 @@ package entity;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+/**
+ * 转换数据元素
+ */
 public class Json2JavaElement {
 
-	private int level;
 	/**
-	 * 是否为数组类型
+	 * 是否为集合类型
 	 * 
 	 * <p>
-	 * 如果是数组的话,数组内数据类型为customClassName对应的自定义类,或者type
+	 * 如果是集合的话,集合内数据类型为customClassName对应的自定义类,或者type
 	 */
 	private boolean isArray;
-	private JsonElement arrayItemJe;
+	
 	/**
-	 * 数组深度,
+	 * 集合数据
+	 */
+	private JsonElement arrayItemJe;
+	
+	/**
+	 * 集合深度,如果是3则为ArrayList<ArrayList<ArrayList<>>>
 	 */
 	private int arrayDeep;
-
-	public int getArrayDeep() {
-		return arrayDeep;
-	}
-
-	public void setArrayDeep(int arrayDeep) {
-		this.arrayDeep = arrayDeep;
-	}
 
 	/**
 	 * 自定义类名
@@ -39,14 +38,6 @@ public class Json2JavaElement {
 
 	private String name;
 	private Class<?> type;
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
 
 	public boolean isArray() {
 		return isArray;
@@ -62,6 +53,14 @@ public class Json2JavaElement {
 
 	public void setArrayItemJe(JsonElement arrayItemJe) {
 		this.arrayItemJe = arrayItemJe;
+	}
+
+	public int getArrayDeep() {
+		return arrayDeep;
+	}
+
+	public void setArrayDeep(int arrayDeep) {
+		this.arrayDeep = arrayDeep;
 	}
 
 	public String getCustomClassName() {
@@ -107,7 +106,7 @@ public class Json2JavaElement {
 	@Override
 	public String toString() {
 		return "\n"
-				+ "Json2JavaElement [level=" + level + ", isArray=" + isArray
+				+ "Json2JavaElement [isArray=" + isArray
 				+ ", arrayDeep=" + arrayDeep + ", name=" + name + ", type="
 				+ type + "]";
 	}
