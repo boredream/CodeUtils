@@ -41,6 +41,12 @@ JavaProject ,属于编译时(ButterKnife等框架属于运行时)工具。
 等等...
 
 
+导入方法
+=======
+注意,以JavaProject的方式导入
+Eclipse 中右键 Import -> General -> Existing Project into Workspace
+选择地址Finish确认
+
 
 使用方法
 =======
