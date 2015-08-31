@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.channels.FileChannel;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -202,6 +203,87 @@ public class FileUtils {
 				boolean delete = file.delete();
 				System.out.println(absname + " ... delete=" + delete);
 			}
+	}
+	
+	/**
+	 * 获取代码行数详情,包括总/空行/注释/有效代码各个行数
+	 * 
+	 * @param rootPath	根目录的绝对路径
+	 */
+	public static void getCodeLinesDetail(String rootPath) {
+		// 全部文件中行数
+		int allLines = 0;
+		// 全部文件中空行数
+		int allEmptyLines = 0;
+		// 全部文件中代码行数
+		int allCodeLines = 0;
+		// 全部文件中注释行数
+		int allAnnoLines = 0;
+		
+		List<File> files = FileUtils.getAllFiles(rootPath);
+		for (File file : files) {
+			// TODO 只统计java和xml代码
+			if(file.getName().endsWith(".java") || file.getName().endsWith(".xml")) {
+				FileReader fr;
+				try {
+					fr = new FileReader(file);
+					BufferedReader bufferedreader = new BufferedReader(fr);
+					
+					String line;
+					// 是否属于多行注释
+					boolean multiLineAnno = false;
+					while ((line=bufferedreader.readLine()) != null) {
+						allLines ++;
+						
+						// 空行
+						if(line.trim().equals("")) {
+							allEmptyLines ++;
+							continue;
+						}
+						
+						// 单行注释
+						if(line.contains("//")) {
+							allAnnoLines ++;
+							continue;
+						}
+						
+						// 如果还是在多行注释中
+						if(multiLineAnno) {
+							allAnnoLines ++;
+							// 如果本行包含多行注释结束符,结束
+							if(line.contains("*/")) {
+								multiLineAnno = false;
+							}
+							continue;
+						}
+						
+						// 多行注释开始(包括/*和/**)
+						if(line.contains("/*")) {
+							allAnnoLines ++;
+							multiLineAnno = true;
+							continue;
+						}
+						
+						// 有效代码
+						allCodeLines ++;
+					}
+					fr.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		System.out.println("文件总行数为：" + allLines);
+		System.out.println("文件空行数为：" + allEmptyLines);
+		System.out.println("文件注释行数为：" + allAnnoLines);
+		System.out.println("文件有效代码行数为：" + allCodeLines);
+		System.out.println("--------------------");
+		// TODO 计算比例规则为 注释行数/有效代码数
+		float percent = (float) allAnnoLines / allCodeLines * 100;
+		// 格式化百分比,保留2位小数  %50.00
+		DecimalFormat df = new DecimalFormat("0.00");
+		System.out.println("注释比例(注释行数/有效代码数): %" + df.format(percent));
 	}
 
 	/**

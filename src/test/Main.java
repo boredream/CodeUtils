@@ -1,5 +1,7 @@
 package test;
 
+import utils.AndroidUtils;
+
 public class Main {
 	
 	public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class Main {
 //		AndroidUtils.autoCreateAdapter();
 //		JsonUtils.parseJson2Java();
 		
-		TempUtils.autoCreateSizeSet(true);
+//		TempUtils.autoCreateSizeSet(true);
 	}
 }
 

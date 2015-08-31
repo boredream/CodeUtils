@@ -1,25 +1,26 @@
 
 
-	private TextView tv_title;
-	private TextView tv_link;
-	private Button btn_submit;
-	private RadioGroup rg_tab;
-	private RadioButton rb1;
-	private RadioButton rb2;
-	private RadioButton rb3;
+	private RadioGroup tg_recharge_type;
+	private RadioButton rb_credit;
+	private RadioButton rb_vip;
+	private LinearLayout ll_credit;
+	private MyListView lv_goodlist;
+	private TextView tv_pay_tip;
+	private TextView tv_tip;
+	private Button btn_commit;
 
 	private void initView() {
-		tv_title = (TextView) findViewById(R.id.tv_title);
-		tv_link = (TextView) findViewById(R.id.tv_link);
-		btn_submit = (Button) findViewById(R.id.btn_submit);
-		rg_tab = (RadioGroup) findViewById(R.id.rg_tab);
-		rb1 = (RadioButton) findViewById(R.id.rb1);
-		rb2 = (RadioButton) findViewById(R.id.rb2);
-		rb3 = (RadioButton) findViewById(R.id.rb3);
+		tg_recharge_type = (RadioGroup) findViewById(R.id.tg_recharge_type);
+		rb_credit = (RadioButton) findViewById(R.id.rb_credit);
+		rb_vip = (RadioButton) findViewById(R.id.rb_vip);
+		ll_credit = (LinearLayout) findViewById(R.id.ll_credit);
+		lv_goodlist = (MyListView) findViewById(R.id.lv_goodlist);
+		tv_pay_tip = (TextView) findViewById(R.id.tv_pay_tip);
+		tv_tip = (TextView) findViewById(R.id.tv_tip);
+		btn_commit = (Button) findViewById(R.id.btn_commit);
 
-		tv_link.setOnClickListener(this);
-		btn_submit.setOnClickListener(this);
-		rg_tab.setOnCheckedChangeListener(this);
+		btn_commit.setOnClickListener(this);
+		tg_recharge_type.setOnCheckedChangeListener(this);
 	}
 
 
@@ -27,10 +28,7 @@
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.tv_link:
-
-			break;
-		case R.id.btn_submit:
+		case R.id.btn_commit:
 
 			break;
 		}
@@ -39,13 +37,10 @@
 	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		switch (checkedId) {
-		case R.id.rb1:
+		case R.id.rb_credit:
 
 			break;
-		case R.id.rb2:
-
-			break;
-		case R.id.rb3:
+		case R.id.rb_vip:
 
 			break;
 		}

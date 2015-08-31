@@ -29,7 +29,8 @@
 		if(convertView == null) {
 			holder = new ViewHolder();
 			convertView = View.inflate(context, R.layout.item, null);
-			holder.iv_show_product_photo = (ImageView) convertView.findViewById(R.id.iv_show_product_photo);
+			holder.cb_credit = (CheckBox) convertView.findViewById(R.id.cb_credit);
+			holder.tv_money = (TextView) convertView.findViewById(R.id.tv_money);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
@@ -42,5 +43,6 @@
 
 
 	public static class ViewHolder{
-		public ImageView iv_show_product_photo;
+		public CheckBox cb_credit;
+		public TextView tv_money;
 	}

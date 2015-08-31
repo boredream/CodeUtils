@@ -4,56 +4,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="title" />
-
-    <TextView
-        android:id="@+id/tv_link"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="link" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="description" />
-
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="submit" />
-
     <RadioGroup
-        android:id="@+id/rg_tab"
+        android:id="@+id/tg_recharge_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/rb1"
+            android:id="@+id/rb_credit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rb1" />
+            android:text="积分" />
 
         <RadioButton
-            android:id="@+id/rb2"
+            android:id="@+id/rb_vip"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rb2" />
-
-        <RadioButton
-            android:id="@+id/rb3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="rb3" />
+            android:text="VIP" />
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_credit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="充值选择:"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp" />
+
+        <com.imohoo.BusinessCMT.view.myview.MyListView
+            android:id="@+id/lv_goodlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/transparent"
+            android:paddingLeft="96dp" >
+        </com.imohoo.BusinessCMT.view.myview.MyListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_pay_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1元可兑换1积分" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择确定,即表示同意石材工作充值协议" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定" />
 
 </LinearLayout>
