@@ -1,0 +1,2318 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-hans" dir="ltr">
+<head>
+<title>中药图典_中草药图片大全_中药材图谱_中药图库</title>
+<meta name="keywords" content="中药图片,中草药图谱,中药材,中药图集,中药图库,草药图解,中草药,中药,图片,图解,中药照片,中药材相片" />
+<meta name="description" content="中药图典收录近3000味中草药的图片，大多数图片是清晰的药品实物照片。药品条目页面还带有中药味性，功能作用，用法用量等详细说明。" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="MediaWiki 1.16.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="apple-touch-icon" href="http://s.ayxbk.com/common/images/apple-touch-icon.png" />
+<link rel="shortcut icon" href="http://s.ayxbk.com/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="A+医学百科 (zh-hans)" />
+<link rel="copyright" href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E7%89%88%E6%9D%83" />
+<link rel="stylesheet" href="http://s.ayxbk.com/vector/main-mini.css?278" media="screen" />
+<style type="text/css">
+/*<![CDATA[*/      
+.wlist li {width:12em;float:left;text-align:left}
+/*]]>*/      
+</style>
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-中药图典 skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" >
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">中药图典</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+				<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					跳转到： <a href="#mw-head">导航</a>,
+					<a href="#p-search">搜索</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<table class="nav" width="100%">
+<tr>
+<td><a href="/w/%E9%A6%96%E9%A1%B5" title="首页">A+医学百科</a> &gt;&gt; <a href="/w/%E8%8D%AF%E5%93%81" title="药品">药品百科</a> &gt;&gt; <a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药百科</a> &gt;&gt; 中药图典</td>
+</tr>
+</table>
+<p></p>
+<div id="ggad-top">
+<p><ins class="adsbygoogle ayx-top-banner" style="display:inline-block" data-ad-client="ca-pub-4174070858627065" data-ad-slot="3789334114"></ins> <script type="text/javascript">
+//<![CDATA[
+(adsbygoogle = window.adsbygoogle || []).push({});
+//]]>
+</script></p>
+</div>
+<script src="/skins/common/masonry.min.js" type="text/javascript">
+</script>
+<p><script type="text/javascript">
+//<![CDATA[
+window.onload = function() {var miniWall = new Masonry( document.getElementById('masonry-container'), {columnWidth: 230 }); };
+//]]>
+</script> 中药图典专题汇集近3000味中药图片。 每味中药配以药品名称、别名和药材的功效作用等注解。药品包含中草药、动物、矿石等不同类型的中药材。图片大多以药材实物照片为主，部分为手绘图画。</p>
+<p>所有中药按药品名称汉语拼音排序。中药名称链接则指向这味中药的条目页面。 中药条目页面里有这味药材的<a href="/w/%E5%91%B3%E6%80%A7" title="味性" class="mw-redirect">味性</a>、<a href="/w/%E5%BD%92%E7%BB%8F" title="归经">归经</a>、功效作用、用法用量等详细说明。</p>
+<p>注意，<a href="/w/%E6%9C%89%E6%AF%92%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="有毒中药列表">好些中药具有毒性</a>，在使用药品时务必请事先咨询医务人员。</p>
+<div id="masonry-container">
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E8%A7%92%E6%9E%AB" title="八角枫"><img alt="Bk6xr.jpg" src="http://p.ayxbk.com/images/thumb/e/e4/Bk6xr.jpg/220px-Bk6xr.jpg" width="220" height="293" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E8%A7%92%E6%9E%AB" title="八角枫">八角枫</a></b><span style="font-size:0.88em;">（白金条[侧根名]、白龙须[须状根名]、八角王、八角梧桐、八角将军、割舌罗、五角枫、七角枫、野罗桐、花冠木）</span>
+<p style="font-size:0.88em;">祛风除湿，舒筋活络，散淤止痛。用于风湿关节通，跌打损伤，精神分裂症。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E8%A7%92%E8%8C%B4%E9%A6%99" title="八角茴香"><img alt="Bkmcp.jpg" src="http://p.ayxbk.com/images/thumb/f/fe/Bkmcp.jpg/220px-Bkmcp.jpg" width="220" height="220" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E8%A7%92%E8%8C%B4%E9%A6%99" title="八角茴香" class="mw-redirect">八角茴香</a></b><span style="font-size:0.88em;">（大茴香、大料、五香八角、舶上茴香、舶茴香、茴香八角珠、八角香、八角大茴、八角、原油茴、大八角、八角珠、八月珠）</span>
+<p style="font-size:0.88em;">温中理气，健胃止呕。用于呕吐，腹胀，腹痛，疝气痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E8%A7%92%E9%87%91%E7%9B%98" title="八角金盘"><img alt="Bkbz9.jpg" src="http://p.ayxbk.com/images/thumb/e/ee/Bkbz9.jpg/220px-Bkbz9.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E8%A7%92%E9%87%91%E7%9B%98" title="八角金盘">八角金盘</a></b><span style="font-size:0.88em;">（手树、金刚纂）</span>
+<p style="font-size:0.88em;">化痰止咳；散风除湿；化瘀止痛。主咳嗽痰多；风湿痹痛；痛风；跌打损伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E8%A7%92%E8%8E%B2" title="八角莲"><img alt="Bkg1t.jpg" src="http://p.ayxbk.com/images/thumb/c/c4/Bkg1t.jpg/220px-Bkg1t.jpg" width="220" height="348" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E8%A7%92%E8%8E%B2" title="八角莲">八角莲</a></b><span style="font-size:0.88em;">（一把伞、六角莲、独叶一枝花、独脚莲[江西]、一碗水[陕西]、八角七、八角兵盘七、鬼臼、八角连、金魁莲、旱八角、叶下花、马眼莲、八角盘、独脚莲、独角莲、八角金盘、山荷叶、爵犀、马目毒公、九臼、天臼、解毒、害母草、独荷草、羞天花、术律草、琼田草、旱荷、金星八角、金魁连、八角乌、白八角莲、金边七）</span>
+<p style="font-size:0.88em;">清热解毒，化痰散结，祛瘀消肿。治痈肿，疔疮，瘰疬，喉蛾，跌打损伤，蛇咬伤。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E8%A7%92%E8%8E%B2%E5%8F%B6" title="八角莲叶"><img alt="Bkbzb.jpg" src="http://p.ayxbk.com/images/3/3c/Bkbzb.jpg" width="220" height="220" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E8%A7%92%E8%8E%B2%E5%8F%B6" title="八角莲叶">八角莲叶</a></b><span style="font-size:0.88em;">（鬼臼叶）</span>
+<p style="font-size:0.88em;">清热解毒；止咳平喘。主痈肿疔疮；喘咳</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E4%BB%99%E8%8D%89" title="八仙草"><img alt="Bkbzc.jpg" src="http://p.ayxbk.com/images/thumb/8/89/Bkbzc.jpg/220px-Bkbzc.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E4%BB%99%E8%8D%89" title="八仙草">八仙草</a></b><span style="font-size:0.88em;">（猪殃殃、小锯藤、锯子草、小茜草、小飞扬藤、红丝线、血见愁、细茜草、拉拉藤、小舒筋）</span>
+<p style="font-size:0.88em;">清湿热，散瘀，消肿，解毒。治淋浊，尿血，跌打损伤，肠痈，疖肿，中耳炎。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E4%BB%99%E8%8A%B1" title="八仙花"><img alt="Bkbzp.jpg" src="http://p.ayxbk.com/images/thumb/4/4d/Bkbzp.jpg/220px-Bkbzp.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E4%BB%99%E8%8A%B1" title="八仙花">八仙花</a></b><span style="font-size:0.88em;">（粉团花、紫阳花）</span>
+<p style="font-size:0.88em;">抗疟药，功效与常山相仿。又用于心脏病。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E6%9C%88%E6%9C%AD" title="八月札"><img alt="Bkamj.jpg" src="http://p.ayxbk.com/images/thumb/2/2a/Bkamj.jpg/220px-Bkamj.jpg" width="220" height="164" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E6%9C%88%E6%9C%AD" title="八月札">八月札</a></b><span style="font-size:0.88em;">（燕蓄子、畜蓄子、拿子、桴棪子、覆子、木通子、八月瓜、八月炸、野毛蛋、冷饭包、野香蕉、羊开口、玉支子、腊瓜、畜葍子、八月楂、压惊子、预知子、八月果、百日瓜、牵藤瓜、拉拉果、野香交）</span>
+<p style="font-size:0.88em;">舒肝理气，活血止痛，除烦利尿。治肝胃气痛，胃热食呆，烦渴，亦白痢疾，腰痛，胁痛，疝气，窟经，子宫下坠。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%85%AB%E7%88%AA%E9%87%91%E9%BE%99" title="八爪金龙"><img alt="Bkc00.jpg" src="http://p.ayxbk.com/images/thumb/9/96/Bkc00.jpg/220px-Bkc00.jpg" width="220" height="313" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%85%AB%E7%88%AA%E9%87%91%E9%BE%99" title="八爪金龙">八爪金龙</a></b><span style="font-size:0.88em;">（百两金、八爪龙、八爪根、铁雨伞、高八爪、开喉箭[四川]）</span>
+<p style="font-size:0.88em;">清咽利喉，散瘀消肿。主治：咽喉肿痛，跌打损伤，风湿骨痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%B7%B4%E8%B1%86" title="巴豆"><img alt="Bkmht.jpg" src="http://p.ayxbk.com/images/thumb/e/e6/Bkmht.jpg/220px-Bkmht.jpg" width="220" height="149" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%B7%B4%E8%B1%86" title="巴豆">巴豆</a></b><span style="font-size:0.88em;">（双眼龙、大叶双眼龙、江子、猛子树、八百力、芒子、巴菽、刚子、老阳子、猛子仁、巴果、巴米、双眼虾、红子仁、豆贡、毒鱼子、銮豆、贡仔、巴仁、巴贡、药子仁、芦麻子、腊盘子、大风子、泻果）</span>
+<p style="font-size:0.88em;">泻寒积，通关窍，逐痰，行水，杀虫。治冷积凝滞，胸腹胀满急痛，血瘕，痰癖，泻痢，水肿，外用治喉风，喉痹，恶疮疥癣。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%B7%B4%E8%B1%86%E9%9C%9C" title="巴豆霜"><img alt="Bk06q.jpg" src="http://p.ayxbk.com/images/6/62/Bk06q.jpg" width="220" height="201" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%B7%B4%E8%B1%86%E9%9C%9C" title="巴豆霜">巴豆霜</a></b>
+<p style="font-size:0.88em;">峻下积滞，逐水消肿，豁痰利咽。用于寒积便秘，乳食停滞，下腹水肿，二便不通，喉风，喉痹。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E5%B7%B4%E6%88%9F%E5%A4%A9" title="巴戟天"><img alt="Bkci0.jpg" src="http://p.ayxbk.com/images/thumb/d/d4/Bkci0.jpg/220px-Bkci0.jpg" width="220" height="264" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E5%B7%B4%E6%88%9F%E5%A4%A9" title="巴戟天">巴戟天</a></b><span style="font-size:0.88em;">（鸡肠风、鸡眼藤、黑藤钻、兔仔肠、三角藤、糠藤、巴戟、兔子肠、巴吉天、戟天、巴戟肉、猫肠筋、兔儿肠）</span>
+<p style="font-size:0.88em;">补肾阳，壮筋骨，祛风湿。治阳痿，少腹冷痛，小便不禁，子宫虚冷，风寒湿痹，腰膝酸痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E8%8F%9D%E8%91%9C" title="菝葜"><img alt="Bk06u.jpg" src="http://p.ayxbk.com/images/thumb/f/fb/Bk06u.jpg/220px-Bk06u.jpg" width="220" height="263" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E8%8F%9D%E8%91%9C" title="菝葜">菝葜</a></b><span style="font-size:0.88em;">（金刚藤、铁菱角、马加勒、筋骨柱子、红灯果、金刚根、王瓜草、金刚骨、山梨儿、金刚树、铁刷子、金刚刺、金刚头、假萆薢、山菱角、霸王引、沟谷刺、金巴斗、豺狗刺、鲎壳藤、马甲、硬饭头、冷饭头、龙爪菜、普贴、鸡肝根、路边刷、鲎壳刺、铁刺苓、饭巴铎、冷饭巴、霸王力、金刚鞭、马鞍宫、马加刺兜）</span>
+<p style="font-size:0.88em;">祛风利湿；解毒消痈。主风湿痹痛；淋浊；带下；泄泻；痢疾；痈肿疮毒；顽癣；烧烫伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E9%9C%B8%E7%8E%8B%E9%9E%AD" title="霸王鞭"><img alt="Bkc02.jpg" src="http://p.ayxbk.com/images/thumb/d/dc/Bkc02.jpg/220px-Bkc02.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E9%9C%B8%E7%8E%8B%E9%9E%AD" title="霸王鞭">霸王鞭</a></b><span style="font-size:0.88em;">（刺金刚、金刚纂、金刚杵、冷水金丹）</span>
+<p style="font-size:0.88em;">祛风解毒；杀虫止痒。主疮疡肿毒；牛皮癣</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%83%8C%E4%B8%89%E4%B8%83" title="白背三七"><img alt="Bkc04.jpg" src="http://p.ayxbk.com/images/thumb/1/16/Bkc04.jpg/220px-Bkc04.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%83%8C%E4%B8%89%E4%B8%83" title="白背三七">白背三七</a></b><span style="font-size:0.88em;">（大肥牛、土生地、白仔菜药、散血姜、土田七、三百棒、地滚子、大救驾、百步还阳、石三七、树三七、大绿叶、接骨丹、枪刀药、清心菜、白血皮菜、胡豆七、胖儿草、磊救驾、玉枇杷、金丝枇杷、白东枫、厚面皮、鸡菜、白番苋、白红菜、疔拔、叉花三七、大晕病药）</span>
+<p style="font-size:0.88em;">清热凉血，散瘀消肿。治支气管炎，肺结核，崩漏痈肿，烫伤。跌打损仿，刀伤出血。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%83%8C%E5%8F%B6" title="白背叶"><img alt="Bkamm.jpg" src="http://p.ayxbk.com/images/thumb/a/aa/Bkamm.jpg/220px-Bkamm.jpg" width="220" height="156" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%83%8C%E5%8F%B6" title="白背叶">白背叶</a></b><span style="font-size:0.88em;">（野桐、叶下白、白背木、白背娘、白朴树、白帽顶、白膜叶、白鹤叶、白面戟、白面风、白桃叶）</span>
+<p style="font-size:0.88em;">清热；解毒；祛湿；止血。主蜂窝组织炎；化脓性中耳炎；鹅口疮；湿疹；跌打损伤；外伤出血</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%83%8C%E5%8F%B6%E6%A0%B9" title="白背叶根"><img alt="Bkc06.jpg" src="http://p.ayxbk.com/images/1/13/Bkc06.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%83%8C%E5%8F%B6%E6%A0%B9" title="白背叶根">白背叶根</a></b><span style="font-size:0.88em;">（白膜根、白朴根、野桐根）</span>
+<p style="font-size:0.88em;">清热；祛湿；收涩；消瘀。主肝炎肠炎；淋浊；带下；脱肛；子宫下垂；肝脾肿大；跌打扭伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%89%81%E8%B1%86" title="白扁豆"><img alt="Bk06y.jpg" src="http://p.ayxbk.com/images/1/17/Bk06y.jpg" width="220" height="263" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%89%81%E8%B1%86" title="白扁豆">白扁豆</a></b><span style="font-size:0.88em;">（火镰扁豆、峨眉豆、扁豆子、茶豆、藊豆、白藊豆、南扁豆、沿篱豆、蛾眉豆、羊眼豆、凉衍豆、白藊豆子、膨皮豆、小刀豆、树豆、藤豆、眉豆）</span>
+<p style="font-size:0.88em;">健脾，化湿，消暑。主脾虚生湿，食少便溏，白带过多，暑湿吐泻，烦渴胸闷</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8D%89%E8%8E%93" title="白草莓"><img alt="Bkc07.jpg" src="http://p.ayxbk.com/images/3/3d/Bkc07.jpg" width="220" height="306" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8D%89%E8%8E%93" title="白草莓">白草莓</a></b><span style="font-size:0.88em;">（三匹风、野杨莓、草莓、白泡儿、白藨、白蒲草、只大萨曾、白地莓）</span>
+<p style="font-size:0.88em;">祛风，清热，解毒。治风热咳嗽，百日咳，口腔炎，痢疾，尿血，疮疖。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E4%BE%A7%E8%80%B3" title="白侧耳"><img alt="Bkc09.jpg" src="http://p.ayxbk.com/images/thumb/c/c3/Bkc09.jpg/220px-Bkc09.jpg" width="220" height="281" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E4%BE%A7%E8%80%B3" title="白侧耳">白侧耳</a></b><span style="font-size:0.88em;">（白耳菜、叫天鸡、光板、金苦板、苍耳七、金钱灯塔草、金筶板、梅花草、黄草、小白花、山慈姑、马尿花、马蹄草、紫葳草、肺心草、白折耳、水折耳）</span>
+<p style="font-size:0.88em;">镇咳，止血，利湿，治虚劳咳嗽，咳血，吐血，亦痢，白带，疔疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%B1%86%E8%94%BB" title="白豆蔻"><img alt="Bk142.jpg" src="http://p.ayxbk.com/images/thumb/5/5b/Bk142.jpg/220px-Bk142.jpg" width="220" height="230" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%B1%86%E8%94%BB" title="白豆蔻">白豆蔻</a></b><span style="font-size:0.88em;">（多骨、壳蔻、白蔻、圆豆蔻、扣米、豆蔻）</span>
+<p style="font-size:0.88em;">行气，暖胃，消食，宽中。治气滞，食滞，胸闷，腹胀，噫气，噎膈，吐逆，反胃，疟疾。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E7%B2%89%E8%9D%B6" title="白粉蝶"><img alt="Bkjzo.jpg" src="http://p.ayxbk.com/images/e/e7/Bkjzo.jpg" width="220" height="220" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E7%B2%89%E8%9D%B6" title="白粉蝶">白粉蝶</a></b><span style="font-size:0.88em;">（白蝴蝶、粉蝶、菜白蝶）</span>
+<p style="font-size:0.88em;">消肿止痛。主跌打损伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%85%B9%E9%94%A6%E9%B8%A1" title="白腹锦鸡"><img alt="Bkc0e.jpg" src="http://p.ayxbk.com/images/thumb/6/62/Bkc0e.jpg/220px-Bkc0e.jpg" width="220" height="174" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%85%B9%E9%94%A6%E9%B8%A1" title="白腹锦鸡">白腹锦鸡</a></b><span style="font-size:0.88em;">（箐鸡肉）</span>
+<p style="font-size:0.88em;">止血；解毒。主血痔；疮疡肿毒</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%AC%BC%E7%AC%94" title="白鬼笔"><img alt="Bkc0j.jpg" src="http://p.ayxbk.com/images/0/06/Bkc0j.jpg" width="220" height="288" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%AC%BC%E7%AC%94" title="白鬼笔">白鬼笔</a></b><span style="font-size:0.88em;">（鬼笔、鬼笔菌、竹下菌、竹菌、无裙荪）</span>
+<p style="font-size:0.88em;">祛风除湿；活血止痛。主风湿痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%9E%9C" title="白果"><img alt="Bkg4a.jpg" src="http://p.ayxbk.com/images/8/88/Bkg4a.jpg" width="220" height="185" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%9E%9C" title="白果">白果</a></b><span style="font-size:0.88em;">（白果仁、灵眼、佛指甲、佛指柑、鸭脚子）</span>
+<p style="font-size:0.88em;">敛肺定喘，止带浊，缩小便。用于痰多喘咳，带下白浊，遗尿尿频。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%92%BF" title="白蒿"><img alt="Bk4uq.jpg" src="http://p.ayxbk.com/images/d/d8/Bk4uq.jpg" width="220" height="308" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%92%BF" title="白蒿">白蒿</a></b><span style="font-size:0.88em;">（蘩、皤蒿、由胡、蘩母、旁勃、白艾蒿、蓬蒿、莓母、大白蒿、大子蒿、臭蒿子、山艾、大头蒿、苦蒿）</span>
+<p style="font-size:0.88em;">治风寒湿痹，黄疸，热痢，疥癞恶疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%B9%A4%E7%81%B5%E8%8A%9D" title="白鹤灵芝"><img alt="Bkc0l.jpg" src="http://p.ayxbk.com/images/d/da/Bkc0l.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%B9%A4%E7%81%B5%E8%8A%9D" title="白鹤灵芝">白鹤灵芝</a></b><span style="font-size:0.88em;">（癣草）</span>
+<p style="font-size:0.88em;">清热润肺；杀虫止痒。主劳嗽；疥癣；湿疹</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E8%8F%9C" title="白花菜"><img alt="Bkc0m.jpg" src="http://p.ayxbk.com/images/8/80/Bkc0m.jpg" width="220" height="271" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E8%8F%9C" title="白花菜">白花菜</a></b><span style="font-size:0.88em;">（羊角菜、屡析草、臭花菜、臭豆角、猪屎草、五梅草、白花仔草）</span>
+<p style="font-size:0.88em;">治风湿痹痛，跌打损伤，疟疾，痢疾，白带，痔疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E8%8F%9C%E5%AD%90" title="白花菜子"><img alt="Bkc0n.jpg" src="http://p.ayxbk.com/images/thumb/8/8c/Bkc0n.jpg/220px-Bkc0n.jpg" width="220" height="265" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E8%8F%9C%E5%AD%90" title="白花菜子">白花菜子</a></b><span style="font-size:0.88em;">（臭菜、臭花菜、羊角菜、臭花菜籽）</span>
+<p style="font-size:0.88em;">祛风散寒，活血止痛。用于风湿疼痛，腰痛，跌打损伤，痔疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E4%B8%B9" title="白花丹"><img alt="Bk6ur.jpg" src="http://p.ayxbk.com/images/thumb/a/a3/Bk6ur.jpg/220px-Bk6ur.jpg" width="220" height="330" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E4%B8%B9" title="白花丹">白花丹</a></b><span style="font-size:0.88em;">（白雪花、白皂药、山波苓、一见消、乌面马、火灵丹、假茉莉、猛老虎、白花岩陀、山坡芩、总管、千里及、野苜莉、隔布草、千槟梅、照药、天槟榔、白花皂药、山坡苓、干里及、鸟面马、千槟榔、白花九股牛、余笑花、白花铁罗汉）</span>
+<p style="font-size:0.88em;">祛风，散瘀，解毒，杀虫。治风湿关节疼痛，血瘀经闭，跌打损伤，肿毒恶疮，疥癣。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E9%AC%BC%E9%92%88%E8%8D%89" title="白花鬼针草"><img alt="Bkc0o.jpg" src="http://p.ayxbk.com/images/thumb/8/83/Bkc0o.jpg/220px-Bkc0o.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E9%AC%BC%E9%92%88%E8%8D%89" title="白花鬼针草">白花鬼针草</a></b><span style="font-size:0.88em;">（金杯银盏、金盏银盆、盲肠草）</span>
+<p style="font-size:0.88em;">清热解毒；利湿退黄。主感冒发热；风湿痹痛；湿热黄疸；痈肿疮疖。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E8%9B%87" title="白花蛇"><img alt="Bkamu.jpg" src="http://p.ayxbk.com/images/thumb/0/0b/Bkamu.jpg/220px-Bkamu.jpg" width="220" height="288" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E8%9B%87" title="白花蛇">白花蛇</a></b>
+<p style="font-size:0.88em;">祛风湿，透筋骨，定惊搐。治风湿瘫痪，骨节疼痛，麻风，疥癞，小儿惊风搐搦，破伤风，杨梅疮，瘰疬恶疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E8%9B%87%E8%88%8C%E8%8D%89" title="白花蛇舌草"><img alt="Bk07z.jpg" src="http://p.ayxbk.com/images/7/73/Bk07z.jpg" width="220" height="299" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E8%9B%87%E8%88%8C%E8%8D%89" title="白花蛇舌草">白花蛇舌草</a></b><span style="font-size:0.88em;">（蛇舌草、蛇舌癀、蛇针草、蛇总管、二叶葎、白花十字草、尖刀草、甲猛草、龙舌草、蛇脷草、鹤舌草、矮脚白花蛇利草、目目生珠草、节节结蕊草、鹩哥利、千打捶、羊须草、细叶柳子、珠仔草、定经草、小叶锅巴草、南地珠、散草、竹叶草、奶沙尔、铁沙尔）</span>
+<p style="font-size:0.88em;">清热解毒；利湿。主肺热喘咳；咽喉肿痛；肠痈；疖肿疮疡；毒蛇咬伤；热淋涩痛；水肿；痢疾；肠炎；湿热黄疸；癌肿</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E8%8B%8B" title="白花苋"><img alt="Gyl58u10.jpg" src="http://p.ayxbk.com/images/thumb/a/a4/Gyl58u10.jpg/220px-Gyl58u10.jpg" width="220" height="293" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E8%8B%8B" title="白花苋">白花苋</a></b><span style="font-size:0.88em;">（烂脚蒿、白牛膝、土牛膝、怀牛膝）</span>
+<p style="font-size:0.88em;">活血散瘀；清热除湿。主月经不调；血瘀崩漏；经闭；跌打损伤；风湿关节痛；湿热黄疸；痢疾；角膜云翳</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B1%E6%B2%B9%E9%BA%BB%E8%97%A4" title="白花油麻藤"><img alt="Bk088.jpg" src="http://p.ayxbk.com/images/3/32/Bk088.jpg" width="220" height="289" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B1%E6%B2%B9%E9%BA%BB%E8%97%A4" title="白花油麻藤">白花油麻藤</a></b><span style="font-size:0.88em;">（鸡血藤[广西]、鲤鱼藤、大蓝布麻）</span>
+<p style="font-size:0.88em;">补血，通经络，强筋骨。用于贫血，白细胞减少症，月经不调，腰腿痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%B4%BB%E9%BA%BB" title="白活麻"><img alt="Gyl5942v.jpg" src="http://p.ayxbk.com/images/thumb/f/fb/Gyl5942v.jpg/220px-Gyl5942v.jpg" width="220" height="152" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%B4%BB%E9%BA%BB" title="白活麻">白活麻</a></b><span style="font-size:0.88em;">（活麻草）</span>
+<p style="font-size:0.88em;">祛风除湿。用于风湿骨痛，小儿吐乳，皮肤湿疹。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%B8%A1%E5%B1%8E%E8%97%A4" title="白鸡屎藤"><img alt="Bkc0q.jpg" src="http://p.ayxbk.com/images/thumb/3/3a/Bkc0q.jpg/220px-Bkc0q.jpg" width="220" height="361" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%B8%A1%E5%B1%8E%E8%97%A4" title="白鸡屎藤">白鸡屎藤</a></b><span style="font-size:0.88em;">（臭皮藤、臭茎子、迎风子、飞龙接骨、青龙跌打）</span>
+<p style="font-size:0.88em;">治黄疸，痢疾，食积，痞块，经闭。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%8F%8A" title="白及"><img alt="Bkmrm.jpg" src="http://p.ayxbk.com/images/thumb/2/2c/Bkmrm.jpg/220px-Bkmrm.jpg" width="220" height="215" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%8F%8A" title="白及">白及</a></b><span style="font-size:0.88em;">（白根、地螺丝、白鸡儿、白鸡娃、连及草、羊角七、甘根、白给、白芨、冰球子、白乌儿头、千年棕、君球子、一兜棕、皲口药、利知子、臼根、白鸟儿头、君求子）</span>
+<p style="font-size:0.88em;">收敛止血，消肿生肌。用于咳血吐血，外伤出血，疮疡肿毒，皮肤皲裂；肺结核咳血，溃疡病出血。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%83%B5%E8%9A%95" title="白僵蚕"><img alt="Bkamv.jpg" src="http://p.ayxbk.com/images/c/c6/Bkamv.jpg" width="220" height="157" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%83%B5%E8%9A%95" title="白僵蚕">白僵蚕</a></b><span style="font-size:0.88em;">（僵蚕、天虫、僵虫、白僵虫）</span>
+<p style="font-size:0.88em;">祛风解痉，化痰散结。治中风失音，惊痫，头风，喉风。喉痹，瘰疬结核。风疮瘾疹，丹毒，乳腺炎。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%8E%A5%E9%AA%A8" title="白接骨"><img alt="Bkc0r.jpg" src="http://p.ayxbk.com/images/d/de/Bkc0r.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%8E%A5%E9%AA%A8" title="白接骨">白接骨</a></b><span style="font-size:0.88em;">（接骨草、玉接骨、接骨丹、金不换、橡皮草、白龙骨、六厘草、猢狲节根、血见愁[浙江]、玉龙盘、无骨苎麻、玉梗半枝莲、玉按骨、血见愁、玉钱草、麒麟草、玉连环、华阿西达、小阿西达、蛀木虫）</span>
+<p style="font-size:0.88em;">止血，去瘀，清热解毒。治吐血，便血，外伤出血，扭伤，疖肿，咽喉肿痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%A5%E5%AD%90" title="白芥子"><img alt="Bk08l.jpg" src="http://p.ayxbk.com/images/thumb/0/03/Bk08l.jpg/220px-Bk08l.jpg" width="220" height="325" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%A5%E5%AD%90" title="白芥子">白芥子</a></b><span style="font-size:0.88em;">（辣菜子）</span>
+<p style="font-size:0.88em;">化痰逐饮；散结消肿。主咳喘痰多；胸满胁痛；肢体麻木；关节肿痛；湿痰流注；阴疽肿毒</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%94%BB" title="白蔻"><img alt="Bkbe2.jpg" src="http://p.ayxbk.com/images/thumb/c/c9/Bkbe2.jpg/220px-Bkbe2.jpg" width="220" height="220" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%94%BB" title="白蔻">白蔻</a></b>
+<p style="font-size:0.88em;">行气开胃。主胃脘疼痛；消化不良</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%85%B0%E8%8A%B1" title="白兰花"><img alt="Bkc0s.jpg" src="http://p.ayxbk.com/images/thumb/b/b9/Bkc0s.jpg/220px-Bkc0s.jpg" width="220" height="178" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%85%B0%E8%8A%B1" title="白兰花">白兰花</a></b><span style="font-size:0.88em;">（白玉兰、白缅花、白兰、白木兰、黄桷兰、缅桂花）</span>
+<p style="font-size:0.88em;">止咳，化浊。治慢性支气管炎。前列腺炎，妇女白带。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%94%B9" title="白蔹"><img alt="Bkmex.jpg" src="http://p.ayxbk.com/images/thumb/1/14/Bkmex.jpg/220px-Bkmex.jpg" width="220" height="286" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%94%B9" title="白蔹">白蔹</a></b><span style="font-size:0.88em;">（山地瓜、野红薯、山葡萄秧、白根、五爪藤、昆仑、猫儿卵、鹅抱蛋、见肿消、穿山老鼠、白水罐、铁老鼠、母鸡带仔、老鼠瓜薯、山栗子、八卦牛、白浆罐、狗天天、癞痢茶、兔核、人卦牛、地老鼠、野着薯、母鸡抱蛋）</span>
+<p style="font-size:0.88em;">清热解毒，消痈散结。用于痈疽发背，疔疮，瘰疠，水火烫伤。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%9F%B3" title="白柳"><img alt="Bkc13.jpg" src="http://p.ayxbk.com/images/thumb/9/95/Bkc13.jpg/220px-Bkc13.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%9F%B3" title="白柳">白柳</a></b><span style="font-size:0.88em;">（苏盖提[维名]）</span>
+<p style="font-size:0.88em;">清热解毒；祛风除湿。主急性扁桃体炎；咽喉炎；腺腮炎；黄疸性肝炎；盆腔炎；肾炎；疮疖；风湿性关节炎；类风湿性关节炎</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%A9%AC%E9%AA%A8" title="白马骨"><img alt="Bkamz.jpg" src="http://p.ayxbk.com/images/thumb/6/6a/Bkamz.jpg/220px-Bkamz.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%A9%AC%E9%AA%A8" title="白马骨">白马骨</a></b><span style="font-size:0.88em;">（六月雪、路边金、满天星、路边鸡、六月冷、曲节草、路边荆、鱼骨刺、光骨刺、过路黄荆、硬骨柴、天星木、凉粉草、细牙家、白点秤、鸡骨头草、鸡脚骨、路边姜、鸡骨柴、千年勿大、白马里梢、野黄杨树、永勿大、米筛花、冻米柴、月月有、朱米雪、白金条、坐山虎、千年树、白花树、铁线树、黄羊脑、五经风、鸡骨头柴）</span>
+<p style="font-size:0.88em;">祛风，利湿，清热，解毒。治风湿腰腿痛，痢疾，水肿，目赤肿痛，喉痛，齿痛，妇女白带，痈疽，瘰疬。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%AF%9B%E8%97%A4" title="白毛藤"><img alt="Bkc15.jpg" src="http://p.ayxbk.com/images/thumb/2/24/Bkc15.jpg/220px-Bkc15.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%AF%9B%E8%97%A4" title="白毛藤">白毛藤</a></b><span style="font-size:0.88em;">（苻、蜀羊泉、谷菜、鬼目草、白草、排风、白幕、鬼目菜、天灯笼、和尚头草、望冬红、酸尖菜、排风藤、土防风、耳坠菜、金线绿毛龟草、葫芦草、毛风藤、毛老人、红道士、毛和尚、野猫耳朵、胡毛藤、羊仔耳、生毛梢、龙毛龟、毛燕仔、红麦禾、彀菜、排风草、耳坠风、毛见藤、生毛稍、毛相公、望风藤、毛千里光、毛秀才、鹰咬豆子、毛道士、毛葫芦、葫芦藤）</span>
+<p style="font-size:0.88em;">请热，利湿，祛风，解毒。治疟疾，黄疸，水肿，淋病，风湿关节痛，丹毒，疔疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8C%85%E6%A0%B9" title="白茅根"><img alt="Bk08r.jpg" src="http://p.ayxbk.com/images/thumb/e/e4/Bk08r.jpg/220px-Bk08r.jpg" width="220" height="155" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8C%85%E6%A0%B9" title="白茅根">白茅根</a></b><span style="font-size:0.88em;">（丝茅草、茅草、白茅草、茅草根、茅根、兰根、茹根、地菅、地筋、兼杜、白花茅根、地节根、坚草根、甜草根、丝毛草根、寒草根、白茅菅、丝茅、万根草）</span>
+<p style="font-size:0.88em;">凉血止血，清热利尿。用于血热吐血，衄血，尿血，热病烦渴，黄疸，水肿，热淋涩痛；急性肾炎水肿。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8C%85%E8%8A%B1" title="白茅花"><img alt="Bkan0.jpg" src="http://p.ayxbk.com/images/d/da/Bkan0.jpg" width="220" height="150" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8C%85%E8%8A%B1" title="白茅花">白茅花</a></b><span style="font-size:0.88em;">（营花、茅盔花、茅针花、菅花、茅花）</span>
+<p style="font-size:0.88em;">止血；定痛。主吐血；衄血；刀伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%A2%85" title="白梅"><img alt="Bkc16.jpg" src="http://p.ayxbk.com/images/thumb/3/33/Bkc16.jpg/220px-Bkc16.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%A2%85" title="白梅">白梅</a></b><span style="font-size:0.88em;">（盐梅、霜梅、白霜梅）</span>
+<p style="font-size:0.88em;">治喉痹，泻痢烦渴，梅核膈气，痈疽肿毒，外伤出血。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%A2%85%E8%8A%B1" title="白梅花"><img alt="Bkc17.jpg" src="http://p.ayxbk.com/images/thumb/7/79/Bkc17.jpg/220px-Bkc17.jpg" width="220" height="267" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%A2%85%E8%8A%B1" title="白梅花">白梅花</a></b><span style="font-size:0.88em;">（绿萼梅、绿梅花）</span>
+<p style="font-size:0.88em;">舒肝，和胃，化痰。治梅核气，肝胃气痛，食欲不振，头晕，瘰疬。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E7%89%9B%E8%83%86" title="白牛胆"><img alt="Bkc1b.jpg" src="http://p.ayxbk.com/images/3/3a/Bkc1b.jpg" width="220" height="293" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E7%89%9B%E8%83%86" title="白牛胆">白牛胆</a></b><span style="font-size:0.88em;">（毛老虎、猪耳风、大力黄、白叶菊、大麻香、毛柴胡、白面风、土蒙花、大刀药、白背风、白羊耳、华耳木、金边草、上大黄、过山香、羊耳茶、毛茶、山白芷、大力王、白羊风、白头翁、飞扬药、观音茶、羊仔耳、白面猫子骨、壮牛浪、八面风、蜡毛香、羊耳风）</span>
+<p style="font-size:0.88em;">祛风散寒；行气利湿；解毒消肿。主风寒感冒；咳嗽；风湿痹痛；泄痢；肝炎；乳腺炎；痔疮；湿疹；疥癣</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%89%8D" title="白前"><img alt="Bk090.jpg" src="http://p.ayxbk.com/images/b/b7/Bk090.jpg" width="220" height="364" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%89%8D" title="白前">白前</a></b><span style="font-size:0.88em;">（鹅管白前、竹叶白前、石蓝、嗽药、柳叶白前、水杨柳、大鹤瓢、水柳、芫花叶白前、溪瓢羹、消结草、乌梗仔、蜜白前、炒白前）</span>
+<p style="font-size:0.88em;">降气，消痰，止咳。用于肺气壅实，咳嗽痰多，胸满喘急。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%B1%88%E8%8F%9C" title="白屈菜"><img alt="Bk6ws.jpg" src="http://p.ayxbk.com/images/6/6e/Bk6ws.jpg" width="220" height="306" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%B1%88%E8%8F%9C" title="白屈菜">白屈菜</a></b><span style="font-size:0.88em;">（山黄连、土黄连、牛金花、八步紧、断肠草[北京]、地黄连、断肠草、山西瓜、雄黄草、假黄连、小野人血草、黄汤子、胡黄连、小黄连）</span>
+<p style="font-size:0.88em;">镇痛，止咳，利尿解毒。治胃肠疼痛，黄疸，水肿，疥癣疮肿，蛇虫咬伤。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E4%B9%B3%E8%8F%87" title="白乳菇"><img alt="Bkc1c.jpg" src="http://p.ayxbk.com/images/thumb/9/90/Bkc1c.jpg/220px-Bkc1c.jpg" width="220" height="367" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E4%B9%B3%E8%8F%87" title="白乳菇">白乳菇</a></b><span style="font-size:0.88em;">（辣味乳菇、蘑菇、羊脂菌、白奶浆菌、板栗菌、白蘑菇、石灰菌）</span>
+<p style="font-size:0.88em;">祛风散寒；舒筋活络。主腰腿疼痛；手足麻木；筋骨不舒；四肢抽搐</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%B2%99%E8%92%BF" title="白沙蒿"><img alt="Bkc1d.jpg" src="http://p.ayxbk.com/images/thumb/2/22/Bkc1d.jpg/220px-Bkc1d.jpg" width="220" height="153" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%B2%99%E8%92%BF" title="白沙蒿">白沙蒿</a></b><span style="font-size:0.88em;">（籽蒿、扑勒蒙、白砂蒿、油砂蒿）</span>
+<p style="font-size:0.88em;">理气；通便；解毒。主大便不通；腥胀腹痛；肋腺炎；扁桃体炎；痈肿疮疖</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%B2%99%E7%B3%96" title="白沙糖"><img alt="Bkc1e.jpg" src="http://p.ayxbk.com/images/thumb/5/5c/Bkc1e.jpg/220px-Bkc1e.jpg" width="220" height="234" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%B2%99%E7%B3%96" title="白沙糖">白沙糖</a></b><span style="font-size:0.88em;">（石蜜、白糖、糖霜、白霜糖）</span>
+<p style="font-size:0.88em;">润肺，生津。治肺燥咳嗽，口干燥渴，中虚脘痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E7%9F%B3%E8%8B%B1" title="白石英"><img alt="Bkan2.jpg" src="http://p.ayxbk.com/images/thumb/2/21/Bkan2.jpg/220px-Bkan2.jpg" width="220" height="152" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E7%9F%B3%E8%8B%B1" title="白石英">白石英</a></b>
+<p style="font-size:0.88em;">镇静安神，止咳，降逆。用于惊悸不安，咳嗽气逆。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%A6%96%E4%B9%8C" title="白首乌"><img alt="Bk6yd.jpg" src="http://p.ayxbk.com/images/thumb/1/16/Bk6yd.jpg/220px-Bk6yd.jpg" width="220" height="221" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%A6%96%E4%B9%8C" title="白首乌">白首乌</a></b><span style="font-size:0.88em;">（山东何首乌、泰山何首乌、泰山白首乌、和尚乌、隔山消、白何乌、白何首乌、隔山撬、白木香、野蕃薯、一肿三消、和平参、山花旗、张果老）</span>
+<p style="font-size:0.88em;">安神、补血。用于体虚失眠，健忘多梦，皮肤搔痒。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%96%AF%E8%8E%A8" title="白薯莨"><img alt="Bkc1h.jpg" src="http://p.ayxbk.com/images/thumb/2/20/Bkc1h.jpg/220px-Bkc1h.jpg" width="220" height="164" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%96%AF%E8%8E%A8" title="白薯莨">白薯莨</a></b><span style="font-size:0.88em;">（山仆薯、板薯、那亚、榜花薯、叶板茨、榜薯、野葛薯、山薯、白米茹粮、地遍、山朴薯、大力王）</span>
+<p style="font-size:0.88em;">清热解毒消肿。主痈疽肿毒；梅毒；下疳；跌打肿痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%9C%AF" title="白术"><img alt="Bk09e.jpg" src="http://p.ayxbk.com/images/thumb/4/46/Bk09e.jpg/220px-Bk09e.jpg" width="220" height="185" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%9C%AF" title="白术">白术</a></b><span style="font-size:0.88em;">（于术、冬术、浙术、种术、山蓟、杨抱蓟、术）、山芥、天蓟、山姜、乞力伽、山精、山连、冬白术、杨枹蓟、术）</span>
+<p style="font-size:0.88em;">补脾，益胃，燥湿，和中，安胎。治脾胃气弱，不思饮食，倦怠少气，虚胀，泄泻，痰饮，水肿，黄疸，湿痹，小便不利，头晕，自汗，胎气不安。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8B%8F" title="白苏"><img alt="Bkbe5.jpg" src="http://p.ayxbk.com/images/thumb/5/5c/Bkbe5.jpg/220px-Bkbe5.jpg" width="220" height="218" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8B%8F" title="白苏">白苏</a></b><span style="font-size:0.88em;">（野苏麻、白苏子、玉苏子、苏梗）</span>
+<p style="font-size:0.88em;">散寒解表，理气宽中。用于风寒感冒，头痛，咳嗽，胸腹胀满。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8B%8F%E5%AD%90" title="白苏子"><img alt="Bk6un.jpg" src="http://p.ayxbk.com/images/thumb/b/bf/Bk6un.jpg/220px-Bk6un.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8B%8F%E5%AD%90" title="白苏子">白苏子</a></b><span style="font-size:0.88em;">（荏子、玉苏子、玉竹子）</span>
+<p style="font-size:0.88em;">下气；消痰；润肺；宽肠。主咳逆；痰喘；气滞便秘</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%AA%80" title="白檀"><img alt="Bkc1i.jpg" src="http://p.ayxbk.com/images/thumb/4/45/Bkc1i.jpg/220px-Bkc1i.jpg" width="220" height="149" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%AA%80" title="白檀">白檀</a></b><span style="font-size:0.88em;">（野荞面根、大撵药、地胡椒、乌子树、砒霜子、蛤蟆涎、白花茶、牛筋叶、檀花青）</span>
+<p style="font-size:0.88em;">消炎软坚，调气。主治乳腺炎，淋巴腺炎，疝气，肠痈，胃癌，疮疖。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%97%A4" title="白藤"><img alt="Bkc1k.jpg" src="http://p.ayxbk.com/images/thumb/3/3a/Bkc1k.jpg/220px-Bkc1k.jpg" width="220" height="293" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%97%A4" title="白藤">白藤</a></b><span style="font-size:0.88em;">（大发汗、白花藤、大毛豆、断肠叶）</span>
+<p style="font-size:0.88em;">发汗，祛风，活血，止血。治风寒感冒，类风湿关节炎，跌打损伤，闭经，外伤出血。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%A4%B4%E7%BF%81" title="白头翁"><img alt="Bk09f.jpg" src="http://p.ayxbk.com/images/thumb/5/58/Bk09f.jpg/220px-Bk09f.jpg" width="220" height="293" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%A4%B4%E7%BF%81" title="白头翁">白头翁</a></b><span style="font-size:0.88em;">（毛姑朵花、老婆子花、老公花、野丈人、胡王使者、白头公）</span>
+<p style="font-size:0.88em;">清热凉血，解毒。治热毒血痢，温疟寒热，鼻衄，血痔。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%A4%B4%E7%BF%81%E8%8A%B1" title="白头翁花"><img alt="Bkc1l.jpg" src="http://p.ayxbk.com/images/thumb/7/7a/Bkc1l.jpg/220px-Bkc1l.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%A4%B4%E7%BF%81%E8%8A%B1" title="白头翁花">白头翁花</a></b>
+<p style="font-size:0.88em;">清热解毒；杀虫。主主治疟疾；头疮；白秃疮</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%80%8F%E9%AA%A8%E6%B6%88" title="白透骨消"><img alt="Bkc1m.jpg" src="http://p.ayxbk.com/images/d/d7/Bkc1m.jpg" width="220" height="367" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%80%8F%E9%AA%A8%E6%B6%88" title="白透骨消">白透骨消</a></b><span style="font-size:0.88em;">（透骨消、连钱草、活血丹、见肿消）</span>
+<p style="font-size:0.88em;">祛风活血；利湿解毒。主风湿痹痛；跌打损伤；肺痈；黄疸；急性肾炎；尿道结石；痄腮</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%96%87" title="白薇"><img alt="Bk09i.jpg" src="http://p.ayxbk.com/images/thumb/6/60/Bk09i.jpg/220px-Bk09i.jpg" width="220" height="268" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%96%87" title="白薇">白薇</a></b><span style="font-size:0.88em;">（白马尾、葞、春草、芒草、白微、白幕、薇草、骨美、龙胆白薇、白龙须、山烟根子、拉瓜瓢、白马薇、巴子根、金金甲根、老君须、老虎瓢根、婆婆针线包、东白微）</span>
+<p style="font-size:0.88em;">清热，凉血。治阴虚内热，风温灼热多眠，肺热咳血，温疟，瘅疟，产后虚烦血厥，热淋，血淋，风湿痛，瘰疬。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%B2%9C%E7%9A%AE" title="白鲜皮"><img alt="Bkmsm.jpg" src="http://p.ayxbk.com/images/8/8c/Bkmsm.jpg" width="220" height="262" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%B2%9C%E7%9A%AE" title="白鲜皮">白鲜皮</a></b><span style="font-size:0.88em;">（白藓皮、八股牛、山牡丹、羊鲜草、北鲜皮、藓皮、野花椒根皮、臭根皮）</span>
+<p style="font-size:0.88em;">祛风，燥湿，清热，解毒。治风热疮毒，疥癣，皮肤痒疹，风湿痹痛，黄疸。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%B9%87" title="白鹇"><img alt="Bkc1n.jpg" src="http://p.ayxbk.com/images/thumb/d/d4/Bkc1n.jpg/220px-Bkc1n.jpg" width="220" height="156" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%B9%87" title="白鹇">白鹇</a></b><span style="font-size:0.88em;">（鹎雉、白鹎、白雉、越禽、银鸡、银雉、白鵫、白翰、鵫雉、雗雉、白雗、文雗）</span>
+<p style="font-size:0.88em;">补气；健脾；益肺。主脾胃虚弱；食欲不振；食后饱胀；大便溏泄；虚劳发热；咳嗽</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8B%8B" title="白苋"><img alt="Bkc1u.jpg" src="http://p.ayxbk.com/images/d/dd/Bkc1u.jpg" width="220" height="319" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8B%8B" title="白苋">白苋</a></b><span style="font-size:0.88em;">（糠苋、细苋、野苋、猪苋、假苋菜、绿苋）</span>
+<p style="font-size:0.88em;">清热，解毒。治疮肿，牙疳，虫咬。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E6%9D%A8%E6%A0%91%E7%9A%AE" title="白杨树皮"><img alt="Bkc1v.jpg" src="http://p.ayxbk.com/images/thumb/c/cb/Bkc1v.jpg/220px-Bkc1v.jpg" width="220" height="292" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E6%9D%A8%E6%A0%91%E7%9A%AE" title="白杨树皮">白杨树皮</a></b><span style="font-size:0.88em;">（白杨皮、山杨皮）</span>
+<p style="font-size:0.88em;">祛风，行瘀，消痰。治风痹，脚气，扑损瘀血，妊娠下痢，牙痛，口疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8D%AF" title="白药"><img alt="Bk5b4.jpg" src="http://p.ayxbk.com/images/thumb/c/c6/Bk5b4.jpg/220px-Bk5b4.jpg" width="220" height="348" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8D%AF" title="白药">白药</a></b><span style="font-size:0.88em;">（白药草乌）</span>
+<p style="font-size:0.88em;">祛风湿；止痛。主风湿痹痛；跌打伤痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8D%AF%E5%AD%90" title="白药子"><img alt="Bk703.jpg" src="http://p.ayxbk.com/images/5/57/Bk703.jpg" width="220" height="310" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8D%AF%E5%AD%90" title="白药子">白药子</a></b><span style="font-size:0.88em;">（白药脂、盘花地不容、山乌龟、金线吊乌龟[广东、湖南]、金线吊葫芦[江西]、金丝吊鳖、白药、白药根）</span>
+<p style="font-size:0.88em;">散瘀消肿,止痛。用于痈疽肿毒，腮腺炎,毒蛇咬伤，跌打肿痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E5%8F%B6%E8%97%A4" title="白叶藤"><img alt="Bkc1w.jpg" src="http://p.ayxbk.com/images/thumb/7/74/Bkc1w.jpg/220px-Bkc1w.jpg" width="220" height="220" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E5%8F%B6%E8%97%A4" title="白叶藤">白叶藤</a></b><span style="font-size:0.88em;">（红藤仔、飞扬藤、胱皮藤、红丝线、扛棺回[海南]、铁边、蜈蚣草、篱尾蛇、藤羊角扭、母乳藤、对面笑、鸟仔藤、淋汁藤、飞杨藤、牛蹄藤、脱皮藤、扛棺回）</span>
+<p style="font-size:0.88em;">清热解毒；止血；散瘀止痛。主肺热咳血；肺痨咯血；胃出血；痈肿；疮毒；跌打刀伤；蛇虫咬伤</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8B%B1" title="白英"><img alt="Bkms7.jpg" src="http://p.ayxbk.com/images/thumb/f/f7/Bkms7.jpg/220px-Bkms7.jpg" width="220" height="280" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8B%B1" title="白英">白英</a></b><span style="font-size:0.88em;">（白毛藤、白草、毛千里光、毛风藤、排风藤、毛秀才、葫芦草、金线绿毛龟）</span>
+<p style="font-size:0.88em;">清热解毒，利湿消肿，抗癌。全草：用于感冒发热，乳痈、恶疮，湿热黄疸、腹水，白带，肾炎水肿；外用治痈疖肿毒。根：风湿痹痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E9%B1%BC" title="白鱼"><img alt="Bkc1x.jpg" src="http://p.ayxbk.com/images/thumb/b/be/Bkc1x.jpg/220px-Bkc1x.jpg" width="220" height="176" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E9%B1%BC" title="白鱼">白鱼</a></b><span style="font-size:0.88em;">（鲌鱼、鱎鱼、白扁鱼）</span>
+<p style="font-size:0.88em;">开胃消食；健脾行水。主食积不化；水肿</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E8%8A%B7" title="白芷"><img alt="Bk09p.jpg" src="http://p.ayxbk.com/images/thumb/1/1e/Bk09p.jpg/220px-Bk09p.jpg" width="220" height="191" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E8%8A%B7" title="白芷">白芷</a></b><span style="font-size:0.88em;">（薛、芷、芳香、苻蓠、泽芬、白茝、香白芷、虈、晼、白茞）</span>
+<p style="font-size:0.88em;">散风除湿，通窍止痛，消肿排脓。用于感冒头痛，眉棱骨痛，鼻塞，鼻渊，牙痛，白带，疮疡肿痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BD%E7%8C%AA%E6%AF%8D%E8%8F%9C" title="白猪母菜"><img alt="Bkc20.jpg" src="http://p.ayxbk.com/images/0/01/Bkc20.jpg" width="220" height="294" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BD%E7%8C%AA%E6%AF%8D%E8%8F%9C" title="白猪母菜">白猪母菜</a></b><span style="font-size:0.88em;">（对主从神仙、六月雪、白胶墙、母草）</span>
+<p style="font-size:0.88em;">清热解毒；凉血止血。主湿热泻痢；目赤肿痛；尿血；痔疮肿痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E9%83%A8" title="百部"><img alt="Bkmf5.jpg" src="http://p.ayxbk.com/images/thumb/4/46/Bkmf5.jpg/220px-Bkmf5.jpg" width="220" height="315" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E9%83%A8" title="百部">百部</a></b><span style="font-size:0.88em;">（百条根、百部草、闹虱药、药虱药、嗽药、野天门冬、百奶、九丛根、九虫根、一窝虎、九十九条根、山百根、牛虱鬼、百部根、白并、玉箫、箭杆）</span>
+<p style="font-size:0.88em;">润肺止咳；杀虫灭虱。主新久咳嗽；肺痨；百日咳；蛲虫病；体虱；癣疥</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E5%90%88" title="百合"><img alt="Bk0ac.jpg" src="http://p.ayxbk.com/images/thumb/1/1b/Bk0ac.jpg/220px-Bk0ac.jpg" width="220" height="223" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E5%90%88" title="百合">百合</a></b><span style="font-size:0.88em;">（野百合、喇叭筒、山百合、药百合、家百合、白百合、蒜脑薯、重迈、中庭、重箱、摩罗、强瞿、百合蒜）</span>
+<p style="font-size:0.88em;">养阴润肺，清心安神。用于阴虚久咳，痰中带血，虚烦惊悸，失眠多梦，精神恍惚。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E5%90%88%E8%8A%B1" title="百合花"><img alt="Bkc21.jpg" src="http://p.ayxbk.com/images/thumb/a/ac/Bkc21.jpg/220px-Bkc21.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E5%90%88%E8%8A%B1" title="百合花" class="mw-redirect">百合花</a></b>
+<p style="font-size:0.88em;">润肺，清火，安神。治咳嗽，眩晕，夜寐不安，天疱湿疮。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E5%90%88%E5%AD%90" title="百合子"><img alt="Bkc2c.jpg" src="http://p.ayxbk.com/images/thumb/3/34/Bkc2c.jpg/220px-Bkc2c.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E5%90%88%E5%AD%90" title="百合子">百合子</a></b>
+<p style="font-size:0.88em;">清热凉血。主肠风下血</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E8%8A%B1%E9%94%A6%E8%9B%87" title="百花锦蛇"><img alt="Bkc2e.jpg" src="http://p.ayxbk.com/images/thumb/0/04/Bkc2e.jpg/220px-Bkc2e.jpg" width="220" height="151" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E8%8A%B1%E9%94%A6%E8%9B%87" title="百花锦蛇">百花锦蛇</a></b><span style="font-size:0.88em;">（金钱白花蛇[广西]、白花蛇、花蛇、菊花蛇）</span>
+<p style="font-size:0.88em;">搜风胜湿，定搐搦，强腰膝。用于半身不遂，口眼歪斜，筋脉拘急，湿痹不仁、骨节疼痛，麻风疥癣。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E4%B8%A4%E9%87%91" title="百两金"><img alt="Bkc00.jpg" src="http://p.ayxbk.com/images/thumb/9/96/Bkc00.jpg/220px-Bkc00.jpg" width="220" height="313" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E4%B8%A4%E9%87%91" title="百两金">百两金</a></b><span style="font-size:0.88em;">（八爪龙、八爪金龙、开喉剑、叶下藏珠、状元红、山豆根、铁雨伞、真珠凉伞、野猴枣、珍珠伞、地杨梅、开喉箭、竹叶胎、蛇连天、白八爪、高脚凉伞）</span>
+<p style="font-size:0.88em;">清热，祛痰，利湿。治咽喉肿痛，肺病咳嗽，咯痰不畅，湿热黄疸，肾炎水肿，痢疾，白浊，风湿骨痛，牙痛，睾丸肿痛。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E8%84%89%E6%A0%B9" title="百脉根"><img alt="Bkc2h.jpg" src="http://p.ayxbk.com/images/thumb/2/2a/Bkc2h.jpg/220px-Bkc2h.jpg" width="220" height="152" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E8%84%89%E6%A0%B9" title="百脉根">百脉根</a></b><span style="font-size:0.88em;">（黄花草、牛角花、黄瓜草、小花生藤、地羊鹊、斑鸠窝、柏脉根、都草、黄金花、五叶草、鸟距草）</span>
+<p style="font-size:0.88em;">补虚；清热；止渴。主虚劳；阴虚发热；口渴</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E7%99%BE%E6%97%A5%E8%8D%89" title="百日草"><img alt="Bkc2i.jpg" src="http://p.ayxbk.com/images/6/68/Bkc2i.jpg" width="220" height="166" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E7%99%BE%E6%97%A5%E8%8D%89" title="百日草">百日草</a></b><span style="font-size:0.88em;">（十姊妹、火毡花、对叶菊、步步登高、节节高）</span>
+<p style="font-size:0.88em;">清热利尿。主治痢疾，淋症，乳头痈。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%9F%8F%E5%AD%90%E4%BB%81" title="柏子仁"><img alt="Bk0ao.jpg" src="http://p.ayxbk.com/images/thumb/7/77/Bk0ao.jpg/220px-Bk0ao.jpg" width="220" height="286" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%9F%8F%E5%AD%90%E4%BB%81" title="柏子仁">柏子仁</a></b><span style="font-size:0.88em;">（柏实、柏子、柏仁、侧柏子）</span>
+<p style="font-size:0.88em;">养心安神，润肠通便。治惊悸，失眠，遗精，盗汗，便秘。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E8%B4%A5%E9%85%B1" title="败酱"><img alt="Bk5b8.jpg" src="http://p.ayxbk.com/images/thumb/d/df/Bk5b8.jpg/220px-Bk5b8.jpg" width="220" height="275" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E8%B4%A5%E9%85%B1" title="败酱">败酱</a></b><span style="font-size:0.88em;">（鹿肠、鹿首、马草、泽败、鹿酱、酸益、苦菜、苦蘵、野苦菜、苦猪菜、苦斋公、豆豉草、豆渣草、白苦爹、苦苴、败酱草、野苦菜；苦斋公；豆豇草；豆渣草；观音菜；白苦爹、苦叶菜、萌菜、女郎花）</span>
+<p style="font-size:0.88em;">清热解毒；活血排脓。主肠痈；肺痈；痈肿；痢疾；产后瘀滞腹痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E8%B4%A5%E9%85%B1%E8%8D%89" title="败酱草"><img alt="Bk0b5.jpg" src="http://p.ayxbk.com/images/4/43/Bk0b5.jpg" width="220" height="308" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E8%B4%A5%E9%85%B1%E8%8D%89" title="败酱草">败酱草</a></b><span style="font-size:0.88em;">（黄花败酱、龙芽败酱、黄花龙牙）</span>
+<p style="font-size:0.88em;">清热解毒，消痈排脓，活血行瘀。用于肠痈、肺痈及疮痈肿毒，实热瘀滞所致的胸腹疼痛，产后瘀滞腹痛等症。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E5%94%87%E9%A9%AC%E5%85%88%E8%92%BF" title="斑唇马先蒿"><img alt="Bk0b6.jpg" src="http://p.ayxbk.com/images/thumb/e/e4/Bk0b6.jpg/220px-Bk0b6.jpg" width="220" height="136" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E5%94%87%E9%A9%AC%E5%85%88%E8%92%BF" title="斑唇马先蒿">斑唇马先蒿</a></b>
+<p style="font-size:0.88em;">健脾开胃，消食化积，利水涩精。主治小儿疳积，食积不化，腹胀满，水肿，遗精，耳鸣。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E7%82%B9%E8%99%8E%E8%80%B3%E8%8D%89" title="斑点虎耳草"><img alt="Bkc2k.jpg" src="http://p.ayxbk.com/images/thumb/4/47/Bkc2k.jpg/220px-Bkc2k.jpg" width="220" height="317" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E7%82%B9%E8%99%8E%E8%80%B3%E8%8D%89" title="斑点虎耳草">斑点虎耳草</a></b>
+<p style="font-size:0.88em;">解毒消肿。主疮痈肿毒</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E8%8A%B1%E6%9D%93%E5%85%B0" title="斑花杓兰"><img alt="Bkc2l.jpg" src="http://p.ayxbk.com/images/thumb/7/71/Bkc2l.jpg/220px-Bkc2l.jpg" width="220" height="324" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E8%8A%B1%E6%9D%93%E5%85%B0" title="斑花杓兰">斑花杓兰</a></b>
+<p style="font-size:0.88em;">镇静止痛；发汗解热。主神经衰弱；癫痫；小儿高热惊厥；头痛；胃脘痛</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E9%B8%A0" title="斑鸠"><img alt="Bkc2m.jpg" src="http://p.ayxbk.com/images/thumb/3/34/Bkc2m.jpg/220px-Bkc2m.jpg" width="220" height="115" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E9%B8%A0" title="斑鸠">斑鸠</a></b><span style="font-size:0.88em;">（斑鵻、锦鸠、斑鹪、鹁鸠、祝鸠）</span>
+<p style="font-size:0.88em;">益气，明目，强筋骨。治虚损，呃逆。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E9%B8%A0%E8%8F%8A" title="斑鸠菊"><img alt="Bkc2r.jpg" src="http://p.ayxbk.com/images/thumb/9/9b/Bkc2r.jpg/220px-Bkc2r.jpg" width="220" height="165" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E9%B8%A0%E8%8F%8A" title="斑鸠菊">斑鸠菊</a></b><span style="font-size:0.88em;">（豆腐渣树、聋耳朵树、鸡菊花、火炭树、火炭叶、火烧叶、火烫叶、火藤菊）</span>
+<p style="font-size:0.88em;">消炎，解毒。主治阑尾炎，疮疖。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E8%8C%85" title="斑茅"><img alt="Bkc2s.jpg" src="http://p.ayxbk.com/images/e/e5/Bkc2s.jpg" width="220" height="270" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E8%8C%85" title="斑茅">斑茅</a></b><span style="font-size:0.88em;">（大密、芭茅）</span>
+<p style="font-size:0.88em;">通窍利水，破血通经。治跌打损伤，筋骨风痛，妇人闭经，水肿盅胀。</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E8%8C%85%E8%8A%B1" title="斑茅花"><img alt="Bkc2t.jpg" src="http://p.ayxbk.com/images/thumb/9/98/Bkc2t.jpg/220px-Bkc2t.jpg" width="220" height="292" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E8%8C%85%E8%8A%B1" title="斑茅花">斑茅花</a></b>
+<p style="font-size:0.88em;">止血。主咯血；呕血；衄血；创伤出血</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%96%91%E8%9D%A5" title="斑蝥"><img alt="Bk0b7.jpg" src="http://p.ayxbk.com/images/6/68/Bk0b7.jpg" width="220" height="240" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%96%91%E8%9D%A5" title="斑蝥">斑蝥</a></b><span style="font-size:0.88em;">（花斑蝥、花壳虫、斑猫、龙尾、螌蝥、斑蚝、龙蚝、斑菌、晏青、龙苗、羊米虫、老虎斑毛、花斑毛、小豆虫、放屁虫、花罗虫、章瓦、斑毛、班蝥）</span>
+<p style="font-size:0.88em;">攻毒蚀疮；逐瘀散结。主痈疽；瘰疬；顽癣；经闭；症瘕；癌肿</p>
+</td>
+</tr>
+</table>
+<table class="wikitable" style="width:22em;">
+<tr>
+<td>
+<div class="center">
+<div class="floatnone"><a href="/w/%E6%9D%BF%E8%93%9D%E6%A0%B9" title="板蓝根"><img alt="Bk0bj.jpg" src="http://p.ayxbk.com/images/thumb/5/5f/Bk0bj.jpg/220px-Bk0bj.jpg" width="220" height="263" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<td><b><a href="/w/%E6%9D%BF%E8%93%9D%E6%A0%B9" title="板蓝根">板蓝根</a></b><span style="font-size:0.88em;">（大蓝根、大青根、靛青根、蓝靛根、靛根）</span>
+<p style="font-size:0.88em;">清热解毒，凉血利咽。用于温毒发斑，舌绛紫暗，痄腮，喉痹，烂喉丹痧，大头瘟疫，丹毒，痈肿。</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="clear:both;"></div>
+<div id="ggad-top"><ins class="adsbygoogle ayx-btm" style="display:inline-block" data-ad-client="ca-pub-4174070858627065" data-ad-slot="7080877719"></ins><script type="text/javascript">
+//<![CDATA[
+(adsbygoogle = window.adsbygoogle || []).push({});
+//]]>
+</script></div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="3">
+<div class="" style="font-size:110%;"><strong class="selflink">中药图典</strong></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-odd wlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">第1页（1-100）</strong></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/2" title="中药图典/2">第2页（101-200）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/3" title="中药图典/3">第3页（201-300）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/4" title="中药图典/4">第4页（301-400）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/5" title="中药图典/5">第5页（401-500）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/6" title="中药图典/6">第6页（501-600）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/7" title="中药图典/7">第7页（601-700）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/8" title="中药图典/8">第8页（701-800）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/9" title="中药图典/9">第9页（801-900）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/10" title="中药图典/10">第10页（901-1000）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/11" title="中药图典/11">第11页（1001-1100）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/12" title="中药图典/12">第12页（1101-1200）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/13" title="中药图典/13">第13页（1201-1300）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/14" title="中药图典/14">第14页（1301-1400）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/15" title="中药图典/15">第15页（1401-1500）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/16" title="中药图典/16">第16页（1501-1600）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/17" title="中药图典/17">第17页（1601-1700）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/18" title="中药图典/18">第18页（1701-1800）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/19" title="中药图典/19">第19页（1801-1900）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/20" title="中药图典/20">第20页（1901-2000）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/21" title="中药图典/21">第21页（2001-2100）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/22" title="中药图典/22">第22页（2101-2200）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/23" title="中药图典/23">第23页（2201-2300）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/24" title="中药图典/24">第24页（2301-2400）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/25" title="中药图典/25">第25页（2401-2500）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/26" title="中药图典/26">第26页（2501-2600）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/27" title="中药图典/27">第27页（2601-2700）</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8/28" title="中药图典/28">第28页（2701-2800）</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" style="width:0%;padding:0px 0px 0px 2px;" rowspan="1">
+<div><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" title="中药图典"><img alt="Bkhfe.jpg" src="http://p.ayxbk.com/images/3/3a/Bkhfe.jpg" width="200" height="147" /></a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" style=";" colspan="3">
+<div><strong class="selflink">中药图典</strong> - <a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药百科</a> - <a href="/w/%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="中药方剂">中药方剂百科</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="3">
+<div class="" style="font-size:110%;"><a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药百科</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">按分类查药</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E8%A7%A3%E8%A1%A8%E8%8D%AF" title="解表药">解表药</a></li>
+<li><a href="/w/%E6%B8%85%E7%83%AD%E8%8D%AF" title="清热药">清热药</a></li>
+<li><a href="/w/%E6%B3%BB%E4%B8%8B%E8%8D%AF" title="泻下药">泻下药</a></li>
+<li><a href="/w/%E7%A5%9B%E9%A3%8E%E6%B9%BF%E8%8D%AF" title="祛风湿药">祛风湿药</a></li>
+<li><a href="/w/%E8%8A%B3%E9%A6%99%E5%8C%96%E6%B9%BF%E8%8D%AF" title="芳香化湿药">芳香化湿药</a></li>
+<li><a href="/w/%E5%88%A9%E6%B0%B4%E6%B8%97%E6%B9%BF%E8%8D%AF" title="利水渗湿药">利水渗湿药</a></li>
+<li><a href="/w/%E6%B8%A9%E9%87%8C%E8%8D%AF" title="温里药">温里药</a></li>
+<li><a href="/w/%E7%90%86%E6%B0%94%E8%8D%AF" title="理气药">理气药</a></li>
+<li><a href="/w/%E6%B6%88%E5%AF%BC%E8%8D%AF" title="消导药">消导药</a></li>
+<li><a href="/w/%E9%A9%B1%E8%99%AB%E8%8D%AF" title="驱虫药">驱虫药</a></li>
+<li><a href="/w/%E6%AD%A2%E8%A1%80%E8%8D%AF" title="止血药">止血药</a></li>
+<li><a href="/w/%E6%B4%BB%E8%A1%80%E8%8D%AF" title="活血药">活血药</a></li>
+<li><a href="/w/%E5%8C%96%E7%97%B0%E6%AD%A2%E5%92%B3%E5%B9%B3%E5%96%98%E8%8D%AF" title="化痰止咳平喘药">化痰止咳平喘药</a></li>
+<li><a href="/w/%E5%AE%89%E7%A5%9E%E8%8D%AF" title="安神药">安神药</a></li>
+<li><a href="/w/%E5%B9%B3%E8%82%9D%E7%86%84%E9%A3%8E%E8%8D%AF" title="平肝熄风药">平肝熄风药</a></li>
+<li><a href="/w/%E5%BC%80%E7%AA%8D%E8%8D%AF" title="开窍药">开窍药</a></li>
+<li><a href="/w/%E8%A1%A5%E7%9B%8A%E8%8D%AF" title="补益药">补益药</a></li>
+<li><a href="/w/%E5%9B%BA%E6%B6%A9%E8%8D%AF" title="固涩药">固涩药</a></li>
+<li><a href="/w/%E5%A4%96%E7%94%A8%E8%8D%AF" title="外用药">外用药</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" style="width:0%;padding:0px 0px 0px 2px;" rowspan="15">
+<div><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" title="中药图典"><img alt="Bk3gr.jpg" src="http://p.ayxbk.com/images/thumb/a/ab/Bk3gr.jpg/120px-Bk3gr.jpg" width="120" height="155" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">按<a href="/w/%E5%BD%92%E7%BB%8F" title="归经">归经</a>查药</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%83%83%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入胃经的中药列表">胃经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%84%BE%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入脾经的中药列表">脾经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E5%A4%A7%E8%82%A0%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入大肠经的中药列表">大肠经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%82%BE%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入肾经的中药列表">肾经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%82%BA%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入肺经的中药列表">肺经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E5%BF%83%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入心经的中药列表">心经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%82%9D%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入肝经的中药列表">肝经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%86%80%E8%83%B1%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入膀胱经的中药列表">膀胱经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E8%83%86%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入胆经的中药列表">胆经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E4%B8%89%E7%84%A6%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入三焦经的中药列表">三焦经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E5%B0%8F%E8%82%A0%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入小肠经的中药列表">小肠经</a></li>
+<li><a href="/w/%E5%BD%92%E5%85%A5%E5%BF%83%E5%8C%85%E7%BB%8F%E7%9A%84%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="归入心包经的中药列表">心包经</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">按<a href="/w/%E5%9B%9B%E6%B0%94" title="四气">药性</a>查药</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E6%B8%A9%E6%80%A7%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="温性中药列表">温性中药列表</a></li>
+<li><a href="/w/%E5%B9%B3%E6%80%A7%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="平性中药列表">平性中药列表</a></li>
+<li><a href="/w/%E5%AF%92%E6%80%A7%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="寒性中药列表">寒性中药列表</a></li>
+<li><a href="/w/%E5%87%89%E6%80%A7%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="凉性中药列表">凉性中药列表</a></li>
+<li><a href="/w/%E7%83%AD%E6%80%A7%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="热性中药列表">热性中药列表</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">按<a href="/w/%E4%BA%94%E5%91%B3" title="五味">药味</a>查药</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E7%94%98%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="甘味中药列表">甘味中药列表</a></li>
+<li><a href="/w/%E8%8B%A6%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="苦味中药列表">苦味中药列表</a></li>
+<li><a href="/w/%E8%BE%9B%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="辛味中药列表">辛味中药列表</a></li>
+<li><a href="/w/%E9%85%B8%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="酸味中药列表">酸味中药列表</a></li>
+<li><a href="/w/%E5%92%B8%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="咸味中药列表">咸味中药列表</a></li>
+<li><a href="/w/%E6%B6%A9%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="涩味中药列表">涩味中药列表</a></li>
+<li><a href="/w/%E6%B7%A1%E5%91%B3%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="淡味中药列表">淡味中药列表</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">按名称查药</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DA%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母A开头的中药材">A</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DB%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母B开头的中药材">B</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DC%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母C开头的中药材">C</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DD%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母D开头的中药材">D</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DE%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母E开头的中药材">E</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DF%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母F开头的中药材">F</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DG%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母G开头的中药材">G</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DH%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母H开头的中药材">H</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DJ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母J开头的中药材">J</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DK%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母K开头的中药材">K</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DL%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母L开头的中药材">L</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DM%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母M开头的中药材">M</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DN%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母N开头的中药材">N</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DO%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母O开头的中药材">O</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DP%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母P开头的中药材">P</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DQ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母Q开头的中药材">Q</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DR%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母R开头的中药材">R</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DS%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母S开头的中药材">S</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DT%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母T开头的中药材">T</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DW%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母W开头的中药材">W</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DX%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母X开头的中药材">X</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DY%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母Y开头的中药材">Y</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DZ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%9D%90" title="以拼音字母Z开头的中药材">Z</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="中药方剂">中药方剂</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DA%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母A开头的中药方剂">A</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DB%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母B开头的中药方剂">B</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DC%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母C开头的中药方剂">C</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DD%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母D开头的中药方剂">D</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DE%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母E开头的中药方剂">E</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DF%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母F开头的中药方剂">F</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DG%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母G开头的中药方剂">G</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DH%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母H开头的中药方剂">H</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DJ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母J开头的中药方剂">J</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DK%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母K开头的中药方剂">K</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DL%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母L开头的中药方剂">L</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DM%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母M开头的中药方剂">M</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DN%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母N开头的中药方剂">N</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DO%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母O开头的中药方剂">O</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DP%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母P开头的中药方剂">P</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DQ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母Q开头的中药方剂">Q</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DR%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母R开头的中药方剂">R</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DS%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母S开头的中药方剂">S</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DT%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母T开头的中药方剂">T</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DW%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母W开头的中药方剂">W</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DX%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母X开头的中药方剂">X</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DY%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母Y开头的中药方剂">Y</a></li>
+<li><a href="/w/%E4%BB%A5%E6%8B%BC%E9%9F%B3%E5%AD%97%E6%AF%8DZ%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="以拼音字母Z开头的中药方剂">Z</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E4%B8%AD%E5%8C%BB%E7%94%B5%E5%AD%90%E4%B9%A6" title="中医电子书">中药电子书</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li>《<a href="/w/%E6%9C%AC%E8%8D%89%E7%BA%B2%E7%9B%AE" title="本草纲目">本草纲目</a>》</li>
+<li>《<a href="/w/%E7%A5%9E%E5%86%9C%E6%9C%AC%E8%8D%89%E7%BB%8F" title="神农本草经">神农本草经</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E8%8D%AF%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86" title="中药基本理论知识">中药基本理论知识</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E8%8D%AF%E5%AD%A6" title="中药学">中药学</a>》</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">中药相关</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%B8%AD%E5%8C%BB" title="中医">中医百科</a></li>
+<li><strong class="selflink">中药图典</strong></li>
+<li><a href="/w/%E6%9C%89%E6%AF%92%E4%B8%AD%E8%8D%AF%E5%88%97%E8%A1%A8" title="有毒中药列表">有毒中药列表</a></li>
+<li><a href="/w/%E8%8D%AF%E5%93%81" title="药品">药品百科</a></li>
+<li><a href="/w/%E5%BD%92%E7%BB%8F" title="归经">归经</a></li>
+<li><a href="/w/%E5%9B%9B%E6%B0%94" title="四气">四气</a></li>
+<li><a href="/w/%E4%BA%94%E5%91%B3" title="五味">五味</a></li>
+<li><a href="/w/%E4%B8%AD%E6%88%90%E8%8D%AF" title="中成药">中成药百科</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p></p>
+<table cellspacing="0" class="navbox" style="border-spacing:0;;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+<tr>
+<th scope="col" style=";" class="navbox-title" colspan="2">
+<div class="" style="font-size:110%;"><a href="/w/%E4%B8%AD%E5%8C%BB" title="中医">中医百科</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E4%B8%AD%E5%8C%BB%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA" title="中医基础理论">基础</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E9%98%B4%E9%98%B3" title="阴阳">阴阳</a></li>
+<li><a href="/w/%E4%BA%94%E8%A1%8C" title="五行">五行</a></li>
+<li><a href="/w/%E4%BA%94%E8%BF%90%E5%85%AD%E6%B0%94" title="五运六气" class="mw-redirect">五运六气</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E8%84%8F%E8%B1%A1" title="脏象">脏象</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;;;;">
+<tr>
+<th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="/w/%E4%BA%94%E8%84%8F" title="五脏">五脏</a></div>
+</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/w/%E5%BF%83" title="心">心</a>、<a href="/w/%E8%82%9D" title="肝" class="mw-redirect">肝</a>、<a href="/w/%E8%84%BE" title="脾">脾</a>、<a href="/w/%E8%82%BA" title="肺">肺</a>、<a href="/w/%E8%82%BE" title="肾">肾</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="/w/%E5%85%AD%E8%85%91" title="六腑">六腑</a></div>
+</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/w/%E8%83%86" title="胆">胆</a>、<a href="/w/%E8%83%83" title="胃">胃</a>、<a href="/w/%E5%B0%8F%E8%82%A0" title="小肠">小肠</a>、<a href="/w/%E5%A4%A7%E8%82%A0" title="大肠">大肠</a>、<a href="/w/%E8%86%80%E8%83%B1" title="膀胱">膀胱</a>、<a href="/w/%E4%B8%89%E7%84%A6" title="三焦">三焦</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="/w/%E5%A5%87%E6%81%92%E4%B9%8B%E5%BA%9C" title="奇恒之府">奇恒之府</a></div>
+</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/w/%E8%84%91" title="脑">脑</a>、<a href="/w/%E9%AB%93" title="髓">髓</a>、<a href="/w/%E9%AA%A8" title="骨">骨</a>、<a href="/w/%E8%84%89" title="脉">脉</a>、<a href="/w/%E5%A5%B3%E5%AD%90%E8%83%9E" title="女子胞" class="mw-redirect">女子胞</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E8%A1%80%E6%B0%94%E7%B2%BE%E7%A5%9E" title="血气精神">血气精神</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E7%B2%BE" title="精">精</a></li>
+<li><a href="/w/%E6%B0%94" title="气">气</a></li>
+<li><a href="/w/%E8%A1%80" title="血">血</a></li>
+<li><a href="/w/%E6%B4%A5%E6%B6%B2" title="津液">津液</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E7%BB%8F%E7%BB%9C" title="经络">经络</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;;;;">
+<tr>
+<th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="/w/%E7%BB%8F%E8%84%89" title="经脉">经脉</a></div>
+</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/w/%E5%8D%81%E4%BA%8C%E7%BB%8F%E8%84%89" title="十二经脉">十二经脉</a>、<a href="/w/%E5%8D%81%E4%BA%8C%E7%BB%8F%E5%88%AB" title="十二经别">十二经别</a>、<a href="/w/%E5%A5%87%E7%BB%8F%E5%85%AB%E8%84%89" title="奇经八脉">奇经八脉</a>、<a href="/w/%E5%8D%81%E4%BA%8C%E7%BB%8F%E7%AD%8B" title="十二经筋">十二经筋</a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="/w/%E7%BB%9C%E8%84%89" title="络脉">络脉</a></div>
+</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even">
+<div style="padding:0em 0.25em"><a href="/w/%E5%8D%81%E4%BA%94%E5%88%AB%E7%BB%9C" title="十五别络" class="mw-redirect">十五别络</a>、<a href="/w/%E6%B5%AE%E7%BB%9C" title="浮络">浮络</a>、<a href="/w/%E5%AD%99%E7%BB%9C" title="孙络">孙络</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E7%A9%B4%E4%BD%8D" title="穴位">穴位</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%BA%BA%E4%BD%93%E7%A9%B4%E4%BD%8D%E5%9B%BE" title="人体穴位图">人体穴位图</a></li>
+<li><a href="/w/%E4%BA%92%E5%8A%A8%E7%89%88%E4%BA%BA%E4%BD%93%E7%A9%B4%E4%BD%8D%E5%9B%BE" title="互动版人体穴位图">互动穴位图</a></li>
+<li><a href="/w/%E5%8D%81%E5%9B%9B%E7%BB%8F%E7%A9%B4" title="十四经穴">十四经穴</a></li>
+<li><a href="/w/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%A0%87%E5%87%86%C2%B7%E7%BB%8F%E7%A9%B4%E9%83%A8%E4%BD%8D" title="中华人民共和国国家标准·经穴部位">标准穴位表</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E4%BD%93%E8%B4%A8" title="体质">体质</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%BD%93%E8%B4%A8" title="体质">体质</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E7%97%85%E5%9B%A0" title="病因">病因</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E5%85%AD%E6%B7%AB" title="六淫">六淫</a>（<a href="/w/%E9%A3%8E%E9%82%AA" title="风邪">风</a>、<a href="/w/%E5%AF%92%E9%82%AA" title="寒邪">寒</a>、<a href="/w/%E6%9A%91%E9%82%AA" title="暑邪">暑</a>、<a href="/w/%E6%B9%BF%E9%82%AA" title="湿邪">湿</a>、<a href="/w/%E7%87%A5%E9%82%AA" title="燥邪">燥</a>、<a href="/w/%E7%81%AB%E9%82%AA" title="火邪">火</a>）</li>
+<li><a href="/w/%E7%96%A0%E6%B0%94" title="疠气">疠气</a></li>
+<li><a href="/w/%E6%B8%A9%E9%82%AA" title="温邪">温邪</a></li>
+<li><a href="/w/%E4%B8%83%E6%83%85" title="七情">七情</a>（<a href="/w/%E5%96%9C" title="喜">喜</a>、<a href="/w/%E6%80%92" title="怒">怒</a>、<a href="/w/%E5%BF%A7" title="忧">忧</a>、<a href="/w/%E6%80%9D" title="思">思</a>、<a href="/w/%E6%82%B2" title="悲">悲</a>、<a href="/w/%E6%81%90" title="恐">恐</a>、<a href="/w/%E6%83%8A" title="惊">惊</a>）</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E7%97%85%E6%9C%BA" title="病机">病机</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E9%82%AA%E6%AD%A3%E7%9B%9B%E8%A1%B0" title="邪正盛衰">邪正盛衰</a></li>
+<li><a href="/w/%E9%98%B4%E9%98%B3%E5%A4%B1%E8%B0%83" title="阴阳失调">阴阳失调</a></li>
+<li><a href="/w/%E6%B0%94%E8%A1%80%E5%A4%B1%E5%B8%B8" title="气血失常">气血失常</a></li>
+<li><a href="/w/%E6%B4%A5%E6%B6%B2%E5%A4%B1%E5%B8%B8" title="津液失常">津液失常</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E5%9B%9B%E8%AF%8A" title="四诊">四诊</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E6%9C%9B%E8%AF%8A" title="望诊">望诊</a></li>
+<li><a href="/w/%E9%97%BB%E8%AF%8A" title="闻诊">闻诊</a></li>
+<li><a href="/w/%E9%97%AE%E8%AF%8A" title="问诊">问诊</a></li>
+<li><a href="/w/%E8%84%89%E8%AF%8A" title="脉诊">切诊</a>（<a href="/w/%E8%84%89%E8%B1%A1" title="脉象">脉象</a>）</li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E8%AF%8A%E6%96%AD%E5%AD%A6" title="中医诊断学">中医诊断学</a>》</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E8%BE%A8%E8%AF%81%E8%AE%BA%E6%B2%BB" title="辨证论治">辨证论治</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E8%BE%A8%E8%AF%81" title="辨证">辨证</a>（<a href="/w/%E5%85%AB%E7%BA%B2%E8%BE%A8%E8%AF%81" title="八纲辨证">八纲辨证</a>、<a href="/w/%E8%84%8F%E8%85%91%E8%BE%A8%E8%AF%81" title="脏腑辨证">脏腑辨证</a>、<a href="/w/%E5%85%AD%E7%BB%8F%E8%BE%A8%E8%AF%81" title="六经辨证">六经辨证</a>、<a href="/w/%E4%B8%89%E7%84%A6%E8%BE%A8%E8%AF%81" title="三焦辨证">三焦辨证</a>）</li>
+<li><a href="/w/%E8%AE%BA%E6%B2%BB" title="论治">论治</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">治则治法</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E6%B2%BB%E5%88%99" title="治则">治则</a>（<a href="/w/%E4%B8%89%E5%9B%A0%E5%88%B6%E5%AE%9C" title="三因制宜">三因制宜</a>）</li>
+<li>治法（<a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药</a>、<a href="/w/%E9%92%88%E7%81%B8" title="针灸">针灸</a>、<a href="/w/%E6%8B%94%E7%BD%90" title="拔罐" class="mw-redirect">拔罐</a>、<a href="/w/%E6%8E%A8%E6%8B%BF" title="推拿">推拿</a>、<a href="/w/%E6%8C%89%E6%91%A9" title="按摩">按摩</a>、<a href="/w/%E6%B0%94%E5%8A%9F" title="气功">气功</a>、<a href="/w/%E9%A3%9F%E7%96%97" title="食疗">食疗</a>）</li>
+<li><a href="/w/%E5%86%85%E6%B2%BB%E6%B3%95" title="内治法">内治法</a>（<a href="/w/%E5%85%AB%E6%B3%95" title="八法">八法</a>）</li>
+<li><a href="/w/%E5%A4%96%E6%B2%BB%E6%B3%95" title="外治法">外治法</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E7%96%BE%E7%97%85" title="疾病">病症</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E6%97%B6%E7%97%85" title="时病">时病</a></li>
+<li><a href="/w/%E6%9D%82%E7%97%85" title="杂病">杂病</a></li>
+<li><a href="/w/%E5%A6%87%E7%A7%91#.E4.B8.AD.E5.8C.BB.E5.A6.87.E7.A7.91.E7.9B.B8.E5.85.B3.E6.9D.A1.E7.9B.AE" title="妇科">妇科</a></li>
+<li><a href="/w/%E4%BA%A7%E7%A7%91#.E4.B8.AD.E5.8C.BB.E4.BA.A7.E7.A7.91.E7.9B.B8.E5.85.B3.E6.9D.A1.E7.9B.AE" title="产科">产科</a></li>
+<li><a href="/w/%E5%A4%96%E7%A7%91" title="外科">外科</a></li>
+<li><a href="/w/%E4%BC%A4%E7%A7%91" title="伤科">伤科</a></li>
+<li><a href="/w/%E8%80%B3%E9%BC%BB%E5%92%BD%E5%96%89%E7%A7%91" title="耳鼻咽喉科">耳鼻咽喉科</a></li>
+<li><a href="/w/%E7%9C%BC%E7%A7%91" title="眼科">眼科</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF" title="中药">中药列表</a></li>
+<li><strong class="selflink">中药图典</strong></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82" title="中药方剂">中药方剂列表</a></li>
+<li><a href="/w/%E6%80%A7%E5%91%B3" title="性味">性味</a>（<a href="/w/%E5%9B%9B%E6%B0%94" title="四气">四气</a>、<a href="/w/%E4%BA%94%E5%91%B3" title="五味">五味</a>）</li>
+<li><a href="/w/%E5%BD%92%E7%BB%8F" title="归经">归经</a></li>
+<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%AD%A6/%E4%B8%AD%E8%8D%AF%E9%85%8D%E4%BC%8D" title="中药学/中药配伍">中药配伍</a>（<a href="/w/%E4%B8%83%E6%83%85" title="七情">七情</a>、<a href="/w/%E5%8D%81%E4%B9%9D%E7%95%8F" title="十九畏">十九畏</a>、<a href="/w/%E5%8D%81%E5%85%AB%E5%8F%8D" title="十八反">十八反</a>）</li>
+<li><a href="/w/%E4%B8%AD%E6%88%90%E8%8D%AF" title="中成药">中成药</a></li>
+<li>《<a href="/w/%E6%9C%AC%E8%8D%89%E7%BA%B2%E7%9B%AE" title="本草纲目">本草纲目</a>》</li>
+<li>《<a href="/w/%E7%A5%9E%E5%86%9C%E6%9C%AC%E8%8D%89%E7%BB%8F" title="神农本草经">神农本草经</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E8%8D%AF%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86" title="中药基本理论知识">中药基本理论知识</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E8%8D%AF%E5%AD%A6" title="中药学">中药学</a>》</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E9%92%88%E7%81%B8" title="针灸">针灸</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E9%92%88%E6%B3%95" title="针法">针法</a>（<a href="/w/%E4%B9%9D%E9%92%88" title="九针">九针</a>、<a href="/w/%E6%99%95%E9%92%88" title="晕针">晕针</a>）</li>
+<li><a href="/w/%E7%81%B8%E6%B3%95" title="灸法">灸法</a></li>
+<li>《<a href="/w/%E9%92%88%E7%81%B8%E5%AD%A6" title="针灸学">针灸学</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E5%88%BA%E7%81%B8" title="中医刺灸">中医刺灸</a>》</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;"><a href="/w/%E5%8C%BB%E5%AD%A6%E7%94%B5%E5%AD%90%E4%B9%A6" title="医学电子书">电子书</a></th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%B8%AD%E5%8C%BB%E7%94%B5%E5%AD%90%E4%B9%A6" title="中医电子书">700本中医电子书</a></li>
+<li><a href="/w/%E7%BB%8F%E5%85%B8%E4%B8%AD%E5%8C%BB%E5%8F%A4%E7%B1%8D" title="经典中医古籍">经典中医古籍</a></li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E5%86%85%E7%A7%91%E5%AD%A6" title="中医内科学">中医内科学</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E5%A4%96%E7%A7%91%E5%AD%A6" title="中医外科学">中医外科学</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E5%A6%87%E7%A7%91%E5%AD%A6" title="中医妇科学">中医妇科学</a>》</li>
+<li>《<a href="/w/%E4%B8%AD%E5%8C%BB%E5%84%BF%E7%A7%91%E5%AD%A6" title="中医儿科学">中医儿科学</a>》</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style=";;">其它</th>
+<td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/%E4%B8%AD%E5%8C%BB%E5%8F%B2" title="中医史">中医史</a></li>
+<li><a href="/w/%E5%8C%BB%E5%AD%A6%E5%90%8D%E4%BA%BA" title="医学名人">医学名人</a></li>
+<li><a href="/w/%E4%B8%AD%E5%8C%BB%E9%99%A2%E5%88%97%E8%A1%A8" title="中医院列表">中医院列表</a></li>
+<li><a href="/w/%E5%8C%BB%E5%AD%A6%E8%A7%86%E9%A2%91" title="医学视频">医学视频</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 2448/1000000
+Post-expand include size: 68528/2097152 bytes
+Template argument size: 28005/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key ahospital:pcache:idhash:217745-0!1!0!!zh-hans!2!edit=0 and timestamp 20150522105527 -->
+<div id="ggad-top"><ins class="adsbygoogle ayx-btm" style="display:inline-block" data-ad-client="ca-pub-4174070858627065" data-ad-slot="7080877719"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div id="fromlink">出自A+医学百科 “中药图典”条目 <a href="http://www.a-hospital.com/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" class="external free" target="_blank">http://www.a-hospital.com/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8</a> 转载请保留此链接</div><div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_count" data-cmd="count"></a></div>
+<table class="msg-table">
+
+<tr style="background-color:rgb(206, 223, 242);">
+<td><b>关于“<strong class="selflink">中药图典</strong>”的留言：</b>
+</td><td align="right"><img alt="Feed-icon.png" src="http://p.ayxbk.com/images/f/f4/Feed-icon.png" width="12" height="12" /> <a href="http://www.a-hospital.com/index.php?title=%E8%AE%A8%E8%AE%BA:%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8&amp;feed=rss&amp;action=history" class="external text" target="_blank">订阅讨论RSS</a>
+</td></tr>
+<tr>
+<td colspan="2" style="background-color:#ffffff;">
+</td></tr>
+<tr>
+<td colspan="2"><a href="http://www.a-hospital.com/index.php?title=%E8%AE%A8%E8%AE%BA:%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8&amp;action=edit&amp;section=new&amp;preload=%E6%A8%A1%E6%9D%BF%3A%E7%AD%BE%E5%90%8D&amp;editintro=%E6%A8%A1%E6%9D%BF%3A%E7%AD%BE%E5%90%8D%E8%AF%B4%E6%98%8E&amp;preloadtitle=%E7%BB%99%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8%E6%9D%A1%E7%9B%AE%E7%9A%84%E7%95%99%E8%A8%80" class="external text" target="_blank">添加留言</a>
+</td></tr></table>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/w/%E7%89%B9%E6%AE%8A:%E9%A1%B5%E9%9D%A2%E5%88%86%E7%B1%BB" title="特殊:页面分类">4个分类</a>: <span dir='ltr'><a href="/w/%E5%88%86%E7%B1%BB:%E4%B8%AD%E8%8D%AF" title="分类:中药">中药</a></span> | <span dir='ltr'><a href="/w/%E5%88%86%E7%B1%BB:%E4%B8%AD%E8%8D%89%E8%8D%AF" title="分类:中草药">中草药</a></span> | <span dir='ltr'><a href="/w/%E5%88%86%E7%B1%BB:%E5%8C%BB%E5%AD%A6%E5%9B%BE%E7%89%87" title="分类:医学图片">医学图片</a></span> | <span dir='ltr'><a href="/w/%E5%88%86%E7%B1%BB:%E4%B8%AD%E5%8C%BB" title="分类:中医">中医</a></span></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>个人工具</h5>
+	<ul>
+					<li  id="pt-login"><a href="/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;returnto=%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o" rel="nofollow">登录／创建账户</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>名字空间</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" rel="nofollow"  title="查看页面内容 [c]" accesskey="c"><span>页面</span></a></li>
+					<li  id="ca-talk"><a href="/w/%E8%AE%A8%E8%AE%BA:%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" rel="nofollow"  title="关于页面正文的讨论 [t]" accesskey="t"><span>讨论</span></a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>查看</h5>
+	<ul>
+					<li id="ca-view" class="selected"><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" rel="nofollow"><span>阅读</span></a></li>
+					<li id="ca-trans"><a href="http://cht.a-hospital.com/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" rel="alternate" hreflang="zh-Hant"><span>繁体/正体</span></a></li>
+					<li id="ca-viewsource"><a href="/index.php?title=%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8&amp;action=edit" rel="nofollow" title="修正、补充或整理本条目。 [e]" accesskey="e"><span>编辑修改</span></a></li>
+					<li id="ca-history" class="collapsible "><a href="/index.php?title=%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8&amp;action=history" rel="nofollow" title="此页面的早前修订版本 [h]" accesskey="h"><span>修订历史</span></a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>动作</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">搜索</label></h5>
+	<form action="/index.php" id="searchform">
+		<input type='hidden' name="title" value="特殊:搜索"/>
+		<div id="simpleSearch">
+							<input id="searchInput"  onfocus="if (this.value == '搜索') {this.value = '';}" onblur="if (this.value == '') {this.value = '搜索';}" name="search" type="text"  title="搜索该网站 [f]" accesskey="f"  value="搜索"  />
+						<button id="searchButton" type='submit' name='button'  title="搜索该文字的页面">&nbsp;</button>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://s.ayxbk.com/common/images/logo.png);" href="/w/%E9%A6%96%E9%A1%B5"  title="访问首页"></a></div>
+				<!-- /logo -->
+				  
+<div class="portal" id='p-navigation'>
+	<h5>导航</h5>
+	<div class="body">
+				<ul>
+					<li><a href="/w/%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+					<li><a href="/w/%E5%A4%A7%E5%8C%BB%E7%B2%BE%E8%AF%9A">大医精诚</a></li>
+					<li><a href="/w/%E4%BA%BA%E4%BD%93%E7%A9%B4%E4%BD%8D%E5%9B%BE">人体穴位图</a></li>
+					<li><a href="/w/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8">中药图典</a></li>
+					<li><a href="/w/%E5%85%A8%E5%9B%BD%E5%8C%BB%E9%99%A2%E5%88%97%E8%A1%A8">全国医院列表</a></li>
+					<li><a href="/w/%E5%8C%BB%E5%AD%A6%E7%94%B5%E5%AD%90%E4%B9%A6">医学电子书</a></li>
+					<li><a href="/w/%E8%8D%AF%E5%93%81">药品百科</a></li>
+					<li><a href="/w/%E4%B8%AD%E5%8C%BB">中医百科</a></li>
+					<li><a href="/w/%E7%96%BE%E7%97%85%E8%AF%8A%E6%96%AD">疾病诊断</a></li>
+					<li><a href="/w/%E6%80%A5%E6%95%91%E5%B8%B8%E8%AF%86">急救常识</a></li>
+					<li><a href="/w/%E7%96%BE%E7%97%85">疾病查询</a></li>
+					<li><a href="/w/%E4%B8%AD%E8%8D%AF">中药百科</a></li>
+					<li><a href="/w/%E4%B8%AD%E8%8D%AF%E6%96%B9%E5%89%82">中医方剂大全</a></li>
+					<li><a href="/w/%E6%80%8E%E6%A0%B7%E7%9C%8B%E5%8C%96%E9%AA%8C%E5%8D%95">怎样看化验单</a></li>
+					<li><a href="/w/%E5%85%A8%E5%9B%BD%E5%88%B6%E8%8D%AF%E4%BC%81%E4%B8%9A%E5%88%97%E8%A1%A8">全国制药企业</a></li>
+					<li><a href="/w/%E5%85%A8%E5%9B%BD%E5%8C%BB%E7%A7%91%E9%99%A2%E6%A0%A1%E5%88%97%E8%A1%A8">医科院校大全</a></li>
+					<li><a href="/w/%E5%8C%BB%E4%BA%8B%E6%BC%AB%E8%B0%88">医事漫谈</a></li>
+					<li><a href="/w/%E5%8C%BB%E5%AD%A6%E4%B8%8B%E8%BD%BD">医学下载</a></li>
+					<li><a href="/w/%E5%8C%BB%E5%AD%A6%E8%A7%86%E9%A2%91">医学视频</a></li>
+				</ul>
+			</div>
+</div>
+  
+<div class="portal" id='p-.E6.8E.A8.E8.8D.90.E5.B7.A5.E5.85.B7'>
+	<h5>推荐工具</h5>
+	<div class="body">
+				<ul>
+					<li><a href="http://www.adaohang.com/health.html">医学网站大全</a></li>
+					<li><a href="http://www.mcd8.com/">医学词典</a></li>
+					<li><a href="http://blog.a-hospital.com/">医学资讯博客</a></li>
+				</ul>
+			</div>
+</div>
+  
+<div class="portal" id='p-.E5.8A.9F.E8.83.BD.E8.8F.9C.E5.8D.95'>
+	<h5>功能菜单</h5>
+	<div class="body">
+				<ul>
+					<li><a href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E6%B7%BB%E5%8A%A0%E6%9D%A1%E7%9B%AE" rel="nofollow">添加页面</a></li>
+					<li><a href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E6%8B%9B%E5%8B%9F%E7%99%BE%E7%A7%91%E5%BF%97%E6%84%BF%E8%80%85" rel="nofollow">志愿者招募中</a></li>
+					<li><a href="/w/%E7%89%B9%E6%AE%8A:ContributionScores" rel="nofollow">积分排名</a></li>
+					<li><a href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E5%85%B3%E4%BA%8E%E5%B9%BF%E5%91%8A" rel="nofollow">关于广告</a></li>
+					<li><a href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E7%BD%91%E7%AB%99%E4%BA%8B%E5%8A%A1">网站事务</a></li>
+					<li><a href="/w/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				</ul>
+			</div>
+</div>
+<div class="portal" id="p-tb">
+	<h5>工具箱</h5>
+	<div class="body">
+		<ul>
+					<li id="t-whatlinkshere"><a href="/w/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+						<li id="t-recentchangeslinked"><a href="/w/%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+																																												<li id="t-specialpages"><a href="/w/%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">所有特殊页面</a></li>
+									<li id="t-print"><a href="/index.php?title=%E4%B8%AD%E8%8D%AF%E5%9B%BE%E5%85%B8&amp;printable=yes" rel="nofollow" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>
+						</ul>
+	</div>
+</div>
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+											<ul id="footer-info">
+																	<li id="footer-info-credits">此页由A+医学百科用户<a rel="nofollow" href="/w/%E7%94%A8%E6%88%B7:%E5%8C%BB%E8%80%85" title="用户:医者">医者</a>于2014年6月13日 (星期五) 17:23最后更改。 在A+医学百科用户<a rel="nofollow" href="/w/%E7%94%A8%E6%88%B7:%E8%A1%8C%E5%8C%BB" title="用户:行医">行医</a>的工作基础上。</li>
+																							<li id="footer-info-copyright"><br />本站内容由网友添加和整理，仅供学习和参考。站内信息不一定准确、全面或最新。<br />
+网站内容不应成为诊断或治疗疾病的最终依据。A+医学百科提醒网友，如有身体不适，请及时就医。<br />
+本站的全部文本内容在<a rel="nofollow" href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E7%89%88%E6%9D%83" title="A+医学百科:版权">知识共享 署名-相同方式共享 3.0协议</a>之条款下提供。<br /></li>
+															</ul>
+															<ul id="footer-places">
+																	<li id="footer-places-privacy"><a rel="nofollow" href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="A+医学百科:隐私政策">隐私政策</a></li>
+																							<li id="footer-places-about"><a rel="nofollow" href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E5%85%B3%E4%BA%8E" title="A+医学百科:关于">关于A+医学百科</a></li>
+																							<li id="footer-places-disclaimer"><a rel="nofollow" href="/w/A%2B%E5%8C%BB%E5%AD%A6%E7%99%BE%E7%A7%91:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="A+医学百科:免责声明">免责声明</a></li>
+															</ul>
+										<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<script>window._bd_share_config={"common":{"bdSign":"off","bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","weixin","tqq","tsina","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tqq","tsina","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+				
+<script>
+var skin="vector",
+stylepath="http://s.ayxbk.com",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|mailto\\:",
+wgArticlePath="/w/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://www.a-hospital.com",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="中药图典",
+wgTitle="中药图典",
+wgAction="view",
+wgArticleId=217745,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-hans",
+wgContentLanguage="zh-hans",
+wgBreakFrames=true,
+wgCurRevisionId=511155,
+wgVersion="1.16.0",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "A+医学百科", "5": "A+医学百科讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论", "420": "Layer", "421": "Layer talk"},
+wgSiteName="A+医学百科",
+wgCategories=["中药", "中草药", "医学图片", "中医"],
+wgMWSuggestTemplate="http://www.a-hospital.com/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="ahospital",
+wgSearchNamespaces=[0],
+wgMWSuggestMessages=["有建议", "无建议"],
+wgRestrictionEdit=["sysop"],
+wgRestrictionMove=["sysop"];
+</script><script src="http://s.ayxbk.com/common/main-mini.js?278"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("http://s.ayxbk.com/vector/csshover.htc")}</style><![endif]-->
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-1856547-6";
+</script>
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1856547-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- Served in 1.750 secs. -->			</body>
+<!-- Cached/compressed 20150522105527 -->
+</html>

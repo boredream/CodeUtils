@@ -1,54 +1,103 @@
 package test;
 
 import java.io.File;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import reptile.bcgm.BCGMUtils;
+import reptile.bcgm.Cao;
+import utils.OfficeUtils;
 
-import utils.AndroidUtils;
-import utils.FileUtils;
 
 public class Main {
+	private static File dirFile = new File("temp" + File.separator + "reptile");
+	private static File imgCsvFile = new File(dirFile, "bcgm_imgs.csv");
+	private static File mainCsvFile = new File(dirFile, "bcgm_main.csv");
 
-	private static String url = "http://www.a-hospital.com/w/%E6%9C%AC%E8%8D%89%E7%BA%B2%E7%9B%AE#.E8.8D.89.E9.83.A8";
+	public static void main(String[] args) throws Exception {
 
-	public static void main(String[] args) {
+		// AndroidUtils.autoCreateActivity();
+		// AndroidUtils.autoCreateAdapter();
+		// JsonUtils.parseJson2Java();
+
+		// TempUtils.autoCreateSizeSet(true);
+
+//		List<CaoMain> cms = BCGMUtils.getMainUrl();
+//		OfficeUtils.saveCVS(cms, mainCsvFile);
 		
-//		AndroidUtils.autoCreateActivity();
-//		AndroidUtils.autoCreateAdapter();
-//		JsonUtils.parseJson2Java();
+//		List<CaoImg> caoImgs = new ArrayList<CaoImg>();
+//		for(int i=1; i<=28; i++) {
+//			String url = BCGMUtils.IMG_URL + (i==1 ? "" : "/" + i);
+//			caoImgs.addAll(BCGMUtils.getImgData(url));
+//			System.out.println(url + " 解析完成，当前总数为 " + caoImgs.size());
+//		}
+//		OfficeUtils.saveCVS(caoImgs, new File(
+//				"temp" + File.separator + "reptile" + File.separator + "bcgm_imgs.csv"));
 		
-//		TempUtils.autoCreateSizeSet(true);
+//		try {
+//			List<CaoImg> cis = OfficeUtils.readDatasFromCSV(imgCsvFile, CaoImg.class);
+//			List<CaoMain> cms = OfficeUtils.readDatasFromCSV(mainCsvFile, CaoMain.class);
+//			List<Cao> caos = new ArrayList<Cao>();
+//			for(CaoMain cm : cms) {
+//				Cao cao = new Cao();
+//				cao.setType(cm.getType());
+//				cao.setName(cm.getName());
+//				cao.setHref(cm.getHref());
+//				
+//				int index = cis.indexOf(cm);
+//				if(index != -1) {
+//					CaoImg ci = cis.get(index);
+//					cao.setImg(ci.getImg());
+//				}
+//				
+//				caos.add(cao);
+//			}
+//			OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm.csv"));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
-
-		new Thread() {
-			public void run() {
-				try {
-					// String response = HttpUtils.getString(url);
-					String response = FileUtils.readToString(new File("temp"
-							+ File.separator + "bcgm_main.txt"), "UTF-8");
-
-					Document parse = Jsoup.parse(response);
-
-					Elements allElements = parse.getAllElements();
-					for (int i = 0; i < allElements.size(); i++) {
-						Element element = allElements.get(i);
-						String nodeName = element.nodeName();
-						String data = element.data();
+		final List<Cao> caos = OfficeUtils.readDatasFromCSV(new File(dirFile, "bcgm.csv"), Cao.class);
+		for(int i=0; i<caos.size(); i++) {
+			final Cao cao = caos.get(i);
+			threadPool.execute(new Runnable() {
+				@Override
+				public void run() {
+					try {
+						loadedCount ++;
+						String detail = BCGMUtils.getDetailData(cao.getName());
+						if(detail != null) {
+							cao.setDetail(detail);
+							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取成功");
+						} else {
+							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
+						}
 						
-						String attr = element.attr("title");
-						String href = element.attr("href");
+						if(loadedCount == caos.size()) {
+							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
+							threadPool.shutdown();
+						}
+					} catch (Exception e) {
+						loadedCount ++;
+						System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
+						e.printStackTrace();
 						
-						if(attr.contains("甘草")) {
-							System.out.println(element);
+						if(loadedCount == caos.size()) {
+							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
+							threadPool.shutdown();
 						}
 					}
-				} catch (Exception e) {
-					e.printStackTrace();
+					
 				}
-			};
-		}.start();
+			});
+		}
+//		OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
+		
+//		List<Cao> caos = OfficeUtils.readDatasFromCSV(new File(dirFile, "bcgm_detail.csv"), Cao.class);
+//		System.out.println(caos);
 	}
+	static ExecutorService threadPool = Executors.newFixedThreadPool(10);
+	static int loadedCount = 0;
+	
 }
