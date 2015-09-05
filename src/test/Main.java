@@ -7,6 +7,7 @@ import java.util.concurrent.Executors;
 
 import reptile.bcgm.BCGMUtils;
 import reptile.bcgm.Cao;
+import utils.AndroidUtils;
 import utils.OfficeUtils;
 
 
@@ -17,7 +18,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		// AndroidUtils.autoCreateActivity();
+		AndroidUtils.autoCreateActivity();
 		// AndroidUtils.autoCreateAdapter();
 		// JsonUtils.parseJson2Java();
 
@@ -58,46 +59,46 @@ public class Main {
 //			e.printStackTrace();
 //		}
 		
-		final List<Cao> caos = OfficeUtils.readDatasFromCSV(new File(dirFile, "bcgm.csv"), Cao.class);
-		for(int i=0; i<caos.size(); i++) {
-			final Cao cao = caos.get(i);
-			threadPool.execute(new Runnable() {
-				@Override
-				public void run() {
-					try {
-						loadedCount ++;
-						String detail = BCGMUtils.getDetailData(cao.getName());
-						if(detail != null) {
-							cao.setDetail(detail);
-							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取成功");
-						} else {
-							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
-						}
-						
-						if(loadedCount == caos.size()) {
-							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
-							threadPool.shutdown();
-						}
-					} catch (Exception e) {
-						loadedCount ++;
-						System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
-						e.printStackTrace();
-						
-						if(loadedCount == caos.size()) {
-							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
-							threadPool.shutdown();
-						}
-					}
-					
-				}
-			});
-		}
+//		final List<Cao> caos = OfficeUtils.readDatasFromCSV(new File(dirFile, "bcgm.csv"), Cao.class);
+//		for(int i=0; i<caos.size(); i++) {
+//			final Cao cao = caos.get(i);
+//			threadPool.execute(new Runnable() {
+//				@Override
+//				public void run() {
+//					try {
+//						loadedCount ++;
+//						String detail = BCGMUtils.getDetailData(cao.getName());
+//						if(detail != null) {
+//							cao.setDetail(detail);
+//							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取成功");
+//						} else {
+//							System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
+//						}
+//						
+//						if(loadedCount == caos.size()) {
+//							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
+//							threadPool.shutdown();
+//						}
+//					} catch (Exception e) {
+//						loadedCount ++;
+//						System.out.println(loadedCount + "/" + caos.size() + " 数据detail获取失败");
+//						e.printStackTrace();
+//						
+//						if(loadedCount == caos.size()) {
+//							OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
+//							threadPool.shutdown();
+//						}
+//					}
+//					
+//				}
+//			});
+//		}
 //		OfficeUtils.saveCVS(caos, new File(dirFile, "bcgm_detail.csv"));
 		
 //		List<Cao> caos = OfficeUtils.readDatasFromCSV(new File(dirFile, "bcgm_detail.csv"), Cao.class);
 //		System.out.println(caos);
 	}
-	static ExecutorService threadPool = Executors.newFixedThreadPool(10);
-	static int loadedCount = 0;
+//	static ExecutorService threadPool = Executors.newFixedThreadPool(10);
+//	static int loadedCount = 0;
 	
 }

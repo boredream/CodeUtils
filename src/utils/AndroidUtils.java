@@ -86,13 +86,13 @@ public class AndroidUtils {
 	 */
 	public static void autoCreateActivity() {
 		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
-		parseElementFromXml("Android\\layout.xml", false);
+		parseElementFromXml("Android" + File.separator + "layout.xml", false);
 		
 		// 解析idNamingBeans集合中的信息,生成页面文本信息
 		String activityContent = createActivityContent();
 		
 		// 获取activity文件
-		File javaFile = new File("Android\\Activity.java");
+		File javaFile = new File("Android" + File.separator + "Activity.java");
 		
 		// 将生成的内容写入至java类文件中
 		FileUtils.writeString2File(activityContent, javaFile);
