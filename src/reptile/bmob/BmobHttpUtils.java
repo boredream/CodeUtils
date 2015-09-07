@@ -1,4 +1,4 @@
-package utils;
+package reptile.bmob;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -23,7 +23,12 @@ import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
 import org.apache.http.protocol.HTTP;
 
-public class HttpUtils {
+public class BmobHttpUtils {
+	
+	// TODO Your Application ID
+	private static final String APP_ID = "Your Application ID";
+	// TODO Your REST API Key
+	private static final String REST_API_KEY = "Your Application ID";
 
 	private static final String HEADER_CONTENT_TYPE = "Content-Type";
 	private static final String CHARSET = "UTF-8";
@@ -37,29 +42,22 @@ public class HttpUtils {
 	}
 
 	public static String getString(String url) throws Exception {
-		return getOrPostString(Method.GET, url, null, null);
-	}
-	
-	public static String getString(String url, Map<String, String> headers) throws Exception {
-		return getOrPostString(Method.GET, url, null, headers);
+		return getOrPostString(Method.GET, url, null);
 	}
 
 	public static String postString(String url, Map<String, String> postParams)
 			throws Exception {
-		return getOrPostString(Method.POST, url, postParams, null);
-	}
-	
-	public static String postString(String url, Map<String, String> postParams, Map<String, String> headers)
-			throws Exception {
-		return getOrPostString(Method.POST, url, postParams, headers);
+		return getOrPostString(Method.POST, url, postParams);
 	}
 
 	private static String getOrPostString(int method, String url,
-			Map<String, String> postParams, Map<String, String> headers) throws Exception {
+			Map<String, String> postParams) throws Exception {
 		HashMap<String, String> map = new HashMap<String, String>();
-		if(headers != null) {
-			map.putAll(headers);
-		}
+		// bmob header
+		map.put("X-Bmob-Application-Id", APP_ID);
+		map.put("X-Bmob-REST-API-Key", REST_API_KEY);
+		map.put("Content-Type", "application/json");
+		 
 		URL parsedUrl = new URL(url);
 		HttpURLConnection connection = openConnection(parsedUrl);
 
@@ -215,10 +213,6 @@ public class HttpUtils {
 		return null;
 	}
 
-	private static String getBodyContentType() {
-		return "application/x-www-form-urlencoded; charset=" + CHARSET;
-	}
-
 	private static void setConnectionParametersForRequest(
 			HttpURLConnection connection, int method,
 			Map<String, String> postParams) throws IOException {
@@ -236,8 +230,6 @@ public class HttpUtils {
 				// output stream.
 				connection.setDoOutput(true);
 				connection.setRequestMethod("POST");
-				connection.addRequestProperty(HEADER_CONTENT_TYPE,
-						getBodyContentType());
 				DataOutputStream out = new DataOutputStream(
 						connection.getOutputStream());
 				out.write(postBody);

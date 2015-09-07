@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 import reptile.bcgm.BCGMUtils;
 import reptile.bcgm.Cao;
 import utils.AndroidUtils;
+import utils.JsonUtils;
 import utils.OfficeUtils;
 
 
@@ -20,7 +21,7 @@ public class Main {
 
 		AndroidUtils.autoCreateActivity();
 		// AndroidUtils.autoCreateAdapter();
-		// JsonUtils.parseJson2Java();
+//		 JsonUtils.parseJson2Java();
 
 		// TempUtils.autoCreateSizeSet(true);
 

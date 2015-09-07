@@ -17,6 +17,10 @@ import entity.Json2JavaElement;
 
 public class JsonUtils {
 	
+	public static void main(String[] args) {
+		parseJson2Java();
+	}
+	
 	/**
 	 * 将json字符串转换为对应的javabean
 	 * 

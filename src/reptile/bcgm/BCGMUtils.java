@@ -107,7 +107,7 @@ public class BCGMUtils {
 
 		return caoImgs;
 	}
-
+	
 	public static String getDetailData(String caoName) throws Exception {
 		String detail = null;
 		String response = null;

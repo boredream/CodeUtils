@@ -2,58 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="title" />
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/tv_link"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="link" />
+        android:text="支付成功,您已获得XX积分"
+        android:textSize="36sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="description" />
-
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="submit" />
-
-    <RadioGroup
-        android:id="@+id/rg_tab"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:id="@+id/rb1"
+        <Button
+            android:id="@+id/btn_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rb1" />
+            android:text="确定" />
 
-        <RadioButton
-            android:id="@+id/rb2"
+        <Button
+            android:id="@+id/btn_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rb2" />
-
-        <RadioButton
-            android:id="@+id/rb3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="rb3" />
-    </RadioGroup>
+            android:text="炫耀一下吧" />
+    </LinearLayout>
 
 </LinearLayout>
