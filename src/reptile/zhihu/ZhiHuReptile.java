@@ -1,5 +1,6 @@
 package reptile.zhihu;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import utils.HttpUtils;
+import utils.OfficeUtils;
 
 import com.google.gson.Gson;
 
@@ -21,19 +23,21 @@ public class ZhiHuReptile {
 
 	public static void main(String[] args) throws Exception {
 		List<Topic> topics = getAllTopics();
+		List<Answer> allAnswers = new ArrayList<Answer>();
+		for(int i=0; i<topics.size(); i++) {
+			String topicUrl = getTopicUrl(topics.get(i));
+			List<Answer> ansersOfPage = getAnsersOfPage(topicUrl);
+			allAnswers.addAll(ansersOfPage);
+		}
 		
-//		for(int i=0; i<topics.size(); i++) {
-//			String topicUrl = getTopicUrl(topics.get(i));
-//			getTop100Ansers(topicUrl);
-//		}
-		
-		String topicUrl = getTopicUrl(topics.get(0));
-		getTop100Ansers(topicUrl);
+		File file = new File("temp" + File.separator + "reptile" + File.separator
+				+ "zhihu_topics_answers.txt");				
+		OfficeUtils.saveCVS(allAnswers, file);
 	}
 	
 	
 	
-	private static void getTop100Ansers(String topicUrl) throws Exception {
+	private static List<Answer> getAnsersOfPage(String topicUrl) throws Exception {
 //		http://www.zhihu.com/topic/19550517/top-answers
 		String topAnswersOfTopic = topicUrl + "/top-answers";
 		
@@ -42,10 +46,12 @@ public class ZhiHuReptile {
 		Document parse = Jsoup.parse(response);
 		Elements elements = parse.getElementsByAttributeValue("class", "content");
 		
+		List<Answer> answers = new ArrayList<Answer>();
 		for(Element element : elements) {
 			Answer answer = parseAnswer(element);
-			System.out.println(answer);
+			answers.add(answer);
 		}
+		return answers;
 	}
 
 
@@ -63,8 +69,14 @@ public class ZhiHuReptile {
 //		<span class="answer-date-link-wrap">
 //		<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-09-24" target="_blank" href="/question/25504353/answer/30949097">编辑于 2014-09-24</a>
 //		</span>
-		Element answerLinkElement = answerRootElement.getElementsByAttributeValueContaining("href", "answer").get(0);
-		String answerLink = hostUrl + answerLinkElement.attr("href");
+		String answerLink = "";
+		Elements answerLinkElements = answerRootElement.getElementsByAttributeValueContaining("href", "answer");
+		if(answerLinkElements != null && answerLinkElements.size() > 0) {
+			Element answerLinkElement = answerLinkElements.get(0);
+			answerLink = hostUrl + answerLinkElement.attr("href");
+		} else {
+			System.out.println(answerRootElement + " ... no answer href");
+		}
 		
 //		<div class="zh-summary summary clearfix">
 //		211 985 高考就是纸老虎gpa 3.8 托福雅思都是渣研究生 博士后 本科毕业像条狗北上广 英美欧 要想成功出亚洲 白瘦美 高富帅 满街都是官二代设计师 程序猿 就我一人还没钱大长腿 一八零 六块腹肌才算赢健身房 瑜伽馆 二十开练都算晚ipad mbp 4k才能玩游戏flym…
@@ -98,6 +110,15 @@ public class ZhiHuReptile {
 					+ questionLink + ", voteCount=" + voteCount
 					+ ", answerLink=" + answerLink + ", summary=" + summary
 					+ "]";
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if(obj instanceof Answer) {
+				Answer answer = (Answer) obj;
+				return this.answerLink.equals(answer.answerLink);
+			}
+			return super.equals(obj);
 		}
 	}
 
