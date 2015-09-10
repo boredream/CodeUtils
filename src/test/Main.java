@@ -1,15 +1,23 @@
 package test;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.Locale;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import reptile.bcgm.BCGMUtils;
-import reptile.bcgm.Cao;
-import utils.AndroidUtils;
-import utils.JsonUtils;
-import utils.OfficeUtils;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.Element;
+
+import utils.FileUtils;
+import utils.XmlUtil;
 
 
 public class Main {
@@ -18,8 +26,8 @@ public class Main {
 	private static File mainCsvFile = new File(dirFile, "bcgm_main.csv");
 
 	public static void main(String[] args) throws Exception {
-
-		AndroidUtils.autoCreateActivity();
+		
+//		AndroidUtils.autoCreateActivity();
 		// AndroidUtils.autoCreateAdapter();
 //		 JsonUtils.parseJson2Java();
 

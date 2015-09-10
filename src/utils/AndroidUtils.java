@@ -9,12 +9,19 @@ import java.util.regex.Pattern;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.jsoup.Jsoup;
+import org.jsoup.parser.Parser;
 
 import entity.IdNamingBean;
 
 
 
 public class AndroidUtils {
+	
+	public static void main(String[] args) {
+//		autoCreateAdapter();
+		autoCreateActivity();
+	}
 	
 	/** DIMEN单位 */
 	public static List<String> dimenUnits = new ArrayList<String>();
@@ -554,6 +561,88 @@ public class AndroidUtils {
 	 */
 	@SuppressWarnings("unchecked")
 	public static void extract2values(String proPath, String valuesXml, String type,
+			String itemName, String itemAttrName, String itemAttrValue, String itemValue, 
+			List<String> values, String matchAttr) {
+		List<File> files = FileUtils.getAllFiles(new File(proPath));
+		
+		String valuesPath = proPath + "/res/values/" + valuesXml;
+		File valuesFile = new File(valuesPath);
+		if(!valuesFile.exists()) {
+			System.out.println("文件不存在,请确定文件["+valuesXml+"]位于/res/values/文件夹下,且文件名称正确");
+			return;
+		}
+		
+		int extractFileCount = 0;
+		for(File file : files) {
+			if(!file.getName().endsWith(".xml")) {
+				continue;
+			}
+			
+			if(file.getName().equals(valuesXml)) {
+				continue;
+			}
+			
+			Document tarDoc = XmlUtil.read(file);
+			
+			// 是否有替换操作
+			boolean isReplace = XmlUtil.replaceAttrValue(tarDoc, values, "@"+type+"/"+itemAttrValue, matchAttr);
+			
+			if(!isReplace) {
+				continue;
+			}
+			
+			XmlUtil.write2xml(file, tarDoc);
+			
+			Document valuesDoc = XmlUtil.read(valuesFile);
+			Element rootElement = valuesDoc.getRootElement();
+			List<Element> elements = rootElement.elements();
+			
+			// 是否在values/xx.xml对应文件下下已有某个抽取过的值
+			boolean hasInValues = false;
+			
+			for(Element element : elements) {
+				String attrValue = element.attributeValue(itemAttrName);
+				if(attrValue.equals(itemAttrValue)) {
+					hasInValues = true;
+					break;
+				}
+			}
+			
+			if(!hasInValues) {
+				Element element = rootElement.addElement(itemName);
+				element.addAttribute(itemAttrName, itemAttrValue);
+				element.setText(itemValue);
+				
+				XmlUtil.write2xml(valuesFile, valuesDoc);
+			}
+			
+			extractFileCount ++;
+		}
+		
+		System.out.println("将" + values 
+				+ "抽取为[" + valuesXml 
+				+ "]文件下的[" + itemAttrValue + "=" + itemValue + "]");
+		System.out.println("共抽取了" + extractFileCount + "个文件下的内容");
+		System.out.println("-------------------------");
+	}
+	
+	/**
+	 * 将参数值抽取到values文件夹下
+	 * <p>如textColor="#ff00aa",将#ff00aa这样的具体值替换为@color/colorname
+	 * <br>并在color.xml文件内创建一个对应颜色item
+	 * 
+	 * @param proPath			项目绝对路径
+	 * @param valuesXml			values文件名称,如strings.xml dimens.xml等
+	 * @param type				抽取内容的前缀,如@color/,则type参数就输入"color"
+	 * @param itemName			values文件内item的名称
+	 * @param itemAttrName		values文件内item的参数,一般都是name
+	 * @param itemAttrValue		values文件内item的参数值,也是抽取值后替换的名称
+	 * @param itemValue			values文件内item的值,即替换后的值
+	 * @param values			被替换的内容,支持模糊替换,只要匹配集合里中其中一个就会被抽取替换,最终抽取成一个值itemValue
+	 * @param matchAttr			匹配参数名,即只会替换该参数名对应的值
+	 */
+	@SuppressWarnings("unchecked")
+	public static void extract2valuesByJsoup(String proPath, String valuesXml, String type,
 			String itemName, String itemAttrName, String itemAttrValue, String itemValue, 
 			List<String> values, String matchAttr) {
 		List<File> files = FileUtils.getAllFiles(new File(proPath));
