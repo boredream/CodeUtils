@@ -1,30 +1,14 @@
 
 
-	private ImageView iv_icon;
-	private TextView tv_info;
-	private Button btn_left;
-	private Button btn_right;
+	private ImageView iv_setting_icon;
+	private TextView tv_setting_name;
+	private ImageView iv_setting_arrow;
 
 	private void initView() {
-		iv_icon = (ImageView) findViewById(R.id.iv_icon);
-		tv_info = (TextView) findViewById(R.id.tv_info);
-		btn_left = (Button) findViewById(R.id.btn_left);
-		btn_right = (Button) findViewById(R.id.btn_right);
+		iv_setting_icon = (ImageView) findViewById(R.id.iv_setting_icon);
+		tv_setting_name = (TextView) findViewById(R.id.tv_setting_name);
+		iv_setting_arrow = (ImageView) findViewById(R.id.iv_setting_arrow);
 
-		btn_left.setOnClickListener(this);
-		btn_right.setOnClickListener(this);
 	}
 
 
-
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.btn_left:
-
-			break;
-		case R.id.btn_right:
-
-			break;
-		}
-	}

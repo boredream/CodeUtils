@@ -1,1 +1,11 @@
-{"data":{"order_number":"WXDE0D6EB88B215E021BCFF549B47BC3","status":7,"pay_time":"20150907155229"},"message":"ok","status":200}
+{
+	"data": {
+		"role": "普通用户",
+		"lack_exp": 2140,
+		"level": 6,
+		"is_vip": true,
+		"integral": 610
+	},
+	"message": "操作成功",
+	"status": 200
+}

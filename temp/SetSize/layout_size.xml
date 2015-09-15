@@ -1,521 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background" >
+    android:background="@color/background"
+    android:orientation="vertical" >
 
-    <include
-        android:id="@+id/title"
-        layout="@layout/title" />
+    <include layout="@layout/title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="16dp"
+        android:background="@color/bg_divider" />
 
     <LinearLayout
-        android:id="@+id/ll_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp" >
 
         <TextView
-            android:id="@+id/tv_fenge"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/fengege2x" />
+            style="@style/TextViewSubhead"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/activity_recharge_confirm_0" />
 
         <TextView
-            android:id="@+id/tv_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center_horizontal"
-            android:text="（如企业信息有误，请联系管理员）"
-            android:textColor="@color/txt_gray" />
-
-        <TextView
-            android:id="@+id/tv_complete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/btn_login_bg2x"
-            android:gravity="center"
-            android:text="选择并保存"
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/tv_modify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/btn_red"
-            android:gravity="center"
-            android:text="修改供职企业"
-            android:textColor="@color/white"
-            android:visibility="gone" />
+            android:id="@+id/tv_money"
+            style="@style/TextViewSubhead"
+            android:text="￥500"
+            android:textColor="@color/txt_red" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/ll_bottom"
-        android:layout_below="@id/title"
-        android:background="#FFFFFF" >
+        android:layout_height="1px"
+        android:background="@color/bg_divider" />
 
-        <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginBottom="1px"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_divider" />
+
+    <com.imohoo.BusinessCMT.view.myview.MyListView
+        android:id="@+id/lv_recharge_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/bg_divider"
+        android:dividerHeight="1px"
+        android:listSelector="@color/transparent" >
+    </com.imohoo.BusinessCMT.view.myview.MyListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_divider" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginBottom="1px"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_confirm_infos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <TextView
+            style="@style/TextViewSubhead"
+            android:layout_marginBottom="16dp"
+            android:text="@string/activity_recharge_confirm_1" />
+
+        <TextView
+            android:id="@+id/tv_confirm_good_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:text="@string/activity_recharge_confirm_2"
+            android:visibility="gone" />
 
-            <RelativeLayout
-                android:id="@+id/rl_company_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
+        <TextView
+            android:id="@+id/tv_confirm_good_description"
+            style="@style/TextViewBody"
+            android:textColor="@color/txt_light_gray" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView8"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="企业名称" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_divider" />
 
-                <TextView
-                    android:id="@+id/dian_name1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/textView8"
-                    android:layout_marginLeft="2dp"
-                    android:layout_toRightOf="@+id/textView8"
-                    android:text="*"
-                    android:textColor="@color/red" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-                <ImageView
-                    android:id="@+id/iv_right_arrow2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/right_arrow"
-                    android:singleLine="true"
-                    android:visibility="invisible" >
-                </ImageView>
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/btn_recharge"
+        android:text="@string/activity_recharge_confirm_3"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tv_show_company_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_toLeftOf="@id/iv_right_arrow2"
-                    android:layout_toRightOf="@id/textView8"
-                    android:gravity="right|center_vertical"
-                    android:singleLine="true"
-                    android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_phone"
+        style="@style/TextViewBody"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:text="400-966-0968"
+        android:textColor="@color/title_blue" />
 
-                <EditText
-                    android:id="@+id/edt_show_company_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_toLeftOf="@id/iv_right_arrow2"
-                    android:layout_toRightOf="@id/textView8"
-                    android:background="#FFFFFF"
-                    android:gravity="right|center_vertical"
-                    android:maxLength="15" />
+    <TextView
+        style="@style/TextViewBody"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/activity_recharge_confirm_4"
+        android:textColor="@color/txt_light_gray" />
 
-                <requestFocus />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView01"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/line" />
-
-            <RelativeLayout
-                android:id="@+id/rl_company_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/textView9"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/activity_user_change_company_info" />
-
-                <TextView
-                    android:id="@+id/dian_name2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/textView9"
-                    android:layout_marginLeft="2dp"
-                    android:layout_toRightOf="@+id/textView9"
-                    android:text="*"
-                    android:textColor="@color/red" />
-
-                <ImageView
-                    android:id="@+id/iv_right_arrow3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/right_arrow"
-                    android:singleLine="true" />
-
-                <TextView
-                    android:id="@+id/tv_show_company_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_toLeftOf="@id/iv_right_arrow3"
-                    android:layout_toRightOf="@id/textView9"
-                    android:gravity="right|center_vertical"
-                    android:singleLine="true" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView02"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/line" />
-
-            <!-- 所属城市 -->
-
-            <RelativeLayout
-                android:id="@+id/rl_company_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/textView10"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/activity_user_change_company_city" />
-
-                <TextView
-                    android:id="@+id/dian_name3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/textView10"
-                    android:layout_marginLeft="2dp"
-                    android:layout_toRightOf="@+id/textView10"
-                    android:text="*"
-                    android:textColor="@color/red" />
-
-                <ImageView
-                    android:id="@+id/iv_right_arrow4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/right_arrow"
-                    android:singleLine="true" />
-
-                <TextView
-                    android:id="@+id/tv_show_company_city"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_toLeftOf="@id/iv_right_arrow4"
-                    android:layout_toRightOf="@id/textView10"
-                    android:gravity="right|center_vertical"
-                    android:singleLine="true" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView03"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/line" />
-            <!-- 详细地址 -->
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/textView14"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="top"
-                    android:text="@string/activity_user_change_address" />
-
-                <EditText
-                    android:id="@+id/editText_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignTop="@id/textView14"
-                    android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@id/textView14"
-                    android:background="#FFFFFF"
-                    android:gravity="top|right"
-                    android:hint="请输入详细地址(50字以内)"
-                    android:inputType="textMultiLine"
-                    android:maxLength="50" >
-                </EditText>
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView04"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:background="@drawable/line" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/pading_15"
-                android:background="@color/background" />
-
-            <TextView
-                android:id="@+id/textView222"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:background="@drawable/line" />
-
-            <!-- 公司网址 -->
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/textView"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/activity_user_change_web" />
-
-                <EditText
-                    android:id="@+id/editText_www"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:background="#FFFFFF"
-                    android:ems="8"
-                    android:gravity="center_vertical|right"
-                    android:singleLine="true" >
-                </EditText>
-
-                <com.imohoo.BusinessCMT.view.myview.AlwaysMarqueeTextView
-                    android:id="@+id/textView_www"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:ellipsize="marquee"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:gravity="right"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:scrollHorizontally="true"
-                    android:singleLine="true" >
-                </com.imohoo.BusinessCMT.view.myview.AlwaysMarqueeTextView>
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView06"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/line" />
-
-            <!-- 其他说明 -->
-
-            <RelativeLayout
-                android:id="@+id/rl_other_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/tv_51"
-                    style="@style/text_black_lighter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/activity_user_change_other_desc" />
-
-                <ImageView
-                    android:id="@+id/iv_right_arrow_51"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/right_arrow"
-                    android:singleLine="true" >
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/tv_show_company_other_desc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_toLeftOf="@id/iv_right_arrow_51"
-                    android:layout_toRightOf="@id/tv_51"
-                    android:gravity="right|center_vertical"
-                    android:singleLine="true" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView08"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:background="@drawable/line" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/pading_15"
-                android:background="@color/background" />
-
-            <TextView
-                android:id="@+id/textView09"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
-                android:background="@drawable/line" />
-
-            <!-- 产品相册 -->
-
-            <RelativeLayout
-                android:id="@+id/rl_product_photo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:padding="10dp" >
-
-                <RelativeLayout
-                    android:id="@+id/rl_product"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical" >
-
-                    <TextView
-                        android:id="@+id/tv_53"
-                        style="@style/text_black_lighter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/activity_user_change_product_photo" />
-
-                    <ImageView
-                        android:id="@+id/iv_right_arrow_53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center_vertical|right"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/right_arrow"
-                        android:gravity="center_vertical"
-                        android:singleLine="true" >
-                    </ImageView>
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_below="@id/rl_product"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="10dp"
-                    android:minHeight="80dp"
-                    android:orientation="horizontal" >
-
-                    <com.imohoo.BusinessCMT.view.myview.MyGridView
-                        android:id="@+id/gv_show_product_photos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:horizontalSpacing="12dp"
-                        android:listSelector="@color/transparent"
-                        android:numColumns="3"
-                        android:scrollbars="none" >
-                    </com.imohoo.BusinessCMT.view.myview.MyGridView>
-                </LinearLayout>
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
-
-</RelativeLayout>
+</LinearLayout>

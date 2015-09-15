@@ -42,8 +42,9 @@ public class TempUtils {
 	
 	public static void main(String[] args) {
 //		extractAllString();
-//		exportXml();
-		autoCreateSizeSet(true);
+		exportXml();
+//		autoCreateSizeSet(true);
+//		desParams();
 	}
 
 	public static void weiboEmoji() {
@@ -505,9 +506,18 @@ public class TempUtils {
 		Document valuesDoc = XmlUtil.read(file);
 		Element rootElement = valuesDoc.getRootElement();
 
+		String regexChinese = "[\u4e00-\u9fa5]+";
+		Pattern patternChiese = Pattern.compile(regexChinese);
+		
 		List<Element> elements = rootElement.elements();
+		List<String> values = new ArrayList<String>();
 		for (Element e : elements) {
-			System.out.println(e.getText());
+			String text = e.getText();
+			Matcher matcher = patternChiese.matcher(text);
+			if(matcher.find() && !values.contains(text)) {
+				values.add(text);
+				System.out.println(text);
+			}
 		}
 	}
 	
@@ -675,5 +685,75 @@ public class TempUtils {
 		}
 		// TODO save string文件
 //		XmlUtil.write2xml(file, valuesDoc);
+	}
+	
+	
+	public static void desParams() {
+//		String beanPath1 = "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\model";
+		String beanPath = "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\db\\table";
+		
+		List<File> allFiles = FileUtils.getAllFiles(beanPath);
+		for(File file : allFiles) {
+			
+			String content = FileUtils.readToString(file, "UTF-8");
+			if(!content.contains("DatabaseTable")) {
+				continue;
+			}
+
+			List<String> paramList = new ArrayList<String>();
+			
+//			System.out.println(file.getName() + " ----------------------------");
+			FileReader fr;
+			
+			try {
+				fr = new FileReader(file);
+				BufferedReader bufferedreader = new BufferedReader(fr);
+				String line;
+				while ((line=bufferedreader.readLine()) != null) {
+					if(line.contains("public void set") && line.contains("String")) {
+						int lastIndex = line.lastIndexOf(")");
+						int beforeIndex = line.indexOf("(String") + 8;
+						String param = line.substring(beforeIndex, lastIndex);
+//						System.out.println(param);
+						paramList.add(param);
+					}
+				}
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+//			System.out.println(paramList);
+//			System.out.println();
+			
+			if(paramList.size() > 0) {
+				for(String param : paramList) {
+					// setter
+					// this.name = name;
+					String oldSetter = "this." + param + " = " + param + ";";
+					// this.name = Util.encryptDES(name);
+					String newSetter = "this." + param + " = " + "Util.encryptDES(" + param + ");";
+					if(content.contains(oldSetter)) {
+						content = content.replace(oldSetter, newSetter);
+					} else {
+						System.out.println(param + " 的setter方法格式不对");
+					}
+					
+					// getter
+					// return name;
+					String oldGetter = "return " + param + ";";
+					// return Util.decryptDES(name);
+					String newGetter = "return " + "Util.decryptDES(" + param + ");";
+					if(content.contains(oldGetter)) {
+						content = content.replace(oldGetter, newGetter);
+					} else {
+						System.out.println(param + " 的getter方法格式不对");
+					}
+				}
+				
+				FileUtils.writeString2File(content, file, "UTF-8");
+			}
+		}
+		
+		
 	}
 }

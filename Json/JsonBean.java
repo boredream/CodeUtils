@@ -5,8 +5,10 @@ public class JsonBeans {
 
 	/*sub class*/
 	public class Data {
-		private String order_number;
-		private int status;
-		private String pay_time;
+		private String role;
+		private int lack_exp;
+		private int level;
+		private boolean is_vip;
+		private int integral;
 	}
 }

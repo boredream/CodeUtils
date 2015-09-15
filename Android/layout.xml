@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:layout_height="56dp"
+    android:background="@drawable/bg_white2gray_sel"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="16dp" >
 
     <ImageView
-        android:id="@+id/iv_icon"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:id="@+id/iv_setting_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/tv_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="支付成功,您已获得XX积分"
-        android:textSize="36sp" />
+        android:id="@+id/tv_setting_name"
+        style="@style/TextViewSubhead"
+        android:layout_marginLeft="16dp"
+        android:text="设置" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btn_left"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="确定" />
-
-        <Button
-            android:id="@+id/btn_right"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="炫耀一下吧" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_setting_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/rightarrow" />
 
 </LinearLayout>
