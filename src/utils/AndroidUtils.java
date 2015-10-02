@@ -242,7 +242,7 @@ public class AndroidUtils {
 	 * 运行该方法后,根据布局文件生成的相关代码会在Android文件夹下Adapter.java中查看,可以复制到自己项目里使用
 	 */
 	public static void autoCreateAdapter() {
-		String layoutXml = "Android\\item.xml";
+		String layoutXml = "Android" + File.separator + "item.xml";
 		
 		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
 		parseElementFromXml(layoutXml, false);
@@ -251,7 +251,7 @@ public class AndroidUtils {
 		String adapterContent = createAdapterContent(layoutXml);
 		
 		// 获取adapter文件
-		File javaFile = new File("Android\\Adapter.java");
+		File javaFile = new File("Android" + File.separator + "Adapter.java");
 		
 		// 将生成的内容写入至java类文件中
 		FileUtils.writeString2File(adapterContent, javaFile);
