@@ -1,11 +1,57 @@
 {
 	"data": {
-		"role": "普通用户",
-		"lack_exp": 2140,
-		"level": 6,
-		"is_vip": true,
-		"integral": 610
+		"total": "5",
+		"list": [{
+			"company_id": "3274",
+			"status": "1",
+			"address": null,
+			"boss": "",
+			"name": "蒙古黑石材加工厂",
+			"star": "30",
+			"avatar": null,
+			"telephone": null
+		},
+		{
+			"company_id": "4031",
+			"status": "1",
+			"address": "厦门市江头建材市场西二区125#",
+			"boss": "",
+			"name": "厦门市蒙古黑石材厂",
+			"star": "30",
+			"avatar": null,
+			"telephone": "0592-5966421，3831289"
+		},
+		{
+			"company_id": "4572",
+			"status": "1",
+			"address": null,
+			"boss": "",
+			"name": "福鼎黑石材",
+			"star": "30",
+			"avatar": null,
+			"telephone": null
+		},
+		{
+			"company_id": "11353",
+			"status": "1",
+			"address": "北京市石景山区玉泉路11号",
+			"boss": "",
+			"name": "丰镇黑石材（北京）经销公司",
+			"star": "30",
+			"avatar": null,
+			"telephone": "01068653320"
+		},
+		{
+			"company_id": "15703",
+			"status": "1",
+			"address": null,
+			"boss": "",
+			"name": "中国黑石材厂",
+			"star": "30",
+			"avatar": null,
+			"telephone": "15203240822"
+		}]
 	},
-	"message": "操作成功",
+	"message": "获取成功",
 	"status": 200
 }

@@ -1,33 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="@drawable/bg_white2gray_sel"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
     android:padding="16dp" >
 
-    <ImageView
-        android:id="@+id/iv_setting_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_launcher" />
+    <RadioGroup
+        android:id="@+id/rg_check_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/tv_setting_name"
-        style="@style/TextViewSubhead"
-        android:layout_marginLeft="16dp"
-        android:text="设置" />
+        <RadioButton
+            android:id="@+id/rb_single"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Single单选" />
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/rb_multi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Multi多选" />
+    </RadioGroup>
 
-    <ImageView
-        android:id="@+id/iv_setting_arrow"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/rightarrow" />
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice"
+        android:listSelector="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="选中状态"
+        android:textColor="#000" />
 
 </LinearLayout>

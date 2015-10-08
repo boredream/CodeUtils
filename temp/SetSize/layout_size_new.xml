@@ -1,49 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background" android:orientation="vertical">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="120dp">
 
-    <include layout="@layout/title"/>
+    <RelativeLayout android:id="@+id/back" android:layout_width="match_parent" android:layout_height="120dp" android:tag="back">
 
-    <View android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="16dp" android:background="@color/bg_divider"/>
+        <ImageView android:id="@+id/iv_call" android:layout_width="64dp" android:layout_height="match_parent" android:layout_alignParentRight="true" android:background="@color/blue" android:padding="16dp" android:src="@drawable/ic_white_phone"/>
+    </RelativeLayout>
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:background="@color/white" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+    <LinearLayout android:id="@+id/front" android:layout_width="match_parent" android:layout_height="120dp" android:background="@color/white" android:clickable="true" android:gravity="center_vertical" android:orientation="horizontal" android:tag="front">
 
-        <TextView style="@style/TextViewSubhead" android:layout_width="0dp" android:layout_weight="1" android:text="@string/activity_recharge_confirm_0" android:id="@+id/tv_set_size1"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent">
 
-        <TextView android:id="@+id/tv_money" style="@style/TextViewSubhead" android:text="￥500" android:textColor="@color/txt_red"/>
+            <ImageView android:id="@+id/iv_logo" android:layout_width="96dp" android:layout_height="96dp" android:layout_centerInParent="true" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:background="#888" android:scaleType="centerCrop" android:src="@drawable/png_icon"/>
+
+            <ImageView android:id="@+id/iv_verify" android:layout_width="32dp" android:layout_height="24dp" android:layout_alignLeft="@id/iv_logo" android:layout_alignTop="@id/iv_logo" android:layout_marginLeft="-14dp" android:layout_marginTop="2dp" android:src="@drawable/ic_company_verify_flag"/>
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:paddingBottom="12dp" android:paddingTop="12dp">
+
+            <TextView android:id="@+id/tv_name" style="@style/TextViewSubhead" android:singleLine="true"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <TextView style="@style/TextViewBody" android:text="@string/item_stone_company_0" android:textColor="@color/txt_light_gray" android:id="@+id/tv_set_size1"/>
+
+                <LinearLayout android:id="@+id/ll_stars" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:orientation="horizontal">
+
+                    <ImageView android:id="@+id/iv_star1" android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_star_full"/>
+
+                    <ImageView android:id="@+id/iv_star2" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="2dp" android:src="@drawable/ic_star_full"/>
+
+                    <ImageView android:id="@+id/iv_star3" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="2dp" android:src="@drawable/ic_star_full"/>
+
+                    <ImageView android:id="@+id/iv_star4" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="2dp" android:src="@drawable/ic_star_empty"/>
+
+                    <ImageView android:id="@+id/iv_star5" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="2dp" android:src="@drawable/ic_star_empty"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_green_phone"/>
+
+                <TextView android:id="@+id/tv_phone" style="@style/TextViewBody" android:layout_marginLeft="4dp" android:hint="@string/none" android:singleLine="true" android:textColor="@color/green_light" android:textColorHint="@color/txt_light_gray"/>
+
+                <TextView android:id="@+id/tv_contact" style="@style/TextViewBody" android:layout_marginLeft="8dp" android:singleLine="true" android:textColor="@color/green_light"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <TextView style="@style/TextViewBody" android:text="@string/item_stone_company_1" android:textColor="@color/txt_light_gray" android:id="@+id/tv_set_size2"/>
+
+                <TextView android:id="@+id/tv_address" style="@style/TextViewBody" android:layout_marginLeft="8dp" android:hint="@string/none" android:singleLine="true" android:textColor="@color/txt_light_gray" android:textColorHint="@color/txt_light_gray"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView android:id="@+id/iv_slide_left" android:layout_width="32dp" android:layout_height="match_parent" android:paddingLeft="8dp" android:scaleType="fitCenter" android:src="@drawable/ic_slide_left"/>
     </LinearLayout>
 
-    <View android:layout_width="match_parent" android:layout_height="1px" android:background="@color/bg_divider"/>
-
-    <View android:layout_width="match_parent" android:layout_height="16dp" android:layout_marginBottom="1px" android:background="@color/background"/>
-
-    <View android:layout_width="match_parent" android:layout_height="1px" android:background="@color/bg_divider"/>
-
-    <com.imohoo.BusinessCMT.view.myview.MyListView android:id="@+id/lv_recharge_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/white" android:cacheColorHint="@color/transparent" android:divider="@color/bg_divider" android:dividerHeight="1px" android:listSelector="@color/transparent">
-    </com.imohoo.BusinessCMT.view.myview.MyListView>
-
-    <View android:layout_width="match_parent" android:layout_height="1px" android:background="@color/bg_divider"/>
-
-    <View android:layout_width="match_parent" android:layout_height="16dp" android:layout_marginBottom="1px" android:background="@color/background"/>
-
-    <View android:layout_width="match_parent" android:layout_height="1px" android:background="@color/bg_divider"/>
-
-    <LinearLayout android:id="@+id/ll_confirm_infos" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/white" android:orientation="vertical" android:padding="16dp">
-
-        <TextView style="@style/TextViewSubhead" android:layout_marginBottom="16dp" android:text="@string/activity_recharge_confirm_1" android:id="@+id/tv_set_size2"/>
-
-        <TextView android:id="@+id/tv_confirm_good_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/activity_recharge_confirm_2" android:visibility="gone"/>
-
-        <TextView android:id="@+id/tv_confirm_good_description" style="@style/TextViewBody" android:textColor="@color/txt_light_gray"/>
-    </LinearLayout>
-
-    <View android:layout_width="match_parent" android:layout_height="1px" android:background="@color/bg_divider"/>
-
-    <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
-
-    <Button android:id="@+id/btn_pay" android:layout_width="240dp" android:layout_height="48dp" android:layout_gravity="center_horizontal" android:layout_marginBottom="36dp" android:background="@drawable/btn_recharge" android:text="@string/activity_recharge_confirm_3" android:textColor="@color/white" android:textSize="16sp"/>
-
-    <TextView android:id="@+id/tv_phone" style="@style/TextViewBody" android:layout_gravity="center_horizontal" android:layout_marginBottom="4dp" android:text="400-966-0968" android:textColor="@color/title_blue"/>
-
-    <TextView style="@style/TextViewBody" android:layout_gravity="center_horizontal" android:layout_marginBottom="16dp" android:text="@string/activity_recharge_confirm_4" android:textColor="@color/txt_light_gray" android:id="@+id/tv_set_size3"/>
-
-</LinearLayout>
+</FrameLayout>

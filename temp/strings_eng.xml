@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">Stone Chat</string>
+    <string name="lang">zh_cn</string>
+    <!-- xlistview -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">上拉查看</string>
+    <string name="xlistview_footer_hint_normal_sx">点击刷新</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="no_data_tip">暂无数据!</string>
+    <string name="no_data_tip_">无匹配数据!</string>
+    <!-- ChosePicUtilDialog -->
+    <string name="activity_chose_detail_dialog_upload">上传照片</string>
+    <string name="activity_chose_detail_dialog_camera">拍照</string>
+    <string name="activity_chose_detail_dialog_gallery">本地相册</string>
+    <string name="complete">完善</string>
+    <string name="activity_chat_history_dialog_cancel">取消</string>
+    <string name="activity_chat_history_dialog_delete">删除</string>
+
+    <!-- 登录页面 -->
+    <string name="logo">"@2014石脉科技</string>
+    <string name="activity_login_account">账号</string>
+    <string name="activity_login_pass">密码</string>
+    <string name="activity_login_find_pass">找回密码？</string>
+    <string name="activity_login_forget_pass">忘记密码</string>
+    <string name="activity_login_login">登 录</string>
+    <string name="activity_login_regist">注 册</string>
+    <string name="activity_login_email_regist">邮箱注册</string>
+    <string name="activity_get_code_network_error">网络连接超时</string>
+    <string name="activity_get_code_network_error2">网络连接错误</string>
+    <string name="activity_login_input_username">请输入用户名</string>
+    <string name="activity_login_input_pass">请输入密码</string>
+    <string name="activity_login_loading">登录中...</string>
+    <string name="activity_regist_input_phone_error">您输入的手机号码有误</string>
+    <string name="activity_change_pwd_pass_error">密码应由数字或字母组成</string>
+    <string name="activity_change_pwd_pass_length_error">密码应由6-16位的数字或字母组成</string>
+    <string name="stone_chat">STONE CHAT</string>
+    <string name="input_six_to_sixteen_password">请输入6-16位密码</string>
+    <string name="input_phone_or_mobile">请输入手机号/邮箱</string>
+    <!-- 注册页面 -->
+    <string name="activity_regist_input_incomplete">您填写的信息不完整</string>
+    <string name="activity_change_pwd_pass_not_equals">两次密码不一致</string>
+    <string name="activity_regist_recommander_error">您输入的推荐人号码有误</string>
+    <string name="activity_regist_phone">你的手机号码</string>
+    <string name="activity_regist_pass">密码</string>
+    <string name="activity_regist_captcha">验证码           </string>
+    <string name="activity_regist_captcha2">验证码        </string>
+    <string name="activity_regist_captcha3">验证码</string>
+    <string name="activity_regist_pass_hint">    填写密码</string>
+    <string name="activity_regist_ensure_pass">确认密码</string>
+    <string name="activity_regist_name">昵称</string>
+    <string name="activity_regist_recommander">推荐人</string>
+    <string name="activity_regist_recommander_hint">推荐人的手机号码（非必填）</string>
+    <string name="activity_regist_please_input_phone">请输入手机号码</string>
+    <!-- phone_message_dialog.xml -->
+    <string name="activity_phone_message_phone">确认手机号码</string>
+    <string name="activity_phone_message_tip">我们将发送验证码短信到这个号码：</string>
+
+    <!-- 通用 -->
+    <string name="commont_finish">完成</string>
+    <string name="commont_cancel">取消</string>
+    <string name="commont_sure">确定</string>
+    <string name="commont_tip">提示</string>
+    <string name="commont_return">返回</string>
+    <string name="commont_change_success">修改成功</string>
+    <!-- 注册 -->
+    <string name="activity_regist_fail">注册失败!</string>
+    <string name="activity_regist_loading">注册中...</string>
+    <string name="activity_regist_input_vcode">请输入验证码</string>
+    <string name="activity_regist_input_vcode2">  请输入验证码</string>
+    <string name="activity_reset_vcode_fail">验证码获取失败!</string>
+    <string name="activity_regist_detail_next">下一步</string>
+    <string name="activity_regist_detail_input_vcode">请输入验证码</string>
+    <string name="activity_reset_vcode_getting">正在获取验证码...</string>
+    <string name="activity_get_code_reset_pass_fail">重置密码失败</string>
+    <string name="reset_password_succesful">重置密码成功</string>
+    <string name="activity_get_code_checking">正在获取验证码...</string>
+    <string name="activity_get_code_restpwding">正在重置密码...</string>
+    <string name="activity_regist_submit">注册</string>
+    <!-- 找回密码 -->
+    <string name="activity_regist_detail_vcode">验证码</string>
+    <string name="activity_regist_detail_phone">我们已经发送了验证码到你的手机:</string>
+    <!-- resetpwd_page.xml -->
+    <string name="activity_reset_pass_new_pass">新密码         </string>
+    <string name="activity_reset_pass_ensure_pass">确认密码</string>
+    <string name="activity_reset_pass_submit">密码重置</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+
+    <!-- user_change_page.xml -->
+    <string name="activity_user_change_head">点击头像更换</string>
+    <string name="activity_user_change_real_name">真实姓名</string>
+    <string name="activity_user_change_name">昵称</string>
+    <string name="activity_user_change_sex">性别</string>
+    <string name="activity_user_change_sex_boy">    男</string>
+    <string name="activity_user_change_sex_girl">    女</string>
+    <string name="activity_user_change_person">个人说明</string>
+    <string name="activity_user_change_position">职位</string>
+    <string name="activity_user_change_web">公司网址</string>
+    <string name="activity_user_change_company_name">供职企业</string>
+    <string name="activity_user_change_company_info">企业介绍</string>
+    <string name="activity_user_change_company_city">所属城市</string>
+    <string name="activity_user_change_address">详细地址</string>
+    <string name="activity_user_change_other_desc">其他说明</string>
+    <string name="activity_user_change_beiyong">备用</string>
+    <string name="activity_user_change_product_photo">产品相册</string>
+    <string name="activity_user_change_real_name_hint">请输入真实姓名</string>
+    <string name="activity_user_change_name_hint">请输入昵称</string>
+    <string name="activity_user_change_position_hint">请点击选择职位</string>
+    <string name="activity_user_change_phone">联系电话</string>
+    <string name="activity_user_change_phone_hint">请输入联系电话</string>
+    <string name="activity_user_change_email">邮箱</string>
+    <string name="activity_user_change_email_hint">请输入邮箱</string>
+    <string name="activity_user_change_captcha">二维码</string>
+    <string name="create_zxing_failed">生成二维码失败！</string>
+
+    <!-- UserChangeActivity.java -->
+    <string name="activity_wan_shan_ge_ren_zi_liao">完善个人资料</string>
+    <string name="activity_user_change_success">恭喜，您已获得注册邀请</string>
+    <string name="activity_user_change_update_fail">修改个人信息失败！</string>
+    <string name="activity_user_change_update_success">修改个人信息成功!</string>
+    <string name="activity_user_change_update_success_message">修改个人信息成功,但您的信息还不完整!</string>
+    <string name="activity_user_change_length_error">您输入的文字过长或不合法，请核对后提交</string>
+    <string name="activity_user_change_upload_head_fail">上传头像失败!</string>
+    <string name="activity_user_change_title_1">编辑资料</string>
+    <string name="activity_user_change_title_2">个人信息</string>
+    <string name="activity_user_change_gallery">相册</string>
+    <string name="activity_user_change_not_null_1">真实姓名不得为空</string>
+    <string name="activity_user_change_not_null_2">职位不得为空</string>
+    <string name="activity_user_change_not_null_3">公司名称不得为空</string>
+    <string name="activity_user_change_not_null_4">地址不得为空</string>
+    <string name="activity_user_change_not_null_5">昵称不得为空</string>
+    <string name="activity_user_change_length_must_in_2_to_10">您输入的昵称必须在2-10个中文字</string>
+    <string name="activity_chat_attach_view_photo">pictures</string>
+    <string name="activity_chat_attach_view_camera">拍照</string>
+    <string name="activity_new_friend_check_net">请检查网络</string>
+    <string name="commont_please_wait">请稍候...</string>
+    <string name="requestURL">http://60.13.233.99:8080/mis/HttpMIS</string>
+    <string name=" imageUriPrefixHeader">file:///sdcard/</string>
+    <string name="imageFolderDir"/>
+    <!-- change_pwd_page.xml -->
+    <string name="activity_change_pwd_old_pass">原始密码</string>
+    <string name="activity_change_pwd_old_pass_hint">请输入原始密码</string>
+    <string name="activity_change_pwd_new_pass">新密码</string>
+    <string name="activity_change_pwd_new_pass_hint">填写新密码</string>
+    <string name="activity_change_pwd_ensure_pass">确认密码</string>
+    <string name="activity_change_pwd_ensure_pass_hint">填写确认密码</string>
+
+    <!-- ChangePwdActivity.java -->
+    <string name="activity_change_pwd_title">修改密码</string>
+    <string name="activity_change_pwd_success">修改密码成功!</string>
+    <string name="activity_change_pwd_fail">修改密码失败!</string>
+    <string name="activity_change_pwd_pass_updating">修改密码中...</string>
+    <string name="activity_change_pwd_please_check">请核实您所填写的信息！</string>
+    <!-- MoreActivity -->
+    <string name="title_more">更多</string>
+    <string name="more_mygq">我的石材供求</string>
+    <string name="more_myscore">我的积分</string>
+    <string name="more_charge_vip">充值 / VIP</string>
+    <string name="more_mysupply">给我的回复</string>
+    <string name="more_notice">通知服务与使用帮助</string>
+    <string name="more_invite">邀请好友加入（邀请即送积分）</string>
+    <string name="more_mytemai">我发布的特卖</string>
+    <string name="more_ta_temai">他发布的特卖</string>
+    <string name="activity_my_stone_gq">我的石材供求</string>
+    <string name="activity_ta_stone_gq">他的石材供求</string>
+    <!-- 充值 -->
+    <string name="get_recharge_good_fail">获取充值商品列表失败</string>
+    <string name="commit_recharge_order_fail">生成充值商品订单失败</string>
+
+    <!-- CompanyIntroduction -->
+    <string name="title_company_introduction">企业介绍</string>
+    <!-- OtherIntroduction -->
+    <string name="title_activity_other_introduction">其他说明</string>
+    <!-- Standby -->
+    <string name="title_activity_standby">备用</string>
+
+    <!-- MyTwoDimensionCode -->
+    <string name="nickname">昵称：</string>
+    <string name="job">职务：</string>
+    <string name="company">公司：</string>
+    <string name="intro">扫一扫，加我石材好友哦</string>
+    <!-- activity_set.xml -->
+    <string name="changepwd">修改密码</string>
+    <string name="set">设置</string>
+    <string name="app_font_set">app文字字体设置</string>
+    <string name="bind_phone">绑定手机号</string>
+    <string name="app_push_set">推送设置</string>
+    <string name="help_feedback">帮助与反馈</string>
+    <string name="about">关于</string>
+    <string name="verson_update">版本更新</string>
+    <string name="write_feedback">写反馈</string>
+    <string name="commit">提 交</string>
+    <string name="input_feedback">请输入您宝贵的意见...</string>
+    <string name="logout">退出当前账号</string>
+    <string name="activity_logout_string">退出中</string>
+
+    <!-- 好友相关 -->
+    <!-- address_list_search.xml -->
+    <string name="activity_address_list_create_group">创建群聊</string>
+    <string name="activity_address_list_create_friend">新朋友</string>
+    <string name="user_telephone">电话：</string>
+    <string name="tv_call_telephone">打电话</string>
+    <string name="tv_share">推荐给好友</string>
+    <string name="tv_add_friend">添加好友</string>
+    <string name="tv_del_friend">删除好友</string>
+    <string name="tv_chat">发消息</string>
+    <string name="tv_user_gongqiu">TA发布的石材供求</string>
+    <string name="tv_user_temaizixun">TA发布的特卖资讯</string>
+    <string name="tv_com_introduction">公司简介</string>
+    <string name="title">确定要删除添加记录?</string>
+    <string name="shaoyishao">扫一扫</string>
+    <string name="saomiaoerweimamingpian">扫描二维码名片</string>
+    <string name="telephone_contacts">手机联系人</string>
+    <string name="add_telephone_contacts">添加或邀请通讯录中的朋友</string>
+    <string name="nearbystone">附近石头人</string>
+    <string name="tv_addnerabyfriend">添加或邀请附近的朋友</string>
+    <string name="hint_friend_validation">You need to send verification application, then you can be friends after confirm </string>
+    <string name="hint_input_validation_info">请输入验证信息（50个字以内） </string>
+    <string name="hint_empty_data">搜索结果为空，请重新输入。</string>
+    <string name="activity_contacts_is_not_in_group">您还未加入该群哦！</string>
+    <string name="detail_info">详细资料</string>
+    <string name="tv_com_location">公司地址</string>
+    <string name="pre">上一个</string>
+    <string name="next">下一个</string>
+    <string name="load_more">加载更多</string>
+    <string name="hint_local_contacts_empty">本地通讯录为空！</string>
+    <string name="friend_invite">邀请</string>
+    <string name="friend_add">添加</string>
+    <string name="friend_added">已添加</string>
+    <string name="no_regist_account">"TA还未注册帐号"</string>
+    <string name="get_integral_error">获取积分失败</string>
+    <string name="need_more_integral">您的积分不够加入本群，请获取更多积分！</string>
+    <string name="group_contacts">成员列表</string>
+    <string name="getting_friends_list">正在获取好友列表</string>
+    <string name="getting_new_friends_list">正在获取好友列表</string>
+    <string name="getting_group_contacts">正在获取群成员列表</string>
+    <string name="getting_user_detail">正在获取用户详情</string>
+    <string name="getting_nearby_stone">正在获取附近石头人</string>
+    <string name="sendding">正在发送请求</string>
+    <string name="no_company_photo">该用户所属公司无产品相册</string>
+    <string name="friend_sorry_content">没有找到您需要的信息。</string>
+    <string name="sms_content">我们都在全新石材工作V2.0万人群，您在哪个群？还没加入的话，可以从这里下载安装石材工作：www.stonechat.cn</string>
+
+    <!-- 主界面 -->
+    <string name="gongqiu_txt">供求</string>
+    <string name="message_txt">消息</string>
+    <string name="friend_txt">好友</string>
+    <string name="zixun_txt">石业资讯</string>
+    <string name="more_txt">更多</string>
+    <string name="title_activity_my_score">MyScore</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_my_supply">MySupply</string>
+    <string name="title_activity_notices">Notices</string>
+    <string name="title_activity_invite_friends">InviteFriends</string>
+    <string name="title_activity_change_pwd">ChangePwd</string>
+    <!-- 供求信息 -->
+    <string name="gongqiu_title">供求信息</string>
+    <string name="tm_title">特卖信息</string>
+    <string name="gongqiu_title_right">筛选</string>
+    <string name="gq_search_tab_quyu">区域：</string>
+    <string name="gq_search_tab_time">时间：</string>
+    <string name="gq_search_tab_juli">距离：</string>
+    <string name="gq_search_tab_leixing">类型：</string>
+    <string name="gq_send">发布</string>
+    <string name="gq_zan">赞</string>
+    <string name="gq_zf">转发</string>
+    <string name="gq_pl_send">发送</string>
+    <string name="gq_pl_hf">回复</string>
+    <string name="gq_pl_num">展开所有#条评论</string>
+    <string name="gq_sorry">抱歉!</string>
+    <string name="gq_sorry_content">没有找到您需要的供求信息</string>
+    <string name="tm_sorry_content">没有找到您需要的特卖信息</string>
+    <string name="new_friends_sorry_content">还没有好友申请,点击添加朋友来查找新朋友吧</string>
+    <string name="nearby_sorry_content">您的附近没有石头人</string>
+    <string name="activity_weibo_input_comment">输入评论</string>
+    <string name="activity_zan">等#人为您点赞</string>
+
+    <!-- 通知服务 -->
+    <string name="how_to_upgrade_system">如何升级系统</string>
+    <string name="android_user_manual">Android用户使用手册</string>
+    <!-- activity_upgrade_system -->
+    <string name="comment">评论</string>
+    <!-- 分享 -->
+    <string name="message">短信</string>
+    <string name="email">邮件</string>
+    <string name="wei_xin">微信</string>
+    <string name="friend_quan">朋友圈</string>
+    <string name="sina">新浪微博</string>
+    <string name="qq">QQ</string>
+    <string name="activity_more_share_title_simple">From StoneChat</string>
+    <string name="activity_more_share_title">免费加入万人在线的石材群</string>
+    <string name="activity_more_share_content_">一个您即刻同万名专业人士，三千多名设计师沟通，没有垃圾信息的石材微信平台。</string>
+    <!-- imgfileadapter.xml -->
+    <string name="activity_img_file_adaptter_filename">文件名称</string>
+    <string name="activity_img_file_list_select_gallery">选择相册</string>
+    <!-- ImgFileListActivity.java -->
+    <string name="activity_img_file_unit">张</string>
+
+    <!-- photogrally.xmll -->
+    <string name="photogallery_select_photo">选择图片</string>
+    <string name="photogallery_select_gallery">选择相册</string>
+    <!-- ImgsActivity.java -->
+    <string name="activity_imgs_text">已选%1$s张，最多选择%2$s张哦</string>
+    <string name="activity_imgs_count_overtop">图片超过限额</string>
+    <string name="activity_add_weibo_progress_message">图片处理中...</string>
+    <string name="activity_chat_deal_image_fail">图片处理失败</string>
+    <string name="activity_chat_send_image_not_exist">你所发送的图片不存在</string>
+
+    <!-- ImageDetailActivity.java -->
+    <string name="activity_image_detail_loading">加载图片...</string>
+    <string name="activity_image_detail_is_first">已经第一张!</string>
+    <string name="activity_image_detail_is_last">已经最后一张!</string>
+    <string name="activity_add_weibo_image_error">图片获取失败</string>
+    <string name="activity_add_weibo_uploading_message">上传中请稍后...</string>
+    <string name="input_person_desc">请输入您的个人说明(140字以内)</string>
+    <string name="title_activity_about">About</string>
+    <!-- 关于 -->
+    <string name="about_shengming">免责声明</string>
+    <string name="about_safety">安全与隐患</string>
+    <string name="about_pingfen">用户评分</string>
+    <string name="about_cw">公司网址：</string>
+    <string name="about_companyweb">www.stonechat.cn</string>
+    <!-- 消息 -->
+    <string name="message_right_txt">添加朋友</string>
+    <string name="search">搜索</string>
+    <string name="activity_chat_page_connect_network">正在连接（请检查网络设置）</string>
+    <!-- 聊天详情 -->
+    <string name="chat_detail_title">聊天详情</string>
+    <!-- 资讯  ZiXunActivity.java -->
+    <string name="activity_zixun_shicaizhan">3D石材展</string>
+    <string name="activity_zixun_shicaizhishu">石材指数</string>
+    <string name="activity_zixun_jixie">机械及辅材</string>
+    <string name="activity_zixun_zhaoping">招聘求职</string>
+    <string name="activity_zixun_wuliu">物流二手</string>
+    <string name="activity_zixun_temai">特卖信息</string>
+    <string name="publish_tm">发布特卖</string>
+    <!-- 3D石材展 -->
+    <string name="activity_tds_all">全部</string>
+    <string name="activity_tds_tuijian">推荐</string>
+    <!-- 资讯&设计 ZiXunSheJiActivity.java -->
+    <string name="activity_zixun_zixunsheji">资讯&amp;设计</string>
+    <!-- 资讯详情 ZiXunDetailActivity.java -->
+    <string name="activity_zixun_detail_title">详情</string>
+    <string name="activity_zixun_detail_share">分享</string>
+    <string name="activity_zixun_find_content">查看评论</string>
+    <string name="activity_zixun_detail_all_comment">全部评论</string>
+    <string name="activity_zixun_detail_btn_pinglun">评论</string>
+    <string name="layout_input_comment_et_hint">输入评论内容</string>
+    <!-- 发布供求 -->
+    <string name="publich_gq">发布供求</string>
+    <string name="publich_gq_click_fortype">点击选择类型</string>
+    <string name="publich_gq_content_hint">请输入300字以内的供求信息</string>
+    <string name="publich_tm_content_hint">请输入300字以内的特卖信息</string>
+    <string name="publich_gq_tb_txt">同步发送到</string>
+    <string name="publich_gq_gh">供货</string>
+    <string name="publich_gq_qh">求货</string>
+    <string name="publich_gq_jg">加工</string>
+    <string name="publich_gq_wl">物流</string>
+    <string name="publich_gq_sending">发布中...</string>
+    <string name="publich_gq_need_type">请选择发布供求的类型</string>
+    <string name="publich_gq_need_content">请输入发布供求的内容</string>
+    <string name="publich_gq_need_content_tolong">您输入的供求内容太多，请控制在300字以内。</string>
+    <string name="publich_gq_need_city">请选择城市</string>
+    <string name="publich_gq_int_yq">(同步发送将会消耗#积分，您有@次免费同步发送机会！)</string>
+    <string name="publich_gq_stay_city">您所在的位置</string>
+    <string name="publich_tm_num">请输入总数量</string>
+    <string name="hint_tm_num_error">输入总数量有误</string>
+    <string name="publich_tm_phone">您的联系电话</string>
+    <string name="hint_tm_phone_error">您的联系电话有误</string>
+    <!-- 资讯详情 全部回复 -->
+    <string name="activity_zixun_all_comment_title">全部评论</string>
+    <string name="activity_zixun_all_comment_num">全部评论(%1$s)</string>
+    <string name="activity_zixun_te_mai">特卖供求信息</string>
+
+    <!-- 提示相关 -->
+    <string name="hint_search_friend_in_add">手机号/邮箱/姓名/公司名称</string>
+    <!-- 积分总数 -->
+
+    <string name="title_score">积分查询</string>
+    <string name="score_total">积分总数</string>
+    <string name="score_detail">积分明细</string>
+    <string name="score_rules">积分获取规则</string>
+    <string name="fail_to_get_my_score_detail">获取积分明细失败</string>
+
+    <!-- 回复列表 -->
+    <string name="activity_mychat_list_default_content">您暂时还没有回复哦</string>
+
+    <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中...</string>
+    <string name="activity_chat_history_not_more_data">没有更多的数据了！</string>
+    <string name="activity_my_chat_list_loading">数据获取中...</string>
+
+    <!-- 私聊设置 -->
+    <string name="activity_private_chat_set">聊天设置</string>
+    <string name="activity_private_chat_set_tz">消息免打扰</string>
+    <string name="activity_private_chat_set_zd">置顶聊天</string>
+    <string name="activity_group_detail_num">群人数：#</string>
+    <string name="activity_group_detail_num_max">群人数上限：#</string>
+    <string name="activity_private_del">移除消息列表记录</string>
+    <string name="activity_private_del_">移除</string>
+    <string name="activity_private_del_s">移除成功</string>
+
+    <!-- 聊天 -->
+    <string name="activity_chat_zp">pictures</string>
+    <string name="activity_chat_zx">拍照</string>
+    <string name="activity_chat_xq">发需求</string>
+    <string name="activity_chat_card">名片</string>
+    <string name="activity_chat_xq_txt">需求</string>
+    <string name="activity_chat_yy">语音</string>
+    <string name="activity_chat_png">图片</string>
+    <string name="activity_chat_card_yq">(免费次数用完后，每次将扣除#积分)</string>
+    <string name="activity_chat_xq_img_num">共#张</string>
+    <string name="activity_single_chat_copy">拷贝</string>
+    <string name="activity_single_chat_reply">回复</string>
+    <string name="private_message">私信</string>
+    <string name="activity_chat_need">求货</string>
+    <string name="activity_chat_SUPPLY">供货</string>
+    <string name="activity_chat_DISCOUNT">特卖</string>
+    <string name="activity_chat_need_jf">您的积分不够，请获取更多积分！</string>
+
+    <!-- 聊天 -->
+    <string name="activity_chat_ensure_send_image_">群聊每次最多允许连续发送两张图片，如果需要发送更多的图片，可以借助供求信息转发到各群</string>
+    <string name="activity_chat_record_txt">按住说话</string>
+    <string name="activity_chat_record_click_txt">松开结束</string>
+    <string name="exit_title">温馨提示</string>
+    <string name="exit_message">确定退出?</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    <string name="exit_account">注销操作将清除当前账号信息</string>
+    <string name="cache_clear">确定清空缓存?</string>
+    <string name="trans_choose_email">请选择邮件发送方式</string>
+    <string name="just_now">刚刚</string>
+    <string name="min">分钟前</string>
+    <string name="hous">小时</string>
+    <string name="yesterday">昨天</string>
+    <string name="time">MM月dd日  a hh:mm</string>
+    <string name="activity_progress_vedio">音频处理中...</string>
+    <string name="pl_txt_num">评论字数须在5~50之间</string>
+
+    <string-array name="activity_3d_share">
+        <item>微信分享</item>
+        <item>微信朋友圈</item>
+        <item>取消</item>
+    </string-array>
+
+    <string name="between">距您</string>
+    <string name="audio_disable">无法录音,请插入sd卡</string>
+    <string name="record_dialog_content">手指上滑，取消发送</string>
+    <string name="record_dialog_content_close">松开手指，取消发送</string>
+    <string name="record_permission_fail">获取录音权限失败</string>
+    <string name="record_small">录音时间小于1秒钟</string>
+    <string name="activity_chat_sound_tip">录音长度不能小于1秒</string>
+
+    <!-- DialogUtils.java -->
+    <string name="regist_fail">注册失败</string>
+    <string name="regist_goto_regist">去注册</string>
+    <string name="send_vcode_fail">发送失败</string>
+    <string name="send_vdoe_goto_reset">去重置</string>
+    <string name="add_friend_validation">添加好友验证</string>
+    <string name="new_friends">新朋友</string>
+
+    <!-- WeiboDetaiImageViewActivity.java -->
+    <string name="activity_new_friend_waiting">请稍后...</string>
+    <string name="commont_save">保存</string>
+    <string name="activity_weibo_detail_image_save_image">是否保存图片?</string>
+    <string name="activity_weibo_detail_image_saveing_image">正在保存图片...</string>
+    <string name="activity_weibo_detail_image_save_success">保存成功!文件保存在</string>
+    <string name="activity_weibo_detail_image_sdcard_error">储存卡未挂载，无法保存图片!</string>
+    <string name="image_save_file_name">StoneChat</string>
+    <string name="activity_share_zixun">全球石材前沿设计精髓，推荐文章荟萃石材工作资讯板块。</string>
+    <string name="most_product_photo_count">最多上传15张</string>
+
+    <!-- 我的石材供求 -->
+    <string name="tm_change_count">修改数量</string>
+    <string name="hint_input_new_count">请输入要修改的数量</string>
+    <string name="delete_my_gq_success">删除我的供求成功</string>
+    <string name="delete_my_gq_failed">删除我的供求失败</string>
+    <!-- 推送设置 -->
+    <string name="set_add_friend_confirm">设置验证成功！</string>
+    <string name="set_add_friend_confirm_failed">设置验证失败！</string>
+    <string name="del_my_gongqiu_success">删除我的供求成功！</string>
+    <string name="del_my_gongqiu_failed">删除我的供求失败！</string>
+
+    <!-- NewFriendAdapter.java -->
+    <string name="new_friend_waiting">等待中...</string>
+    <string name="new_friend_accept">已接受</string>
+    <string name="new_friend_refuse">已拒绝</string>
+    <!-- 帮助与反馈 -->
+    <string name="fail_to_get_help_and_feedback_detail">获取帮助与反馈列表失败</string>
+    <!-- 所有webview -->
+    <string name="failed">获取失败！</string>
+    <!-- 写反馈提交失败 -->
+    <string name="write_feedback_falied">提交反馈失败！</string>
+
+    <!-- 我的特卖 -->
+    <string name="delete_my_temai_success">删除我的特卖成功</string>
+    <string name="delete_my_temai_failed">删除我的特卖失败</string>
+    <string name="get_user_info_failed">获取用户信息失败</string>
+    <string name="get_user_info_failed_timeout">获取用户信息超时</string>
+    <string name="image_save">图片保存在#文件夹下</string>
+    <string name="send_error">(发送失败)</string>
+    <!-- 分享到微信加积分 -->
+    <string name="share_get_score_falied">分享到微信加积分失败</string>
+    <string name="activity_home_exit_tip">再按一次退出程序</string>
+    <string name="software_version_is_new">您已是最新版本</string>
+    <string name="software_has_new_version">发现有新的版本是否更新？</string>
+    <string name="menu_settings">Settings</string>
+    <string name="insert_card">插入卡</string>
+    <string name="down_fail">下载失败</string>
+    <string name="is_downing">正在下载</string>
+    <string name="down_sucess">下载成功</string>
+    <string name="webview">网页</string>
+
+    <string-array name="service_core_notice_info">
+        <item>一条语音信息</item>
+        <item>一条图片信息</item>
+        <item>一条文字信息</item>
+        <item>一条需求信息</item>
+        <item>一条名片信息</item>
+    </string-array>
+
+    <string name="service_cover_notification_content">来自%1$s:%2$s</string>
+    <string name="service_cover_notification_content_count">%1$s条未读信息</string>
+    <string name="bind_ok">确认绑定</string>
+    <string name="make_clean">确认删除</string>
+    <string name="make_sure">确认清空</string>
+    <string name="only_capy">仅复制文字内容</string>
+    <string name="group_red">查看</string>
+    <string name="at_text">[有人@我]</string>
+    <string name="copy_s">复制成功</string>
+    <string name="no_tel">您还未绑定手机号码，请绑定手机号码。</string>
+    <string name="bind_phone_failed">绑定手机失败</string>
+    <string name="bind_phone_success">绑定手机号成功</string>
+    <string name="sorry_content">没有找到您需要的信息。</string>
+    <string name="the_gongqiu_deleted">被评论或赞的供求有可能已被您删除</string>
+    <string name="the_temai_deleted">被评论或赞的特卖有可能已被您删除</string>
+    <string name="please_go_to_set_to_bind_phone">请前往设置中心绑定手机号</string>
+    <string name="reset_pwd_failed">重置密码失败</string>
+    <string name="share_content_of_avaite_friend_title">免费加入万人在线的石材群</string>
+    <string name="share_content_of_avaite_friend_content">我们都在全新石材工作V2.0万人群，您在哪个群？供求，悬赏销售，设计师，招聘，特价，机械，市场，各地区群！来自石材工作微信万人群</string>
+    <string name="share_content_of_gongqiu_and_temai">我们都在全新石材工作V2.0万人群，您在哪个群？供求，悬赏销售，设计师，招聘，特价，机械，市场，各地区群！</string>
+    <string name="exit_failed">退出失败</string>
+    <string name="china">中国</string>
+    <string name="has_num">这个月您还有#次免费使用机会,确认发送吗？</string>
+    <string name="zf_has_num">这个月您还有#次免费使用机会,确认转发吗？</string>
+    <string name="send_no_num">发送#将消耗您%积分,确认发送吗？</string>
+    <string name="zf_no_num">转发#到群将消耗您%积分,确认发送吗？</string>
+    <string name="tb_no_num">同步求货到群将消耗您#积分,确认发送吗？</string>
+    <string name="no_num">免费机会已用完，发送需要消费#积分，确认发送吗？</string>
+    <string name="the_company_is_exit">该公司已存在</string>
+    <string name="no_choose">您还未选择群组或好友</string>
+    <string name="uploading">Uploading</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="loginout_success">退出成功</string>
+    <string name="system_notice">系统通知</string>
+    <string name="has_invalid_zifu">您输入的账号或密码含有非法字符</string>
+    <string name="send_for_group">发送求货到群将消耗您#积分,确认发送吗？</string>
+    <string name="share_from">%s转发的文章和评论</string>
+    <string name="share_from_2">%m邀请您参观</string>
+    <string name="share_from_3">来自%x转发的专业图片</string>
+    <string name="share_from_4">来自%1$s转发的%2$s信息</string>
+    <string name="share_from_44">%1$s位[拇指]%2$s名评论的%3$s信息</string>
+    <string name="share_from_5">%1$s邀请您加入石材工作</string>
+    <string name="no_change">您还没有设置所在城市，这将有助于您的信息被快速检索到</string>
+    <string name="no_change_set">马上设置</string>
+    <string name="no_change_no">直接发送</string>
+    <string name="scan_the_local_image">扫描本地图片</string>
+    <string name="contact_customer_service">联系客服</string>
+    <string name="add_new_address">创建位置</string>
+    <string name="add_new_address_name">位置名称</string>
+    <string name="add_new_address_name_hnit">Please enter your location</string>
+    <string name="add_new_address_id">所在地区</string>
+    <string name="reslfy">刷新</string>
+    <string name="fanyi_txt">翻译</string>
+    <string name="skip">跳过</string>
+    <string name="look_num">浏览次数：</string>
+
+    <!-- 以下为Activity中提取内容 -->
+    <string name="addfriendsactivity_0">微信支付</string>
+    <string name="contactsactivity_1">(安装后才可使用)</string>
+    <string name="contactsactivity_2">支付宝</string>
+    <string name="contactsactivity_3">石材工积分作充值</string>
+    <string name="frienddetailactivity_4">描述</string>
+    <string name="frienddetailactivity_5">取消支付</string>
+    <string name="publishgq_6">查询支付结果</string>
+    <string name="publishgq_7">无法获取订单支付结果,可以在个人账户中查询充值产品是否到账</string>
+    <string name="zfgqactivity_8">免费加入万人在线的石材群</string>
+    <string name="rechargeactivity_10">请输入自定义充值金额</string>
+    <string name="rechargeactivity_11">请输入正确格式的金额</string>
+    <string name="rechargeactivity_12">请输入大于0的金额</string>
+    <string name="rechargeactivity_13">请选择VIP</string>
+    <string name="bindphoneactivity_0">重新获取</string>
+    <string name="bindphoneactivity_1">获取验证码</string>
+    <string name="companyinfochangeactivity_0">请输入15字以内的公司名称</string>
+    <string name="companyinfochangeactivity_1">无</string>
+    <string name="companyinfochangeactivity_2">请先选择或填写公司名</string>
+    <string name="companyinfochangeactivity_3">请先选择或填写公司名</string>
+    <string name="companyinfochangeactivity_4">请先选择或填写公司名</string>
+    <string name="companyinfochangeactivity_5">请先选择或填写公司名</string>
+    <string name="contactsactivity_0">群</string>
+    <string name="frienddetailactivity_0">网络异常</string>
+    <string name="frienddetailactivity_1">你们当前还不是好友，无法发送消息。是否添加对方为好友？</string>
+    <string name="frienddetailactivity_2">你确定删除好友关系？</string>
+    <string name="frienddetailactivity_3">无法获取该用户电话信息</string>
+    <string name="gongqiuactivity_0">正在努力重连中。。。</string>
+    <string name="groupdetail_0">邀请</string>
+    <string name="homeactivity_0">群</string>
+    <string name="homeactivity_1">更新通讯录失败，请检查网络设置</string>
+    <string name="homeactivity_2">请完善个人资料</string>
+    <string name="imagepageractivity_0">访问</string>
+    <string name="imagepageractivity_1">下载石材工作，免费加入万人群</string>
+    <string name="interregisteractivity_0">准备跳转到登陆页面</string>
+    <string name="locationcontactsactivity_0">等待验证</string>
+    <string name="locationcontactsactivity_1">对方还未注册，无法查看TA的详细资料</string>
+    <string name="locationcontactsactivity_2">石材帐号：</string>
+    <string name="loginactivity_0">授权开始</string>
+    <string name="loginactivity_1">授权错误</string>
+    <string name="loginactivity_2">授权完成</string>
+    <string name="loginactivity_3">获取平台数据开始...</string>
+    <string name="loginactivity_4">授权完成</string>
+    <string name="loginactivity_5">授权取消</string>
+    <string name="moreactivity_0">普通用户</string>
+    <string name="moreactivity_1">积分</string>
+    <string name="moreactivity_2">(距离下一级还需</string>
+    <string name="moreactivity_3">积分)</string>
+    <string name="moreactivity_4">积分</string>
+    <string name="moreactivity_5">积分</string>
+    <string name="moreactivity_6">加载中...</string>
+    <string name="moreactivity_7">邀请</string>
+    <string name="moreactivity_8">积分</string>
+    <string name="mygongqiu_0">网络异常</string>
+    <string name="mygongqiu_1">你有</string>
+    <string name="mygongqiu_2">条未读消息</string>
+    <string name="mytemaiactivity_0">网络异常</string>
+    <string name="mytemaiactivity_1">你有</string>
+    <string name="mytemaiactivity_2">条未读消息</string>
+    <string name="mywebviewactivity_0">加载中...</string>
+    <string name="nearbyfriendactivity_0">更多</string>
+    <string name="nearbyfriendactivity_1">没有更多了</string>
+    <string name="nearbyfriendactivity_2">发消息</string>
+    <string name="nearbyfriendactivity_3">刷新石头人信息失败</string>
+    <string name="newfriendsactivity_0">网络超时</string>
+    <string name="newfriendsactivity_1">网络异常</string>
+    <string name="newfriendsactivity_2">是否确认拒绝请求</string>
+    <string name="publishgq_0">求货</string>
+    <string name="publishgq_1">供货</string>
+    <string name="publishgq_2">求货</string>
+    <string name="publishgq_3">机械辅材</string>
+    <string name="publishgq_4">人才招聘</string>
+    <string name="publishgq_5">物流二手</string>
+    <string name="rechargeactivity_0">积分充值</string>
+    <string name="rechargeactivity_1">充值商品列表获取失败,请重新进入页面刷新获取</string>
+    <string name="rechargeactivity_2">充值积分比例获取失败,请重新进入页面刷新获取</string>
+    <string name="rechargeactivity_3">充值积分比例获取失败,请重新进入页面刷新获取</string>
+    <string name="rechargeactivity_4">正在获取充值商品列表</string>
+    <string name="rechargeactivity_5">积分充值</string>
+    <string name="rechargeactivity_6">VIP充值</string>
+    <string name="rechargeactivity_7">白银会员(VIP1)</string>
+    <string name="rechargeactivity_8">黄金会员(VIP2)</string>
+    <string name="registeractivity_0">重新获取</string>
+    <string name="registeractivity_1">获取验证码</string>
+    <string name="registerdetailactivity_0">准备跳转到登陆页面</string>
+    <string name="resetpwd_0">重新获取</string>
+    <string name="resetpwd_1">获取验证码</string>
+    <string name="searchcompanyactivity_0">查找/创建企业名称</string>
+    <string name="searchcompanyactivity_1">获取公司信息失败</string>
+    <string name="searchcompanyactivity_2">获取公司信息失败</string>
+    <string name="searchcompanyactivity_3">搜索公司--网络失败</string>
+    <string name="setactivity_0">V </string>
+    <string name="setactivity_1">V </string>
+    <string name="setactivity_2">您确定退出当前用户吗？</string>
+    <string name="setactivity_3">退出登录时的返回值:</string>
+    <string name="splashactivity_0">启动检查，返回网络失败</string>
+    <string name="splashactivity_1">启动检查，返回网络超时</string>
+    <string name="userchangeactivity_0">保密</string>
+    <string name="userchangeactivity_1">男</string>
+    <string name="userchangeactivity_2">女</string>
+    <string name="userchangeactivity_3">正在保存中...</string>
+    <string name="wxpayentryactivity_0">微信支付</string>
+    <string name="wxpayentryactivity_1">(安装后才可使用)</string>
+    <string name="wxpayentryactivity_2">支付宝</string>
+    <string name="wxpayentryactivity_3">石材工积分作充值</string>
+    <string name="wxpayentryactivity_4">描述</string>
+    <string name="wxpayentryactivity_5">取消支付</string>
+    <string name="wxpayentryactivity_6">查询支付结果</string>
+    <string name="wxpayentryactivity_7">无法获取订单支付结果,可以在个人账户中查询充值产品是否到账</string>
+    <string name="wxpayentryactivity_8">免费加入万人在线的石材群</string>
+    <string name="wxpayentryactivity_9">一个让您与万名专业石材人，三千多名设计师沟通的石材微信群</string>
+    <string name="zfgqactivity_0">好友推荐</string>
+    <string name="zfgqactivity_1">转发成功</string>
+    <string name="zfgqactivity_2">名片</string>
+    <string name="zfgqactivity_3">供货</string>
+    <string name="zfgqactivity_4">求货</string>
+    <string name="zfgqactivity_5">机械辅材</string>
+    <string name="zfgqactivity_6">人才招聘</string>
+    <string name="zfgqactivity_7">物流二手</string>
+    <string name="zixunallcomment_0">全部评论</string>
+    <string name="zixunallcomment_1">评论字数需在5~50之间</string>
+    <string name="zixundetailactivity_0">评论字数需在5~50之间</string>
+    <string name="zixundetailactivity_1">会员</string>
+    <string name="zixundetailactivity_2">会员</string>
+    <!-- 以下为非Activity的java文件中提取内容 -->
+    <string name="citychoosedialog_0">当前选中:</string>
+    <string name="citychooselogic_0">市</string>
+    <string name="citychooselogic_1">市</string>
+    <string name="companysearchdialog_0">搜索公司--网络失败</string>
+    <string name="constant_0">[倒拇指]</string>
+    <string name="constant_1">[拇指]</string>
+    <string name="constant_2">[抱拳]</string>
+    <string name="constant_3">[酷]</string>
+    <string name="constant_4">[握手]</string>
+    <string name="constant_5">[微笑]</string>
+    <string name="contactsiteminfo_0">群</string>
+    <string name="emotionutils_0">[倒拇指]</string>
+    <string name="emotionutils_1">[拇指]</string>
+    <string name="emotionutils_2">[抱拳]</string>
+    <string name="emotionutils_3">[酷]</string>
+    <string name="emotionutils_4">[握手]</string>
+    <string name="emotionutils_5">[微笑]</string>
+    <string name="fileconstant_0">StoneChat</string>
+    <string name="firstlogic_0">下载提示</string>
+    <string name="firstlogic_1">有新版本是否更新</string>
+    <string name="firstlogic_2">更新</string>
+    <string name="firstlogic_3">新版本已在后台下载</string>
+    <string name="firstlogic_4">确定</string>
+    <string name="friendslistadapter_0">查看</string>
+    <string name="friendslistadapter_1">加入</string>
+    <string name="gqlistadapter_0">供求</string>
+    <string name="gqlistadapter_1">需求</string>
+    <string name="gqlistadapter_2">机械及辅材</string>
+    <string name="gqlistadapter_3">招聘求职</string>
+    <string name="gqlistadapter_4">物流二手</string>
+    <string name="gqlistadapter_5">特卖</string>
+    <string name="imagedetailfragment_0">下载错误</string>
+    <string name="imagedetailfragment_1">图片无法显示</string>
+    <string name="imagedetailfragment_2">网络有问题，无法下载</string>
+    <string name="imagedetailfragment_3">图片太大无法显示</string>
+    <string name="imagedetailfragment_4">未知的错误</string>
+    <string name="jpushreceivr_0">[MyReceiver] 接收到推送下来的自定义消息: </string>
+    <string name="jpushreceivr_1">[MyReceiver] 用户收到到RICH PUSH CALLBACK: </string>
+    <string name="myreceiver_0">[MyReceiver] 接收到推送下来的自定义消息: </string>
+    <string name="myreceiver_1">[MyReceiver] 用户收到到RICH PUSH CALLBACK: </string>
+    <string name="mytwodimensioncode_0">无</string>
+    <string name="mytwodimensioncode_1">无</string>
+    <string name="newfriendadapter_0">接受</string>
+    <string name="newfriendadapter_1">已接受</string>
+    <string name="newgqlistadapter_0">供求</string>
+    <string name="newgqlistadapter_1">需求</string>
+    <string name="newgqlistadapter_2">机械及辅材</string>
+    <string name="newgqlistadapter_3">招聘求职</string>
+    <string name="newgqlistadapter_4">物流二手</string>
+    <string name="newgqlistadapter_5">特卖</string>
+    <string name="pomeloclienparsemanager_0">版本过老，禁止登录</string>
+    <string name="popupwindowsofchoosedelcache_0">确认清除</string>
+    <string name="rechargecreditadapter_0">其他数量</string>
+    <string name="rechargecreditadapter_1">  (一元可兑换</string>
+    <string name="rechargecreditadapter_2">积分)</string>
+    <string name="rechargeresultdialog_0">确定</string>
+    <string name="rechargeresultdialog_1">炫耀一下吧</string>
+    <string name="rechargeresultdialog_2">支付失败,请重新选择支付方式</string>
+    <string name="rechargeresultdialog_3">确定</string>
+    <string name="rechargeresultdialog_4">验证失败,请检查网络是否连接正常</string>
+    <string name="rechargeresultdialog_5">取消</string>
+    <string name="rechargeresultdialog_6">再次验证</string>
+    <string name="rechargeresultdialog_7">支付成功</string>
+    <string name="rechargeresultdialog_8">确定</string>
+    <string name="rechargetypeadapter_0">该支付方式不可用</string>
+    <string name="sharemenudialog_0">您的微信账号可能在其它地方登录，请重新登录微信再分享!</string>
+    <string name="sharemenudialog_1">您的微信账号可能在其它地方登录，请重新登录微信再分享!</string>
+    <string name="sharemenudialog_2">删除成功</string>
+    <string name="sharemenudialog_3">删除失败</string>
+    <string name="sharemenudialog_4">请选择邮件发送软件</string>
+    <string name="sharemenudialog_5">请选择邮件发送软件</string>
+    <string name="stringutils_0">您现在享受的是</string>
+    <string name="stringutils_1">选择以下服务,可升级您的会员享受</string>
+    <string name="timechoosedialog_0">当前选中:</string>
+    <string name="tmlistadapter_0">供求</string>
+    <string name="tmlistadapter_1">需求</string>
+    <string name="tmlistadapter_2">机械及辅材</string>
+    <string name="tmlistadapter_3">招聘求职</string>
+    <string name="tmlistadapter_4">物流二手</string>
+    <string name="tmlistadapter_5">特卖</string>
+    <string name="updateservice_0">更新提示</string>
+    <string name="updateservice_1">新版本已下载完成，是否更新？</string>
+    <string name="updateservice_2">更新</string>
+    <string name="updateservice_3">下次</string>
+    <string name="userjobselectdialog_0">董事长</string>
+    <string name="userjobselectdialog_1">总经理</string>
+    <string name="userjobselectdialog_2">副总经理</string>
+    <string name="userjobselectdialog_3">部门经理</string>
+    <string name="userjobselectdialog_4">普通员工</string>
+    <string name="util_0">魔羯宝瓶双鱼白羊金牛双子巨蟹狮子室女天秤天蝎人马魔羯</string>
+    <string name="util_1">座</string>
+    <string name="util_10">大于100KM</string>
+    <string name="util_11">附近</string>
+    <string name="util_12">距离你</string>
+    <string name="util_13">距离你</string>
+    <string name="util_14">距离你</string>
+    <string name="util_15">MM月dd日  a hh:mm</string>
+    <string name="util_16">MM月dd日  a hh:mm</string>
+    <string name="util_17">日</string>
+    <string name="util_18">日</string>
+    <string name="util_19">刚刚</string>
+    <string name="util_2">秒前</string>
+    <string name="util_20">分钟前</string>
+    <string name="util_21">小时前</string>
+    <string name="util_22">昨天</string>
+    <string name="util_23">刚刚</string>
+    <string name="util_24">分钟前</string>
+    <string name="util_25">小时前</string>
+    <string name="util_26">昨天</string>
+    <string name="util_27">复制整个文件夹内容操作出错</string>
+    <string name="util_3">分钟前</string>
+    <string name="util_4">小时前</string>
+    <string name="util_5">1天前</string>
+    <string name="util_6">2天前</string>
+    <string name="util_7">3天前</string>
+    <string name="util_8">未知</string>
+    <string name="util_9">距离未知</string>
+    <string name="xlistview_0">yyyy年MM月dd日 HH:mm</string>
+    <!-- 以下为xml中提取内容 -->
+    <string name="activity_company_introduction_0">请输入企业描述(140字以内)...</string>
+    <string name="activity_help_and_feedback_0">常见问题</string>
+    <string name="activity_more_0">StoneChat Technology</string>
+    <string name="activity_more_1">LV</string>
+    <string name="activity_more_2">0积分</string>
+    <string name="activity_my_gongqiu_0">你有0条未读评论</string>
+    <string name="activity_my_temai_0">你有5条未读评论</string>
+    <string name="activity_other_introduction_0">请输入企业其他说明(140字以内)...</string>
+    <string name="activity_pay_0">微信支付</string>
+    <string name="activity_pay_1">APP支付生成预支付订单</string>
+    <string name="activity_pay_2">生成APP微信支付参数</string>
+    <string name="activity_pay_3">调起微信支付</string>
+    <string name="activity_pay_result_0">支付结果</string>
+    <string name="activity_recharge_1">VIP充值选择</string>
+    <string name="activity_recharge_2">会员权利一览</string>
+    <string name="activity_recharge_3">充值选择</string>
+    <string name="activity_recharge_4">请输入金额</string>
+    <string name="activity_recharge_5">元</string>
+    <string name="activity_recharge_6">会员权利一览</string>
+    <string name="activity_recharge_7">确定</string>
+    <string name="activity_recharge_8">*选择确定,即表示同意</string>
+    <string name="activity_recharge_9">&lt;StoneChat Recharge Agreement&gt;</string>
+    <string name="activity_recharge_confirm_0">支付金额</string>
+    <string name="activity_recharge_confirm_1">您购买了</string>
+    <string name="activity_recharge_confirm_2">您花费了XX元购买了XX积分</string>
+    <string name="activity_recharge_confirm_3">确认支付</string>
+    <string name="activity_recharge_confirm_4">您在支付过程中遇到任何问题,请于客服联系</string>
+    <string name="activity_set_0">是否需要验证好友</string>
+    <string name="activity_set_1">清除缓存</string>
+    <string name="activity_set_2">测试</string>
+    <string name="activity_standby_0">请输入企业其他说明...</string>
+    <string name="activity_tdsdetails_0">分享</string>
+    <string name="activity_title_0">返回</string>
+    <string name="activity_title_1">二维码扫描</string>
+    <string name="activity_zi_xun_detail_0">详情</string>
+    <string name="activity_zi_xun_detail_1">分享</string>
+    <string name="activity_zi_xun_detail_2">评论()</string>
+    <string name="activity_zi_xun_detail_3">查看所有评论</string>
+    <string name="activity_zi_xun_detail_comment_0">如何鉴别黑金花质量</string>
+    <string name="activity_zi_xun_detail_comment_1">2014-04-15 来源:石脉科技</string>
+    <string name="adapter_chat_0">矮人石材</string>
+    <string name="adapter_chat_1">有限公司</string>
+    <string name="adapter_chat_10">矮人石材</string>
+    <string name="adapter_chat_11">有以上品种石材请联系我，18305174625，转发采购需求，请自行联系，谢谢！</string>
+    <string name="adapter_chat_3">经理</string>
+    <string name="adapter_chat_4">矮人石材</string>
+    <string name="adapter_chat_5">有以上品种石材请联系我，18305174625，转发采购需求，请自行联系，谢谢！</string>
+    <string name="adapter_chat_6">矮人石材</string>
+    <string name="adapter_chat_7">有限公司</string>
+    <string name="adapter_chat_9">经理</string>
+    <string name="adapter_gqlist_0">数量：</string>
+    <string name="adapter_gqlist_1">电话：</string>
+    <string name="adapter_gqlist_2">南京新城科技圆</string>
+    <string name="adapter_gqlist_3">展开所有26条评论</string>
+    <string name="adapter_grid_tds_0">我是</string>
+    <string name="adapter_grid_tds_1">三等奖富豪送 </string>
+    <string name="adapter_list_zixun_comment_0">这是昵称</string>
+    <string name="adapter_list_zixun_comment_1">25分钟前</string>
+    <string name="adapter_list_zixun_comment_2">这是评论内容</string>
+    <string name="adapter_list_zxac_0">2分钟前</string>
+    <string name="adapter_list_zxac_1">真好</string>
+    <string name="adapter_mylist_zixun_pinglun_0">~闲~庭~信~步</string>
+    <string name="adapter_mylist_zixun_pinglun_1">2分钟前</string>
+    <string name="adapter_mylist_zixun_pinglun_2">真好</string>
+    <string name="adapter_new_gqlist_0">数量：</string>
+    <string name="adapter_new_gqlist_1">电话：</string>
+    <string name="adapter_new_gqlist_2">南京新城科技圆</string>
+    <string name="adapter_new_gqlist_3">展开所有26条评论</string>
+    <string name="adapter_publish_gq_group_0">测试群</string>
+    <string name="adapter_tmlist_0">数量：</string>
+    <string name="adapter_tmlist_1">电话：</string>
+    <string name="adapter_tmlist_2">南京新城科技圆</string>
+    <string name="adapter_tmlist_3">展开所有26条评论</string>
+    <string name="adapter_zf_gq_0">测试群</string>
+    <string name="androidmanifest_0">石材内存泄露检测</string>
+    <string name="bind_phone_0">手机号       </string>
+    <string name="bind_phone_1">获取验证码</string>
+    <string name="change_pwd_page_0">请输入原始密码</string>
+    <string name="change_pwd_page_1">请输入新密码</string>
+    <string name="change_pwd_page_2">请再次输入新密码</string>
+    <string name="change_pwd_page_3">完 成</string>
+    <string name="dialog_city_choose_0">确定</string>
+    <string name="dialog_my_twodimenscode2_0">无</string>
+    <string name="dialog_my_twodimenscode_0">无</string>
+    <string name="dialog_recharge_result_0">支付成功!\n您已获得XX积分</string>
+    <string name="dialog_recharge_result_1">恭喜您成为</string>
+    <string name="dialog_recharge_result_3">确定</string>
+    <string name="dialog_recharge_result_4">炫耀一下吧</string>
+    <string name="dialog_select_company_0">供职企业</string>
+    <string name="dialog_select_company_1">请输入您所在的企业名称</string>
+    <string name="dialog_select_company_2">确定</string>
+    <string name="dialog_share_menu_0">分享</string>
+    <string name="first_0">启动检查</string>
+    <string name="font_setting_0">今天的会议什么时候？</string>
+    <string name="font_setting_1">下午15：20，二楼大会议室</string>
+    <string name="font_setting_2">最小字体</string>
+    <string name="font_setting_3">标准字体</string>
+    <string name="font_setting_4">最大字体</string>
+    <string name="frag_alipay_0">商品名称:</string>
+    <string name="frag_alipay_1">测试的商品</string>
+    <string name="frag_alipay_2">商品描述:</string>
+    <string name="frag_alipay_3">该测试商品的详细描述</string>
+    <string name="frag_alipay_4">商品价格:</string>
+    <string name="frag_alipay_5">0.01元</string>
+    <string name="frag_alipay_6">支付</string>
+    <string name="frag_alipay_7">检查账户</string>
+    <string name="frame_layout_refresh_header_0">更新于：07-28 15:32</string>
+    <string name="friend_validation_info_layout_0">发送</string>
+    <string name="home_page_0">这是首页</string>
+    <string name="home_page_1">修改密码测试</string>
+    <string name="home_page_2">推送设置</string>
+    <string name="home_page_3">字体设置</string>
+    <string name="imgfilelist_0">取消</string>
+    <string name="item_credit_0">(一元可兑换积分)</string>
+    <string name="item_listview_score_0">登录奖励</string>
+    <string name="item_popupwindows_0">拍照</string>
+    <string name="item_popupwindows_1">从相册中选取</string>
+    <string name="item_popupwindows_2">取消</string>
+    <string name="item_popupwindows_of_choose_delete_image_0">取消</string>
+    <string name="item_popupwindows_of_choose_share_friends_0">石材工作好友</string>
+    <string name="item_popupwindows_of_choose_share_friends_1">其他平台好友</string>
+    <string name="item_popupwindows_of_choose_share_friends_2">取消</string>
+    <string name="item_recharge_type_0">支付宝支付</string>
+    <string name="item_vip_0">黄金会员 (VIP1)</string>
+    <string name="item_vip_1">365/年</string>
+    <string name="list_item_0">查看</string>
+    <string name="login_page_0">注册</string>
+    <string name="login_page_1">微信登陆</string>
+    <string name="myscoretitle_0">我的积分总数</string>
+    <string name="myscoretitle_1">积分获取规则</string>
+    <string name="push_setting_0">一键静音</string>
+    <string name="register_page_0">手机</string>
+    <string name="register_page_1">获取验证码</string>
+    <string name="register_page_2">请输入昵称</string>
+    <string name="register_page_3">注 册</string>
+    <string name="resetpwd_page_0">手机</string>
+    <string name="resetpwd_page_1">获取验证码</string>
+    <string name="search_company_activity_0">录入新企业</string>
+    <string name="search_company_activity_1">（未找到你的供职企业，赶紧录入吧）</string>
+    <string name="search_company_activity_2">请输入您所在的企业名称</string>
+    <string name="strings_0">TA还未注册帐号</string>
+    <string name="umeng_bak_platform_item_simple_0">腾讯微博</string>
+    <string name="umeng_bak_platform_selector_dialog_0">分享到</string>
+    <string name="umeng_socialize_at_view_0">搜索</string>
+    <string name="umeng_socialize_base_alert_dialog_0">使用已有账号发表评论</string>
+    <string name="umeng_socialize_base_alert_dialog_1">腾讯微博</string>
+    <string name="umeng_socialize_base_alert_dialog_2">取消</string>
+    <string name="umeng_socialize_bind_select_dialog_0">使用已有账号发表评论</string>
+    <string name="umeng_socialize_bind_select_dialog_1">QQ空间</string>
+    <string name="umeng_socialize_bind_select_dialog_2">腾讯微博</string>
+    <string name="umeng_socialize_bind_select_dialog_3">新浪微博</string>
+    <string name="umeng_socialize_bind_select_dialog_4">人人网</string>
+    <string name="umeng_socialize_bind_select_dialog_5">豆瓣</string>
+    <string name="umeng_socialize_bind_select_dialog_6">匿名评论 	</string>
+    <string name="umeng_socialize_bind_select_dialog_7">取消</string>
+    <string name="umeng_socialize_failed_load_page_0">网络加载失败，请点击重试。</string>
+    <string name="umeng_socialize_full_alert_dialog_0">分享到</string>
+    <string name="umeng_socialize_full_alert_dialog_1">分享到</string>
+    <string name="umeng_socialize_full_curtain_0">正在删除...</string>
+    <string name="umeng_socialize_oauth_dialog_0">关注官方微博</string>
+    <string name="umeng_socialize_post_share_0">关注官方微博</string>
+    <string name="umeng_socialize_post_share_1">说点什么吧。。。</string>
+    <string name="umeng_socialize_shareboard_item_0">QQ空间</string>
+    <string name="user_change_page22_0">（如企业信息有误，请联系管理员）</string>
+    <string name="user_change_page22_1">选择并保存</string>
+    <string name="user_change_page22_2">修改供职企业</string>
+    <string name="user_change_page22_3">企业名称</string>
+    <string name="user_change_page22_4">请输入详细地址(50字以内)</string>
+    <string name="user_change_page_0">保 存</string>
+
+    <!-- 新增加 -->
+    <string name="original">原文</string>
+    <string name="view_count">浏览次数:</string>
+    <string name="rechargeactivity_9">请选择积分</string>
+    <string name="wxpayentryactivity_10">充值商品信息获取失败,请重新选择商品</string>
+    <string name="wxpayentryactivity_11">元的积分充值服务,将获得</string>
+    <string name="wxpayentryactivity_12">元的积分套餐服务,将获得</string>
+    <string name="wxpayentryactivity_13">积分,可用于发送名片,发布供求,加入群组</string>
+    <string name="wxpayentryactivity_14">请选择一种支付方式</string>
+    <string name="creditlackdialog_0">积分不足,无法发布</string>
+    <string name="creditlackdialog_1">积分不足,无法转发</string>
+    <string name="creditlackdialog_2">积分不足,无法发送</string>
+    <string name="creditlackdialog_3">积分不足,无法加入</string>
+    <string name="date_0">年</string>
+    <string name="date_1">月</string>
+    <string name="date_2">日</string>
+    <string name="activity_recharge_confirm_10">您花费了</string>
+    <string name="activity_recharge_confirm_11">元购买了</string>
+    <string name="activity_recharge_confirm_12">的包年服务,会员有效期为</string>
+    <string name="activity_recharge_confirm_13">至</string>
+    <string name="my_site">我的企业微网站</string>
+    <string name="activity_chatactivity_no_re">There is no sound from the microphone, allow StoneChat to access your microphone from device menu:"Settings"-&gt;"Privacy"-&gt;"Microphone"</string>
+    <string name="dialog_recharge_result_11">恭喜您已达到</string>
+    <string name="rechargeresultdialog_9">级</string>
+    <string name="yiyou">has already</string>
+    <string name="ren">people joined</string>
+    <string name="activity_stone_industry_0">Stone Industry Information Database</string>
+    <string name="activity_stone_industry_1">scan</string>
+    <string name="activity_stone_industry_2">find stone/enterprises</string>
+    <string name="pop_scan_type_0">take pictures</string>
+    <string name="pop_scan_type_1">pictures</string>
+    <string name="pop_scan_type_2">This function is temporarily not usable, our programmer is working on it.</string>
+    <string name="item_stone_company_0">Rate:</string>
+    <string name="item_stone_company_1">Address:</string>
+    <string name="share_menu_dialog_0">I have become StoneChat</string>
+    <string name="share_menu_dialog_1">Enjoy professional high-end services</string>
+    <string name="share_menu_dialog_2">I leveled up to XXX of StoneChat, </string>
+    <string name="share_menu_dialog_3">receiving more professional services</string>
+    <string name="share_menu_dialog_4">If you don’t want to be distubed by spam messages any more, join StoneChat!(The most professtional communication platform that thousands of people are buying/selling stones on it)</string>
+    <string name="layout_message_0">scan image</string>
+    <string name="industrymainactivity_0">Search content can not be null</string>
+    <string name="activity_industry_company_0">Tel</string>
+    <string name="activity_industry_company_1">The main business of the company</string>
+    <string name="activity_industry_company_2">Product list</string>
+    <string name="activity_industry_main_0">find stone</string>
+    <string name="activity_industry_main_1">find enterprise</string>
+    <string name="dialogutils_1">Recharge now</string>
+    <string name="dialogutils_2">Recharge later</string>
+    <string name="dialogutils_3">Become VIP, get rid of ads.</string>
+    <string name="dialogutils_4">Become VIP now</string>
+    <string name="dialogutils_5">Next time</string>
+    <string name="footview_industry_load_done_0">All data is loaded</string>
+    <string name="footview_industry_load_done_1">Can't find your company? Register yours!</string>
+    <string name="footview_industry_load_done_2">Please contact customer service</string>
+    <string name="footview_industry_load_done_3">400 966 0968</string>
+    <string name="include_industry_company_4">The main business of the company</string>
+    <string name="include_industry_company_5">Product list</string>
+    <string name="include_industry_stone_header_0">City</string>
+    <string name="layout_zixun_0">进入行业信息库</string>
+    <string name="none">暂无</string>
+
+    <!-- Addnew -->
+    <string name="activity_zan_">Full text</string>
+    <string name="company_site">Company's Twitter/Weibo/micro-website</string>
+    <string name="en_forget_password">尊敬的用户：APP暂不支持通过邮箱找回密码的功能，如有需要，请直接拨打服务热线400-966-0968，有专人为您提供帮助。</string>
+
+</resources>

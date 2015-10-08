@@ -1,0 +1,2875 @@
+<section id="api-Search">
+    <h1>Search</h1>
+      <div id="api-Search-PostSearchCompany">
+        
+  <article id="api-Search-PostSearchCompany-0.0.0" data-group="Search" data-name="PostSearchCompany" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索 石材企业</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索 石材企业</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/company</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            <p class="default-value">默认值: <code>1</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">perpage <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>每页数量</p> 
+            <p class="default-value">默认值: <code>20</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">total</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>结果集总数</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;company_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>公司ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;telephone</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司联系方式</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;address</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司地址</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;auth</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>公司认证状态(0:未认证,1:已认证)</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;star</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>公司评价星级（1-5)</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchStone">
+        
+  <article id="api-Search-PostSearchStone-0.0.0" data-group="Search" data-name="PostSearchStone" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索 石种</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索 石种</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/stone</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            <p class="default-value">默认值: <code>1</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">perpage <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>每页数量</p> 
+            <p class="default-value">默认值: <code>20</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种中文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;english_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种英文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种图片</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchNews">
+        
+  <article id="api-Search-PostSearchNews-0.0.0" data-group="Search" data-name="PostSearchNews" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索 资讯&amp;设计列表</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索资讯&amp;设计</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/news</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">data</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;images</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>该信息的图片集</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的标题</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;small_title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的小标题</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;category_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>资讯信息分类id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchDisplay">
+        
+  <article id="api-Search-PostSearchDisplay-0.0.0" data-group="Search" data-name="PostSearchDisplay" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索3D石材展</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索3D石材展</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/display</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">is_recommend <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>1:推荐  0：全部（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">data</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>3D石材展结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;image</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的图片</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;jumpurl</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>跳转url</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的标题</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;small_title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的小标题</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchRecruitment">
+        
+  <article id="api-Search-PostSearchRecruitment-0.0.0" data-group="Search" data-name="PostSearchRecruitment" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索人才招聘</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索人才招聘</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/recruitment</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>人才招聘结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>该信息的图片集</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;hit</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>阅读量</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_top</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1：置顶的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_ad</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1:是推广的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市id          （注有三种可能 1.直辖市 列如北京id  2.普通城市 列如南京id  3.外国 列如美国id）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市名称        （注有三种可能 1.直辖市 北京  2.普通城市 南京  3.外国 美国）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省id     （注有三种可能 1.直辖市 列如北京id=0  2.普通省 列如江苏的id  3.外国 列如美国id=90）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省名称      （注有三种可能 1.直辖市 列如中国  2.普通省 列如江苏  3.外国 列如海外）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;nickanem</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_approve</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>发布者是否点赞过bool值</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;praiselist</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>赞列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;comment</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>评论列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的id  如果没有被回复的人to_user_id为0同时也没有下面一项了</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchRecommendRecommend">
+        
+  <article id="api-Search-PostSearchRecommendRecommend-0.0.0" data-group="Search" data-name="PostSearchRecommendRecommend" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索新品推荐的推荐</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索新品推荐</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/recommend/recommend</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">&nbsp;&nbsp;recommendProducts</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>推荐列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;icon</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>图标</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容一般是url</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;small_title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchRecommend">
+        
+  <article id="api-Search-PostSearchRecommend-0.0.0" data-group="Search" data-name="PostSearchRecommend" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索新品推荐的更多</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索新品推荐</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/recommend</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">&nbsp;&nbsp;newProducts</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>更多结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;icon</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>图标</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容一般是url</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;small_title</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchStuff">
+        
+  <article id="api-Search-PostSearchStuff-0.0.0" data-group="Search" data-name="PostSearchStuff" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索机械辅材</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索机械辅材</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/stuff</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">lsit</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>机械辅材结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>该信息的图片集</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;hit</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>阅读量</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_top</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1：置顶的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_ad</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1:是推广的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市id          （注有三种可能 1.直辖市 列如北京id  2.普通城市 列如南京id  3.外国 列如美国id）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市名称        （注有三种可能 1.直辖市 北京  2.普通城市 南京  3.外国 美国）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省id     （注有三种可能 1.直辖市 列如北京id=0  2.普通省 列如江苏的id  3.外国 列如美国id=90）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省名称      （注有三种可能 1.直辖市 列如中国  2.普通省 列如江苏  3.外国 列如海外）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;nickanem</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_approve</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>发布者是否点赞过bool值</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;praiselist</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>赞列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;comment</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>评论列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的id  如果没有被回复的人to_user_id为0同时也没有下面一项了</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchTransport">
+        
+  <article id="api-Search-PostSearchTransport-0.0.0" data-group="Search" data-name="PostSearchTransport" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索物流二手</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索物流二手</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/transport</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>物流二手结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>该信息的图片集</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;hit</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>阅读量</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_top</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1：置顶的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_ad</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1:是推广的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市id          （注有三种可能 1.直辖市 列如北京id  2.普通城市 列如南京id  3.外国 列如美国id）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市名称        （注有三种可能 1.直辖市 北京  2.普通城市 南京  3.外国 美国）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省id     （注有三种可能 1.直辖市 列如北京id=0  2.普通省 列如江苏的id  3.外国 列如美国id=90）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省名称      （注有三种可能 1.直辖市 列如中国  2.普通省 列如江苏  3.外国 列如海外）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;nickanem</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_approve</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>发布者是否点赞过bool值</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;praiselist</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>赞列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;comment</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>评论列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的id  如果没有被回复的人to_user_id为0同时也没有下面一项了</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchDiscount">
+        
+  <article id="api-Search-PostSearchDiscount-0.0.0" data-group="Search" data-name="PostSearchDiscount" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索特卖</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索特卖</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/discount</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">category_id <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>分类ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">keyword <span class="label label-optional">选项</span></td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>信息内容的关键字（可选）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">tuid <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>0或不传:所有人的特卖  非0（即用户的id）:指定用户的特卖</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>特卖结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>该信息的图片集</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>该信息的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;hit</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>阅读量</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_top</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1：置顶的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_ad</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>1:是推广的</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;created</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布时间</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市id          （注有三种可能 1.直辖市 列如北京id  2.普通城市 列如南京id  3.外国 列如美国id）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市名称        （注有三种可能 1.直辖市 北京  2.普通城市 南京  3.外国 美国）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省id      （注有三种可能 1.直辖市 列如北京id=0  2.普通省 列如江苏的id  3.外国 列如美国id=90）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省名称      （注有三种可能 1.直辖市 列如中国  2.普通省 列如江苏  3.外国 列如海外）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;nickanem</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>该信息的发布者头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;total_count</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>数量</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;telephone</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>联系电话</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;is_approve</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>发布者是否点赞过bool值</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;praiselist</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>赞列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>点赞者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;comment</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>评论列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;content</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>评论者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的id  如果没有被回复的人to_user_id为0同时也没有下面一项了</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;to_user_nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>被回复者的昵称</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchUser">
+        
+  <article id="api-Search-PostSearchUser-0.0.0" data-group="Search" data-name="PostSearchUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索用户：关键字</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索用户：关键字</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/user</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">keyword</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>关键字 模糊：nikename company   等于：email mobile</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">users</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>用户结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>用户对象</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;company</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>企业对象</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchUserSuggest">
+        
+  <article id="api-Search-PostSearchUserSuggest-0.0.0" data-group="Search" data-name="PostSearchUserSuggest" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索用户：输入提示</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索用户：输入提示（10个结果，用于在下拉框提示）</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/user/suggest</span></code></pre>
+
+
+
+    
+
+    
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">users</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>用户结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>用户对象</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchUserStoners">
+        
+  <article id="api-Search-PostSearchUserStoners-0.0.0" data-group="Search" data-name="PostSearchUserStoners" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 搜索用户：附近石头人</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>搜索用户：附近石头人</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/user/stoners</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">&nbsp;&nbsp;user</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>用户结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;company</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>用户公司列表 （注：data.user 和 data.company 数组key值相同的为同一个人的个人资料和所属企业信息）</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>用户公司id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>用户公司名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;photos</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>用户公司相册.......</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;id</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>用户id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;nickname</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>用户昵称 .....</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+  </section>

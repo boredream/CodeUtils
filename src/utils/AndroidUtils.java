@@ -17,7 +17,7 @@ import entity.IdNamingBean;
 public class AndroidUtils {
 	
 	public static void main(String[] args) {
-//		autoCreateAdapter();
+		autoCreateAdapter();
 		autoCreateActivity();
 	}
 	
@@ -91,6 +91,7 @@ public class AndroidUtils {
 	 */
 	public static void autoCreateActivity() {
 		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		idNamingBeans.clear();
 		parseElementFromXml("Android" + File.separator + "layout.xml", false);
 		
 		// 解析idNamingBeans集合中的信息,生成页面文本信息
@@ -100,7 +101,7 @@ public class AndroidUtils {
 		File javaFile = new File("Android" + File.separator + "Activity.java");
 		
 		// 将生成的内容写入至java类文件中
-		FileUtils.writeString2File(activityContent, javaFile);
+		FileUtils.writeString2File(activityContent, javaFile, "utf-8");
 	}
 	
 	/**
@@ -112,6 +113,7 @@ public class AndroidUtils {
 	 */
 	public static void autoCreateActivity(String layoutXml, String activityFile, boolean include) {
 		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		idNamingBeans.clear();
 		parseElementFromXml(layoutXml, include);
 		
 		// 解析idNamingBeans集合中的信息,生成页面文本信息
@@ -151,6 +153,61 @@ public class AndroidUtils {
 					"(" + bean.getViewName() + ") findViewById(R.id." + bean.getIdName() + ");"));
 		}
 		sb.append("\n");
+		
+		// 是否包含EditText控件,如果包含,自动生成非空判断代码
+		boolean hasEditText = false;
+		///**
+		// * TODO 使用输入内容,可根据需要自行修改补充本方法
+		// */
+		//private void submit() {
+		//	// 开始验证输入内容
+		//	String content = et_content.getText().toString().trim();
+		//	if(!TextUtils.isEmpty(content)) {
+		//		Toast.makeText(this, "content不能为空", Toast.LENGTH_SHORT).show();
+		//		return;
+		//	}
+		//	
+		//	// TODO 验证成功,下面开始使用数据
+		//	
+		//	
+		//}
+		StringBuilder sbEditText = new StringBuilder();
+		sbEditText.append("\n");
+		sbEditText.append(formatSingleLine(1, "/**"));
+		sbEditText.append(formatSingleLine(1, " * TODO 输入验证,可根据需要自行修改补充"));
+		sbEditText.append(formatSingleLine(1, " */"));
+		sbEditText.append(formatSingleLine(1, "private void submit() {"));
+		sbEditText.append(formatSingleLine(2, "// 开始验证输入内容"));
+		
+		for(IdNamingBean bean : idNamingBeans) {
+			Attribute attrTag = bean.getElement().attribute("tag");
+			// 只判断EditText控件
+			if(bean.getViewName().equals("EditText")) {
+				// 带有可选标识(tag为optional)的EditText不做非空验证
+				if(attrTag != null && attrTag.getValue().equals("optional")) {
+					continue;
+				}
+				
+				// 截取最后一个_后面的内容作为名称,不包含_时使用全部id作为名称
+				String idName = bean.getIdName();
+				int index = idName.lastIndexOf("_");
+				String name = index == -1 ? idName : idName.substring(index + 1);
+				
+				sbEditText.append(formatSingleLine(2, "String " + name + " = " + idName + ".getText().toString().trim();"));
+				sbEditText.append(formatSingleLine(2, "if(TextUtils.isEmpty(" + name + ")) {"));
+				sbEditText.append(formatSingleLine(3, "Toast.makeText(this, \"" + name + "不能为空\", Toast.LENGTH_SHORT).show();"));
+				sbEditText.append(formatSingleLine(3, "return;"));
+				sbEditText.append(formatSingleLine(2, "}"));
+				sbEditText.append(formatSingleLine(2, ""));
+				
+				hasEditText = true;
+			}
+		}
+		
+		sbEditText.append(formatSingleLine(2, "// TODO 验证成功,下面开始使用数据"));
+		sbEditText.append(formatSingleLine(2, ""));
+		sbEditText.append(formatSingleLine(2, ""));
+		sbEditText.append(formatSingleLine(1, "}"));
 
 		// 是否包含可点击的控件,如果包含,自动生成onClick相关代码
 		boolean hasClickView = false;
@@ -228,10 +285,21 @@ public class AndroidUtils {
 		sbOnChecked.append(formatSingleLine(1, "}"));
 		
 		sb.append(formatSingleLine(1, "}\n"));
+		sb.append("\n");
 		
-		String activityContent = sb.toString() + "\n" + 
-				(hasClickView ? sbOnClick.toString() : "") + 
-				(hasCheckedView ? sbOnChecked.toString() : "");
+		if(hasClickView) {
+			sb.append(sbOnClick);
+		}
+		
+		if(hasCheckedView) {
+			sb.append(sbOnChecked);
+		}
+		
+		if(hasEditText) {
+			sb.append(sbEditText);
+		}
+		
+		String activityContent = sb.toString();
 		return activityContent;
 	}
 	
@@ -245,6 +313,7 @@ public class AndroidUtils {
 		String layoutXml = "Android\\item.xml";
 		
 		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		idNamingBeans.clear();
 		parseElementFromXml(layoutXml, false);
 		
 		// 解析idNamingBeans集合中的信息,生成适配器文本信息
@@ -265,6 +334,7 @@ public class AndroidUtils {
 	 * @param include		是否将include引用的布局中内容也获取到
 	 */
 	public static void autoCreateAdapter(String layoutXml, String adapterFile, boolean include) {
+		idNamingBeans.clear();
 		parseElementFromXml(layoutXml, include);
 		
 		String adapterContent = createAdapterContent(layoutXml);

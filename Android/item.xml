@@ -1,66 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="72dp"
-    android:descendantFocusability="beforeDescendants"
-    android:orientation="horizontal" >
-
-    <ImageView
-        android:id="@+id/iv_vip_logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="12dp"
-        android:src="@drawable/vip_gold" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp" >
 
     <TextView
-        android:id="@+id/tv_vip_name"
+        android:id="@+id/tv_name"
         style="@style/TextViewSubhead"
-        android:layout_alignTop="@id/iv_vip_logo"
-        android:layout_marginTop="2dp"
-        android:layout_toRightOf="@id/iv_vip_logo"
-        android:text="黄金会员 (VIP1)"
-        android:textSize="20sp" />
+        android:text="Name" />
 
     <TextView
-        android:id="@+id/tv_is_recommend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:text="推荐"
-        android:textColor="@color/txt_black"
-        android:textSize="18sp"
-        android:visibility="gone" />
+        android:id="@+id/tv_des"
+        style="@style/TextViewBody"
+        android:layout_marginTop="8dp"
+        android:text="description" />
 
-    <CheckBox
-        android:id="@+id/cb_vip"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/cb_green_sel"
-        android:button="@null"
-        android:focusable="false" />
-
-    <TextView
-        android:id="@+id/tv_vip_info"
-        style="@style/TextViewSubhead"
-        android:layout_below="@+id/tv_vip_name"
-        android:layout_marginTop="4dp"
-        android:layout_toRightOf="@+id/iv_vip_logo"
-        android:text="365/年"
-        android:textColor="@color/txt_light_gray"
-        android:textSize="16sp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tv_vip_name"
-        android:layout_alignTop="@+id/tv_vip_name"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/tv_vip_name"
-        android:src="@drawable/vip_recommend" />
-
-</RelativeLayout>
+</LinearLayout>

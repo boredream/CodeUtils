@@ -1,14 +1,41 @@
 
 
-	private ImageView iv_setting_icon;
-	private TextView tv_setting_name;
-	private ImageView iv_setting_arrow;
+	private RadioGroup rg_check_type;
+	private RadioButton rb_single;
+	private RadioButton rb_multi;
+	private ListView lv;
+	private Button btn;
 
 	private void initView() {
-		iv_setting_icon = (ImageView) findViewById(R.id.iv_setting_icon);
-		tv_setting_name = (TextView) findViewById(R.id.tv_setting_name);
-		iv_setting_arrow = (ImageView) findViewById(R.id.iv_setting_arrow);
+		rg_check_type = (RadioGroup) findViewById(R.id.rg_check_type);
+		rb_single = (RadioButton) findViewById(R.id.rb_single);
+		rb_multi = (RadioButton) findViewById(R.id.rb_multi);
+		lv = (ListView) findViewById(R.id.lv);
+		btn = (Button) findViewById(R.id.btn);
 
+		btn.setOnClickListener(this);
+		rg_check_type.setOnCheckedChangeListener(this);
 	}
 
 
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn:
+
+			break;
+		}
+	}
+
+	@Override
+	public void onCheckedChanged(RadioGroup group, int checkedId) {
+		switch (checkedId) {
+		case R.id.rb_single:
+
+			break;
+		case R.id.rb_multi:
+
+			break;
+		}
+	}

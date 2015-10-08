@@ -1,0 +1,348 @@
+<section id="api-Stone">
+    <h1>Stone</h1>
+      <div id="api-Stone-PostStoneIndexSuppliers">
+        
+  <article id="api-Stone-PostStoneIndexSuppliers-0.0.0" data-group="Stone" data-name="PostStoneIndexSuppliers" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Stone - 石材供应商列表</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>石材供应商列表</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/stone/index/suppliers</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            <p class="default-value">默认值: <code>1</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">perpage <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>每页数量</p> 
+            <p class="default-value">默认值: <code>20</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">city_id <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>供应商所在地区id</p> 
+            <p class="default-value">默认值: <code>0</code></p>
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">total</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>结果集总数</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;company_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>公司ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;telephone</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司联系方式</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;address</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司地址</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;avatar</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司头像</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;auth</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>公司认证状态(0:未认证,1:已认证)</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Stone-PostStoneIndexDetail">
+        
+  <article id="api-Stone-PostStoneIndexDetail-0.0.0" data-group="Stone" data-name="PostStoneIndexDetail" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Stone - 石材行业信息库详情</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>石材行业信息库详情</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/stone/index/detail</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种ID</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">data</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>结果</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种中文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;english_name</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种英文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;intro</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种介绍</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photos</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>石种图片列表</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+  </section>

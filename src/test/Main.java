@@ -27,6 +27,13 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
+		String s = "11112-1111asdasd22222-2222,22222-2222 22222-2222...22222-2222，22222-2222";
+		String[] split = s.split("[^0-9-]+");
+		System.out.println(split.length); 
+		for(String str : split) {
+			System.out.println(str);
+		}
+		
 //		AndroidUtils.autoCreateActivity();
 		// AndroidUtils.autoCreateAdapter();
 //		 JsonUtils.parseJson2Java();

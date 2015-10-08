@@ -40,11 +40,24 @@ import entity.IdNamingBean;
 
 public class TempUtils {
 	
-	public static void main(String[] args) {
-//		extractAllString();
-		exportXml();
+	public static void main(String[] args) throws Exception {
+//		compareStrings();
 //		autoCreateSizeSet(true);
 //		desParams();
+//		extractAllString();
+
+		String path = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
+		
+		File rootFile = new File(path);
+		for(File file : rootFile.listFiles()) {
+			System.out.println(file.getName());
+			if(file.isDirectory()) {
+				for(File f : file.listFiles()) {
+					System.out.println("  " + f.getName());
+				}
+			}
+		}
+		
 	}
 
 	public static void weiboEmoji() {
@@ -687,6 +700,39 @@ public class TempUtils {
 //		XmlUtil.write2xml(file, valuesDoc);
 	}
 	
+	public static void compareStrings() {
+		
+		List<String> hasStrName = new ArrayList<String>();
+		
+		// save to
+		File file = new File("D:\\work\\BusinessCMT2.0\\res\\values-en\\strings.xml");
+		Document valuesDoc = XmlUtil.read(file);
+		Element rootElement = valuesDoc.getRootElement();
+		
+		List<Element> elements = rootElement.elements();
+		for(Element element : elements) {
+			Attribute nameAtt = element.attribute("name");
+			String name = nameAtt.getValue();
+			hasStrName.add(name);
+		}
+		
+		// save to
+		File fileChn = new File("D:\\work\\BusinessCMT2.0\\res\\values\\strings.xml");
+		Document valuesDocChn = XmlUtil.read(fileChn);
+		Element rootElementChn = valuesDocChn.getRootElement();
+		
+		List<Element> elementsChn = rootElementChn.elements();
+		for(Element element : elementsChn) {
+			Attribute nameAtt = element.attribute("name");
+			String name = nameAtt.getValue();
+			if(!hasStrName.contains(name)) {
+				System.out.println(element.getText());
+			}
+		}
+	
+		
+		
+	}
 	
 	public static void desParams() {
 //		String beanPath1 = "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\model";
@@ -753,7 +799,6 @@ public class TempUtils {
 				FileUtils.writeString2File(content, file, "UTF-8");
 			}
 		}
-		
-		
 	}
+	
 }

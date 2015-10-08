@@ -1,0 +1,693 @@
+<section id="api-Company">
+    <h1>Company</h1>
+      <div id="api-Company-PostCompanySettingsChange_basic">
+        
+  <article id="api-Company-PostCompanySettingsChange_basic-0.0.0" data-group="Company" data-name="PostCompanySettingsChange_basic" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Company - 创建企业资料</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>创建企业资料</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/company/settings/change_basic</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>企业名称</p> 
+            
+            <p class="type-size">尺寸範圍: <code>2-64字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">business</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>业务范围 可选</p> 
+            
+            <p class="type-size">尺寸範圍: <code>2-64字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">intro</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>简单介绍</p> 
+            
+            <p class="type-size">尺寸範圍: <code>0-280字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">more_info</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>更多  可选</p> 
+            
+            <p class="type-size">尺寸範圍: <code>0-280字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">address</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>详细地址 可选</p> 
+            
+            <p class="type-size">尺寸範圍: <code>0-280字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">website</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司网址 可选</p> 
+            
+            <p class="type-size">尺寸範圍: <code>0-280字符</code></p>
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">city_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>所在城市ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">images</td>
+              <td>
+                <p>File</p> 
+              </td>
+            <td>
+            <p>[] 产品相册 可选</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">company</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>企业对象</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photos</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>企业相册</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>城市名</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;province_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>省名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司的一些具体信息</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Company-PostCompanyProfileName">
+        
+  <article id="api-Company-PostCompanyProfileName-0.0.0" data-group="Company" data-name="PostCompanyProfileName" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Company - 模糊查询公司名称</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>模糊查询公司名称</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/company/profile/name</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>企业名</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">companys</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>匹配到的企业列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">is_exit</td>
+              <td>
+                <p>Int</p> 
+              </td>
+            <td>
+            <p>0:无匹配的 1：有匹配的</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Company-PostCompanyIndexProducts">
+        
+  <article id="api-Company-PostCompanyIndexProducts-0.0.0" data-group="Company" data-name="PostCompanyIndexProducts" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Company - 获取企业产品列表</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>获取企业产品列表</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/company/index/products</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">company_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>企业ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            <p class="default-value">默认值: <code>1</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">perpage <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>每页数量</p> 
+            <p class="default-value">默认值: <code>20</code></p>
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">total</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>结果集总数</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种id</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种中文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;english_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种英文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种图片地址</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Company-PostCompanyProfile">
+        
+  <article id="api-Company-PostCompanyProfile-0.0.0" data-group="Company" data-name="PostCompanyProfile" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Company - 获取企业基础资料</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>获取企业基础资料</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/company/profile</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">company_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>企业ID</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">company</td>
+              <td>
+                <p>Object</p> 
+              </td>
+            <td>
+            <p>企业对象</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photos</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>企业相册图片列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>企业ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>企业名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;business</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>业务范围</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;telephone</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>联系方式</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;intro</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>简单介绍</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;address</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>详细地址</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;website</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司网址</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;city_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>所在城市ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;auth</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>认证状态(0,1)</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;star</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>企业星级（1-5）</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+  </section>
