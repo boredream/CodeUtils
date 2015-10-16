@@ -2,6 +2,7 @@ package reptile.swagger;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import org.jsoup.Jsoup;
@@ -9,9 +10,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import entity.Json2JavaElement;
+
 import reptile.swagger.SwaggerDocGenerator.RequestInfo.RequestParam;
 import utils.AndroidUtils;
 import utils.FileUtils;
+import utils.JsonUtils;
 
 public class SwaggerDocGenerator {
 
@@ -75,6 +79,7 @@ public class SwaggerDocGenerator {
 			// <ul class="operations">
 			Elements apiElements = typeElement.getElementsByClass("operations");
 			
+			apiLoop:
 			for(Element apiElement : apiElements) {
 				RequestInfo requestInfo = new RequestInfo();
 				
@@ -129,7 +134,7 @@ public class SwaggerDocGenerator {
 							Element jsonElement = e.get(4);
 							// 解析json中的多个参数
 							requestInfo.setParams(parseJsonParams(jsonElement));
-							break;
+							continue apiLoop;
 						}
 					}
 					requestInfo.setParams(params);
@@ -142,7 +147,19 @@ public class SwaggerDocGenerator {
 	}
 
 	private static ArrayList<RequestParam> parseJsonParams(Element jsonElement) {
-		return null;
+		ArrayList<RequestParam> requestParams = new ArrayList<RequestParam>();
+		
+		String jsonStr = jsonElement.getElementsByClass("json").text();
+		if(!jsonStr.isEmpty()) {
+			List<Json2JavaElement> jsonBeanTree = JsonUtils.getJsonBeanTree(jsonStr);
+			for(Json2JavaElement j2je : jsonBeanTree) {
+				String paramName = j2je.getName();
+				String paramDes = "jsonBodyParams"; // 此类格式post参数没有描述
+				String pType = j2je.getType().getSimpleName();
+				requestParams.add(new RequestParam(paramName, pType, paramDes));
+			}
+		}
+		return requestParams;
 	}
 
 	static class RequestInfo {

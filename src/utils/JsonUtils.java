@@ -18,7 +18,10 @@ import entity.Json2JavaElement;
 public class JsonUtils {
 	
 	public static void main(String[] args) {
-		parseJson2Java();
+		/// 读取json字符串
+		String json = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
+				
+		parseJson2Java(json);
 	}
 	
 	/**
@@ -31,15 +34,9 @@ public class JsonUtils {
 	 * 注意:<br>
 	 * 如果json字符串中有null或者空集合[]这种无法判断类型的,会统一使用Object类型
 	 */
-	public static void parseJson2Java() {
-		/// 读取json字符串
-		String string = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
-		
+	public static void parseJson2Java(String jsonStr) {
 		// 解析获取整个json结构集合
-		JsonParser parser = new JsonParser();
-		JsonElement element = parser.parse(string);
-		JsonObject jo = element.getAsJsonObject();
-		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jo);
+		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jsonStr);
 		
 		// 利用获取到的json结构集合,创建对应的javabean文件内容
 		String javaBeanStr = createJavaBean(jsonBeanTree);
@@ -135,10 +132,14 @@ public class JsonUtils {
 	/**
 	 *  递归遍历整个json数据结构,保存至jsonBeans集合中
 	 *  
-	 *  @param rootJo 根json对象
+	 *  @param jsonStr json字符串
 	 *  @return 解析好的数据集合
 	 */
-	private static List<Json2JavaElement> getJsonBeanTree(JsonObject rootJo) {
+	public static List<Json2JavaElement> getJsonBeanTree(String jsonStr) {
+		JsonParser parser = new JsonParser();
+		JsonElement element = parser.parse(jsonStr);
+		JsonObject rootJo = element.getAsJsonObject();
+		
 		jsonBeans = new ArrayList<Json2JavaElement>();
 		recursionJson(rootJo, null);
 		return jsonBeans;
