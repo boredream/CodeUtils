@@ -2,7 +2,6 @@ package reptile.swagger;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 import org.jsoup.Jsoup;
@@ -71,9 +70,6 @@ public class SwaggerDocGenerator {
 		for(Element typeElement : typeElements) {
 			// id为 "resource_用户相关api"
 			String apiTitle = typeElement.id().split("_")[1];
-			if(!apiTitle.endsWith("用户相关api")) {
-				continue;
-			}
 			
 			// 获取该类型下具体接口
 			// <ul class="operations">
@@ -112,37 +108,41 @@ public class SwaggerDocGenerator {
 					
 					// 一行对应一个参数
 					// <tr>
-					Elements paramElements = paramsElement.getElementsByTag("tr");
+					Elements paramElements = paramsElement.children();
 					
-					List<RequestParam> params = new ArrayList<RequestParam>();
+					ArrayList<RequestParam> params = new ArrayList<RequestParam>();
 					for(Element paramElement : paramElements) {
 						// 一列对应参数的一个属性,共5列,分别为 名称,值,描述,参数类型,数据类型
 						// <td>
-						Elements e = paramElement.getAllElements();
+						Elements e = paramElement.children();
 						
-						if(e.size() == 5) {
-							String pType = e.get(3).text();
-							if(pType.equals("query")) {
-								// 如果参数类型为query,则为数据类型为基础类型
-								String paramName = e.get(0).text();
-								String paramDes = e.get(2).text();
-								String paramType = e.get(4).text();
-								params.add(new RequestParam(paramName, paramType, paramDes));
-							} else if(pType.equals("body")) {
-								// 如果参数类型为body,则为数据类型为json字符串,一般只有一行
-							}
-						} else {
-//							System.out.println("----- " + e);
+						String paramName = e.get(0).text();
+						String paramDes = e.get(2).text();
+						String pType = e.get(3).text();
+						
+						if(pType.equals("query")) {
+							// 如果参数类型为query,则为数据类型为基础类型
+							String paramType = e.get(4).text();
+							params.add(new RequestParam(paramName, paramType, paramDes));
+						} else if(pType.equals("body")) {
+							// 如果参数类型为body,则为数据类型为json字符串,且一般只有一行
+							Element jsonElement = e.get(4);
+							// 解析json中的多个参数
+							requestInfo.setParams(parseJsonParams(jsonElement));
+							break;
 						}
 					}
+					requestInfo.setParams(params);
 				}
-				
 				System.out.println(requestInfo.toString());
-				
 			}
 			
 		}
 		return requestInfos;
+	}
+
+	private static ArrayList<RequestParam> parseJsonParams(Element jsonElement) {
+		return null;
 	}
 
 	static class RequestInfo {
