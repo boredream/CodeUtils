@@ -418,7 +418,7 @@ public class AndroidUtils {
 		sbAdapterInfo.append(formatSingleLine(2, "}"));
 		
 		sbAdapterInfo.append("\n");
-		sbAdapterInfo.append(formatSingleLine(2, "// set data"));
+		sbAdapterInfo.append(formatSingleLine(2, "// TODO set data"));
 		sbAdapterInfo.append("\n");
 		
 		sbAdapterInfo.append(formatSingleLine(2, "return convertView;"));

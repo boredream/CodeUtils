@@ -44,19 +44,19 @@ public class TempUtils {
 //		compareStrings();
 //		autoCreateSizeSet(true);
 //		desParams();
-//		extractAllString();
+		extractAllString();
 
-		String path = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
-		
-		File rootFile = new File(path);
-		for(File file : rootFile.listFiles()) {
-			System.out.println(file.getName());
-			if(file.isDirectory()) {
-				for(File f : file.listFiles()) {
-					System.out.println("  " + f.getName());
-				}
-			}
-		}
+//		String path = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
+//		
+//		File rootFile = new File(path);
+//		for(File file : rootFile.listFiles()) {
+//			System.out.println(file.getName());
+//			if(file.isDirectory()) {
+//				for(File f : file.listFiles()) {
+//					System.out.println("  " + f.getName());
+//				}
+//			}
+//		}
 		
 	}
 

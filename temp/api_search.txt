@@ -143,6 +143,17 @@
                         </td>
           </tr>
           <tr>
+            <td class="code">&nbsp;&nbsp;boss</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>公司老板名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
             <td class="code">&nbsp;&nbsp;address</td>
               <td>
                 <p>String</p> 
@@ -181,7 +192,7 @@
                 <p>Number</p> 
               </td>
             <td>
-            <p>公司评价星级（1-5)</p> 
+            <p>企业星级（10-50）除以10得到具体的星级</p> 
             
             
                         </td>
@@ -271,6 +282,28 @@
             
                         </td>
           </tr>
+          <tr>
+            <td class="code">material_id <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种材质ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">order <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>排序（0：id升序，1：字母表升序）</p> 
+            <p class="default-value">默认值: <code>0</code></p>
+            
+                        </td>
+          </tr>
         </tbody>
       </table>
 
@@ -287,6 +320,17 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td class="code">total</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>结果总数</p> 
+            
+            
+                        </td>
+          </tr>
           <tr>
             <td class="code">list</td>
               <td>
@@ -338,6 +382,17 @@
               </td>
             <td>
             <p>石种图片</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;first_char</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>首字母(大写)</p> 
             
             
                         </td>
@@ -839,6 +894,17 @@
               </td>
             <td>
             <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;additionalContent</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>附加json信息</p> 
             
             
                         </td>
@@ -1499,6 +1565,39 @@
                         </td>
           </tr>
           <tr>
+            <td class="code">&nbsp;&nbsp;address</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>供求类信息详细地址</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;latitude</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>纬度</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;longitude</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>经度</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
             <td class="code">&nbsp;&nbsp;is_top</td>
               <td>
                 <p>Number</p> 
@@ -1527,6 +1626,17 @@
               </td>
             <td>
             <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;additionalContent</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>附加json信息</p> 
             
             
                         </td>
@@ -1892,6 +2002,17 @@
               </td>
             <td>
             <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;additionalContent</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>附加json信息</p> 
             
             
                         </td>
@@ -2279,6 +2400,17 @@
               </td>
             <td>
             <p>该信息的内容</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;additionalContent</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>附加json信息</p> 
             
             
                         </td>
@@ -2854,6 +2986,195 @@
               </td>
             <td>
             <p>用户昵称 .....</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+
+
+    
+
+
+  </article>
+
+      </div>
+      <div id="api-Search-PostSearchStoneImage">
+        
+  <article id="api-Search-PostSearchStoneImage-0.0.0" data-group="Search" data-name="PostSearchStoneImage" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Search - 根据图片搜索石种</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn dropdown-toggle" data-toggle="dropdown">
+          <strong>0.0.0</strong> <span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">比较变更:</a></li>
+          <li class="version"><a href="#">0.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+      <p></p><p>根据图片搜索石种</p> <p></p>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://short.server.stone-chat.com/search/stone/image</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Params</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">image</td>
+              <td>
+                <p>FILE</p> 
+              </td>
+            <td>
+            <p>上传图片</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">page <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>页码</p> 
+            <p class="default-value">默认值: <code>1</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">perpage <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>每页数量</p> 
+            <p class="default-value">默认值: <code>20</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">material_id <span class="label label-optional">选项</span></td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种材质ID</p> 
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    
+      <h2>Success 200</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">字段</th>
+            <th style="width: 10%">类型</th>
+            <th style="width: 70%">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">total</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>结果总数</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">list</td>
+              <td>
+                <p>Array</p> 
+              </td>
+            <td>
+            <p>结果列表</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;stone_id</td>
+              <td>
+                <p>Number</p> 
+              </td>
+            <td>
+            <p>石种ID</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种中文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;english_name</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种英文名称</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;photo</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>石种图片</p> 
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">&nbsp;&nbsp;first_char</td>
+              <td>
+                <p>String</p> 
+              </td>
+            <td>
+            <p>首字母(大写)</p> 
             
             
                         </td>

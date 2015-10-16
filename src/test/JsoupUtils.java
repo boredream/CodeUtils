@@ -17,9 +17,9 @@ import utils.FileUtils;
 public class JsoupUtils {
 
 	public static void main(String[] args) {
-//		ArrayList<RequestInfo> infos = parseApiDoc("temp" + File.separator + "api_search.txt");
+		ArrayList<RequestInfo> infos = parseApiDoc("temp" + File.separator + "api_search.txt");
 //		ArrayList<RequestInfo> infos = parseApiDoc("temp" + File.separator + "api_stone.txt");
-		ArrayList<RequestInfo> infos = parseApiDoc("temp" + File.separator + "api_company.txt");
+//		ArrayList<RequestInfo> infos = parseApiDoc("temp" + File.separator + "api_company.txt");
 		genCode(infos);
 	}
 
