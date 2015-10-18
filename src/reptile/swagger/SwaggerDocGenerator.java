@@ -3,61 +3,145 @@ package reptile.swagger;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import entity.Json2JavaElement;
-
-import reptile.swagger.SwaggerDocGenerator.RequestInfo.RequestParam;
+import reptile.swagger.RequestInfo.RequestParam;
 import utils.AndroidUtils;
 import utils.FileUtils;
 import utils.JsonUtils;
+import entity.Json2JavaElement;
 
 public class SwaggerDocGenerator {
 
 	public static void main(String[] args) {
 		ArrayList<RequestInfo> infos = parseDocFromHtml("temp" + File.separator + "apidoc" + File.separator + "swagger.txt");
-//		genCode(infos);
+		System.out.println("接口总数量：" + infos.size());
+		System.out.println(infos);
+		genCode(infos);
 	}
 
 	private static void genCode(ArrayList<RequestInfo> infos) {
+		StringBuilder sbUrl = new StringBuilder();
 		StringBuilder sb = new StringBuilder();
 		for(RequestInfo info : infos) {
 			
 //			/**
-//			 * Search - 搜索 石种
+//			 * 查询指定服务申请详细信息
 //			 */
-//			public static final String SEARCH_STONE = "/search/stone";
+//			public static final String SERVICEAPPLIES = "/rest/serviceApplies/{applyId}";
 			
-			// url地址后缀
-			String urlEnd = info.getUrlEnd();
-			// 替换/为_同时转大写
-			String name = info.getUrlEnd().replace("/", "_").toUpperCase(Locale.CHINA).substring(1);
+			String name = info.getName();
+			String url = info.getUrl();
+			String urlName = info.getMethod() + "_" + url
+					.replace("/rest/", "")
+					.replace("/", "_")
+					.replace("{", "")
+					.replace("}", "");
 			
-			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sb.append(AndroidUtils.formatSingleLine(1, " * " + info.getDes()));
-			sb.append(AndroidUtils.formatSingleLine(1, " */"));
-			sb.append(AndroidUtils.formatSingleLine(1, "public static final String " 
-					+ name + " = \"" + urlEnd + "\";"));
-			sb.append("\n");
-			
-			
-//			HashMap<String, Object> postParams = new HashMap<String, Object>();
-//			postParams.put("page", page);
-//			postParams.put("keyword", searchKey);
-			
-			sb.append(AndroidUtils.formatSingleLine(2, "HashMap<String, Object> postParams = new HashMap<String, Object>();"));
-			for(RequestParam param : info.getParams()) {
-				sb.append(AndroidUtils.formatSingleLine(2, 
-						"postParams.put(\"" + param.getName() + "\", " + param.getName() + ");"
-								+ " // " + param.getDes()));
+			String endParam = null;
+			Pattern pattern = Pattern.compile("\\{[\\s\\S]+\\}");
+			Matcher matcher = pattern.matcher(url);
+			if(matcher.find()) {
+				endParam = matcher.group();
+				url = url.replace(endParam, "");
 			}
 			
-			System.out.println("----------------------");
+			sbUrl.append(AndroidUtils.formatSingleLine(1, "/**"));
+			sbUrl.append(AndroidUtils.formatSingleLine(1, " * " + name));
+			sbUrl.append(AndroidUtils.formatSingleLine(1, " */"));
+			sbUrl.append(AndroidUtils.formatSingleLine(1, "public static final String " 
+					+ urlName.toUpperCase() + " = \"" + url + "\";" 
+					+ (endParam == null ? "" : "// " + endParam)));
+			sbUrl.append("\n");
+			
+//			/**
+//			 * 注册用户
+//			 *
+//			 * @param phone 手机号 (可选项: 1; 2)
+//			 * @param listener
+//			 */
+//			public static void userSignUp(String phone, HttpListener<User> listener) {
+//			    String time = String.valueOf(getCurrentTime());
+//			    Map<String, Object> params = new HashMap<String, Object>();
+//			    params.put("phone", phone);
+//			    params.put("time", time);
+//			    doHttp(Urls.getUrl(Urls.USER_SIGN_UP), "get", params, User.class, listener);
+//			}
+			
+			// endParam模式的为
+//			    String time = String.valueOf(getCurrentTime());
+//			    doHttp(Urls.getUrl(Urls.USER_SIGN_UP) + phone, params, User.class, listener);
+			
+			// 方式注释里参数
+			StringBuilder sbAnotation = new StringBuilder();
+			// 方法参数里参数
+			StringBuilder sbParam = new StringBuilder();
+			// 方法内容里参数
+			StringBuilder sbBody = new StringBuilder();
+			
+			ArrayList<RequestParam> params = info.getParams();
+			if(params != null && params.size() > 0) {
+				sbAnotation.append(AndroidUtils.formatSingleLine(1, " *"));
+				for(RequestParam param : params) {
+					// 方式注释里参数
+					sbAnotation.append("\t * @param")
+						.append(" ").append(param.getName())
+						.append(" ").append(param.getDes());
+	
+					ArrayList<String> options = param.getSelectOptions();
+					if(options != null && options.size() > 0) {
+						sbAnotation.append(" (可选项: ");
+						for(int i=0; i<options.size(); i++) {
+							if(i > 0) {
+								sbAnotation.append("; ");
+							}
+							sbAnotation.append(options.get(i));
+						}
+						sbAnotation.append(")");
+					}
+					sbAnotation.append("\n");
+					
+					// 方法参数里参数 String phone, HttpListener<User> listener
+					sbParam.append(param.getType() + " " + param.getName() + ", ");
+					
+					// 方法内容里参数 params.put("phone", phone);
+					sbBody.append(AndroidUtils.formatSingleLine(2, 
+							"params.put(\"" + param.getName() + "\", " + param.getName() + ");"));
+				}
+			}
+			sbParam.append("HttpListener<Object> listener");
+			
+			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
+			sb.append(AndroidUtils.formatSingleLine(1, " * " + name));
+			sb.append(sbAnotation.toString());
+			sb.append(AndroidUtils.formatSingleLine(1, " */"));
+			
+			StringBuilder methodNameSb = new StringBuilder();
+			String[] nameItems = urlName.split("_");
+			for(int i=0; i<nameItems.length; i++) {
+				String nameItem = nameItems[i];
+				if(i>0) {
+					nameItem = nameItem.substring(0, 1).toUpperCase() + nameItem.substring(1);
+				}
+				methodNameSb.append(nameItem);
+			}
+			
+			sb.append(AndroidUtils.formatSingleLine(1, "public static void " + methodNameSb.toString() +
+					"("  + sbParam.toString() + ") {"));
+			sb.append(AndroidUtils.formatSingleLine(2, 
+					"HashMap<String, Object> params = new HashMap<String, Object>();"));
+			sb.append(sbBody.toString());
+			sb.append(AndroidUtils.formatSingleLine(2, 
+					"doHttp(Urls.getUrl(Urls." + urlName.toUpperCase() 
+					+ "), \"" + info.getMethod() + "\", params, Object.class, listener);"));
+			sb.append(AndroidUtils.formatSingleLine(1, "}")); 
+			sb.append("\n");
 		}
 		System.out.println(sb.toString());
 	}
@@ -78,8 +162,8 @@ public class SwaggerDocGenerator {
 			// 获取该类型下具体接口
 			// <ul class="operations">
 			Elements apiElements = typeElement.getElementsByClass("operations");
+//			System.out.println(apiTitle + " ... " + apiElements.size());
 			
-			apiLoop:
 			for(Element apiElement : apiElements) {
 				RequestInfo requestInfo = new RequestInfo();
 				
@@ -119,27 +203,39 @@ public class SwaggerDocGenerator {
 					for(Element paramElement : paramElements) {
 						// 一列对应参数的一个属性,共5列,分别为 名称,值,描述,参数类型,数据类型
 						// <td>
-						Elements e = paramElement.children();
+						Elements columeElement = paramElement.children();
 						
-						String paramName = e.get(0).text();
-						String paramDes = e.get(2).text();
-						String pType = e.get(3).text();
+						String paramName = columeElement.get(0).text();
+						String paramDes = columeElement.get(2).text();
+						String pType = columeElement.get(3).text();
 						
 						if(pType.equals("query")) {
 							// 如果参数类型为query,则为数据类型为基础类型
-							String paramType = e.get(4).text();
-							params.add(new RequestParam(paramName, paramType, paramDes));
+							String paramType = columeElement.get(4).text();
+							
+							// 数据值可能为可选项
+							Elements valueOptionsElements = columeElement.get(1).getElementsByTag("option");
+							ArrayList<String> valueOptions = new ArrayList<String>();
+							for(Element valueOptionsElement : valueOptionsElements) {
+								String option = valueOptionsElement.text();
+								if(option != null && !option.trim().equals("")) {
+									valueOptions.add(option);
+								}
+							}
+							
+							params.add(new RequestParam(paramName, paramType, paramDes, valueOptions));
+							requestInfo.setParams(params);
 						} else if(pType.equals("body")) {
 							// 如果参数类型为body,则为数据类型为json字符串,且一般只有一行
-							Element jsonElement = e.get(4);
+							Element jsonElement = columeElement.get(4);
 							// 解析json中的多个参数
 							requestInfo.setParams(parseJsonParams(jsonElement));
-							continue apiLoop;
+							break;
 						}
 					}
-					requestInfo.setParams(params);
 				}
-				System.out.println(requestInfo.toString());
+				requestInfos.add(requestInfo);
+//				System.out.println(requestInfo.toString());
 			}
 			
 		}
@@ -154,124 +250,12 @@ public class SwaggerDocGenerator {
 			List<Json2JavaElement> jsonBeanTree = JsonUtils.getJsonBeanTree(jsonStr);
 			for(Json2JavaElement j2je : jsonBeanTree) {
 				String paramName = j2je.getName();
-				String paramDes = "jsonBodyParams"; // 此类格式post参数没有描述
+				String paramDes = ""; // 此类格式post参数没有描述
 				String pType = j2je.getType().getSimpleName();
-				requestParams.add(new RequestParam(paramName, pType, paramDes));
+				requestParams.add(new RequestParam(paramName, pType, paramDes, new ArrayList<String>()));
 			}
 		}
 		return requestParams;
-	}
-
-	static class RequestInfo {
-		
-		public static final String METHOD_GET = "get";
-		public static final String METHOD_PUT = "put";
-		public static final String METHOD_POST = "post";
-		public static final String METHOD_DELETE = "delete";
-		
-		private String name;
-		private String method;
-		private String url;
-		private String des;
-		private ArrayList<RequestParam> params;
-
-		static class RequestParam {
-			private String name;
-			private String type;
-			private String des;
-
-			public RequestParam(String name, String type, String des) {
-				this.name = name;
-				this.type = type;
-				this.des = des;
-			}
-
-			public String getName() {
-				return name;
-			}
-
-			public void setName(String name) {
-				this.name = name;
-			}
-
-			public String getType() {
-				return type;
-			}
-
-			public void setType(String type) {
-				this.type = type;
-			}
-
-			public String getDes() {
-				return des;
-			}
-
-			public void setDes(String des) {
-				this.des = des;
-			}
-
-			@Override
-			public String toString() {
-				return "RequestParam [name=" + name + ", type=" + type
-						+ ", des=" + des + "]";
-			}
-			
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getMethod() {
-			return method;
-		}
-
-		public void setMethod(String method) {
-			this.method = method;
-		}
-
-		public String getUrl() {
-			return url;
-		}
-		
-		// TODO
-		public String getUrlEnd() {
-			String host = "http://short.server.stone-chat.com";
-			return url.replace(host, "");
-		}
-
-		public void setUrl(String url) {
-			this.url = url;
-		}
-		
-		public String getDes() {
-			return des;
-		}
-
-		public void setDes(String des) {
-			this.des = des;
-		}
-
-		public ArrayList<RequestParam> getParams() {
-			return params;
-		}
-
-		public void setParams(ArrayList<RequestParam> params) {
-			this.params = params;
-		}
-
-		@Override
-		public String toString() {
-			return "RequestInfo [name=" + name + ", method=" + method
-					+ ", url=" + url + ", des=" + des + ", params=" + params
-					+ "]";
-		}
-		
-
 	}
 	
 }
