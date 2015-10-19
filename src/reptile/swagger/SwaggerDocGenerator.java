@@ -44,11 +44,14 @@ public class SwaggerDocGenerator {
 					.replace("{", "")
 					.replace("}", "");
 			
+			// 作为url末尾直接拼装的参数,一般只有一个
 			String endParam = null;
+			String endParamName = null;
 			Pattern pattern = Pattern.compile("\\{[\\s\\S]+\\}");
 			Matcher matcher = pattern.matcher(url);
 			if(matcher.find()) {
 				endParam = matcher.group();
+				endParamName = endParam.replace("{", "").replace("}", "");
 				url = url.replace(endParam, "");
 			}
 			
@@ -119,7 +122,12 @@ public class SwaggerDocGenerator {
 			
 			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
 			sb.append(AndroidUtils.formatSingleLine(1, " * " + name));
-			sb.append(sbAnotation.toString());
+			if(endParamName != null) {
+				sb.append(AndroidUtils.formatSingleLine(1, " *"))
+					.append("\t * @param").append(" ").append(endParamName);
+			} else {
+				sb.append(sbAnotation.toString());
+			}
 			sb.append(AndroidUtils.formatSingleLine(1, " */"));
 			
 			StringBuilder methodNameSb = new StringBuilder();
@@ -133,13 +141,13 @@ public class SwaggerDocGenerator {
 			}
 			
 			sb.append(AndroidUtils.formatSingleLine(1, "public static void " + methodNameSb.toString() +
-					"("  + sbParam.toString() + ") {"));
+					"("  + (endParamName==null?"":"String "+endParamName+", ") + sbParam.toString() + ") {"));
 			sb.append(AndroidUtils.formatSingleLine(2, 
 					"HashMap<String, Object> params = new HashMap<String, Object>();"));
 			sb.append(sbBody.toString());
 			sb.append(AndroidUtils.formatSingleLine(2, 
 					"doHttp(Urls.getUrl(Urls." + urlName.toUpperCase() 
-					+ "), \"" + info.getMethod() + "\", params, Object.class, listener);"));
+					+ ")" + (endParamName==null?"":" + "+endParamName) + ", \"" + info.getMethod() + "\", params, Object.class, listener);"));
 			sb.append(AndroidUtils.formatSingleLine(1, "}")); 
 			sb.append("\n");
 		}
