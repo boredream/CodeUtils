@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp" >
+    android:layout_height="112dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/iv_stone"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tv_name"
         style="@style/TextViewSubhead"
-        android:text="Name" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1" />
 
-    <TextView
-        android:id="@+id/tv_des"
-        style="@style/TextViewBody"
-        android:layout_marginTop="8dp"
-        android:text="description" />
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arrow_right" />
 
 </LinearLayout>

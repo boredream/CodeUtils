@@ -29,20 +29,20 @@
 		if(convertView == null) {
 			holder = new ViewHolder();
 			convertView = View.inflate(context, R.layout.item, null);
+			holder.iv_stone = (ImageView) convertView.findViewById(R.id.iv_stone);
 			holder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
-			holder.tv_des = (TextView) convertView.findViewById(R.id.tv_des);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		// set data
+		// TODO set data
 
 		return convertView;
 	}
 
 
 	public static class ViewHolder{
+		public ImageView iv_stone;
 		public TextView tv_name;
-		public TextView tv_des;
 	}
