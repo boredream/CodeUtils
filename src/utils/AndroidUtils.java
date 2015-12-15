@@ -1,5 +1,6 @@
 package utils;
 import java.io.File;
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -303,6 +304,277 @@ public class AndroidUtils {
 		return activityContent;
 	}
 	
+	
+	/**
+	 * 生成activity对应的测试文件内容(针对已经写好的页面代码生成)
+	 */
+	public static String createActivityContent4EspressoTest(String projectPath, String activityPath) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n\n");
+		
+		File activityFile = new File(projectPath + activityPath);
+		// 页面名
+		String activityName = FileUtils.getName(activityFile);
+		// 页面内容
+		String activityContent = FileUtils.readToString(activityFile, "UTF-8");
+		// 布局内容元素
+		List<IdNamingBean> layoutElements;
+		// setContentView(R.layout.activity_login);
+		String setContentViewRegex = "setContentView\\(R.layout.([\\w_]+)\\);";
+		Pattern setContentViewPattern = Pattern.compile(setContentViewRegex);
+		Matcher setContentViewMatcher = setContentViewPattern.matcher(activityContent);
+		if(setContentViewMatcher.find()) {
+			// projectPath = D:\PlayFun\HaveFun
+			// layoutPath = projectPath + \app\src\main\res\layout
+			String layoutPath = projectPath + "\\app\\src\\main\\res\\layout\\" + setContentViewMatcher.group(1) + ".xml";
+			parseElementFromXml(layoutPath, true);
+			layoutElements = idNamingBeans;
+		} else {
+			throw new RuntimeException("页面必须要setContentView绑定布局");
+		}
+		// 类名: 页面名+Test
+		String className = activityName + "Test";
+		
+		// @RunWith(AndroidJUnit4.class)
+		// public class RegistActivityTest {
+		//
+		// 		@Rule
+		// 		public ActivityTestRule<RegistActivity> mActivityRule = new ActivityTestRule<>(RegistActivity.class, true, false);
+		sb.append(formatSingleLine(0, "@RunWith(AndroidJUnit4.class)"));
+		sb.append(formatSingleLine(0, "public class "+className+" {"));
+		sb.append("\n");
+		sb.append(formatSingleLine(1, "@Rule"));
+		sb.append(formatSingleLine(1, "public ActivityTestRule<"+activityName+"> mActivityRule = new ActivityTestRule<>("+activityName+".class, true, false);"));
+		sb.append("\n");
+		
+		//		@Test
+		//		public void test() {
+		sb.append(formatSingleLine(1, "@Test"));
+		sb.append(formatSingleLine(1, "public void test() {"));
+		
+		// 页面初始化
+		sb.append(formatSingleLine(2, "Intent intent = new Intent();"));
+		// 判断页面初始化时是否有getExtra,如果有需要在测试代码中putExtra
+		//　userId = getIntent().getLongExtra("userId", 0);
+		String getExtraRegex = ".get([\\w]+)Extra\\(\"([\\w_]+)\"";
+		Pattern getExtraPattern = Pattern.compile(getExtraRegex);
+		Matcher getExtraMatcher = getExtraPattern.matcher(activityContent);
+		if(getExtraMatcher.find()) {
+			// Intent intent = new Intent();
+			// intent.putExtra("userId", 1016l);
+			// mActivityRule.launchActivity(intent);
+			
+			sb.append(formatSingleLine(2, "// 待测试页面需要Extra数据如下"));
+			String type = getExtraMatcher.group(1);
+			String key = getExtraMatcher.group(2);
+			sb.append(formatSingleLine(2, "intent.putExtra(\""+key+"\", 添加"+type+"类型的值);"));
+		}
+		sb.append(formatSingleLine(2, "mActivityRule.launchActivity(intent);"));
+		sb.append("\n");
+		
+		// 用onView定位控件,并执行动作
+		// onView(withId(R.id.et_username)).perform(typeText("boredream"), closeSoftKeyboard());
+		for(IdNamingBean bean : layoutElements) {
+			// 控件名
+			String viewName = bean.getViewName();
+			// 不同控件对应的操作
+			String perform = "";
+			// 一般自定义控件都会在名字里表明自己的类型,因此使用contains判断
+			if(viewName.contains("EditText")) {
+				// EditText对应输入
+				perform = ".perform(typeText(输入测试内容), closeSoftKeyboard())";
+			} else if(viewName.contains("Button") || viewName.contains("CheckBox") ) {
+				// Button/RadioButton/CheckBox对应点击
+				perform = ".perform(click())";
+			} else {
+				// 无法判断的类型,不添加动作
+			} 
+			sb.append(formatSingleLine(2, "onView(withId(R.id."+bean.getIdName()+"))"+perform+";"));
+		}
+		
+		// 最后验证部分,留给开发者自己根据业务处理,添加部分注释引导
+		
+        // TODO 复制上面的onView部分定位控件,然后根据需要编写期望的check结果
+        // 示例: 比如需要验证dialog/toast是否显示可以如下(如果验证页面上控件则不需要.inRoot部分)
+        // onView(withText("登录"))
+        //         .inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))
+        //         .check(matches(isDisplayed()));
+		sb.append("\n");
+		sb.append(formatSingleLine(2, "// TODO 复制上面的onView部分定位控件,然后根据需要编写期望的check结果"));
+		sb.append(formatSingleLine(2, "// 示例: 比如需要验证dialog/toast是否显示可以如下(如果验证页面上控件则不需要.inRoot部分)"));
+		sb.append(formatSingleLine(2, "// onView(withText(\"请输入密码\"))"));
+		sb.append(formatSingleLine(2, "//         .inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))"));
+		sb.append(formatSingleLine(2, "//         .check(matches(isDisplayed()));"));
+		sb.append("\n");
+		sb.append(formatSingleLine(1, "}"));
+		sb.append(formatSingleLine(0, "}"));
+		
+//		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
+//		// private TextView tv_name;
+//		for(IdNamingBean bean : idNamingBeans) {
+//			sb.append(formatSingleLine(1, "private " + bean.getViewName() + " " + bean.getIdName() + ";"));
+//		}
+//		sb.append("\n");
+//		
+//		// 生成initView自定义方法,并在其中依次findViewById为view成员变量赋值
+//		// private void initView() {
+//		//    tv_name = (TextView)findViewById(R.id.tv_name);
+//		// }
+//		sb.append(formatSingleLine(1, "private void initView() {"));
+//		for(IdNamingBean bean : idNamingBeans) {
+//			sb.append(formatSingleLine(2, bean.getIdName() + " = " +
+//					"(" + bean.getViewName() + ") findViewById(R.id." + bean.getIdName() + ");"));
+//		}
+//		sb.append("\n");
+//		
+//		// 是否包含EditText控件,如果包含,自动生成非空判断代码
+//		boolean hasEditText = false;
+//		///**
+//		// * TODO 使用输入内容,可根据需要自行修改补充本方法
+//		// */
+//		//private void submit() {
+//		//	// 开始验证输入内容
+//		//	String content = et_content.getText().toString().trim();
+//		//	if(!TextUtils.isEmpty(content)) {
+//		//		Toast.makeText(this, "content不能为空", Toast.LENGTH_SHORT).show();
+//		//		return;
+//		//	}
+//		//	
+//		//	// TODO 验证成功,下面开始使用数据
+//		//	
+//		//	
+//		//}
+//		StringBuilder sbEditText = new StringBuilder();
+//		sbEditText.append("\n");
+//		sbEditText.append(formatSingleLine(1, "/**"));
+//		sbEditText.append(formatSingleLine(1, " * TODO 输入验证,可根据需要自行修改补充"));
+//		sbEditText.append(formatSingleLine(1, " */"));
+//		sbEditText.append(formatSingleLine(1, "private void submit() {"));
+//		sbEditText.append(formatSingleLine(2, "// 开始验证输入内容"));
+//		
+//		for(IdNamingBean bean : idNamingBeans) {
+//			Attribute attrTag = bean.getElement().attribute("tag");
+//			// 只判断EditText控件
+//			if(bean.getViewName().equals("EditText")) {
+//				// 带有可选标识(tag为optional)的EditText不做非空验证
+//				if(attrTag != null && attrTag.getValue().equals("optional")) {
+//					continue;
+//				}
+//				
+//				// 截取最后一个_后面的内容作为名称,不包含_时使用全部id作为名称
+//				String idName = bean.getIdName();
+//				int index = idName.lastIndexOf("_");
+//				String name = index == -1 ? idName : idName.substring(index + 1);
+//				
+//				sbEditText.append(formatSingleLine(2, "String " + name + " = " + idName + ".getText().toString().trim();"));
+//				sbEditText.append(formatSingleLine(2, "if(TextUtils.isEmpty(" + name + ")) {"));
+//				sbEditText.append(formatSingleLine(3, "Toast.makeText(this, \"" + name + "不能为空\", Toast.LENGTH_SHORT).show();"));
+//				sbEditText.append(formatSingleLine(3, "return;"));
+//				sbEditText.append(formatSingleLine(2, "}"));
+//				sbEditText.append(formatSingleLine(2, ""));
+//				
+//				hasEditText = true;
+//			}
+//		}
+//		
+//		sbEditText.append(formatSingleLine(2, "// TODO 验证成功,下面开始使用数据"));
+//		sbEditText.append(formatSingleLine(2, ""));
+//		sbEditText.append(formatSingleLine(2, ""));
+//		sbEditText.append(formatSingleLine(1, "}"));
+//		
+//		// 是否包含可点击的控件,如果包含,自动生成onClick相关代码
+//		boolean hasClickView = false;
+//		// 点击事件复写的onclick方法
+//		// @Override
+//		// public void onClick(View v) {
+//		//    switch (v.getId()) {
+//		//    case R.id.btn_ok:
+//		// 		// doSomething
+//		// 		break;
+//		//    }
+//		// } 
+//		StringBuilder sbOnClick = new StringBuilder();
+//		sbOnClick.append("\n");
+//		sbOnClick.append(formatSingleLine(1, "@Override"));
+//		sbOnClick.append(formatSingleLine(1, "public void onClick(View v) {"));
+//		sbOnClick.append(formatSingleLine(2, "switch (v.getId()) {"));
+//		
+//		for(IdNamingBean bean : idNamingBeans) {
+//			Attribute attrClickable = bean.getElement().attribute("clickable");
+//			// 只设置Button的点击事件,和参数包含clickable=true的控件
+//			if(bean.getViewName().equals("Button")
+//					|| (attrClickable != null 
+//					&& attrClickable.getValue().equals("true"))) {
+//				// 设置监听
+//				// btn_ok.setOnClickListener(this);
+//				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnClickListener(this);"));
+//				// 在onclick中分别处理不同id的点击
+//				sbOnClick.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+//				sbOnClick.append("\n");
+//				sbOnClick.append(formatSingleLine(3, "break;"));
+//				
+//				hasClickView = true;
+//			}
+//		}
+//		sbOnClick.append(formatSingleLine(2, "}"));
+//		sbOnClick.append(formatSingleLine(1, "}"));
+//		
+//		
+//		// 是否包含RadioGroup/Button等控件,如果包含,自动生成onCheckChanged相关代码
+//		boolean hasCheckedView = false;
+//		// 点击事件复写的onclick方法
+//		// @Override
+//		// public void onCheckedChanged(RadioGroup group, int checkedId) {
+//		//    switch (checkedId) {
+//		//    case R.id.rb_home:
+//		// 		// doSomething
+//		// 		break;
+//		//    }
+//		// }
+//		StringBuilder sbOnChecked = new StringBuilder();
+//		sbOnChecked.append("\n");
+//		sbOnChecked.append(formatSingleLine(1, "@Override"));
+//		sbOnChecked.append(formatSingleLine(1, "public void onCheckedChanged(RadioGroup group, int checkedId) {"));
+//		sbOnChecked.append(formatSingleLine(2, "switch (checkedId) {"));
+//		
+//		for(IdNamingBean bean : idNamingBeans) {
+//			// 只设置Button的点击事件,和参数包含clickable=true的控件
+//			if(bean.getViewName().equals("RadioGroup")) {
+//				// 设置监听
+//				// rg.setOnCheckedChangeListener(this);
+//				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnCheckedChangeListener(this);"));
+//				
+//				hasCheckedView = true;
+//			} else if(bean.getViewName().equals("RadioButton")) {
+//				// 在onCheckedChanged中分别处理不同id的选中
+//				sbOnChecked.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+//				sbOnChecked.append("\n");
+//				sbOnChecked.append(formatSingleLine(3, "break;"));
+//				
+//				hasCheckedView = true;
+//			}
+//		}
+//		sbOnChecked.append(formatSingleLine(2, "}"));
+//		sbOnChecked.append(formatSingleLine(1, "}"));
+//		
+//		sb.append(formatSingleLine(1, "}\n"));
+//		sb.append("\n");
+//		
+//		if(hasClickView) {
+//			sb.append(sbOnClick);
+//		}
+//		
+//		if(hasCheckedView) {
+//			sb.append(sbOnChecked);
+//		}
+//		
+//		if(hasEditText) {
+//			sb.append(sbEditText);
+//		}
+		
+		return sb.toString();
+	}
+	
 	/**
 	 * 自动遍历xml中所有带id的控件,在adapter文件中生成最基本的代码<br>
 	 * <br>
@@ -517,8 +789,8 @@ public class AndroidUtils {
 		Document normalShapeDoc = createShape(shape, cornersRadius, null, null, "@color/" + normalColorName);
 		Document specialShapeDoc = createShape(shape, cornersRadius, null, null, "@color/" + specialColorName);
 		
-		String normalShapeName = shape + "_" + normalColorName;
-		String specialShapeName = shape + "_" + specialColorName;
+		String normalShapeName = "correct_" + normalColorName;
+		String specialShapeName = "correct_" + specialColorName;
 		
 		String path = "temp";
 		File normalShapeFile = new File(path, normalShapeName + ".xml");
@@ -594,6 +866,9 @@ public class AndroidUtils {
 		
 		for(Element element : elements) {
 			Attribute attr = element.attribute("drawable");
+			if(attr == null) {
+				continue;
+			}
 			String value = attr.getStringValue();
 			if(value.contains(end)) {
 				// 替换特殊状态(pressed/checked)的item加后缀
