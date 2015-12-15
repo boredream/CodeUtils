@@ -67,12 +67,12 @@ public class JsonUtils {
 	 */
 	public static String createJavaBean(List<Json2JavaElement> jsonBeanTree) {
 		StringBuilder sb = new StringBuilder();
+		StringBuilder sbGetterAndSetter = new StringBuilder();
+		sb.append("\n");
 		
 		// 是否包含自定义子类
 		boolean hasCustomeClass = false;
 		List<String> customClassNames = new ArrayList<String>();
-		
-		sb.append("public class JsonBeans {\n");
 		
 		// 由于在循环的时候有移除操作,所以使用迭代器遍历
 		Iterator<Json2JavaElement> iterator = jsonBeanTree.iterator();
@@ -89,25 +89,7 @@ public class JsonUtils {
 				hasCustomeClass = true;
 			} else {
 				// 如果不是自定义子类,则根据类型名和控件对象名生成变量申明语句
-				// private TextView tv_name;
-				
-				// 先判断是否有注释,有的话添加之
-				String des = j2j.getDes();
-				if(des != null && des.length() > 0) {
-					sb.append("\t/**")
-						.append("\n")
-						.append("\t * ")
-						.append(des)
-						.append("\n")
-						.append("\t */")
-						.append("\n");
-				}
-				
-				sb.append("\tprivate ")
-					.append(getTypeName(j2j))
-					.append(" ")
-					.append(j2j.getName())
-					.append(";\n\n");
+				genFieldd(sb, sbGetterAndSetter, j2j, 0);
 				
 				// 已经使用的数据会移除,则集合中只会剩下自定义子类相关的元素数据,将在后续的循环中处理
 				iterator.remove();
@@ -119,13 +101,11 @@ public class JsonUtils {
 			for(String customClassName : customClassNames) {
 				// 根据名称申明子类
 				
-				// /*sub class*/
 				// public class CustomClass {
-				sb.append("\n\t/*sub class*/\n");
-				sb.append("\tpublic class ")
-					.append(customClassName)
-					.append(" {\n");
+				sb.append("\n");
+				sb.append(AndroidUtils.formatSingleLine(1, "public static class " + customClassName + " {"));
 				
+				StringBuilder sbSubGetterAndSetter = new StringBuilder();
 				// 循环余下的集合
 				Iterator<Json2JavaElement> customIterator = jsonBeanTree.iterator();
 				while(customIterator.hasNext()) {
@@ -137,23 +117,69 @@ public class JsonUtils {
 					// 如果当前数据属于本次外层循环需要处理的子类
 					if(parentClassName.equals(customClassName)) {
 						// 根据类型名和控件对象名生成变量申明语句
-						// private TextView tv_name;
-						sb.append("\t\tprivate ")
-							.append(getTypeName(j2j))
-							.append(" ")
-							.append(j2j.getName())
-							.append(";\n");
+						genFieldd(sb, sbSubGetterAndSetter, j2j, 1);
 						
 						// 已经使用的数据会移除,减少下一次外层循环的遍历次数
 						customIterator.remove();
 					}
 				}
-				sb.append("\t}\n");
+				
+				sb.append(sbSubGetterAndSetter.toString());
+				sb.append(AndroidUtils.formatSingleLine(1, "}"));
 			}
 		}
 		
-		sb.append("}");
+		sb.append(sbGetterAndSetter.toString());
+		sb.append("\n");
 		return sb.toString();
+	}
+
+	/**
+	 * 生成变量相关代码
+	 * 
+	 * @param sb 添加申明变量部分
+	 * @param sbGetterAndSetter 添加getter和setter方法部分
+	 * @param j2j 变量信息
+	 * @param extraTabNum 额外缩进量\t
+	 */
+	private static void genFieldd(StringBuilder sb, StringBuilder sbGetterAndSetter, 
+			Json2JavaElement j2j, int extraTabNum) {
+		// 先判断是否有注释,有的话添加之
+		// /**
+		//  * 姓名
+		//  */
+		String des = j2j.getDes();
+		if(des != null && des.length() > 0) {
+			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "/**"));
+			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, " * " + des));
+			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, " */"));
+		}
+		
+		// 申明变量
+		// private String name;
+		sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+				"private " + getTypeName(j2j) + " " + j2j.getName() + ";"));
+		
+		// 生成变量对应的getter和setter方法
+		// public String getName() {
+		//     return name;
+		// }
+		sbGetterAndSetter.append("\n");
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+				"public " + getTypeName(j2j) + " get" + StringUtils.firstToUpperCase(j2j.getName()) + "() {"));
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(2 + extraTabNum, "return " + j2j.getName() + ";"));
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "}"));
+		
+		// public void setName(String name) {
+		//     this.name = name;
+		// }
+		sbGetterAndSetter.append("\n");
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+				"public void set" + StringUtils.firstToUpperCase(j2j.getName()) + 
+				"(" + getTypeName(j2j) + " " + j2j.getName() + ") {"));
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(2 + extraTabNum, 
+				"this." + j2j.getName() + " = " + j2j.getName() + ";"));
+		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "}"));
 	}
 	
 	/**
