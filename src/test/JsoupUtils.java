@@ -228,5 +228,15 @@ public class JsoupUtils {
 			this.params = params;
 		}
 
+		@Override
+		public String toString() {
+			return "RequestInfo [name=" + name + ", method=" + method
+					+ ", url=" + url + ", des=" + des + ", params=" + params
+					+ "]";
+		}
+		
+		
+
 	}
+	
 }

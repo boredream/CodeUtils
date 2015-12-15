@@ -31,6 +31,9 @@ import org.apache.poi.xslf.usermodel.XSLFTextShape;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.junit.internal.runners.model.EachTestNotifier;
+
+import com.google.gson.Gson;
 
 import utils.AndroidUtils;
 import utils.CharacterParser;
@@ -44,7 +47,7 @@ public class TempUtils {
 //		compareStrings();
 //		autoCreateSizeSet(true);
 //		desParams();
-		extractAllString();
+//		extractAllString();
 
 //		String path = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
 //		
@@ -57,6 +60,51 @@ public class TempUtils {
 //				}
 //			}
 //		}
+
+		String str = FileUtils.readToString(new File("temp\\test.html"));
+		String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(str);
+		if(matcher.find()) {
+			String body = matcher.group(1);
+			String regex1 = "\"([\\s\\S]+)\"";
+			Pattern pattern1 = Pattern.compile(regex1);
+			Matcher matcher1 = pattern1.matcher(body);
+			if(matcher1.find()) {
+				System.out.println(matcher1.group(1));
+			}
+		}
+		
+	}
+	
+	class Person {
+		private String name;
+		private String gender;
+		private List<String> nickNames;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getGender() {
+			return gender;
+		}
+
+		public void setGender(String gender) {
+			this.gender = gender;
+		}
+
+		public List<String> getNickNames() {
+			return nickNames;
+		}
+
+		public void setNickNames(List<String> nickNames) {
+			this.nickNames = nickNames;
+		}
 		
 	}
 

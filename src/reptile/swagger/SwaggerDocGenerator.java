@@ -11,11 +11,13 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import reptile.swagger.RequestInfo.RequestParam;
 import utils.AndroidUtils;
 import utils.FileUtils;
 import utils.JsonUtils;
+import utils.StringUtils;
 import entity.Json2JavaElement;
+import entity.RequestInfo;
+import entity.RequestInfo.RequestParam;
 
 public class SwaggerDocGenerator {
 
@@ -26,7 +28,7 @@ public class SwaggerDocGenerator {
 		genCode(infos);
 	}
 
-	private static void genCode(ArrayList<RequestInfo> infos) {
+	public static void genCode(ArrayList<RequestInfo> infos) {
 		StringBuilder sbUrl = new StringBuilder();
 		StringBuilder sb = new StringBuilder();
 		for(RequestInfo info : infos) {
@@ -38,11 +40,25 @@ public class SwaggerDocGenerator {
 			
 			String name = info.getName();
 			String url = info.getUrl();
-			String urlName = info.getMethod() + "_" + url
+			String urlName = /*info.getMethod() + "_" + */url
 					.replace("/rest/", "")
 					.replace("/", "_")
 					.replace("{", "")
 					.replace("}", "");
+			
+			String responseBeanName = "Object";
+			if(info.getResponseJson() != null) {
+				// user/test -> UserTestResponse
+				String[] split = url.split("/");
+				responseBeanName = StringUtils.firstToUpperCase(split[0]) + StringUtils.firstToUpperCase(split[1]) + "Response";
+				
+				String jsonJava = info.getResponseJson();
+				// TODO 特殊处理,继承基类 extends BaseEntity
+				jsonJava = jsonJava.replace("JsonBeans", responseBeanName + " extends BaseEntity");
+				
+				File file = new File("temp" + File.separator + "entity" + File.separator + responseBeanName + ".java");
+				FileUtils.writeString2File(jsonJava, file, "utf-8");
+			}
 			
 			// 作为url末尾直接拼装的参数,一般只有一个
 			String endParam = null;
@@ -118,7 +134,7 @@ public class SwaggerDocGenerator {
 							"params.put(\"" + param.getName() + "\", " + param.getName() + ");"));
 				}
 			}
-			sbParam.append("HttpListener<Object> listener");
+			sbParam.append("HttpListener<" + responseBeanName + "> listener");
 			
 			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
 			sb.append(AndroidUtils.formatSingleLine(1, " * " + name));
@@ -146,11 +162,12 @@ public class SwaggerDocGenerator {
 					"HashMap<String, Object> params = new HashMap<String, Object>();"));
 			sb.append(sbBody.toString());
 			sb.append(AndroidUtils.formatSingleLine(2, 
-					"doHttp(Urls.getUrl(Urls." + urlName.toUpperCase() 
-					+ ")" + (endParamName==null?"":" + "+endParamName) + ", \"" + info.getMethod() + "\", params, Object.class, listener);"));
+					"doHttp(URLs.getUrl(URLs." + urlName.toUpperCase() 
+					+ ")" + (endParamName==null?"":" + "+endParamName) + ", \"" + info.getMethod() + "\", params, " + responseBeanName + ".class, listener);"));
 			sb.append(AndroidUtils.formatSingleLine(1, "}")); 
 			sb.append("\n");
 		}
+		System.out.println(sbUrl.toString());
 		System.out.println(sb.toString());
 	}
 

@@ -20,7 +20,6 @@ public class JsonUtils {
 	public static void main(String[] args) {
 		/// 读取json字符串
 		String json = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
-				
 		parseJson2Java(json);
 	}
 	
@@ -46,12 +45,27 @@ public class JsonUtils {
 	}
 	
 	/**
+	 * 将json字符串转换为对应的javabean
+	 * 
+	 * @return 生成的javabean代码
+	 */
+	public static String getJavaFromJson(String jsonStr) {
+		// 解析获取整个json结构集合
+		List<Json2JavaElement> jsonBeanTree = getJsonBeanTree(jsonStr);
+		
+		// 利用获取到的json结构集合,创建对应的javabean文件内容
+		String javaBeanStr = createJavaBean(jsonBeanTree);
+		
+		return javaBeanStr;
+	}
+	
+	/**
 	 * 根据解析好的数据创建生成对应的javabean类字符串
 	 * 
 	 * @param jsonBeanTree 解析好的数据集合
 	 * @return 生成的javabean类字符串
 	 */
-	private static String createJavaBean(List<Json2JavaElement> jsonBeanTree) {
+	public static String createJavaBean(List<Json2JavaElement> jsonBeanTree) {
 		StringBuilder sb = new StringBuilder();
 		
 		// 是否包含自定义子类
@@ -76,11 +90,24 @@ public class JsonUtils {
 			} else {
 				// 如果不是自定义子类,则根据类型名和控件对象名生成变量申明语句
 				// private TextView tv_name;
+				
+				// 先判断是否有注释,有的话添加之
+				String des = j2j.getDes();
+				if(des != null && des.length() > 0) {
+					sb.append("\t/**")
+						.append("\n")
+						.append("\t * ")
+						.append(des)
+						.append("\n")
+						.append("\t */")
+						.append("\n");
+				}
+				
 				sb.append("\tprivate ")
 					.append(getTypeName(j2j))
 					.append(" ")
 					.append(j2j.getName())
-					.append(";\n");
+					.append(";\n\n");
 				
 				// 已经使用的数据会移除,则集合中只会剩下自定义子类相关的元素数据,将在后续的循环中处理
 				iterator.remove();
@@ -138,7 +165,18 @@ public class JsonUtils {
 	public static List<Json2JavaElement> getJsonBeanTree(String jsonStr) {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(jsonStr);
-		JsonObject rootJo = element.getAsJsonObject();
+
+		// 根element可能是对象也可能是数组
+		JsonObject rootJo = null;
+		if(element.isJsonObject()) {
+			rootJo = element.getAsJsonObject();
+		} else if(element.isJsonArray()){
+			// 集合中如果有数据,则取第一个解析
+			JsonArray jsonArray = element.getAsJsonArray();
+			if(jsonArray.size() > 0) {
+				rootJo = jsonArray.get(0).getAsJsonObject();
+			}
+		}
 		
 		jsonBeans = new ArrayList<Json2JavaElement>();
 		recursionJson(rootJo, null);
@@ -156,6 +194,10 @@ public class JsonUtils {
 	 * @param parent 已经解析好的上一级数据,无上一级时传入null
 	 */
 	private static void recursionJson(JsonObject jo, Json2JavaElement parent) {
+		if(jo == null) {
+			return;
+		}
+		
 		// 循环整个json对象的键值对
 		for (Entry<String, JsonElement> entry : jo.entrySet()) {
 			// json对象的键值对建构为 {"key":value}

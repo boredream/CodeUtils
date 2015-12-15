@@ -38,6 +38,11 @@ public class Json2JavaElement {
 
 	private String name;
 	private Class<?> type;
+	
+	/**
+	 * 注释,null时不添加注释
+	 */
+	private String des;
 
 	public boolean isArray() {
 		return isArray;
@@ -101,6 +106,14 @@ public class Json2JavaElement {
 
 	public void setType(Class<?> type) {
 		this.type = type;
+	}
+	
+	public String getDes() {
+		return des;
+	}
+
+	public void setDes(String des) {
+		this.des = des;
 	}
 
 	@Override

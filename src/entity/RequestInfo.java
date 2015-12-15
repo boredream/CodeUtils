@@ -1,4 +1,4 @@
-package reptile.swagger;
+package entity;
 
 import java.util.ArrayList;
 
@@ -14,6 +14,11 @@ public class RequestInfo {
 	private String url;
 	private String des;
 	private ArrayList<RequestParam> params;
+	
+	/**
+	 * 返回数据json转换成的JavaBean代码字符串
+	 */
+	private String responseJson;
 
 	public static class RequestParam {
 		private String name;
@@ -112,6 +117,14 @@ public class RequestInfo {
 
 	public void setParams(ArrayList<RequestParam> params) {
 		this.params = params;
+	}
+	
+	public String getResponseJson() {
+		return responseJson;
+	}
+
+	public void setResponseJson(String responseJson) {
+		this.responseJson = responseJson;
 	}
 
 	@Override
