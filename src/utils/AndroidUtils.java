@@ -1,6 +1,5 @@
 package utils;
 import java.io.File;
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -12,8 +11,6 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 
 import entity.IdNamingBean;
-
-
 
 public class AndroidUtils {
 	
@@ -408,169 +405,6 @@ public class AndroidUtils {
 		sb.append("\n");
 		sb.append(formatSingleLine(1, "}"));
 		sb.append(formatSingleLine(0, "}"));
-		
-//		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
-//		// private TextView tv_name;
-//		for(IdNamingBean bean : idNamingBeans) {
-//			sb.append(formatSingleLine(1, "private " + bean.getViewName() + " " + bean.getIdName() + ";"));
-//		}
-//		sb.append("\n");
-//		
-//		// 生成initView自定义方法,并在其中依次findViewById为view成员变量赋值
-//		// private void initView() {
-//		//    tv_name = (TextView)findViewById(R.id.tv_name);
-//		// }
-//		sb.append(formatSingleLine(1, "private void initView() {"));
-//		for(IdNamingBean bean : idNamingBeans) {
-//			sb.append(formatSingleLine(2, bean.getIdName() + " = " +
-//					"(" + bean.getViewName() + ") findViewById(R.id." + bean.getIdName() + ");"));
-//		}
-//		sb.append("\n");
-//		
-//		// 是否包含EditText控件,如果包含,自动生成非空判断代码
-//		boolean hasEditText = false;
-//		///**
-//		// * TODO 使用输入内容,可根据需要自行修改补充本方法
-//		// */
-//		//private void submit() {
-//		//	// 开始验证输入内容
-//		//	String content = et_content.getText().toString().trim();
-//		//	if(!TextUtils.isEmpty(content)) {
-//		//		Toast.makeText(this, "content不能为空", Toast.LENGTH_SHORT).show();
-//		//		return;
-//		//	}
-//		//	
-//		//	// TODO 验证成功,下面开始使用数据
-//		//	
-//		//	
-//		//}
-//		StringBuilder sbEditText = new StringBuilder();
-//		sbEditText.append("\n");
-//		sbEditText.append(formatSingleLine(1, "/**"));
-//		sbEditText.append(formatSingleLine(1, " * TODO 输入验证,可根据需要自行修改补充"));
-//		sbEditText.append(formatSingleLine(1, " */"));
-//		sbEditText.append(formatSingleLine(1, "private void submit() {"));
-//		sbEditText.append(formatSingleLine(2, "// 开始验证输入内容"));
-//		
-//		for(IdNamingBean bean : idNamingBeans) {
-//			Attribute attrTag = bean.getElement().attribute("tag");
-//			// 只判断EditText控件
-//			if(bean.getViewName().equals("EditText")) {
-//				// 带有可选标识(tag为optional)的EditText不做非空验证
-//				if(attrTag != null && attrTag.getValue().equals("optional")) {
-//					continue;
-//				}
-//				
-//				// 截取最后一个_后面的内容作为名称,不包含_时使用全部id作为名称
-//				String idName = bean.getIdName();
-//				int index = idName.lastIndexOf("_");
-//				String name = index == -1 ? idName : idName.substring(index + 1);
-//				
-//				sbEditText.append(formatSingleLine(2, "String " + name + " = " + idName + ".getText().toString().trim();"));
-//				sbEditText.append(formatSingleLine(2, "if(TextUtils.isEmpty(" + name + ")) {"));
-//				sbEditText.append(formatSingleLine(3, "Toast.makeText(this, \"" + name + "不能为空\", Toast.LENGTH_SHORT).show();"));
-//				sbEditText.append(formatSingleLine(3, "return;"));
-//				sbEditText.append(formatSingleLine(2, "}"));
-//				sbEditText.append(formatSingleLine(2, ""));
-//				
-//				hasEditText = true;
-//			}
-//		}
-//		
-//		sbEditText.append(formatSingleLine(2, "// TODO 验证成功,下面开始使用数据"));
-//		sbEditText.append(formatSingleLine(2, ""));
-//		sbEditText.append(formatSingleLine(2, ""));
-//		sbEditText.append(formatSingleLine(1, "}"));
-//		
-//		// 是否包含可点击的控件,如果包含,自动生成onClick相关代码
-//		boolean hasClickView = false;
-//		// 点击事件复写的onclick方法
-//		// @Override
-//		// public void onClick(View v) {
-//		//    switch (v.getId()) {
-//		//    case R.id.btn_ok:
-//		// 		// doSomething
-//		// 		break;
-//		//    }
-//		// } 
-//		StringBuilder sbOnClick = new StringBuilder();
-//		sbOnClick.append("\n");
-//		sbOnClick.append(formatSingleLine(1, "@Override"));
-//		sbOnClick.append(formatSingleLine(1, "public void onClick(View v) {"));
-//		sbOnClick.append(formatSingleLine(2, "switch (v.getId()) {"));
-//		
-//		for(IdNamingBean bean : idNamingBeans) {
-//			Attribute attrClickable = bean.getElement().attribute("clickable");
-//			// 只设置Button的点击事件,和参数包含clickable=true的控件
-//			if(bean.getViewName().equals("Button")
-//					|| (attrClickable != null 
-//					&& attrClickable.getValue().equals("true"))) {
-//				// 设置监听
-//				// btn_ok.setOnClickListener(this);
-//				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnClickListener(this);"));
-//				// 在onclick中分别处理不同id的点击
-//				sbOnClick.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
-//				sbOnClick.append("\n");
-//				sbOnClick.append(formatSingleLine(3, "break;"));
-//				
-//				hasClickView = true;
-//			}
-//		}
-//		sbOnClick.append(formatSingleLine(2, "}"));
-//		sbOnClick.append(formatSingleLine(1, "}"));
-//		
-//		
-//		// 是否包含RadioGroup/Button等控件,如果包含,自动生成onCheckChanged相关代码
-//		boolean hasCheckedView = false;
-//		// 点击事件复写的onclick方法
-//		// @Override
-//		// public void onCheckedChanged(RadioGroup group, int checkedId) {
-//		//    switch (checkedId) {
-//		//    case R.id.rb_home:
-//		// 		// doSomething
-//		// 		break;
-//		//    }
-//		// }
-//		StringBuilder sbOnChecked = new StringBuilder();
-//		sbOnChecked.append("\n");
-//		sbOnChecked.append(formatSingleLine(1, "@Override"));
-//		sbOnChecked.append(formatSingleLine(1, "public void onCheckedChanged(RadioGroup group, int checkedId) {"));
-//		sbOnChecked.append(formatSingleLine(2, "switch (checkedId) {"));
-//		
-//		for(IdNamingBean bean : idNamingBeans) {
-//			// 只设置Button的点击事件,和参数包含clickable=true的控件
-//			if(bean.getViewName().equals("RadioGroup")) {
-//				// 设置监听
-//				// rg.setOnCheckedChangeListener(this);
-//				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnCheckedChangeListener(this);"));
-//				
-//				hasCheckedView = true;
-//			} else if(bean.getViewName().equals("RadioButton")) {
-//				// 在onCheckedChanged中分别处理不同id的选中
-//				sbOnChecked.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
-//				sbOnChecked.append("\n");
-//				sbOnChecked.append(formatSingleLine(3, "break;"));
-//				
-//				hasCheckedView = true;
-//			}
-//		}
-//		sbOnChecked.append(formatSingleLine(2, "}"));
-//		sbOnChecked.append(formatSingleLine(1, "}"));
-//		
-//		sb.append(formatSingleLine(1, "}\n"));
-//		sb.append("\n");
-//		
-//		if(hasClickView) {
-//			sb.append(sbOnClick);
-//		}
-//		
-//		if(hasCheckedView) {
-//			sb.append(sbOnChecked);
-//		}
-//		
-//		if(hasEditText) {
-//			sb.append(sbEditText);
-//		}
 		
 		return sb.toString();
 	}

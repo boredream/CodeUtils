@@ -104,6 +104,11 @@ public class OfficeUtils {
 			String cvsStr = sbHeader.substring(0, sbHeader.length() - 1) + "\n"
 					+ sbContent.toString();
 
+			File parent = file.getParentFile();
+			if(!parent.exists()) {
+				parent.mkdirs();
+			}
+			
 			if (!file.exists()) {
 				file.createNewFile();
 			}

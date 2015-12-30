@@ -1,0 +1,18 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/1/79079405843f4a549f09a5a64e2db82de0078917.png?1382508545,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/2/69ea0d4a2c019d172c0ca3e7cee7cc6bfb35c747.png?1382508551,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/3/006cf5c8814248ecf934a7d88d1bad23e887b61f.png?1382508553,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/4/df4478ae15494ad34abdff83f88472960f853312.png?1382508555,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/5/d99fc3402ad6ebdc6cd59208453291fcd530fa8e.png?1382508557,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/16/1/2/medium/6/de94b72ea2c7095ce237b9650d4bc302b114a6fe.png?1382508559,Inbox,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/1/3ad0ce977254abe451f977e9fd4d8ed0c5d882a6.png?1355176956,Email List,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/2/50addf402bb7dc3e62be5062fe74be150b64a918.png?1355176957,Email Fields Default,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/3/ff5c32e12ca76c16cd9c233dc6bb62f6a284eb0a.png?1355176959,Input Recipient,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/4/86764035a83028a65290de9efed66b0a63b7c253.png?1355176961,Add Attachment,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/5/3dcccf9ff07c325541b912fa3c4f6a61db45ec3c.png?1355176963,Make Drawing,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/6/407354bfb9088a891b250f4b27f68b768c639673.png?1355176965,Email Fields Filled Out,Sharing,6
+http://s3.amazonaws.com/uxarchive2/flows/16/4/1/medium/7/0fa3d5af6eb8a922d257c76f421c6b8d690e0e57.png?1355176967,Email Sent,Sharing,7
+http://s3.amazonaws.com/uxarchive2/flows/16/7/2/medium/1/52118dadf73cd160c18221334e85227f037863bc.png?1382508632,Sign in,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/16/7/2/medium/2/b190830ad71034584521fa33e870c6bcca1dbada.png?1382508633,Account informations,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/16/7/2/medium/3/b201a3f9b586e134f7e55b9bf795421e7ad5b100.png?1382508635,Welcome,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/16/7/2/medium/4/d8d23e6a4f280aa5cd861c46cb92868f9c12c2f3.png?1382508637,Inbox,Signing up,4

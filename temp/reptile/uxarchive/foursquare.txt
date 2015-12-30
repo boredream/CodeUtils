@@ -1,0 +1,19 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/9/1/2/medium/1/cefeb33b4d9c7f75a72258c3e9f5b5b0885dac1b.png?1380398444,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/9/1/2/medium/2/0ba6ff626963b1adeb6a70c772d1562c4d5e86d7.png?1380398447,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/9/1/2/medium/3/21162646baf11ba1937a31902082925bfc27b590.png?1380398451,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/9/1/2/medium/4/a3596ce58e03207a47cc1116807a5191012f3dec.png?1380398458,Main feed,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/9/2/2/medium/1/8e69e217d6bf498559fd023ee28c4cb0d13f6ef0.png?1380398265,Main feed,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/9/2/2/medium/2/11328c015dc7def6e99a7a966df5fd61df68dd14.png?1380398273,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/9/2/2/medium/3/ec325d1edd2d574557822d343ad887bccf972be7.png?1380398276,Searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/9/2/2/medium/4/6abee7cde2b0233365f3e3bf6040f2bc28506233.png?1380398278,Search results,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/9/2/2/medium/5/477613db32daeaf33697f490d00ac629b5835c35.png?1380398281,Local business page,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/1/82efd27385c0608dccfaa6df04920c249bbcebec.png?1364694358,Log in screen,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/2/93c6c6fc8bc94a03a02e03940f002ba058add25e.png?1364694359,Sign up form,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/3/35295259c76de191837c5c167f250715b60a7450.png?1364694361,Find facebook friend,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/4/60866cc776e341d1ff8f13a539ecd9afc540ec2c.png?1364694363,Facebook friend list,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/5/dcaaa7c7d7188a6fd44483799fd369f128e2662a.png?1364694364,Scan address book,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/6/f5489ef759c0ddd1abfee2b802e568c0d0351237.png?1364694365,Address book list,Signing up,6
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/7/7e24bf82d15b99c6b076806d85bb9649c59f73e8.png?1364694366,Facebook request,Signing up,7
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/8/b1f358b9b1d2e67aae338569c8eac950bab70711.png?1364694367,Tutorial,Signing up,8
+http://s3.amazonaws.com/uxarchive2/flows/9/7/2/medium/9/d9923e5b992b7012e4ada1ca639996fab299f395.png?1364694369,Main screen,Signing up,9

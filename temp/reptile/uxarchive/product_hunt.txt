@@ -1,0 +1,9 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/197/20/2/medium/1/b72139eb32429cca153f3f1d76c2b656d97a45f6.png?1410495577,Trending,Consuming,1
+http://s3.amazonaws.com/uxarchive2/flows/197/20/2/medium/2/8cfb881e54f14fad2b94790ba35ff98d82132b60.png?1410495578,Product details,Consuming,2
+http://s3.amazonaws.com/uxarchive2/flows/197/1/2/medium/1/63d63680919729331dcb1ef7151f199a78258923.png?1410495457,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/197/1/2/medium/2/f5000470007026c718cb9caa87de2f47b4e8f471.png?1410495459,Trending,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/197/2/2/medium/1/d3f84072353c2a783d76277baa34d70c95742684.png?1410495758,Trending,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/197/2/2/medium/2/d7508e45844a339565266594281b10a245ce2b3b.png?1410495760,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/197/2/2/medium/3/867a4f36049f3f86640f42511fd5f066846c9d81.png?1410495761,Searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/197/2/2/medium/4/5b1e2ab74859d82dd5075ddec3c3b2c14dae7874.png?1410495762,Product details,Searching,4

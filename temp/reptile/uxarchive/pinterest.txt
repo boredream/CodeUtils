@@ -1,0 +1,48 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/138/16/2/medium/1/737648e2894e4331e6fe8d97d1e92784c4789663.png?1415297249,Home feed,Adding,1
+http://s3.amazonaws.com/uxarchive2/flows/138/16/2/medium/2/2a99e61fbde1014e129361d43d89ce57cec1c015.png?1415297252,Actions,Adding,2
+http://s3.amazonaws.com/uxarchive2/flows/138/16/2/medium/3/91fdc95bb41bce9f18fc51d8647c0fab5a3a13a1.png?1415297254,Board list,Adding,3
+http://s3.amazonaws.com/uxarchive2/flows/138/16/2/medium/4/9c9550e9dd751e2f9b5ad446eafd482a50bdda6d.png?1415297257,Confirmation,Adding,4
+http://s3.amazonaws.com/uxarchive2/flows/138/16/2/medium/5/a029e7798dc31b50aaac72fa5abbfd10cb7d537d.png?1415297259,Home feed,Adding,5
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/1/007e2e3177c26a634001ff9e33fe50246f0f2ce5.png?1415297123,Profile,Creating,1
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/2/43658227b25388e4d3cf1324c436a77a34ca78c3.png?1415297125,Creation options,Creating,2
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/3/c0a4789f275d63ae7973c5caba486495b4dd1c89.png?1415297127,Site,Creating,3
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/4/92e841dab5bbd8cd1eaaf019cff70da958a4cd14.png?1415297129,Images,Creating,4
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/5/ca7176c80039432d987f9feb288b8626072620e8.png?1415297132,Board selection,Creating,5
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/6/82355b2ad7fe75b18dd5f1bf30ebcb750723edb4.png?1415297134,Confirmation,Creating,6
+http://s3.amazonaws.com/uxarchive2/flows/138/11/2/medium/7/2f53613c0cd012a1e4914bae43bc58082751aec7.png?1415297136,Profile,Creating,7
+http://s3.amazonaws.com/uxarchive2/flows/138/3/2/medium/1/1aa5ad3954f93d38423840aee1f0d1cb321dea24.png?1415297342,Explore,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/138/3/2/medium/2/bc98ae650ca8392dda3b46944824de0f2fefb29b.png?1415297345,Topic,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/138/3/2/medium/3/158bb8ff06dfa1081d048b05b10f553706d1fc86.png?1415297348,Refined topic,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/138/3/2/medium/4/36e47b637641b8c981508fbb52c2d2dc8f3e0131.png?1415297350,Pin,Exploring,4
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/1/4f235497b22755036f5959629d6a9f91dbd7975e.png?1415311841,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/2/202e0c70fe251b920ce51699f31021325f096d08.png?1415311843,Welcome,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/3/f8b6d0f3966d30b73e73107137c563057e07b406.png?1415311845,Sign up,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/4/9ab1b1d183a473a14aa3dc809b5af7b28467424c.png?1415311847,Sign up,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/5/0f92e0b2cf2c77ff4b8512493391ec8655b113db.png?1415311850,Sign up,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/6/fbd0bebb58e4df9bafca9dcfbeea7b5d7b3f154c.png?1415311852,Sign up form,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/7/8ff30ce328698932f02966ff5ee3bd2942ccc488.png?1415311854,Hello,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/8/1feef8f6408894cf1291f2ba2efac16fd3d670d6.png?1415311857,Topic list,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/9/753384a26eb8e45f3ee296fc72a422c97b66831d.png?1415311859,Topic selection,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/10/a33bde5ad88278b0bb7a0056168da9b5be0f6d1d.png?1415311863,Topic selected,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/11/b34be411ca7285f64e9a6b8c45bf1c7ce5762b21.png?1415311865,Social connect,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/12/c0f4f5a89d063cb67253f2b872858a7913c97c76.png?1415311867,People selection,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/13/ba966f3c85c84b8f76bd89b5a0a364325f48386a.png?1415311869,People selected,Onboarding,13
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/14/506790be943ce7f98bd04185749ed8b0e7817cc0.png?1415311872,Loading,Onboarding,14
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/15/b3a986e15861b9bbf3d102966b2cfc883c8ba6e0.png?1415311874,Home feed tutorial,Onboarding,15
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/16/23031d67cced1df49c8426f80ae039098424c05e.png?1415311876,Home feed,Onboarding,16
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/17/66ecd565743d03cf1e510a33a75e1862563dd45b.png?1415311878,Pin tutorial,Onboarding,17
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/18/d71065aa215d95019fbf79a9005fde93a4bdf2ac.png?1415311880,Board selection tutorial,Onboarding,18
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/19/069cad86e2c88fa0c29f3d0c2258484a7a3bddf1.png?1415311882,Home feed,Onboarding,19
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/20/1dad300d18f4b49bd7ce81b1d502ee9e4278c1b4.png?1415311885,Profile tutorial,Onboarding,20
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/21/dd5be16a85000b1d4f10f0c0b9fb59c592586feb.png?1415311887,Profile tutorial,Onboarding,21
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/22/8aa1fb371beff1edd89b2cd3cd1713ebe720bcf1.png?1415311889,Profile tutorial,Onboarding,22
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/23/a7fb8b6e324034903b289f0b6eac9cd527afe2ee.png?1415311891,Profile tutorial,Onboarding,23
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/24/857f189d520e386e3c75a4d914a3adfb03883900.png?1415311894,Profile tutorial,Onboarding,24
+http://s3.amazonaws.com/uxarchive2/flows/138/1/2/medium/25/d52a5fe400a3057ff1c9990e48dbc70ee053e890.png?1415311896,Profile,Onboarding,25
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/1/80bb256e3f60422d81ec46dc3f11824f76d22ca7.png?1415296900,Explore,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/2/a82b01b4bf489c1370ef8631e12d98111c450704.png?1415296902,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/3/698195b5af245e0f7bdb222e39ddc732cb409103.png?1415296904,Searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/4/d7b3c65f2918a570cd5ac24d6f9a901cf2df4a25.png?1415296906,Search results,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/5/42dc30267d9411fe6b26219141303475bece7dbf.png?1415296908,Added filter,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/138/2/2/medium/6/7c362f1713bc2710e3cf42375aa00c7b35482c89.png?1415296910,Pin,Searching,6

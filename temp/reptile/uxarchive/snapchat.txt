@@ -1,0 +1,31 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/1/e379f33975eb1ed13e253967d9b41d400c17b621.png?1381815609,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/2/6a4a4462f7075f0e10958cd382688ec509f8dfe9.png?1381815611,Log in,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/3/32c1cf528f1e8a5be3f01f2dbfa4896fe729e0cc.png?1381815612,Log in fields,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/4/2c64b0876e652909db150854413f56869e58317a.png?1381815614,Camera,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/5/65ff220cefd2f59624d173bf54c1082077906a68.png?1381815616,Photo options,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/6/e1982662fc616249e8a9fc3981567cde07ff2d8c.png?1381815618,Caption edit,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/7/cad629bc68c683c0f6980c2f788f532937fcf8e2.png?1381815621,Photo options,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/8/4f04c724c374778e1fe4da5cd516ec4a625dbd9e.png?1381815623,Friend list,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/155/1/2/medium/9/9c71abc3d10901c308d2c5aac5c33894b3bda8de.png?1381815625,Home feed,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/1/4d32501be8073668b3a5ef5d0a7b1d6173e950ad.png?1416332608,Conversation list,Purchasing,1
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/2/b8f2e64de67913876a98754b16580eeaf37d406b.png?1416332610,Conversation,Purchasing,2
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/3/a0db842a10f1c3fda45e393fcfda30c4838e2fb3.png?1416332612,Message edit,Purchasing,3
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/4/f954df89f6999b668bb5f16af065e8bcae90994e.png?1416332613,Message edit,Purchasing,4
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/5/9d34f06f32d017da4ddbfa561ee2bb5766934e1a.png?1416332615,Alert,Purchasing,5
+http://s3.amazonaws.com/uxarchive2/flows/155/10/2/medium/6/46928ddb27148d15a42238a967879f6177bfe6e8.png?1416332616,Conversation,Purchasing,6
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/1/bed03d517bac7dcee3083dc979fad9e7af47a84e.png?1381817232,Home feed,Sharing,1
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/2/935d07ead91d595ab5c9c9634ad5455c5b49e285.png?1381817234,Camera,Sharing,2
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/3/0883323a53569ba17177e02195332a81089c46f2.png?1381817237,Photo options,Sharing,3
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/4/38c8b63d3c9ad5967846c8ec2cdcff6866fc6c5c.png?1381817240,Time edit,Sharing,4
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/5/5b9e7d27817ead8933467be984901c8e781cd287.png?1381817244,Photo options,Sharing,5
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/6/229138432b82b791aa884b55b5995cffa2f865ab.png?1381817247,Paint edit,Sharing,6
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/7/f7a7c686b6900a284171fcc822459899a3105e8e.png?1381817249,Friend list,Sharing,7
+http://s3.amazonaws.com/uxarchive/flows/155/4/2/medium/8/815f0ac7d856cb11e6baff3e4c17ef7e292d1b11.png?1381817251,Home feed,Sharing,8
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/1/8b7f02e5e24193ac1850dddedbcb618ece8d335b.png?1381816873,Sign up,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/2/c680870981bb5a3181d45858b7e4c1da3d9e6796.png?1381816877,Account edit,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/3/ac1fec6e53ade6492ee8ee96e502c78b77f69250.png?1381816879,Username edit,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/4/73d40e0ae57e1f62b95a070dcaec64110c646254.png?1381816881,Phone nb,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/5/18973930905ccc0e366fc8bf3960b5a40503a7bf.png?1381816883,Verification message,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/6/34de3fe352fb217de55a46108cc44040f075edf9.png?1381816885,Friend list,Signing up,6
+http://s3.amazonaws.com/uxarchive2/flows/155/7/2/medium/7/237268b9c56b8e93d9005a403393bd2ca993d8f6.png?1381816887,Camera,Signing up,7

@@ -1,0 +1,10 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/1/f1ac6f849e34e5d134ddd344a59a4327ee7990e3.png?1373567559,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/2/89a773ad191dfc78bd654a2e4cb067d47532cbef.png?1373567567,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/3/3c6cdb84b0d4a7ee028a6710f18e9388f58cd258.png?1373567569,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/4/4489bafc16d162b88fdc1e8ce096d2b13d578a02.png?1373567571,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/5/0a0c7019eb054f08a5005a553e7dbec815ee013d.png?1373567573,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/6/dcc2f91c83850f7e51b735207056429766a2a9a1.png?1373567575,Tutorial,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/7/5e393fc4afe592c06577ec7f1d313e9c3393b1ff.png?1373567578,Get started,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/8/3bf8fe224ad18e99c66f3c301ea94d93e705f2d6.png?1373567580,Sign in,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/97/1/2/medium/9/f97a6f2087590c2f3a4380b832c2e78542858178.png?1373567582,Recipe list,Onboarding,9

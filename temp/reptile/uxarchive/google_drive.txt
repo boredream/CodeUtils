@@ -1,0 +1,24 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/117/11/2/medium/1/7b6d0a734357e54097f63007f184a5cb9cd77439.png?1379299000,My Drive,Creating,1
+http://s3.amazonaws.com/uxarchive2/flows/117/11/2/medium/2/c814f9a5f4351908721428a37dd516af1fd13cef.png?1379299004,Object types,Creating,2
+http://s3.amazonaws.com/uxarchive2/flows/117/11/2/medium/3/ca2de48641b445d57b0c439dc2c372c344ef1798.png?1379299008,Naming,Creating,3
+http://s3.amazonaws.com/uxarchive2/flows/117/11/2/medium/4/8870b319931d6f8465cfeae72dbe3310171f8458.png?1379299012,Created document,Creating,4
+http://s3.amazonaws.com/uxarchive2/flows/117/13/2/medium/1/63f8a689b2d3d653a05d724014be92e199d512f2.png?1379299273,My Drive,Deleting,1
+http://s3.amazonaws.com/uxarchive2/flows/117/13/2/medium/2/9808ebb7d831b025e206d2912710b56e22c12dc8.png?1379299277,Folder options,Deleting,2
+http://s3.amazonaws.com/uxarchive2/flows/117/13/2/medium/3/c80fc5a4cae9862edbc28c73f75b30b63f408137.png?1379299280,Alert,Deleting,3
+http://s3.amazonaws.com/uxarchive2/flows/117/13/2/medium/4/072c7498e6cc24a0ee566d5be7ca94769b98a683.png?1379299283,My Drive,Deleting,4
+http://s3.amazonaws.com/uxarchive2/flows/117/12/2/medium/1/68a510bb774a4cf0ba9888db211c607e69d2c596.png?1379299436,My Drive,Moving,1
+http://s3.amazonaws.com/uxarchive2/flows/117/12/2/medium/2/27003ccfc8b44e322fa9083b3f99dd5707d47d43.png?1379299441,Folder options,Moving,2
+http://s3.amazonaws.com/uxarchive2/flows/117/12/2/medium/3/056b7f89df3161c9d6134d75756478ab68921ef9.png?1379299446,My Drive,Moving,3
+http://s3.amazonaws.com/uxarchive2/flows/117/12/2/medium/4/05a95d5f99aecc91a3fdf34100f6586ed11c49b5.png?1379299451,Selected folder,Moving,4
+http://s3.amazonaws.com/uxarchive2/flows/117/12/2/medium/5/ed02636587e3d0143e1f277c157f7bda71822d8f.png?1379299454,My Drive,Moving,5
+http://s3.amazonaws.com/uxarchive2/flows/117/2/2/medium/1/979ef44251274a302d88953245eb88add58df800.png?1379142189,My Drive,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/117/2/2/medium/2/42b5ee6ce8f5d698a7fe223cb7dc928b4551ccc0.png?1379142196,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/117/2/2/medium/3/f87dfe9c740c7617c5a0aaba932a003faf8521ab.png?1379142199,Search results,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/117/2/2/medium/4/f03c0cd25ea35497cfc6af518c6405cb2afa41d9.png?1379142202,Doc,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/1/0bb9f3d8e0bbadbaf28c33cc1a4d11d5883eda49.png?1382634232,My Drive,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/2/2270decf0455d217c66e8ad76707620d9c0a7b2c.png?1382634236,Folder options,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/3/0f1f8a040753c985c4a4abfa3248d9295819b963.png?1382634238,People selection,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/4/7b5bd359b2637806850f560fd1939e6637c2c537.png?1382634241,Searching,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/5/3be3b2ef81857ba1b384fd5bfece11d96d253525.png?1382634243,People selection,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/117/4/2/medium/6/b8289f88fe7f2b31776c328057b7312866fa0117.png?1382634246,Folder options,Sharing,6

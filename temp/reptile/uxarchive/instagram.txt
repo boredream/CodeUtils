@@ -1,0 +1,25 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/10/3/2/medium/1/c649045450832ffcbb57432effb625fe6aa7dea0.png?1415654810,Explore,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/10/3/2/medium/2/6ba4ae4cffd59d775de9bafd2ab70ce8406765f2.png?1415654813,Picture,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/1/b21340784584af75d90fa2de063e6ee8aeef7cbd.png?1415689437,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/2/364aeac4d41fc87366bdb1278db6585aaf6859bc.png?1415689439,Sign in,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/3/a266576adf66a10021b34073ce6354c7826f9f35.png?1415689441,Sign up,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/4/c653407eb25440dfef4ce76aa6969e93a8c872ba.png?1415689442,Profile information,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/5/51ecd2caa18a1cce78ae678fe4af7e931f4fdaf3.png?1415689444,Photo options,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/6/9fa4fac240f2e59c3c6d51ba9e6050823aba9a48.png?1415689446,Camera,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/7/7af1bbca24d59e4cfd1dad8e254c1ce9a3ae0790.png?1415689448,Name， password,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/8/b10ba524a1486d2ccbb32453c477d32cffb37dc5.png?1415689450,Email confirmation,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/9/8eac26eac7a4f96edfa1a2b7a26b301c7c396048.png?1415689452,Full name & phone,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/10/ca7994257a28bb03ca382e4c3f08d9a3aa8d98cb.png?1415689454,Finding friends,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/11/14f77b72a2666a583dd6df692fef948d9a81f601.png?1415689456,Friends list,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/10/1/2/medium/12/bcd9bc15b3eda96867bf0108937c8becd398ec15.png?1415689458,Home feed,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/10/2/2/medium/1/ed3fb4b9218218726b9e6c087c4c75f227fc6d68.png?1415655193,Explore,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/10/2/2/medium/2/6d6990e056233ec7bc1b7d21a4a4361555294963.png?1415655196,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/10/2/2/medium/3/2a3c7db3e3339180b9450a2ee917bc807dc1ce33.png?1415655197,Searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/10/2/2/medium/4/7f9d6925497b1de055522700f8b0afaf10520c73.png?1415655199,Profile,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/10/2/2/medium/5/5c373c049128d2655c0f76132a19f5929329ad63.png?1415655201,Suggested people,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/10/4/2/medium/1/5aff665468a48781fa3261f3fe7fe4def1143e14.png?1415688899,Home feed,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/10/4/2/medium/2/625ccac2750bb25db16cdc64b24457dc6efebf80.png?1415688901,Camera,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/10/4/2/medium/3/1b4abb65bb1a7d1a08c206126ed412804bea782b.png?1415688904,Filter selection,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/10/4/2/medium/4/c28da340d57d338c08ef4e6d55e70979ccae42b2.png?1415688905,Sharing options,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/10/4/2/medium/5/648b904c64768872243a34bdb03ffce46ee81e8f.png?1415688908,Home feed,Sharing,5

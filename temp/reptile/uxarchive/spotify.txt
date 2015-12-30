@@ -1,0 +1,33 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/14/3/2/medium/1/9591947e464125f96a625cfdc1d3bcd3321fb6d9.png?1382504114,Playlists,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/14/3/2/medium/2/a890b95347b1da64ded8e47963d693dfeeb8dc4b.png?1382504117,Navigation,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/14/3/2/medium/3/6244bdce1b64324502c63ebf643a77e8063ab739.png?1382504120,Browse,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/14/3/2/medium/4/65aa5cfb8968740055238f6d22cc23c95b730e62.png?1382504124,Selected playlist,Exploring,4
+http://s3.amazonaws.com/uxarchive2/flows/14/3/2/medium/5/b573ed4599bc49ffbe954cedf22871ee7beba252.png?1382504128,Player,Exploring,5
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/1/e7da228acda0d4c48e14f6ac28c7cd6033806853.png?1382508406,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/2/1862a31c396609c1cc37935e0c85999fd2e757ab.png?1382508409,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/3/fe93012711bda61f48c89c099268b2c94d99841f.png?1382508415,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/4/f39ab9270c1bf16637c1c029f5702aed672e7157.png?1382508420,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/5/411d1d44143de5e36ec4009d0681d665c8e4aa1d.png?1382508423,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/6/fdbbe95c11bccb4a5dee95a3ad8623482e6ffe43.png?1382508427,Login,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/14/1/2/medium/7/26d7830e7f9c685c1e81b96b6321eb9f8e68e039.png?1382508430,Playlists,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/1/d5bfc649e791d1a9908980cfd925829792df806e.png?1382504609,Playlists,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/2/d7ad58ac315c229573932436f7953395301ed02d.png?1382504611,Navigation,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/3/95ff44ec66e02496fdaf6ef09a3eb1e2aa7c682b.png?1382504613,Search results,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/4/4e26075e91a8d707c0609c53ec7b7a04100268ac.png?1382504616,Search,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/5/d6f9aec25b9c40e251848c33af524a118ee78841.png?1382504617,Search results,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/6/fa12596c27b487fd8e04aae4396647887182f12e.png?1382504619,Artist,Searching,6
+http://s3.amazonaws.com/uxarchive2/flows/14/2/2/medium/7/02fba96fce4611ecc3e4ca5e04a1f4aa2805b857.png?1382504622,Player,Searching,7
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/1/0731bfe75d923800d1f7ea632acf4a549e6b80bf.png?1382505238,Artist,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/2/769d7e4f274235bba3dbf859a4d4464346c4b150.png?1382505240,Player,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/3/a831ab08c0a782ed0e8f9aea699f38f006f0a547.png?1382505242,Song options,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/4/fc21a3a3d91449f54b255d4c3ce53ad99cab36a7.png?1382505245,Sharing service list,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/5/d34cba49049e35444bb650edc6464750e28a9ca3.png?1382505247,Friend selection,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/6/f327a6792d86469af0f214589bfa824913dd40ca.png?1382505250,Message edit,Sharing,6
+http://s3.amazonaws.com/uxarchive2/flows/14/4/2/medium/7/4472b8c9010e7733ec9a9b5430ba549afe4198af.png?1382505252,Artist,Sharing,7
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/1/c50ef528d0c44b8edeb61ec177562111a27678b3.png?1382508326,Tutorial,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/2/90e47515f468d97601f6f9e5904e7c84228b6972.png?1382508329,Sign in,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/3/ee1d40491173f883fae9ab1682708bc667d94f78.png?1382508331,Sign up form,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/4/3925071e79106153c118fe4a5307066f3c2a09c7.png?1382508334,Account info,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/5/ff0f5f94b467db6c592f125d93fb58a572288921.png?1382508337,Welcome msg,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/14/7/2/medium/6/9678b9cfa6bb198c5494e8b9e29ccef9876ea930.png?1382508340,Browse,Signing up,6

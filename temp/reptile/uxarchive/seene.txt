@@ -1,0 +1,10 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/1/fd61674e521a60caaf8b15bef39e70bd14d674f4.png?1382340787,Home feed,Sharing,1
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/2/236085d5613873fcd13abb5d174e31f0dadf3901.png?1382340791,Camera,Sharing,2
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/3/19fc8e38dbc3ebaba12cb6efafd9ed01bdf261f3.png?1382340794,Capturing,Sharing,3
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/4/1f13b5950b771a14c5e177570281ab054e12a053.png?1382340797,Capturing,Sharing,4
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/5/c7545e19a2d64340cd2ff87b755645f76a95b982.png?1382340799,Capturing,Sharing,5
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/6/3bafd10cbd46ab4b43a29650b268a3b8fc7bde3e.png?1382340803,Capturing,Sharing,6
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/7/ddab9b8a0f7a45ee6a378f442c694e6b994d5dde.png?1382340805,Captured image,Sharing,7
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/8/dac888392f511b27216f42e7a626ceca3c42790f.png?1382340809,Sharing options,Sharing,8
+http://s3.amazonaws.com/uxarchive/flows/161/4/2/medium/9/cb813eca26c426eb34989f5aed0924a8c92b8bf6.png?1382340811,Home feed,Sharing,9

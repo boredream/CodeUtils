@@ -1,0 +1,32 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/1/ab50eae65563c2342c133262d33b672d6ba10569.png?1415575681,Map,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/2/e5460e51c1549b21d73cd8ae4919d706846a6691.png?1415575683,Search,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/3/5b641584c9cd316b8fc5605ab1d8e051a971d94b.png?1415575684,Nearby,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/4/1c37177f28c51cfb584bdb551878865de6f024d8.png?1415575687,Nearby ice cream,Exploring,4
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/5/6774815233f1e53e03ec679d2adeb95a83435d9c.png?1415575690,Map,Exploring,5
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/6/ec5148f12ef79f7f1cebbede475c878116160c53.png?1415575693,Local business info,Exploring,6
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/7/5fa7d46bf08989f4d01443a4060dd209cd67cc7e.png?1415575695,Direction options,Exploring,7
+http://s3.amazonaws.com/uxarchive2/flows/21/3/2/medium/8/9d51cf24fbe92465ee66b602945cc220fa82e0d8.png?1415575697,Directions,Exploring,8
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/1/4a1646e11352ad952bea9445c51b70e3ac63afaa.png?1415574372,Map,Getting directions,1
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/2/57143ba467922944a37bdd6d1250da9b98c7ec73.png?1415574375,Search,Getting directions,2
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/3/00f7a276747dc75c88cc001ece684ab0e9187c93.png?1415574378,Searching,Getting directions,3
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/4/ded07d09df1a7e8b3f7bf3826dd14c9343807be0.png?1415574380,Search result,Getting directions,4
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/5/aec60b3024b68bad7fb9c4d9a8b323beecc72aa2.png?1415574382,Direction options,Getting directions,5
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/6/26aa970bd2ed837dd113a6c7642a1e8fd5faddf9.png?1415574385,Direction overview,Getting directions,6
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/7/4c99964d414406c6cd99c5ebbbdc9f697ba0c848.png?1415574388,Directions,Getting directions,7
+http://s3.amazonaws.com/uxarchive2/flows/21/9/2/medium/8/b3e7172935d43b46b774a2a0bce5446080b31af4.png?1415574390,Direction list,Getting directions,8
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/1/418d770ba8892fdd6f3c507fb6cc8b50ac27fa04.png?1415575400,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/2/a43f8d9414c7731a3eb30a3ae721c21430b2d7d0.png?1415575403,Terms & conditions,Onboarding,2
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/3/b23275e55a2ddb04fb686d410d1ba09588f0c9da.png?1415575405,Sign in,Onboarding,3
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/4/2c0f1b3c193da3901a63919aaf1f37be5cc90c2a.png?1415575407,Sign in info,Onboarding,4
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/5/823ad38ff0b5a1ace8e5c42cee3b95a89c2e56d4.png?1415575410,Location authorization,Onboarding,5
+http://s3.amazonaws.com/uxarchive/flows/21/1/2/medium/6/bbf782fbbb42dab13ba80902a2e37c392fdc7180.png?1415575412,Maps,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/1/8665f15915ca86e888714873b72bdf77c9754d56.png?1415575928,Maps,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/2/8fe40c4c91b89283962d3d062f4e68f171a60473.png?1415575931,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/3/eae33b0bec21a7bb4ef82c5239c33e24e4c92b8f.png?1415575933,Searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/4/7d5837f4170d8ea47b80807dae2db75860295096.png?1415575935,Search results,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/5/90f6b589f605cfe80089c1089580e86d01a6d6dc.png?1415575937,Filters,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/6/d2d576c99ec224d4ae8bcb89cc1df86a10dc787b.png?1415575938,Filtered results,Searching,6
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/7/56f86876de9b2b32a9320f6ee270431ba6517025.png?1415575941,Local business info,Searching,7
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/8/df82ad873ad621039032c1eed34611de004ccef3.png?1415575943,Direction options,Searching,8
+http://s3.amazonaws.com/uxarchive2/flows/21/2/2/medium/9/dd6abf9727254add599ac2074f2a15e44d722fdb.png?1415575945,Directions overview,Searching,9

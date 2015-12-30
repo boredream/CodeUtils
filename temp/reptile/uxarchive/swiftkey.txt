@@ -1,0 +1,8 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/1/cf159c97e13d929553ee13db468e082d6687aff8.png?1411063923,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/2/3c14e635fb4d4945b916239e162119ec88978c29.png?1411063925,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/3/68ccea874071756eea4d77c7cef619800f8eb7f7.png?1411063927,Sign in,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/4/7d102641a1fdd08660f8c1017ff3de9aeaabe6c8.png?1411063929,Facebook approval,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/5/e3bd9144780bb06f42128cb5f41502ca38831cbf.png?1411063931,Email notifications,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/6/4531c517c4e38ef165eae080e1944ebebbd645df.png?1411063932,Setup instructions,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/198/1/2/medium/7/64c52f60a78ee4eaa6d297a4501488fab532e90b.png?1411063934,Options,Onboarding,7

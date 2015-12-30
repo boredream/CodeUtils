@@ -1,0 +1,21 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/1/378e638c09a9583a49e258b8955fa23e434dbb50.png?1382338207,Booking types,Booking,1
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/2/c550c095ea5166b248caa2a6e27e600aa290768d.png?1382338209,Flight details,Booking,2
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/3/6645c2261aa803e3e2caf45b68578955e4379373.png?1382338211,Depart location search,Booking,3
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/4/d36be7a7fc67aa1c6b8db4779f33daf713d92327.png?1382338213,Depart location searching,Booking,4
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/5/57d62125a41d66cad7683b3e80c8a42930ca1c70.png?1382338216,Flight details,Booking,5
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/6/45b590f02de718b09a368e43e4a9ed64eeaa1b4e.png?1382338218,Depart date,Booking,6
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/7/64c2d5f4f7b588a3b14d2c7184c1904b8cd1689e.png?1382338221,Flight details,Booking,7
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/8/a3fbd57efa507dcb8181364fd3d74158e3883c31.png?1382338224,Arrival date,Booking,8
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/9/c6f2d1c004dc10e81bd3791e3251d73f5eac7c65.png?1382338226,Flight details,Booking,9
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/10/8010377911745fa6a96b4592e163c284ed668eaa.png?1382338228,Searching flights,Booking,10
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/11/a51a005e82a173fd61427d6d5784576b3210d16b.png?1382338229,Airlines list,Booking,11
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/12/a81823983e67ce3283b0c7899fa0fd1a97f12c36.png?1382338231,Flights list,Booking,12
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/13/82887a43292e897835856cac6543dfe9ca1f78c8.png?1382338233,Flights details,Booking,13
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/14/2bb3687f70b007da810d2ad2b48e033f31c6888d.png?1382338235,Flights details,Booking,14
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/15/2ac2412158d1ff016c2b41ff0955434d06014fa8.png?1382338237,Airline login,Booking,15
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/16/b4efbc266ba9272c0b04811872124394a48f9684.png?1382338238,Passenger info,Booking,16
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/17/48b0a5b983202e5474a3e7100abe27d6b0532156.png?1382338240,Payment details,Booking,17
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/18/8c2b98a88305f48e937babce8b5332654b34df57.png?1382338242,Flight review,Booking,18
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/19/08b92e94ced0c6050dbd61bdc3625477bb36e74f.png?1382338244,Purchase confirmation,Booking,19
+http://s3.amazonaws.com/uxarchive2/flows/158/21/2/medium/20/963ce08263a49272306f856d34f738407b4420e3.png?1382338246,Flight details,Booking,20

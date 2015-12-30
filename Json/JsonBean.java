@@ -1,56 +1,185 @@
-public class JsonBeans {
-	private ArrayList<Statuses> statuses;
-	private int previous_cursor;
-	private long next_cursor;
-	private int total_number;
 
-	/*sub class*/
-	public class User {
-		private int id;
-		private String screen_name;
-		private String name;
-		private String province;
+	private int errNum;
+	private String errMsg;
+	private RetData retData;
+
+	public static class RetData {
 		private String city;
-		private String location;
-		private String description;
-		private String url;
-		private String profile_image_url;
-		private String domain;
-		private String gender;
-		private int followers_count;
-		private int friends_count;
-		private int statuses_count;
-		private int favourites_count;
-		private String created_at;
-		private boolean following;
-		private boolean allow_all_act_msg;
-		private String remark;
-		private boolean geo_enabled;
-		private boolean verified;
-		private boolean allow_all_comment;
-		private String avatar_large;
-		private String verified_reason;
-		private boolean follow_me;
-		private int online_status;
-		private int bi_followers_count;
+		private String pinyin;
+		private String citycode;
+		private String date;
+		private String time;
+		private String postCode;
+		private float longitude;
+		private float latitude;
+		private String altitude;
+		private String weather;
+		private String temp;
+		private String l_tmp;
+		private String h_tmp;
+		private String WD;
+		private String WS;
+		private String sunrise;
+		private String sunset;
+
+		public String getCity() {
+			return city;
+		}
+
+		public void setCity(String city) {
+			this.city = city;
+		}
+
+		public String getPinyin() {
+			return pinyin;
+		}
+
+		public void setPinyin(String pinyin) {
+			this.pinyin = pinyin;
+		}
+
+		public String getCitycode() {
+			return citycode;
+		}
+
+		public void setCitycode(String citycode) {
+			this.citycode = citycode;
+		}
+
+		public String getDate() {
+			return date;
+		}
+
+		public void setDate(String date) {
+			this.date = date;
+		}
+
+		public String getTime() {
+			return time;
+		}
+
+		public void setTime(String time) {
+			this.time = time;
+		}
+
+		public String getPostCode() {
+			return postCode;
+		}
+
+		public void setPostCode(String postCode) {
+			this.postCode = postCode;
+		}
+
+		public float getLongitude() {
+			return longitude;
+		}
+
+		public void setLongitude(float longitude) {
+			this.longitude = longitude;
+		}
+
+		public float getLatitude() {
+			return latitude;
+		}
+
+		public void setLatitude(float latitude) {
+			this.latitude = latitude;
+		}
+
+		public String getAltitude() {
+			return altitude;
+		}
+
+		public void setAltitude(String altitude) {
+			this.altitude = altitude;
+		}
+
+		public String getWeather() {
+			return weather;
+		}
+
+		public void setWeather(String weather) {
+			this.weather = weather;
+		}
+
+		public String getTemp() {
+			return temp;
+		}
+
+		public void setTemp(String temp) {
+			this.temp = temp;
+		}
+
+		public String getL_tmp() {
+			return l_tmp;
+		}
+
+		public void setL_tmp(String l_tmp) {
+			this.l_tmp = l_tmp;
+		}
+
+		public String getH_tmp() {
+			return h_tmp;
+		}
+
+		public void setH_tmp(String h_tmp) {
+			this.h_tmp = h_tmp;
+		}
+
+		public String getWD() {
+			return WD;
+		}
+
+		public void setWD(String WD) {
+			this.WD = WD;
+		}
+
+		public String getWS() {
+			return WS;
+		}
+
+		public void setWS(String WS) {
+			this.WS = WS;
+		}
+
+		public String getSunrise() {
+			return sunrise;
+		}
+
+		public void setSunrise(String sunrise) {
+			this.sunrise = sunrise;
+		}
+
+		public String getSunset() {
+			return sunset;
+		}
+
+		public void setSunset(String sunset) {
+			this.sunset = sunset;
+		}
 	}
 
-	/*sub class*/
-	public class Statuses {
-		private String created_at;
-		private long id;
-		private String text;
-		private String source;
-		private boolean favorited;
-		private boolean truncated;
-		private String in_reply_to_status_id;
-		private String in_reply_to_user_id;
-		private String in_reply_to_screen_name;
-		private Object geo;
-		private String mid;
-		private int reposts_count;
-		private int comments_count;
-		private ArrayList<Object> annotations;
-		private User user;
+	public int getErrNum() {
+		return errNum;
 	}
-}
+
+	public void setErrNum(int errNum) {
+		this.errNum = errNum;
+	}
+
+	public String getErrMsg() {
+		return errMsg;
+	}
+
+	public void setErrMsg(String errMsg) {
+		this.errMsg = errMsg;
+	}
+
+	public RetData getRetData() {
+		return retData;
+	}
+
+	public void setRetData(RetData retData) {
+		this.retData = retData;
+	}
+

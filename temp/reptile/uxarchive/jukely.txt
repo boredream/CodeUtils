@@ -1,0 +1,15 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/1/39259065ebfb6787aff8f892b11a69474223912e.png?1384322623,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/2/e2213da11560603cd3227a4ecae42538b6a08c12.png?1384322625,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/3/304e263993c8f73f37794fb01db258dc7176a8ad.png?1384322629,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/4/12b4030530ff4f7de592e5fda60bc5915437079a.png?1384322633,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/5/dac8b0877694a3d2973fb1dd9abf0f262d72a012.png?1384322637,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/6/cba16639429a571500d3645fa542984b6133d33c.png?1384322643,Cities list,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/49/1/2/medium/7/0f6927b6d1746917c78d78459ce3fa14418ea853.png?1384322647,Home feed,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/1/36b94a2f58f1ecd6910a76b2a42a00508c7aab52.png?1366573845,Sign up screen,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/2/96951bb45d464b7d232693afd35c404f5c987258.png?1366573849,Sign up form,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/3/07cf36da183cf612b678e4b1d3e7e9992f389e32.png?1366573853,Connect,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/4/388b503bd290d6f999e034f0a502bd3ecca8d570.png?1366573856,Tutorial,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/5/667090f4cd06ee82ba59fc8307726433d5a1e163.png?1366573857,Tutorial,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/6/99df07b646ef615b4b294d985814dcfb50d2ee8f.png?1366573861,Tutorial,Signing up,6
+http://s3.amazonaws.com/uxarchive2/flows/49/7/2/medium/7/682117a607d6c5c5bb78acabe6f6aaf208922646.png?1366573863,Concert list,Signing up,7

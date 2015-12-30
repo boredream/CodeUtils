@@ -1,0 +1,15 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/229/20/2/medium/1/5af0cdf48cd0a5d4346b82aabe00232c379d2b6e.png?1421341491,Newsfeed,Consuming,1
+http://s3.amazonaws.com/uxarchive2/flows/229/20/2/medium/2/fa748dce47678f1c538eb95fead9cff43a20b6f1.png?1421341493,Player,Consuming,2
+http://s3.amazonaws.com/uxarchive2/flows/229/20/2/medium/3/2d1f743c1a1ff213862d0dcfe6258ac1c1f7f7df.png?1421341494,Listen later tutorial,Consuming,3
+http://s3.amazonaws.com/uxarchive2/flows/229/20/2/medium/4/2aeffacca23861897dadf08634634fb5a4373619.png?1421341496,Extended player,Consuming,4
+http://s3.amazonaws.com/uxarchive2/flows/229/20/2/medium/5/d9d39faa84405534776a1240486f5c0a850dba2c.png?1421341497,Player in car mode,Consuming,5
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/1/2b9c9e463e9f3addfbf1e37fac00d5d9ed8737d2.png?1421345498,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/2/27243fa5aaf037c659245edd80e53e54d398c2d4.png?1421345499,Animation,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/3/1d1ccc01ffdf254e9183e8c507f9d6bb5c7fb1b7.png?1421345501,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/4/06743db62da97980a5354ea30a47d092f24c995a.png?1421345503,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/5/036ab35a330692b7f36efe67dabb84f7cf988df3.png?1421345505,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/6/48f44da1db79eba33634f6308f49e240180fdc97.png?1421345507,Tutorial,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/7/f7794b5112d9bbcd86a9f4f76c0f1ecce8815ba5.png?1421345509,Notification alert,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/8/810004f89635be2262cbfe7413b2376b9d2112d1.png?1421345510,Sign up info,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/229/1/2/medium/9/d73404c0a7e465b3a4a1c03fc9d28da74f06d4e6.png?1421345512,Newsfeed,Onboarding,9

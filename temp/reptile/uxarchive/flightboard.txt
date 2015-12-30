@@ -1,0 +1,5 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/194/2/2/medium/1/8a6977147ee77e587d937389c27c787ec87d7249.png?1391977879,Flight board,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/194/2/2/medium/2/1de63595d0eb465cd735aeb8813002cae075903f.png?1391977881,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/194/2/2/medium/3/248a9a2c87d7ec2b4adb2ae326e0cb1b37a82ed2.png?1391977883,Flight list,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/194/2/2/medium/4/034aceedd5bb26670ff7cb3fee2be667621fcc96.png?1391977885,Flight details,Searching,4

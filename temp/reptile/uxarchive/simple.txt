@@ -1,0 +1,11 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/1/cf95a16de153355d376c9c754fc98eaf99734b1d.png?1385333977,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/2/1dec4b5a8a3566f0c4daa2d6c0218f75e10045e9.png?1385333980,Welcome,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/3/6ad73c7514071fa7d19a0debb7834db03abef61e.png?1385333984,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/4/a0bc4f691ca33a0076823a78aa16fa524d8e8e43.png?1385333987,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/5/c1ce6a6a5830982dcc72ff7e2f6b9811394a2da8.png?1385333990,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/6/fedfe53d5700113e70299e58ff7832cca15e3e66.png?1385333995,Get invited,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/7/0c1bc9c298ce95efdbcb1598bcd4dd3be319b081.png?1385334000,Sign in,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/8/4f1702b6c7fef2317724cab7bb4e880e1d5022b5.png?1385334004,Password creation,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/9/1b1654bd6017554739000025d59671651572d692.png?1385334009,Password confirmation,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/175/1/2/medium/10/baf23bfe9f9d39e5f1df416eca1505506f1e49a5.png?1385334012,Transactions,Onboarding,10

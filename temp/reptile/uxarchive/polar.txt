@@ -1,0 +1,12 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/1/94f959e933ac0a2580e463719ee19070f67fa966.png?1385332259,Home feed,Creating,1
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/2/1329498472c931629203414a3946f7e9d24e12f6.png?1385332262,Poll edit,Creating,2
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/3/fdd81c2a70d941b7ce8eecd77eb7c1676e4f53a9.png?1385332265,Question edit,Creating,3
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/4/445aec2cb78028ced21733d6a0cd1dc4e5f34104.png?1385332266,Camera,Creating,4
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/5/7cd4738ae80242037c4f9fe504a0bd45bc59ad32.png?1385332269,Poll edit,Creating,5
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/6/cdd80d34faf9cb5a1b13d900190b7c6a0b81b371.png?1385332272,Sharing options,Creating,6
+http://s3.amazonaws.com/uxarchive2/flows/173/11/2/medium/7/7d614dc5339d8933e6f3cc77d42ea59890e63031.png?1385332275,Home feed,Creating,7
+http://s3.amazonaws.com/uxarchive2/flows/173/2/2/medium/1/3ef895bddbf99b3f1ef81e214af4088b028b2739.png?1385332473,Home feed,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/173/2/2/medium/2/5f4b47978201a60b112d43b463efad866e53eda1.png?1385332476,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/173/2/2/medium/3/04f27b9b848ac58f23e8e2482ffbc5e205e9b442.png?1385332477,Search results,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/173/2/2/medium/4/ddb71094bd0454974966e3ba46218085af259df0.png?1385332479,Poll,Searching,4

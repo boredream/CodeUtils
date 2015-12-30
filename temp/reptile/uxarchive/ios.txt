@@ -1,0 +1,16 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/125/13/2/medium/1/e3f451a63e75f6d4605ffb4ac935a204f47e1980.png?1379397881,Home screen,Deleting,1
+http://s3.amazonaws.com/uxarchive2/flows/125/13/2/medium/2/5ba4ee0b4ada15933a9ca1a12d4bddd2db6f2593.png?1379397883,Running apps,Deleting,2
+http://s3.amazonaws.com/uxarchive2/flows/125/13/2/medium/3/da9f0f9658253e52c0316e08ed6b12842bcce09e.png?1379397885,Running apps,Deleting,3
+http://s3.amazonaws.com/uxarchive2/flows/125/13/2/medium/4/4c135f74869abd24c6541ce0ca1092c37916d2c4.png?1379397888,Home screen,Deleting,4
+http://s3.amazonaws.com/uxarchive2/flows/125/18/2/medium/1/1b374c7af969c83b3b6269430a3e9f3eaed78ec6.png?1379483013,Receiving call,Receiving,1
+http://s3.amazonaws.com/uxarchive2/flows/125/18/2/medium/2/d251ff8cc3b367928a35e92b4647a400b59f1404.png?1379483017,Calling,Receiving,2
+http://s3.amazonaws.com/uxarchive2/flows/125/18/2/medium/3/faf3c2df7dad2b3d987636efda17c1e80215a357.png?1379483020,Call options,Receiving,3
+http://s3.amazonaws.com/uxarchive2/flows/125/18/2/medium/4/26dda53b5a1f40388085d88e2abb6459b2fc05b6.png?1379483026,Call ended,Receiving,4
+http://s3.amazonaws.com/uxarchive2/flows/125/18/2/medium/5/fbbcffeb687eaf8fd0ea6a740a69d7871d1d7568.png?1379483030,Locked screen,Receiving,5
+http://s3.amazonaws.com/uxarchive2/flows/125/2/2/medium/1/40e5187c27b0c0ff1d06070f8f5f65d49b13e6e9.png?1379480155,Home screen,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/125/2/2/medium/2/e33fe348a78f32e07c39f477aeac0b4c9c551a82.png?1379480159,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/125/2/2/medium/3/90349307d34f72458f1ad9ec76651a7098583987.png?1379480163,Weather app,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/125/17/2/medium/1/b54f6cd925325d38b80368ac7f5b979a462fbc4f.png?1379481291,Locked screen,Unlocking,1
+http://s3.amazonaws.com/uxarchive2/flows/125/17/2/medium/2/d959e5105196d625247f6659cc847d2e234c0a83.png?1379481295,Password,Unlocking,2
+http://s3.amazonaws.com/uxarchive2/flows/125/17/2/medium/3/2225738b5d1751500679d0cc1d0b50ebf2a9f86b.png?1379481299,Home screen,Unlocking,3

@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="112dp"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:padding="8dp" >
-
-    <ImageView
-        android:id="@+id/iv_stone"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:scaleType="centerCrop" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_small">
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_title"
         style="@style/TextViewSubhead"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_weight="1" />
+        android:text="您的订单已发货" />
 
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_arrow_right" />
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/TextViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!只要998!!!!!!!!!!"
+        android:textColor="@color/txt_gray" />
+
+    <TextView
+        style="@style/TextViewBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="查看详情" />
 
 </LinearLayout>

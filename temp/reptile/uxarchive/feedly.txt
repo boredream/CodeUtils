@@ -1,0 +1,22 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/5/20/2/medium/1/6022221645d3d8ed2c2e0bb1545564a07c394844.png?1384320043,Feed,Consuming,1
+http://s3.amazonaws.com/uxarchive2/flows/5/20/2/medium/2/2c0a484dc1dcc8b21abb0c7e5a36be757b1d2806.png?1384320045,Article,Consuming,2
+http://s3.amazonaws.com/uxarchive2/flows/5/20/2/medium/3/0dffb83d30e82df6ba9e54fba985bfc80b0ae7b6.png?1384320047,Article,Consuming,3
+http://s3.amazonaws.com/uxarchive2/flows/5/3/2/medium/1/7e308fc938ec91e1aa74486ee2586baa1da47626.png?1384319347,Site,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/5/3/2/medium/2/3e9c60310c06985a1e548d79d844537f0491d1f0.png?1384319350,Explore,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/5/3/2/medium/3/53093c722994feffbd793c28334bc874693f12fd.png?1384319352,Search results,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/5/3/2/medium/4/c5c6307cd6ba32555d04b3d5e7e19ac0bd9ed927.png?1384319354,Site,Exploring,4
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/1/9966b2c816c677d8f68b72b1ae398307cc0fdd8b.png?1384319763,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/2/0f14b413cf1446cf0af678255a1fe5e28f23d784.png?1384319765,Welcome,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/3/1d96375bf8308fdbeaf34a5d6f5cad7b539b820f.png?1384319768,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/4/2410949c7bcc29b2370b389ff4c6a11ef412341e.png?1384319771,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/5/5f9aa7239f7eee0553d32e4743cb635895d87a98.png?1384319774,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/6/5b21250ab5b133ce48b1da976f70ae0545e7636d.png?1384319777,Get started,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/7/2966b8f1827775756d9c654e54d916a15940dc06.png?1384319780,Explore,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/8/ff6c1888c159f443582a291d2992565a09320270.png?1384319783,Search results,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/5/1/2/medium/9/f3b153b9ae405da0a05566906a3e63646dff2ff6.png?1384319787,Site,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/5/2/2/medium/1/4c43eb047d90138e14f18e0d986ca6925d964ddd.png?1384320234,Site,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/5/2/2/medium/2/8c540e78159dbe816cc346c244c61a451087cb6a.png?1384320237,Explore,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/5/2/2/medium/3/888d9383b07cab3c299274fc8e1f5487773325e6.png?1384320239,Search,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/5/2/2/medium/4/df0657acd48a0f0f733f2d1fc307c76d3d934159.png?1384320241,Search results,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/5/2/2/medium/5/b09af3aa8c9d17f47a8ddaa38bfeb042b4854d58.png?1384320243,Site,Searching,5

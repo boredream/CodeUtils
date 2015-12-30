@@ -1,0 +1,17 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/223/25/2/medium/1/e367242ac7f1fda05858d9dc584c9ecb72dd1664.png?1413996004,Connect,Logging in,1
+http://s3.amazonaws.com/uxarchive2/flows/223/25/2/medium/2/f6382e4721e6997a528e8e9e5725942423ce885c.png?1413996010,Login,Logging in,2
+http://s3.amazonaws.com/uxarchive2/flows/223/25/2/medium/3/33bcf2789dc75397a058a7d8e318be0525810c58.png?1413996012,Home screen,Logging in,3
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/1/634c71e9bd9d0d0f1b761ae541a7d558bf611643.png?1413996127,Home,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/2/d6cc8bf2e589f8424280d73ae8717c8e927b2c79.png?1413996131,Photo access,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/3/25d785a089d3aa1a1b3bc7f50be9f35d50abb5ca.png?1413996134,Photos,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/4/514196422de8a5c205f88ac36899a10e8d6fb5fd.png?1413996136,Photo edit,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/5/b5ddc2cb829c1bac0928b902d98deb21db5128a6.png?1413996138,Email edit,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/6/3c8b97278b94d974562a2ec2c3896ad043fb46d0.png?1413996140,Templates,Sharing,6
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/7/1274c33cb51dfe46be2c64f9eca18b000018dbfc.png?1413996141,Templates,Sharing,7
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/8/5b153995cff536ae2ba818a983a52e5192bb2aaa.png?1413996144,Lists,Sharing,8
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/9/75363bc49dda5ae205f233bf2d306da3ea74b17a.png?1413996145,Recipients,Sharing,9
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/10/5060cff9d78fb219a8422696065f92a12ebe0176.png?1413996147,Preview,Sharing,10
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/11/0b0d389be4b21e0bcf2ef109c10f1c3b666946b5.png?1413996149,Confirmation?,Sharing,11
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/12/d66c806b09e2681b5992fe642b7af1181bdd1f80.png?1413996151,Success message,Sharing,12
+http://s3.amazonaws.com/uxarchive2/flows/223/4/2/medium/13/4e4fcec5d7f17c0b454c774fdd3d2109ffe607b6.png?1413996153,Home,Sharing,13

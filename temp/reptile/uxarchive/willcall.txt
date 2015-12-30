@@ -1,0 +1,13 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/1/79e080dbee9c4abb351f180fc16ecdf07f349e2c.png?1366185890,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/2/0f727725844cdf71d6fa4d7911ccbe7df6e29bca.png?1366185893,Welcome screen,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/3/65b2a320dbedd37173f8becd07aa43e6650a5748.png?1366185895,Sign up form,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/4/11fe10cd6684a9a528ae134761098c5aff5527b0.png?1366185897,Cities choice,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/5/73357e30513896b67aab8019a35a3acfd2e9ec48.png?1366185899,Sharing options,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/6/3a5e7d864065b5b18c0fde3c165f29bdffc6bbce.png?1366185901,Email,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/7/2810441d787de19d37c6bf4a67c41fc596f8786f.png?1366185903,Cities choice,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/44/1/2/medium/8/cab0c7d5b570ecdef7530cd5b89eb1d779af1e47.png?1366185906,Events' list,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/44/10/2/medium/1/ff86337ff523ed1712a6e339c0d3e4c0283361bb.png?1366583729,Events list,Purchasing,1
+http://s3.amazonaws.com/uxarchive2/flows/44/10/2/medium/2/c4ca5036fe8ea04377135fe83302d83f048db8cb.png?1366583730,Event informations,Purchasing,2
+http://s3.amazonaws.com/uxarchive2/flows/44/10/2/medium/3/a13aa81ba64ed4989ebfd10a7b4d24cc6f1474d3.png?1366583732,Event booking,Purchasing,3
+http://s3.amazonaws.com/uxarchive2/flows/44/10/2/medium/4/63be03b6ddcb0a50582601dad630a1c57ff71069.png?1366583734,Event confirmation,Purchasing,4

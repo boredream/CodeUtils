@@ -1,0 +1,35 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/1/b45cdfffdd9bc48ff1966697b5337335f3977894.png?1414144055,Rooms list,Creating,1
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/2/cc45fc0a19515e4659240a928155549f418004cf.png?1414144059,Room info edit,Creating,2
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/3/8e0bb7cedd9203ca5b14318156d0db35b460b592.png?1414144061,Room info edit,Creating,3
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/4/e9e1d12b34f0325b227b4cc62901e14524937dd3.png?1414144063,Permissions,Creating,4
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/5/f4c4cfdca59d927ba37c6149a2bc17fb4e45283d.png?1414144065,Nickname,Creating,5
+http://s3.amazonaws.com/uxarchive2/flows/226/11/2/medium/6/fe266340c54f737636a66b64c41893d2d3aef051.png?1414144067,Rooms list,Creating,6
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/1/26787a79d77e08b1ff836281953f9442a8598b07.png?1414143617,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/2/476a38b10f172b063b245c259be8a3281f65fa49.png?1414143618,Splash screen,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/3/cb27117ca42ad07b8f0a81308161746973290cc0.png?1414143620,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/4/3f7af68340e3f2a15ffbf8f5442f2a144bdf6515.png?1414143621,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/5/d7453e27b61a366305e7ac454a094e771b532e69.png?1414143623,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/6/eaf203952787ce72be77bc0db5bce60a2628a972.png?1414143625,Create account,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/7/afccf39435aec8ae9c97df8d36ffc0f20f539123.png?1414143626,Invite,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/8/0e9eb31b8d1f74b2c3d9a33f249c4f561cbf1ea6.png?1414143628,First invite,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/9/9bf07740ff749aa31aa09a98a73121a83ae52414.png?1414143629,Photos access,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/10/c6308447bb948ce9a37c2cb3e91daf18e7032b2e.png?1414143631,Photos access alert,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/11/9c380b30e0bbcac0e01225b86ebf319a360c7b9f.png?1414143633,Rooms list,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/12/297288514844f16f89a8ae4444af826c2a39a3bb.png?1414143635,Room info edit,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/13/c0ac78b86dfe2859caac9b6fe096230587711806.png?1414143636,Room info edit,Onboarding,13
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/14/aa3ab0dbb9be06c0d3180fabf17dc471334858da.png?1414143638,Permissions,Onboarding,14
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/15/cf40cdb66165f02e2db20b2489245a981ae76fba.png?1414143640,Nickname edit,Onboarding,15
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/16/18ad58d78de0c2da02043ed071ee5ff670341c63.png?1414143641,Rooms list,Onboarding,16
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/17/c36cd76e2aedf98488cd97fd12f2ef57710f0a8f.png?1414143643,Room,Onboarding,17
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/18/e5b42ec9e1d99b68e68415d5a499aededf503d5e.png?1414143644,Camera access,Onboarding,18
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/19/9cc40167cad96c22d8330607f2291c9f1328c8ee.png?1414143646,Post edit,Onboarding,19
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/20/435505676bff0bf4a2d8695d71796457221c8f81.png?1414143647,Enable notifications,Onboarding,20
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/21/61beee31f2f9a93196b596e5611c4ee0f843308b.png?1414143648,Notification alert,Onboarding,21
+http://s3.amazonaws.com/uxarchive2/flows/226/1/2/medium/22/4de103aa1de245eb97e9427a730116f62dd6e32a.png?1414143650,Room,Onboarding,22
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/1/9e8c6ee8716920583948e35fbb2a1b0099b493c0.png?1414144293,Room,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/2/9ff6715374f967f673cd85c5b8a6920c898d0e59.png?1414144295,Post edit,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/3/1e7b977ce1d2f02b015cfc2e10d6ac2eb24bf61a.png?1414144298,Camera,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/4/0be65979a6987be9a16aa1e25c50f664f0e72164.png?1414144300,Photo,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/5/8a8e0d9028aa8182bd162b74489c37cb45553a48.png?1414144303,post edit,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/226/4/2/medium/6/37cf3eb23923ecacfc0c06f5a946ca210f9f750d.png?1414144306,Room,Sharing,6

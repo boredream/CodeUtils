@@ -1,0 +1,26 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/1/ee363a3b263705f449cc1e00fe392741e183be0b.png?1413303749,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/2/d76a660ca25b3a94ef98f0869515d0af8acfe832.png?1413303751,Commercial video,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/3/30266e5396eae07c3151b59c4eb0fe5c5592eb74.png?1413303753,Terms of use,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/4/0cbe635e766ebbfd6275fb10b2552a0f6bb5c21a.png?1413303754,Phone number,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/5/7aaeaf141496509558f36a19036d35abbabb8eb5.png?1413303756,Verification code,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/6/6ef822b509b9cc9c120bdc8a24281dcc7d3d2a9b.png?1413303757,Note,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/7/40f2e1eed31c97c4f9f518b1664c9f5e562f4b7f.png?1413303759,Contact access,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/8/d970fcf8700a46aa3f906df5677f1e6f932389d9.png?1413303760,Microphone access,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/9/0df5fec287dbeb63d537ba5726905ea458721e76.png?1413303761,Camera access,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/10/85444a9bdab7394396fd9b1dd5fee8d1e15daa91.png?1413303762,Notifications access,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/11/5ce4d4625f09c501d93a99ebfd53f2f3009d13d8.png?1413303764,Video stream,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/12/e2d81e2c643620fe2eeeb94340bfdad6dceeb696.png?1413303765,Camera,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/13/62f3277ab7cc4fdf457664a5ebdffb06cb54b4c1.png?1413303767,Video recording,Onboarding,13
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/14/e77b991b63f281b75a7922b61b4c532774d4b6a7.png?1413303770,Recipients,Onboarding,14
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/15/328a4356eeee5662941c4033b3f393cd5510b429.png?1413303771,Recipient search,Onboarding,15
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/16/031213255572e699b61edd2147c4abb5b3ae5d73.png?1413303773,Recipients,Onboarding,16
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/17/0fb872be08f01185ec13f09f1882972026b2dc50.png?1413303774,Tutorial,Onboarding,17
+http://s3.amazonaws.com/uxarchive2/flows/218/1/2/medium/18/1d2ce194e5c4980ef527dca13c0c2c55ec729269.png?1413303776,Sent video,Onboarding,18
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/1/12465fc9576bd0d227b382240ffec20f8afb41ca.png?1413303894,Video stream,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/2/724c57ecf878da6ad85af891fc363bd911c7b7c8.png?1413303895,Camera,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/3/f5a94a17c813d455cdbd8f15c057518b5f2ee82b.png?1413303897,Video recording,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/4/6c411b15eb6fe4c94adbc57420818274a0de7cfd.png?1413303899,Recipients,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/5/61e9cf5faac6fa201709db765a2bf6800cd2cdfe.png?1413303901,Recipient search,Sharing,5
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/6/6c550ed995b90475dae885e7f63ee607a1bb5a9b.png?1413303903,Recipents,Sharing,6
+http://s3.amazonaws.com/uxarchive2/flows/218/4/2/medium/7/ddfaaeba9b986d50129473970f956a4225963c6e.png?1413303905,Shared video,Sharing,7

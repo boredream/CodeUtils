@@ -1,0 +1,6 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/176/13/2/medium/1/5f74acf98023aeebd264902e995053ac3621e549.png?1385337336,My trips,Deleting,1
+http://s3.amazonaws.com/uxarchive2/flows/176/13/2/medium/2/341f1a53f105e6584bafb13352cc8481468dfc16.png?1385337339,Trip details,Deleting,2
+http://s3.amazonaws.com/uxarchive2/flows/176/13/2/medium/3/5c2571cd86d32590947ef1f42cff938e1ad4a253.png?1385337341,Trip edit,Deleting,3
+http://s3.amazonaws.com/uxarchive2/flows/176/13/2/medium/4/3f17acedbc6ba0fd3f7fa1653308be5f07761895.png?1385337344,Confirmation,Deleting,4
+http://s3.amazonaws.com/uxarchive2/flows/176/13/2/medium/5/8bf7eb4967033adf021d4063d4088ac50cc525bc.png?1385337347,My trips,Deleting,5

@@ -1,0 +1,18 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/1/dc292ba477092b3a33bdd3fbe7b2a7efd337a21c.png?1365709246,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/2/af08f21b0cd5b9f878653107b776a14b92e0b869.png?1365709250,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/3/7f01744a3699b72c6af0cfaede469cc1cf6985ac.png?1365709251,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/4/54ddfa3b96d0823f28b192cfc2fd25a0235afb06.png?1365709253,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/5/9a4d7c0b08375219143926366cedbaef9a57a8bc.png?1365709256,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/6/f0f11b68826b8cb4ccc45df2cc783fb98f8a1651.png?1365709258,Tutorial,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/7/90df828d15fff947a29acb98debb0e60350bd094.png?1365709259,Tutorial,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/8/99b3634271a72407e7fc3521534ddc8c07bd6184.png?1365709261,Tutorial,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/9/e19344d2e4e07005894dc9f9d4b311973dcec5fa.png?1365709262,Tutorial,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/10/2009db664bb261bbbfec5e4b357b17bd44848546.png?1365709264,Get app for Mac,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/11/cf97d9c05b4a8fca6d6db0cbde2d75d251f8c990.png?1365709266,Twitter follow,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/43/1/2/medium/12/44200309d83c35f77661064cceed15415f05f456.png?1365709268,Received files,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/43/4/2/medium/1/3388e2bd2f917e697b5e926004746819599ad02e.png?1365995485,Image gallery,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/43/4/2/medium/2/e8906a65f9282f8a1ea511cf87c5a6a65d8e9743.png?1365995489,Destination selection,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/43/4/2/medium/3/12d81954173ca4eaebfe355f6b2d4d26503aef9d.png?1365995492,File upload,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/43/4/2/medium/4/055a216878698a35a13b2f8862bbecfae3778cd6.png?1365995494,File transfer confirmation,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/43/4/2/medium/5/16707254c3ae3720805904fb60417c07ca485193.png?1365995496,Image gallery,Sharing,5

@@ -1,0 +1,15 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/1/c1e39d72b8d4b6ed7809b0d05a9fa76fdb18f3ba.png?1379487706,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/2/a08424c2a7f75a8bd55b5f002f4a2a5eb88e8a14.png?1379487711,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/3/7ca7aabd9c35283a3c1faac3af3caddaa1cc36ee.png?1379487716,Account list,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/4/e7aef54b5f35784db934ef4356462e955158663d.png?1379487719,Service selection,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/5/e5952aad78587f243eb7b57e3df7e69e1fe09191.png?1379487723,Feedly login,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/6/92f440c0158f17dd22089d90aee3748da912853f.png?1379487727,Google login,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/7/c4b85ea85e7bfb6847ba2d486914eb1ae4f7260a.png?1379487731,Google permissions,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/8/1e2995b25b00543c0c4a6f66b2efb2c71990452c.png?1379487734,Account options,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/9/f4cddf0da7fe0ff7dc3c688d3cf853c9e1688370.png?1379487739,Account list,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/128/1/2/medium/10/a2aa2dbb6589726f06c9d3a38ad186eeadc7d04c.png?1379487749,Account categories,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/128/4/2/medium/1/80da04c079915f6467c680153ae8bab15bc63e3c.png?1379433367,Article,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/128/4/2/medium/2/efebc43225d71884845e65d0880d0c6a8ed6d18f.png?1379433371,Sharing services,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/128/4/2/medium/3/c7562069a63ba82e34466b220e38a5c53b416565.png?1379433375,Twitter sheet,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/128/4/2/medium/4/22827fad766fa876b540720da2ceae8d1d1f2b35.png?1379433380,Article,Sharing,4

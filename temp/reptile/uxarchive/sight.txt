@@ -1,0 +1,13 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/202/20/2/medium/1/39e3a9148fbcbe184dc4fbbb098a390e0a05e06b.png?1411616290,Article feed,Consuming,1
+http://s3.amazonaws.com/uxarchive2/flows/202/20/2/medium/2/6c91e4350293258ec400a6e0a46403de04718032.png?1411616292,Article,Consuming,2
+http://s3.amazonaws.com/uxarchive2/flows/202/20/2/medium/3/dc372f05cc14b25e8b0f09ba6e983412384d72f3.png?1411616294,Image,Consuming,3
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/1/611f60ce88f74104bba612ffb311b7afe6f2fbfa.png?1411616084,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/2/91ab7d6d42afce28bbcd6d71ed834806b0cad637.png?1411616095,Welcome,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/3/a0329bde45bdd78ddf9faee249617655db43e3a4.png?1411616097,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/4/59ebc69c0a8c0ed2b03850f02d32d6bd0b9b38b5.png?1411616099,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/5/e9fdb536bef14ae56ca62d708c34ff8de232680e.png?1411616102,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/6/2f52a884803b61f83fff2f43ee865bc450008771.png?1411616105,Empty article feed,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/7/2184e1b73bb9b8560dbbd2e4d7abdb5b6255c1eb.png?1411616108,Home screen,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/8/eac83f343596b68a1bc7c0d78ec8f20479be8377.png?1411616116,Article (from feedly),Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/202/1/2/medium/9/1abe1188fc4b1ad85e534912d02796418a10c935.png?1411616119,Article feed,Onboarding,9

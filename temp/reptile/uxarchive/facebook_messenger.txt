@@ -1,0 +1,8 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/1/117388defbe18b6f36e63e8c82d9d25cf6109961.png?1384455086,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/2/f50095beaea028c14ad310f57780c79b2199eb0e.png?1384455088,Welcome,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/3/da03c138d1182f620ffe80c1b0e81bbb2523e74d.png?1384455090,Phone number,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/4/27ba2e19479f5185c84e2404a98ac98e44db8442.png?1384455091,Tips,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/5/e88cec8bd5fe26c6b1c361014033d45717714091.png?1384455093,Contact sync,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/6/093bf20cc01ed823f776a3be1d9e75b1eb43611d.png?1384455094,Welcome,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/171/1/2/medium/7/5d582a77ac6ffccd348367ad7893978248fc4913.png?1384455096,Conversatoin list,Onboarding,7

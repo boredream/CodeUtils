@@ -1,0 +1,12 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/1/f158fe1a2765219347c94ee167fb5018daf33899.png?1390150253,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/2/4acf785656444933b55a2c41bbc54efe9b1de5ca.png?1390150255,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/3/91de62a542c13c34a2873d0c7fe540eab1766cd4.png?1390150257,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/4/35c0a3093c8d340e35307ca3f49263e251f14ec6.png?1390150258,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/5/7d3f49d9a6060698289a3577ce5a25b39dc9d41d.png?1390150261,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/6/c7846acdb4746e520a3c5638a55c3e6b2ed799bb.png?1390150264,Sign in,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/7/275d68bba81d21cce9a05f0c73aaba4327803059.png?1390150266,Language selection,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/8/802162b274975a6256294e07ac46a7b056d064d9.png?1390150268,Profile edit,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/9/286858d68bf11f05b16742e4fee15eb6862eaa87.png?1390150271,Mesage,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/10/ce0762eb3441b82328c63fbd3319fcbdcf27d818.png?1390150273,Goal setting,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/19/1/2/medium/11/a14dbe84bf64d472fa8800b05ceff77f065b26d7.png?1390150275,Level list,Onboarding,11

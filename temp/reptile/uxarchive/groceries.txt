@@ -1,0 +1,11 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/63/3/2/medium/1/ac8ba48c21fe6f4ba4aaedcc553fce3ee503d442.png?1370324910,Groceries list,Exploring,1
+http://s3.amazonaws.com/uxarchive2/flows/63/3/2/medium/2/e134791928ba2e7110e05a3fbbb5af6869ef65dd.png?1370324913,Products list,Exploring,2
+http://s3.amazonaws.com/uxarchive2/flows/63/3/2/medium/3/c5733bc149267a24f024a1d60cbcdb330b13375c.png?1370324914,Groceries list,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/63/1/2/medium/1/4c85424abeedc638a654fb023e37bb87a24a3adf.png?1370324286,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/63/1/2/medium/2/c10ec74b506397badd91140c6876ce3832d521f9.png?1370324287,Welcome screen,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/63/1/2/medium/3/15a1c28126a0e30ba589b48a84baf18594d29fb5.png?1370324289,Groceries list,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/63/2/2/medium/1/fd1051b9662db01cf02ae0eebb440b7ed7829e7d.png?1370324991,Groceries list,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/63/2/2/medium/2/35b458188e1d508ad69e59651bf85c2009b51cda.png?1370324992,Products list,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/63/2/2/medium/3/a9a4619ee83a475104be144697ba0515bfc1fd30.png?1370324993,Search,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/63/2/2/medium/4/6f29ffad76ff092ee7934bc1be22ec0c0ddf5fec.png?1370324994,Groceries list,Searching,4

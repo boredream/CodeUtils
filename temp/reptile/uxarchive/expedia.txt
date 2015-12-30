@@ -1,0 +1,11 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/1/9494c102b82559f2acab9572c63ea62d560ad07d.png?1385338133,Home feed,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/2/52d2f839b221805bad62336321632732a512e445.png?1385338135,Departure search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/3/90079be7e03bc5849349990c23534bf0bacaac3e.png?1385338137,Departure searching,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/4/eeeddec734a03dc13134ddd8327c406ba89525bb.png?1385338139,Arrival search,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/5/571850a0c3d058a3867771554ab5a66bb53a95ad.png?1385338141,Arrival searching,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/6/a4575fcd299cfc58cf5d2cb1d1786c7caf26c286.png?1385338143,Depart date edit,Searching,6
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/7/38eb94eb333c9ae86c5f8c6ed291a1d21673a62c.png?1385338145,Arrival date edit,Searching,7
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/8/f337f399941def0e487423953a2c80112498c404.png?1385338147,Loading flights,Searching,8
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/9/acaaee360bc4a1aa0080eaf21b2dc41af57ad9e7.png?1385338148,Search results,Searching,9
+http://s3.amazonaws.com/uxarchive2/flows/177/2/2/medium/10/4fe814afc0395d2b6b6caf2cf963c8ad9c2ef25e.png?1385338150,Trip,Searching,10

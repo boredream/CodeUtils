@@ -1,0 +1,16 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/1/a4b63497998fc104cb63a65bb268fc4c26d48c45.png?1412137301,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/2/64ac5b370e83ea58f859a7de519f714abb21f351.png?1412137302,Log in,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/3/8a920fcdac697bd123090082118760f078f6d851.png?1412137304,log in info,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/4/1035d3ac625acb0e5b1ec2940088f2d54fa73dd4.png?1412137305,Phone number,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/5/f191e33ffd69199af7fd5f30a9f1e47ee1a5544d.png?1412137307,Confirmation code,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/6/c09ae01b357edae9c69294fbf6d66acda19bbc4c.png?1412137308,Find people,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/7/ad69f4316585ff54d176d8a44fb7bae1ca8d6393.png?1412137309,Location access,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/8/404e4dd39c0a59bc4bbdab95e8d8116617c79959.png?1412137311,Tutorial,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/9/9a6029ab5a56f9c39fed251bbee67fc4a880089d.png?1412137312,Tutorial,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/10/f36e439ac6e78588e30d17c96c72f363ae9133b4.png?1412137313,Tutorial,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/11/1ca3477928e8f766e2ec612a20ea73c4404ce517.png?1412137315,Tutorial,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/205/1/2/medium/12/9aaa633c86a8652626746e9a3f63e260fe1a6f83.png?1412137316,Messages,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/205/4/2/medium/1/8ea40308f6a1309d78c2bda2264f8c40f254ba44.png?1412137694,Places,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/205/4/2/medium/2/70a4fb6daf91a5beec6afb19d3a615126b310442.png?1412137696,Conversation,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/205/4/2/medium/3/28fb1d99b6b1f91e893d12ed0bff9a621e268ee9.png?1412137697,Message sent,Sharing,3

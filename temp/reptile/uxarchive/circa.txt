@@ -1,0 +1,17 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/153/20/2/medium/1/c4ffc4ca7a6c06ad6ed5e0ec9757b9202cd1c3c8.png?1381354631,Home feed,Consuming,1
+http://s3.amazonaws.com/uxarchive2/flows/153/20/2/medium/2/d39b697955d4983d4cb26a41db546e8cb13cdae9.png?1381354634,Article summary,Consuming,2
+http://s3.amazonaws.com/uxarchive2/flows/153/20/2/medium/3/d1a2e9db470d6f57a23cde92147361d989d7b043.png?1381354636,Article,Consuming,3
+http://s3.amazonaws.com/uxarchive2/flows/153/20/2/medium/4/7ee03f730d7905b01abc5db30e24dd59adc55a18.png?1381354638,Related article,Consuming,4
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/1/0e19f9def71fd0008487e68f68d4b331c98006e0.png?1381354406,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/2/d11b1afab868dce81d7113f5593e8be82c871767.png?1381354408,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/3/8e536a5149f57b94b638c8df70412ce223baf34f.png?1381354411,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/4/3874df4eb50ed5edb8bc1f74d7f55adb5ffce371.png?1381354413,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/5/a4a61ac469c7e19cb683cd16f5c86dcd6681d063.png?1381354415,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/6/eab85131884bb9e4c990e675ca5d51dffc32445a.png?1381354417,Log in,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/7/308a252666ff4a836f3587122137982b363873c2.png?1381354418,Notification message,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/153/1/2/medium/8/797ee5d7b66278ed21488b30b573e83007b4ddb4.png?1381354420,Home feed,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/153/7/2/medium/1/d660f7cafa05dd62ec5cfa60cbccf7f3a1b13fa3.png?1381354488,Tutorial,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/153/7/2/medium/2/d713053974ea9635399710410ec3e4842c1e40a1.png?1381354491,Sign up,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/153/7/2/medium/3/3cbaff6f4a40418dcba6f48baad364b0e2bfdb0a.png?1381354493,Notification message,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/153/7/2/medium/4/a0bb80c8f335564019f74a2c2a8e9247c8b95139.png?1381354495,Home feed,Signing up,4

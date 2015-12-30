@@ -1,0 +1,21 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/53/1/2/medium/1/711a0ced9b396f3c4918cc5f36ac0e1436dce409.png?1384454769,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/53/1/2/medium/2/ed8c286687463303e218d3e0d726438e9cfc1ac8.png?1384454771,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/53/1/2/medium/3/e65b445425ad15f1ee51fe220283c7e1cbf33500.png?1384454773,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/53/1/2/medium/4/3532c8de57a193787e1b0509781c19a7b1063672.png?1384454775,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/53/1/2/medium/5/b920418ec8642e730317b4f4e52387477e6d2620.png?1384454777,Home feed,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/1/418f416fe7db6d786d5602b980352626b9a727da.png?1366838558,Sign up options,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/2/aff0530e4fa392912425f2fd9ac30ea81893a6ed.png?1366838560,Tutorial,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/3/2cd2089c315ef52a90bffc83061842e20dc65fac.png?1366838562,Tutorial,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/4/fe6dd1401bed233c79d776970c73790cd891bba1.png?1366838564,Tutorial,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/5/dc76cb65cd9f715c0b570e9781ff07a1be362fa6.png?1366838566,Tutorial,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/6/7c78b4e4ca55b9ba9b7db53bc20cc7f2ecfd19b6.png?1366838568,Sign up form,Signing up,6
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/7/3afc72867e3e394065a8bab990a776319328befd.png?1366838569,Welcome,Signing up,7
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/8/62368567c4af3ed2f59ff5ecbababcd653db54e8.png?1366838571,Tutorial,Signing up,8
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/9/1ddcbcfeb836da5f72e06221eefe4c077f160261.png?1366838573,Tutorial,Signing up,9
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/10/e096f3834d6a651d9834437638252bcb23f1bffc.png?1366838575,Tutorial,Signing up,10
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/11/7b72e13c19a0bf6a07da311e2c835970b0886c69.png?1366838576,Tutorial,Signing up,11
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/12/192c568e0c8aa8705985bc80f19955d5cbd7a2db.png?1366838577,Tutorial,Signing up,12
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/13/664f3b3860ba07f0e7580319b7c96894b1b948bc.png?1366838579,Tutorial,Signing up,13
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/14/29831c90db1f6020cc4047cfa138fb26263ac96e.png?1366838581,Start,Signing up,14
+http://s3.amazonaws.com/uxarchive2/flows/53/7/2/medium/15/38aca83914846d5d2bbf332a0a64667267e79799.png?1366838583,Article's list,Signing up,15

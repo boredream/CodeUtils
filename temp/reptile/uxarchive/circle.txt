@@ -1,0 +1,17 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive/flows/6/3/1/medium/1/16d3bc64f2d25764fbda4131691c7d8f7d71337e.png?1355176750,Home,Exploring,1
+http://s3.amazonaws.com/uxarchive/flows/6/3/1/medium/2/cd32a4aa09d92ad5a045c1e4d08fde44e59c9dce.png?1355176752,Explore Results,Exploring,2
+http://s3.amazonaws.com/uxarchive/flows/6/3/1/medium/3/21ddb1c2d2dda006d4faebf20cf5d18e6697c0ec.png?1355176754,Profile Page,Exploring,3
+http://s3.amazonaws.com/uxarchive2/flows/6/1/2/medium/1/83c4468e9d80462d00e56495a17d2a57fbc2d212.png?1379144315,Connect,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/6/1/2/medium/2/1cb4bde91bc142c22b4e1e6f9d0ed000f91312bd.png?1379144317,Add friends,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/6/1/2/medium/3/0a711a07a0b56414505b61a703ac4ec543c84fd5.png?1379144320,Checking,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/6/1/2/medium/4/39a4e7f6bce4b4ab27076e0bb583ea7601021879.png?1379144322,Nearby feed,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/6/2/1/medium/1/ae5ee542c544300c133c0941e3c4dbe2e7c94db8.png?1355176756,Home,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/6/2/1/medium/2/927fef584964554f4741ac4071513a9c538251b5.png?1355176758,Explore Results,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/6/2/1/medium/3/bbb07fcffc56fe500057758fa7baadd32e34d7a4.png?1355176760,Search Screen,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/6/2/1/medium/4/1ade7d6fd80a16f6219c31b15c27604ee499f1ce.png?1355176762,Search Focused,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/6/2/1/medium/5/263600ff3fb7dc5663e6725e72e35ff2fddc8e7d.png?1355176764,Invite Friend,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/6/4/2/medium/1/6c29196d12e49e07912dbb0a33ff6fb31d29601b.png?1379434309,Friend profile,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/6/4/2/medium/2/b4c5f118bf6d01594a4b2a13210a2cddafcfae73.png?1379434312,Conversation,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/6/4/2/medium/3/76aafae2e293b01b0c06b0345269306e6d1e6e99.png?1379434314,Message edit,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/6/4/2/medium/4/ea4a66ba791d25132ef4f6159afe94cfcf8a17d8.png?1379434316,Message sent,Sharing,4

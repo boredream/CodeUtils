@@ -1,0 +1,6 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive/flows/131/19/2/medium/1/1b1b43689f2805996e7202da8d5e7dea24ea7a36.png?1379484919,Default state,Recording,1
+http://s3.amazonaws.com/uxarchive/flows/131/19/2/medium/2/09bca29344525430846fd6253ff0353d5240d53d.png?1379484922,Recording,Recording,2
+http://s3.amazonaws.com/uxarchive/flows/131/19/2/medium/3/7c02b9d52bc4bf68fee307001b5fafe41ce61756.png?1379484925,Recording stopped,Recording,3
+http://s3.amazonaws.com/uxarchive/flows/131/19/2/medium/4/1bd12f922b766ab058afccc85a001ec10cfdb7af.png?1379484930,Name editing,Recording,4
+http://s3.amazonaws.com/uxarchive/flows/131/19/2/medium/5/70823e611ed8efeed2a22c4424cc9f9d00cc7a20.png?1379484934,Voice memo list,Recording,5

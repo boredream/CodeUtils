@@ -1,0 +1,20 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/11/1/2/medium/1/870c2d6e55c3274d2d3f4ada95230b31405d04f7.png?1366827190,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/11/1/2/medium/2/4663132e7e6232b8a046f5b4850e296a57112d8d.png?1366827192,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/11/1/2/medium/3/7a1c5447ed2822d04e502e0cd80a1790e2ae95fd.png?1366827196,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/11/1/2/medium/4/85c14c27c20d3fe741e79607f10329f22054296f.png?1366827199,Album list,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/1/e46aaba248219da328155b9bb76d97f0411cfbd6.png?1355176816,Heavy Rotation,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/2/c42fcbd7bcd9bf61ed1f90db11fe10e7a2977988.png?1355176817,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/3/bbb412c52e8817b027d34404bd086e097a6d09b6.png?1355176819,List,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/4/1cb50d5e591a1529e045a9ea8a3eb637ce41bed1.png?1355176820,Artist View,Searching,4
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/5/e22473db64898af09b120090512fb9b370de2a1a.png?1355176821,Album View,Searching,5
+http://s3.amazonaws.com/uxarchive2/flows/11/2/2/medium/6/148b1058104c72be4a8a677693ebc8d2efe2afbe.png?1355176823,Play Song,Searching,6
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/1/ee9b2e28a89398bd0a8bd9d035a1ecdd2958766e.png?1366827518,Sign up,Signing up,1
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/2/a32acf510d71a8e0a8bcc9f0cc8c461217305b03.png?1366827520,Email sent,Signing up,2
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/3/d678c82573c63dd3380b7d96b921b9cffe56221d.png?1366827522,Desktop sign up,Signing up,3
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/4/784f4adf4ba59938da2b9deaebca82701debf558.png?1366827524,Sign up,Signing up,4
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/5/8056a3399746eb4ac7f721564e75434b533b3004.png?1366827527,Sign in ,Signing up,5
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/6/722e3beb0484dc830289f2418e96cbed27ea52d7.png?1366827529,Trial period alert,Signing up,6
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/7/60abb7dd418d1375cad37d1ad9857ead7e624def.png?1366827531,Tutorial,Signing up,7
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/8/ff0c166512905d7c05676731e5f6f956644d4fda.png?1366827534,Tutorial,Signing up,8
+http://s3.amazonaws.com/uxarchive2/flows/11/7/2/medium/9/ec0004a0212e9719d432fc9b1e632dfec105aa80.png?1366827536,Album list,Signing up,9

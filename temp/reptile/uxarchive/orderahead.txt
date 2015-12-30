@@ -1,0 +1,9 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/1/756e08b328c714fc7ba3402ce3f057c2ceec8063.png?1366572606,Local businesses list,Purchasing,1
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/2/0cfe584786e890f7ea68fad4d0ad5db62effe31f.png?1366572612,Local businesses details,Purchasing,2
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/3/598a5a7408ce217ceb8d47dde8fa18fc399d2036.png?1366572614,Dish category,Purchasing,3
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/4/c9cf05e6ee10826fc762f90188fec7c7f98ede83.png?1366572615,Dish options,Purchasing,4
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/5/a464b046bad29f299e488fe9bb6472970b9aad75.png?1366572616,Dish category,Purchasing,5
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/6/3df6097595f7eba547b6b988375ef7e524a024a6.png?1366572617,Order confirmation,Purchasing,6
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/7/425e109dbfebacd8b1fca16d923dad0ed4970a73.png?1366572618,Order summary,Purchasing,7
+http://s3.amazonaws.com/uxarchive2/flows/46/10/2/medium/8/5b6edd636b7f92d8b9f0face65624e245057e184.png?1366572620,Local businesses list,Purchasing,8

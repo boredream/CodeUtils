@@ -1,0 +1,9 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/1/2d21ac938b4cc061ceae6fd2df4c84711d1dbe00.png?1411349631,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/2/6d008d90b480e95f66964972ba26921f5c41b974.png?1411349637,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/3/dd3d16fcafbff7ab65bf40d8f7b3806fc5b2f4d2.png?1411349639,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/4/6be668f83f231e7bfc15efe3b3e1c38c1d906e41.png?1411349642,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/5/1c598026a62bd2df879d808e0f26d70e97284af0.png?1411349644,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/6/0feccb32b3fb28ee1d4eb17fe66330a17c3d7661.png?1411349646,Sign in,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/7/e63ded86a998987ebcee6618912dbc0de7bb81ce.png?1411349648,Sign in info,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/199/1/2/medium/8/3204865944012b12b3989b5813bfb9a4831b631f.png?1411349650,Streams,Onboarding,8

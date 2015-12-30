@@ -1,0 +1,10 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/1/6e4ec89d1a96a33cd35e424483031d43812942c4.png?1369977798,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/2/0e3b80a4fc1eacb3555f3bb7271e82ae07c49cd8.png?1369977801,Quote,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/3/bd0c0f485b4320ecc0dc7c3007eb8c58ee3b6283.png?1369977802,Interactive tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/4/b0888a07ec45cb2eb53006a19f2d934bfc3854da.png?1369977804,Note,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/5/e43c4d4d94e237f11247bdef6350b164dd2cef3d.png?1369977805,Interactive tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/6/9e455b8ac3d4e40668ce558a578fd3de0260af93.png?1369977806,Note,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/7/e47feeafefdbcbe2f478cc65172823df18f7646a.png?1369977807,Interactive tutorial,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/8/5f19e9b9fe3637998b5056c1a07eac4683aad620.png?1369977808,Welcome,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/58/1/2/medium/9/d820240b1249d808621c8a9c91f1816221f6d58a.png?1369977810,Start game,Onboarding,9

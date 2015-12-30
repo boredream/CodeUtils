@@ -1,0 +1,16 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/213/11/2/medium/1/8646fd182041a459c2855637a87ce1c300d78a83.png?1412919303,Docs,Creating,1
+http://s3.amazonaws.com/uxarchive2/flows/213/11/2/medium/2/f6f5578f3919a217139ffc27c3b57472d8bc0cd0.png?1412919307,New document,Creating,2
+http://s3.amazonaws.com/uxarchive2/flows/213/11/2/medium/3/1c1edf05dc432deb1215d1ef961743b578186602.png?1412919310,Document,Creating,3
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/1/7df1f5d599017a54450407f5624a89a4389ef205.png?1412919928,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/2/0019f59b187e6f2f43f75c89c1dd6571f3a44e52.png?1412919930,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/3/7e79ccd413f95d19fb4f35be795e1a1753c4f3d4.png?1412919932,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/4/b0b404f9df64409f016a4489742b9780781aed3a.png?1412919934,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/5/10e3e0fff132d874eb993d3e8b0c9d11f3e9bd5e.png?1412919936,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/6/43d401c0c6bf2d3209f6cc946edc8c8653f8f5b0.png?1412919938,Tutorial,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/7/9462d4409a4850b214df560a2489c5d7b11cdf1e.png?1412919939,Account selection,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/213/1/2/medium/8/d48d8d8f10ee8c659c78f92d8d4989bae21419b0.png?1412919941,Document list,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/213/2/2/medium/1/f2cd4481a5489d3a0dc391ec1332a250f74e79cd.png?1412920158,Document list,Searching,1
+http://s3.amazonaws.com/uxarchive2/flows/213/2/2/medium/2/01bffc49c8c0d8fe0af0b11452886f8c02b50935.png?1412920160,Search,Searching,2
+http://s3.amazonaws.com/uxarchive2/flows/213/2/2/medium/3/b604d21dfab3de29a086451e58cf6e0b5a8fae4a.png?1412920161,Search results,Searching,3
+http://s3.amazonaws.com/uxarchive2/flows/213/2/2/medium/4/b3ec3f60708202dc8843986283467c91b00c4d8c.png?1412920164,Document,Searching,4

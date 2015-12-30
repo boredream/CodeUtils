@@ -1,0 +1,15 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/1/cfbdb068ca1126a6f019e1885164ec5fd2f6fd9f.png?1413178918,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/2/58a89eae839d6c111453d941fe13ea93385437f9.png?1413178920,Notification alert,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/3/c4d3fba05b57dc73772881a83d2598d1079ef670.png?1413178922,Sign up,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/4/90225d2914dcabe79c0467263da26472dde2a74c.png?1413178925,Sign up info,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/5/e31f99233f5a03dfe4e6d987c7fb7fad03d6fc15.png?1413178928,Facebook access,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/6/3d1fd3ee577852740d389c856994ba43f7178783.png?1413178931,Sign up info,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/7/4ebfa3d0f9fc79f459a93d70261140545f45d336.png?1413178933,Picture options,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/8/45cafeb2b4205ea3d35adf632d2ea509172739c2.png?1413178937,Photo access,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/9/0eabc620f27d16a4794cde5b84de23b36b7db2c9.png?1413178939,Photos,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/10/f767d403949c5149347083f7653569512fd102a9.png?1413178944,Image cropping,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/11/230bb8fdddfcacdf432555895835769b7f7211d6.png?1413178947,Sign up info,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/12/ff0629d6b9be915d9f49e196f68d4423ef6b604c.png?1413178949,Tutorial,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/13/08cc2ea1a03a8b9ac0592e3200f94b542c373606.png?1413178951,Tutorial,Onboarding,13
+http://s3.amazonaws.com/uxarchive2/flows/216/1/2/medium/14/0eb858f2a22be2fd29f1390d94d0a009392eff8e.png?1413178953,Trending items,Onboarding,14

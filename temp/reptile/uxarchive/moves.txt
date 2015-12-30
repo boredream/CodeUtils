@@ -1,0 +1,4 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/59/1/2/medium/1/cfb34066c7d6b26761a67572ea9fc2ade5ba5a5e.png?1369978723,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/59/1/2/medium/2/805792f260f1dfb6621d5f712563c82865d4c531.png?1369978727,Tutorial,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/59/1/2/medium/3/f93e57846288b98bd34fb489cc8d4dc861a983ff.png?1369978729,Main screen,Onboarding,3

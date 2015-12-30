@@ -1,0 +1,22 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/1/b0de4e8cd9f6f88969df42d5eb1ad58a54c4eecd.png?1391537154,Splash screen,Onboarding,1
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/2/41f1cccd81c2879474bdb43800f7f5d472bfa8a0.png?1391537156,Marketing video,Onboarding,2
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/3/54a96d4fb5185513db6785e3b934aa87c5c1bbe0.png?1391537158,Tutorial,Onboarding,3
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/4/9292d21415c90b16c158a37a9ab0e5c177cb30ff.png?1391537159,Tutorial,Onboarding,4
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/5/ff20f7d87cfa5885c3f0af19382613805d137c10.png?1391537161,Tutorial,Onboarding,5
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/6/da247abbc3e15a77290482c78b7d4d4e80e4a0fd.png?1391537163,Magazine selection,Onboarding,6
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/7/4ed578d8d3977bca628875d01a5eb0ece64bf0c2.png?1391537165,Magazine,Onboarding,7
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/8/2c4eaaf63a5bdb7fe5a4d84ea5c638f2a42f72cd.png?1391537167,Post,Onboarding,8
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/9/05269948c45ddf9e07213c363a9e254889fa12d2.png?1391537169,Post,Onboarding,9
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/10/ec63b7d593e10cd97d6ff43880c8ea0ad33f8b28.png?1391537170,Website,Onboarding,10
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/11/1bf0d56fc461747a51921b66330306506d91eec6.png?1391537172,Post,Onboarding,11
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/12/352fa288f87bd16e1b8a839ff7ca3fc66774b689.png?1391537173,Post,Onboarding,12
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/13/1a550cca2b0679d437de3ba5ca40e0dd4e5f1da5.png?1391537176,Magazine,Onboarding,13
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/14/85b89b4b26c52c68f4fc5a0726c555ad6a4cff1d.png?1391537178,Menu,Onboarding,14
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/15/e42c1da98a430ce9358f1c907289665f33efa471.png?1391537179,Post edit,Onboarding,15
+http://s3.amazonaws.com/uxarchive2/flows/190/1/2/medium/16/ea7393d9607cbfd5ce8e9b903d322c5accbc606a.png?1391537181,Magazine,Onboarding,16
+http://s3.amazonaws.com/uxarchive2/flows/190/4/2/medium/1/593a45e114d01684c66927998dd7f6e4fb6c8728.png?1391537845,News feed,Sharing,1
+http://s3.amazonaws.com/uxarchive2/flows/190/4/2/medium/2/fe38e897961ef6866b31c301760c1ddee5592e9f.png?1391537847,Menu,Sharing,2
+http://s3.amazonaws.com/uxarchive2/flows/190/4/2/medium/3/51b851ff7c760f481faf4f51023f168a9e5c3597.png?1391537849,Post edit,Sharing,3
+http://s3.amazonaws.com/uxarchive2/flows/190/4/2/medium/4/0fba4947e4afbdd69962d8b3777a1bef1331a573.png?1391537850,Post,Sharing,4
+http://s3.amazonaws.com/uxarchive2/flows/190/4/2/medium/5/b5624c9a5ded755fe627bde3415689e7b58b99d8.png?1391537852,News feed,Sharing,5

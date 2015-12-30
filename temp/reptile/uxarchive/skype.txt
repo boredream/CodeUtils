@@ -1,0 +1,7 @@
+imgUrl,name,flowName,seqInFlow
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/1/c757746ad7d955f20847482863aeaea5f59b6e89.png?1379487234,conversation,Recording,1
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/2/3bcf978924201ed1cfcf02ad14c7c1860705f09b.png?1379487237,Message edit,Recording,2
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/3/21dd2c4383945757050b11fab79c1e22dbf52895.png?1379487241,Video setup,Recording,3
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/4/093cb16b10e70ad5cc11186d5f88f9127e24d1f5.png?1379487247,Recording,Recording,4
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/5/2abdb7a7dd3665127b3a7b31a2028af9b1dd002d.png?1379487251,Video edit,Recording,5
+http://s3.amazonaws.com/uxarchive2/flows/132/19/2/medium/6/7a356c20de69e3f510718a54f8d295fa40a394b9.png?1379487256,Video shared,Recording,6
