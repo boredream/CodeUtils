@@ -60,20 +60,22 @@ public class TempUtils {
 //				}
 //			}
 //		}
+		
+		exportXml();
 
-		String str = FileUtils.readToString(new File("temp\\test.html"));
-		String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(str);
-		if(matcher.find()) {
-			String body = matcher.group(1);
-			String regex1 = "\"([\\s\\S]+)\"";
-			Pattern pattern1 = Pattern.compile(regex1);
-			Matcher matcher1 = pattern1.matcher(body);
-			if(matcher1.find()) {
-				System.out.println(matcher1.group(1));
-			}
-		}
+//		String str = FileUtils.readToString(new File("temp\\test.html"));
+//		String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
+//		Pattern pattern = Pattern.compile(regex);
+//		Matcher matcher = pattern.matcher(str);
+//		if(matcher.find()) {
+//			String body = matcher.group(1);
+//			String regex1 = "\"([\\s\\S]+)\"";
+//			Pattern pattern1 = Pattern.compile(regex1);
+//			Matcher matcher1 = pattern1.matcher(body);
+//			if(matcher1.find()) {
+//				System.out.println(matcher1.group(1));
+//			}
+//		}
 		
 	}
 	
@@ -563,7 +565,7 @@ public class TempUtils {
 	public static void exportXml() {
 		// save to
 		File file = new File(
-				"D:\\work\\BusinessCMT2.0\\res\\values\\strings.xml");
+				"D:\\workproject\\businessCMT\\src\\main\\res\\values\\strings.xml");
 		Document valuesDoc = XmlUtil.read(file);
 		Element rootElement = valuesDoc.getRootElement();
 

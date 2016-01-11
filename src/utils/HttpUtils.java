@@ -2,6 +2,8 @@ package utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -100,6 +102,52 @@ public class HttpUtils {
 		String responseContent = new String(bytes, responseCharset);
 		return responseContent;
 	}
+	
+	public static byte[] getOrPostFile(int method, String url,
+			Map<String, String> postParams, Map<String, String> headers) throws Exception {
+		HashMap<String, String> map = new HashMap<String, String>();
+		if(headers != null) {
+			map.putAll(headers);
+		}
+		URL parsedUrl = new URL(url);
+		HttpURLConnection connection = openConnection(parsedUrl);
+
+		for (String headerName : map.keySet()) {
+			connection.addRequestProperty(headerName, map.get(headerName));
+		}
+
+		setConnectionParametersForRequest(connection, method, postParams);
+		// Initialize HttpResponse with data from the HttpURLConnection.
+		ProtocolVersion protocolVersion = new ProtocolVersion("HTTP", 1, 1);
+		int responseCode = connection.getResponseCode();
+		if (responseCode == -1) {
+			// -1 is returned by getResponseCode() if the response code could
+			// not be retrieved.
+			// Signal to the caller that something was wrong with the
+			// connection.
+			throw new IOException(
+					"Could not retrieve response code from HttpUrlConnection.");
+		}
+		StatusLine responseStatus = new BasicStatusLine(protocolVersion,
+				connection.getResponseCode(), connection.getResponseMessage());
+		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
+		response.setEntity(entityFromConnection(connection));
+		for (Entry<String, List<String>> header : connection.getHeaderFields()
+				.entrySet()) {
+			if (header.getKey() != null) {
+				Header h = new BasicHeader(header.getKey(), header.getValue()
+						.get(0));
+				response.addHeader(h);
+
+			}
+		}
+
+		Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
+		String responseCharset = parseCharset(contentTypeHeader);
+
+		byte[] bytes = entityToBytes(response.getEntity());
+		return bytes;
+	}
 
 	/**
 	 * Returns the charset specified in the Content-Type of this header, or the
@@ -169,8 +217,8 @@ public class HttpUtils {
 	private static HttpURLConnection openConnection(URL url) throws IOException {
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-		connection.setConnectTimeout(20 * 1000);
-		connection.setReadTimeout(20 * 1000);
+		connection.setConnectTimeout(60 * 1000);
+		connection.setReadTimeout(60 * 1000);
 		connection.setUseCaches(false);
 		connection.setDoInput(true);
 

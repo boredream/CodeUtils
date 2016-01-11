@@ -144,10 +144,7 @@ public class OfficeUtils {
 		String line;
 		while ((line = bufr.readLine()) != null) {
 			// 防止末尾,无法split的处理
-			String[] fieldValues = (line + "a").split(",");
-			String last = fieldValues[fieldValues.length - 1];
-			last = last.substring(0, last.length() - 1);
-			fieldValues[fieldValues.length - 1] = last;
+			Object[] fieldValues = line.split(",");
 
 			if (fieldValues.length != fieldNames.length) {
 				System.out.println(line + " 的value和header " + header + " 不一致");

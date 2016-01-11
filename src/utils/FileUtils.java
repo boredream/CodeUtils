@@ -541,5 +541,29 @@ public class FileUtils {
     public static void writeString2File(String str, File file) {  
     	writeString2File(str, file, getCharSet(file));
     } 
+    
+    /**
+     * 将字节数组写入文件
+     */
+    public static void writeBytes2File(byte[] bytes, File file) {
+    	FileOutputStream fos = null;
+    	try {
+    		if(!file.exists()) {
+    			file.createNewFile();
+    		}
+    		
+    		fos = new FileOutputStream(file);
+    		fos.write(bytes);
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	} finally {
+    		try {
+    			fos.close();
+    		} catch (IOException e) {
+    			fos = null;
+    			e.printStackTrace();
+    		}
+    	}
+    }
 
 }
