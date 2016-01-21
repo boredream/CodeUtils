@@ -12,7 +12,7 @@ import org.jsoup.select.Elements;
 import utils.HttpUtils;
 import utils.OfficeUtils;
 
-public class Main {
+public class Xedtt {
 
 	private static String hostUrl = "http://www.xedtt.com";
 	private static String imagePageUrl = hostUrl
@@ -25,7 +25,7 @@ public class Main {
 	private static void saveAll() throws Exception {
 		File path = new File("temp" + File.separator + "reptile"
 				+ File.separator + "gif" + File.separator + "xedtt");
-		for (int i = 9; i < 28; i++) {
+		for (int i = 5; i < 10; i++) {
 			File file = new File(path, "page" + i + ".txt");
 			if (file.exists()) {
 				continue;
@@ -36,15 +36,6 @@ public class Main {
 
 			OfficeUtils.saveCVS(infos, file);
 		}
-
-		// List<GifInfo> allInfos = new ArrayList<GifInfo>();
-		// for (File file : path.listFiles()) {
-		// List<GifInfo> infos = OfficeUtils.readDatasFromCSV(file,
-		// GifInfo.class);
-		// allInfos.addAll(infos);
-		// }
-		// File allFile = new File(path, "hnbang.txt");
-		// OfficeUtils.saveCVS(allInfos, allFile);
 	}
 
 	private static List<GifInfo> getAllGif(String appUrl) throws Exception {
@@ -73,9 +64,18 @@ public class Main {
 			String oriGifContent = HttpUtils.getString(oriGifUrl);
 			Element oriGifElement = Jsoup.parse(oriGifContent)
 					.getElementsByClass("content").get(0);
-			String imgUrl = oriGifElement.getElementsByTag("img").get(0)
-					.attr("src");
+			Element imageElement = oriGifElement.getElementsByTag("img").get(0);
+			String imgUrl = imageElement.attr("src");
+			int width = 0;
+			int height = 0;
+			try {
+				width = Integer.parseInt(imageElement.attr("width"));
+				height = Integer.parseInt(imageElement.attr("height"));
+			} catch (Exception e) {
+			}
 			info.imgUrl = imgUrl;
+			info.width = width;
+			info.height = height;
 
 			infos.add(info);
 		}
@@ -103,5 +103,7 @@ public class Main {
 		public String title;
 		public String thumbnailImgUrl;
 		public String imgUrl;
+		public int width;
+		public int height;
 	}
 }
