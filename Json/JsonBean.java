@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 	private int errNum;
 	private String errMsg;
@@ -161,6 +162,36 @@
 
 	public int getErrNum() {
 		return errNum;
+=======
+public class JsonBeans {
+	private ArrayList<Content> content;
+	private Object sort;
+	private int numberOfElements;
+	private int totalElements;
+	private boolean firstPage;
+	private boolean lastPage;
+	private int totalPages;
+	private int size;
+	private int number;
+
+	/*sub class*/
+	public class Content {
+		private long id;
+		private long sharingId;
+		private String sharingContent;
+		private Object sharingImage;
+		private Object sharingImageUrl;
+		private boolean sharingDeleted;
+		private String commentUserName;
+		private String commentPortraitPic;
+		private String commentPortraitPicUrl;
+		private String commentToUserName;
+		private String commentType;
+		private boolean commentDeleted;
+		private String content;
+		private boolean looked;
+		private String createTime;
+>>>>>>> Stashed changes
 	}
 
 	public void setErrNum(int errNum) {

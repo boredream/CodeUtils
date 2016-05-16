@@ -276,7 +276,8 @@ public class SwaggerDocGenerator {
 			for(Json2JavaElement j2je : jsonBeanTree) {
 				String paramName = j2je.getName();
 				String paramDes = ""; // 此类格式post参数没有描述
-				String pType = j2je.getType().getSimpleName();
+				Class<?> type = j2je.getType();
+				String pType = type == null ? "String" : j2je.getType().getSimpleName();
 				requestParams.add(new RequestParam(paramName, pType, paramDes, new ArrayList<String>()));
 			}
 		}

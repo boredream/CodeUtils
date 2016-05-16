@@ -19,7 +19,7 @@ public class JsonUtils {
 	
 	public static void main(String[] args) {
 		/// 读取json字符串
-		String json = FileUtils.readToString(new File("Json\\JsonString.txt"), "UTF-8");
+		String json = FileUtils.readToString(new File("Json"+File.separator+"JsonString.txt"), "UTF-8");
 		parseJson2Java(json);
 	}
 	
@@ -41,7 +41,7 @@ public class JsonUtils {
 		String javaBeanStr = createJavaBean(jsonBeanTree);
 		
 		// 将生成的内容写入到文件中去
-		FileUtils.writeString2File(javaBeanStr, new File("Json\\JsonBean.java"));
+		FileUtils.writeString2File(javaBeanStr, new File("Json"+File.separator+"JsonBean.java"));
 	}
 	
 	/**

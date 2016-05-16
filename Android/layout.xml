@@ -10,6 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+<<<<<<< Updated upstream
     tools:context="com.boredream.androidespressotest.LoginActivity"
     tools:showIn="@layout/activity_login">
 
@@ -31,5 +32,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="登录" />
+=======
+    tools:context="com.yanfeiyang.ca.entity.NewPostActivity"
+    tools:showIn="@layout/activity_new_post">
+
+    <EditText
+        android:id="@+id/et_content"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="4" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@android:drawable/ic_menu_add"
+        android:scaleType="centerCrop" />
+>>>>>>> Stashed changes
 
 </LinearLayout>
