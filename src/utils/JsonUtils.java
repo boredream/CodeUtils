@@ -103,7 +103,7 @@ public class JsonUtils {
 				
 				// public class CustomClass {
 				sb.append("\n");
-				sb.append(AndroidUtils.formatSingleLine(1, "public static class " + customClassName + " {"));
+				sb.append(StringUtils.formatSingleLine(1, "public static class " + customClassName + " {"));
 				
 				StringBuilder sbSubGetterAndSetter = new StringBuilder();
 				// 循环余下的集合
@@ -125,7 +125,7 @@ public class JsonUtils {
 				}
 				
 				sb.append(sbSubGetterAndSetter.toString());
-				sb.append(AndroidUtils.formatSingleLine(1, "}"));
+				sb.append(StringUtils.formatSingleLine(1, "}"));
 			}
 		}
 		
@@ -150,14 +150,14 @@ public class JsonUtils {
 		//  */
 		String des = j2j.getDes();
 		if(des != null && des.length() > 0) {
-			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "/**"));
-			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, " * " + des));
-			sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, " */"));
+			sb.append(StringUtils.formatSingleLine(1 + extraTabNum, "/**"));
+			sb.append(StringUtils.formatSingleLine(1 + extraTabNum, " * " + des));
+			sb.append(StringUtils.formatSingleLine(1 + extraTabNum, " */"));
 		}
 		
 		// 申明变量
 		// private String name;
-		sb.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+		sb.append(StringUtils.formatSingleLine(1 + extraTabNum, 
 				"private " + getTypeName(j2j) + " " + j2j.getName() + ";"));
 		
 		// 生成变量对应的getter和setter方法
@@ -165,21 +165,21 @@ public class JsonUtils {
 		//     return name;
 		// }
 		sbGetterAndSetter.append("\n");
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum, 
 				"public " + getTypeName(j2j) + " get" + StringUtils.firstToUpperCase(j2j.getName()) + "() {"));
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(2 + extraTabNum, "return " + j2j.getName() + ";"));
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "}"));
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(2 + extraTabNum, "return " + j2j.getName() + ";"));
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum, "}"));
 		
 		// public void setName(String name) {
 		//     this.name = name;
 		// }
 		sbGetterAndSetter.append("\n");
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, 
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum, 
 				"public void set" + StringUtils.firstToUpperCase(j2j.getName()) + 
 				"(" + getTypeName(j2j) + " " + j2j.getName() + ") {"));
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(2 + extraTabNum, 
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(2 + extraTabNum, 
 				"this." + j2j.getName() + " = " + j2j.getName() + ";"));
-		sbGetterAndSetter.append(AndroidUtils.formatSingleLine(1 + extraTabNum, "}"));
+		sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum, "}"));
 	}
 	
 	/**

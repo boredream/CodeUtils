@@ -18,6 +18,7 @@ public class AndroidUtils {
 	public static void main(String[] args) {
 		autoCreateAdapter();
 		autoCreateActivity();
+		autoCreateRecyclerAdapter();
 	}
 	
 	/** DIMEN单位 */
@@ -29,22 +30,6 @@ public class AndroidUtils {
 		dimenUnits.add("dp");
 	}
 	
-	/**
-	 * 将string按需要格式化,前面加缩进符,后面加换行符
-	 * @param tabNum 缩进量
-	 * @param srcString
-	 * @return
-	 */
-	public static String formatSingleLine(int tabNum, String srcString) {
-		StringBuilder sb = new StringBuilder();
-		for(int i=0; i<tabNum; i++) {
-			sb.append("\t");
-		}
-		sb.append(srcString);
-		sb.append("\n");
-		return sb.toString();
-	}
-
 	public static List<IdNamingBean> idNamingBeans = new ArrayList<IdNamingBean>();
 	/**
 	 * 递归获取layout中全部控件
@@ -138,7 +123,7 @@ public class AndroidUtils {
 		// 根据view名-id名的实体类,依次生成控件对应的成员变量,变量名取id名称赋值
 		// private TextView tv_name;
 		for(IdNamingBean bean : idNamingBeans) {
-			sb.append(formatSingleLine(1, "private " + bean.getViewName() + " " + bean.getIdName() + ";"));
+			sb.append(StringUtils.formatSingleLine(1, "private " + bean.getViewName() + " " + bean.getIdName() + ";"));
 		}
 		sb.append("\n");
 		
@@ -146,9 +131,9 @@ public class AndroidUtils {
 		// private void initView() {
 		//    tv_name = (TextView)findViewById(R.id.tv_name);
 		// }
-		sb.append(formatSingleLine(1, "private void initView() {"));
+		sb.append(StringUtils.formatSingleLine(1, "private void initView() {"));
 		for(IdNamingBean bean : idNamingBeans) {
-			sb.append(formatSingleLine(2, bean.getIdName() + " = " +
+			sb.append(StringUtils.formatSingleLine(2, bean.getIdName() + " = " +
 					"(" + bean.getViewName() + ") findViewById(R.id." + bean.getIdName() + ");"));
 		}
 		sb.append("\n");
@@ -172,11 +157,11 @@ public class AndroidUtils {
 		//}
 		StringBuilder sbEditText = new StringBuilder();
 		sbEditText.append("\n");
-		sbEditText.append(formatSingleLine(1, "/**"));
-		sbEditText.append(formatSingleLine(1, " * TODO 输入验证,可根据需要自行修改补充"));
-		sbEditText.append(formatSingleLine(1, " */"));
-		sbEditText.append(formatSingleLine(1, "private void submit() {"));
-		sbEditText.append(formatSingleLine(2, "// 开始验证输入内容"));
+		sbEditText.append(StringUtils.formatSingleLine(1, "/**"));
+		sbEditText.append(StringUtils.formatSingleLine(1, " * TODO 输入验证,可根据需要自行修改补充"));
+		sbEditText.append(StringUtils.formatSingleLine(1, " */"));
+		sbEditText.append(StringUtils.formatSingleLine(1, "private void submit() {"));
+		sbEditText.append(StringUtils.formatSingleLine(2, "// 开始验证输入内容"));
 		
 		for(IdNamingBean bean : idNamingBeans) {
 			Attribute attrTag = bean.getElement().attribute("tag");
@@ -192,21 +177,21 @@ public class AndroidUtils {
 				int index = idName.lastIndexOf("_");
 				String name = index == -1 ? idName : idName.substring(index + 1);
 				
-				sbEditText.append(formatSingleLine(2, "String " + name + " = " + idName + ".getText().toString().trim();"));
-				sbEditText.append(formatSingleLine(2, "if(TextUtils.isEmpty(" + name + ")) {"));
-				sbEditText.append(formatSingleLine(3, "Toast.makeText(this, \"" + name + "不能为空\", Toast.LENGTH_SHORT).show();"));
-				sbEditText.append(formatSingleLine(3, "return;"));
-				sbEditText.append(formatSingleLine(2, "}"));
-				sbEditText.append(formatSingleLine(2, ""));
+				sbEditText.append(StringUtils.formatSingleLine(2, "String " + name + " = " + idName + ".getText().toString().trim();"));
+				sbEditText.append(StringUtils.formatSingleLine(2, "if(TextUtils.isEmpty(" + name + ")) {"));
+				sbEditText.append(StringUtils.formatSingleLine(3, "Toast.makeText(this, \"" + name + "不能为空\", Toast.LENGTH_SHORT).show();"));
+				sbEditText.append(StringUtils.formatSingleLine(3, "return;"));
+				sbEditText.append(StringUtils.formatSingleLine(2, "}"));
+				sbEditText.append(StringUtils.formatSingleLine(2, ""));
 				
 				hasEditText = true;
 			}
 		}
 		
-		sbEditText.append(formatSingleLine(2, "// TODO 验证成功,下面开始使用数据"));
-		sbEditText.append(formatSingleLine(2, ""));
-		sbEditText.append(formatSingleLine(2, ""));
-		sbEditText.append(formatSingleLine(1, "}"));
+		sbEditText.append(StringUtils.formatSingleLine(2, "// TODO 验证成功,下面开始使用数据"));
+		sbEditText.append(StringUtils.formatSingleLine(2, ""));
+		sbEditText.append(StringUtils.formatSingleLine(2, ""));
+		sbEditText.append(StringUtils.formatSingleLine(1, "}"));
 
 		// 是否包含可点击的控件,如果包含,自动生成onClick相关代码
 		boolean hasClickView = false;
@@ -221,9 +206,9 @@ public class AndroidUtils {
 		// } 
 		StringBuilder sbOnClick = new StringBuilder();
 		sbOnClick.append("\n");
-		sbOnClick.append(formatSingleLine(1, "@Override"));
-		sbOnClick.append(formatSingleLine(1, "public void onClick(View v) {"));
-		sbOnClick.append(formatSingleLine(2, "switch (v.getId()) {"));
+		sbOnClick.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbOnClick.append(StringUtils.formatSingleLine(1, "public void onClick(View v) {"));
+		sbOnClick.append(StringUtils.formatSingleLine(2, "switch (v.getId()) {"));
 		
 		for(IdNamingBean bean : idNamingBeans) {
 			Attribute attrClickable = bean.getElement().attribute("clickable");
@@ -233,17 +218,17 @@ public class AndroidUtils {
 					&& attrClickable.getValue().equals("true"))) {
 				// 设置监听
 				// btn_ok.setOnClickListener(this);
-				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnClickListener(this);"));
+				sb.append(StringUtils.formatSingleLine(2, bean.getIdName() + ".setOnClickListener(this);"));
 				// 在onclick中分别处理不同id的点击
-				sbOnClick.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+				sbOnClick.append(StringUtils.formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
 				sbOnClick.append("\n");
-				sbOnClick.append(formatSingleLine(3, "break;"));
+				sbOnClick.append(StringUtils.formatSingleLine(3, "break;"));
 				
 				hasClickView = true;
 			}
 		}
-		sbOnClick.append(formatSingleLine(2, "}"));
-		sbOnClick.append(formatSingleLine(1, "}"));
+		sbOnClick.append(StringUtils.formatSingleLine(2, "}"));
+		sbOnClick.append(StringUtils.formatSingleLine(1, "}"));
 		
 		
 		// 是否包含RadioGroup/Button等控件,如果包含,自动生成onCheckChanged相关代码
@@ -259,31 +244,31 @@ public class AndroidUtils {
 		// }
 		StringBuilder sbOnChecked = new StringBuilder();
 		sbOnChecked.append("\n");
-		sbOnChecked.append(formatSingleLine(1, "@Override"));
-		sbOnChecked.append(formatSingleLine(1, "public void onCheckedChanged(RadioGroup group, int checkedId) {"));
-		sbOnChecked.append(formatSingleLine(2, "switch (checkedId) {"));
+		sbOnChecked.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbOnChecked.append(StringUtils.formatSingleLine(1, "public void onCheckedChanged(RadioGroup group, int checkedId) {"));
+		sbOnChecked.append(StringUtils.formatSingleLine(2, "switch (checkedId) {"));
 		
 		for(IdNamingBean bean : idNamingBeans) {
 			// 只设置Button的点击事件,和参数包含clickable=true的控件
 			if(bean.getViewName().equals("RadioGroup")) {
 				// 设置监听
 				// rg.setOnCheckedChangeListener(this);
-				sb.append(formatSingleLine(2, bean.getIdName() + ".setOnCheckedChangeListener(this);"));
+				sb.append(StringUtils.formatSingleLine(2, bean.getIdName() + ".setOnCheckedChangeListener(this);"));
 				
 				hasCheckedView = true;
 			} else if(bean.getViewName().equals("RadioButton")) {
 				// 在onCheckedChanged中分别处理不同id的选中
-				sbOnChecked.append(formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
+				sbOnChecked.append(StringUtils.formatSingleLine(2, "case R.id." + bean.getIdName() + ":"));
 				sbOnChecked.append("\n");
-				sbOnChecked.append(formatSingleLine(3, "break;"));
+				sbOnChecked.append(StringUtils.formatSingleLine(3, "break;"));
 				
 				hasCheckedView = true;
 			}
 		}
-		sbOnChecked.append(formatSingleLine(2, "}"));
-		sbOnChecked.append(formatSingleLine(1, "}"));
+		sbOnChecked.append(StringUtils.formatSingleLine(2, "}"));
+		sbOnChecked.append(StringUtils.formatSingleLine(1, "}"));
 		
-		sb.append(formatSingleLine(1, "}\n"));
+		sb.append(StringUtils.formatSingleLine(1, "}\n"));
 		sb.append("\n");
 		
 		if(hasClickView) {
@@ -338,20 +323,20 @@ public class AndroidUtils {
 		//
 		// 		@Rule
 		// 		public ActivityTestRule<RegistActivity> mActivityRule = new ActivityTestRule<>(RegistActivity.class, true, false);
-		sb.append(formatSingleLine(0, "@RunWith(AndroidJUnit4.class)"));
-		sb.append(formatSingleLine(0, "public class "+className+" {"));
+		sb.append(StringUtils.formatSingleLine(0, "@RunWith(AndroidJUnit4.class)"));
+		sb.append(StringUtils.formatSingleLine(0, "public class "+className+" {"));
 		sb.append("\n");
-		sb.append(formatSingleLine(1, "@Rule"));
-		sb.append(formatSingleLine(1, "public ActivityTestRule<"+activityName+"> mActivityRule = new ActivityTestRule<>("+activityName+".class, true, false);"));
+		sb.append(StringUtils.formatSingleLine(1, "@Rule"));
+		sb.append(StringUtils.formatSingleLine(1, "public ActivityTestRule<"+activityName+"> mActivityRule = new ActivityTestRule<>("+activityName+".class, true, false);"));
 		sb.append("\n");
 		
 		//		@Test
 		//		public void test() {
-		sb.append(formatSingleLine(1, "@Test"));
-		sb.append(formatSingleLine(1, "public void test() {"));
+		sb.append(StringUtils.formatSingleLine(1, "@Test"));
+		sb.append(StringUtils.formatSingleLine(1, "public void test() {"));
 		
 		// 页面初始化
-		sb.append(formatSingleLine(2, "Intent intent = new Intent();"));
+		sb.append(StringUtils.formatSingleLine(2, "Intent intent = new Intent();"));
 		// 判断页面初始化时是否有getExtra,如果有需要在测试代码中putExtra
 		//　userId = getIntent().getLongExtra("userId", 0);
 		String getExtraRegex = ".get([\\w]+)Extra\\(\"([\\w_]+)\"";
@@ -362,12 +347,12 @@ public class AndroidUtils {
 			// intent.putExtra("userId", 1016l);
 			// mActivityRule.launchActivity(intent);
 			
-			sb.append(formatSingleLine(2, "// 待测试页面需要Extra数据如下"));
+			sb.append(StringUtils.formatSingleLine(2, "// 待测试页面需要Extra数据如下"));
 			String type = getExtraMatcher.group(1);
 			String key = getExtraMatcher.group(2);
-			sb.append(formatSingleLine(2, "intent.putExtra(\""+key+"\", 添加"+type+"类型的值);"));
+			sb.append(StringUtils.formatSingleLine(2, "intent.putExtra(\""+key+"\", 添加"+type+"类型的值);"));
 		}
-		sb.append(formatSingleLine(2, "mActivityRule.launchActivity(intent);"));
+		sb.append(StringUtils.formatSingleLine(2, "mActivityRule.launchActivity(intent);"));
 		sb.append("\n");
 		
 		// 用onView定位控件,并执行动作
@@ -387,7 +372,7 @@ public class AndroidUtils {
 			} else {
 				// 无法判断的类型,不添加动作
 			} 
-			sb.append(formatSingleLine(2, "onView(withId(R.id."+bean.getIdName()+"))"+perform+";"));
+			sb.append(StringUtils.formatSingleLine(2, "onView(withId(R.id."+bean.getIdName()+"))"+perform+";"));
 		}
 		
 		// 最后验证部分,留给开发者自己根据业务处理,添加部分注释引导
@@ -398,14 +383,14 @@ public class AndroidUtils {
         //         .inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))
         //         .check(matches(isDisplayed()));
 		sb.append("\n");
-		sb.append(formatSingleLine(2, "// TODO 复制上面的onView部分定位控件,然后根据需要编写期望的check结果"));
-		sb.append(formatSingleLine(2, "// 示例: 比如需要验证dialog/toast是否显示可以如下(如果验证页面上控件则不需要.inRoot部分)"));
-		sb.append(formatSingleLine(2, "// onView(withText(\"请输入密码\"))"));
-		sb.append(formatSingleLine(2, "//         .inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))"));
-		sb.append(formatSingleLine(2, "//         .check(matches(isDisplayed()));"));
+		sb.append(StringUtils.formatSingleLine(2, "// TODO 复制上面的onView部分定位控件,然后根据需要编写期望的check结果"));
+		sb.append(StringUtils.formatSingleLine(2, "// 示例: 比如需要验证dialog/toast是否显示可以如下(如果验证页面上控件则不需要.inRoot部分)"));
+		sb.append(StringUtils.formatSingleLine(2, "// onView(withText(\"请输入密码\"))"));
+		sb.append(StringUtils.formatSingleLine(2, "//         .inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView()))))"));
+		sb.append(StringUtils.formatSingleLine(2, "//         .check(matches(isDisplayed()));"));
 		sb.append("\n");
-		sb.append(formatSingleLine(1, "}"));
-		sb.append(formatSingleLine(0, "}"));
+		sb.append(StringUtils.formatSingleLine(1, "}"));
+		sb.append(StringUtils.formatSingleLine(0, "}"));
 		
 		return sb.toString();
 	}
@@ -464,46 +449,45 @@ public class AndroidUtils {
 		sbAdapterInfo.append("\n");
 		
 		// 成员变量,只设置最基本的集合类和context
-		sbAdapterInfo.append(formatSingleLine(1, "private Context context;"));
-		sbAdapterInfo.append(formatSingleLine(1, "// TODO change the MyItem class to your data bean class"));
-		sbAdapterInfo.append(formatSingleLine(1, "private List<MyItem> datas;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "private Context context;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "// TODO change the MyItem class to your data bean class"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "private List<MyItem> datas;"));
 		sbAdapterInfo.append("\n");
 		
 		// 根据成员变量创建的构造函数
-		sbAdapterInfo.append(formatSingleLine(1, "public MyAdapter(Context context, List<MyItem> datas) {"));
-		sbAdapterInfo.append(formatSingleLine(2, "this.context = context;"));
-		sbAdapterInfo.append(formatSingleLine(2, "this.datas = datas;"));
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public MyAdapter(Context context, List<MyItem> datas) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "this.context = context;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "this.datas = datas;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
 		sbAdapterInfo.append("\n");
 		
 		// 重写getCount方法
-		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
-		sbAdapterInfo.append(formatSingleLine(1, "public int getCount() {"));
-		sbAdapterInfo.append(formatSingleLine(2, "return datas.size();"));
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public int getItemCount() {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "return datas.size();"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
 		sbAdapterInfo.append("\n");
 		
-		// 重写getItem方法
-		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
-		sbAdapterInfo.append(formatSingleLine(1, "public MyItem getItem(int position) {"));
-		sbAdapterInfo.append(formatSingleLine(2, "return datas.get(position);"));
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
-		sbAdapterInfo.append("\n");
-		
-		// 重写getItemId方法
-		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
-		sbAdapterInfo.append(formatSingleLine(1, "public long getItemId(int position) {"));
-		sbAdapterInfo.append(formatSingleLine(2, "return position;"));
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
-		sbAdapterInfo.append("\n");
+		// ViewHolder class的申明处理
+				sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public static class ViewHolder{"));
+				for(IdNamingBean bean : idNamingBeans) {
+					// public TextView item_tv;
+					sbAdapterInfo.append("\t\t")
+						.append("public ")
+						.append(bean.getViewName())
+						.append(" ")
+						.append(bean.getIdName())
+						.append(";\n");
+				}
+				sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
 		
 		// 重写getView方法,并进行优化处理
-		sbAdapterInfo.append(formatSingleLine(1, "@Override"));
-		sbAdapterInfo.append(formatSingleLine(1, "public View getView(int position, View convertView, ViewGroup parent) {"));
-		sbAdapterInfo.append(formatSingleLine(2, "ViewHolder holder;"));
-		sbAdapterInfo.append(formatSingleLine(2, "if(convertView == null) {"));
-		sbAdapterInfo.append(formatSingleLine(3, "holder = new ViewHolder();"));
-		sbAdapterInfo.append(formatSingleLine(3, "convertView = View.inflate(context, R.layout."+FileUtils.getName(layoutXml)+", null);"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public View getView(int position, View convertView, ViewGroup parent) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "ViewHolder holder;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "if(convertView == null) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(3, "holder = new ViewHolder();"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(3, "convertView = View.inflate(context, R.layout."+FileUtils.getName(layoutXml)+", null);"));
 		
 		// getView中viewholder的变量赋值处理
 		// 根据view名-id名的实体类,依次生成控件对应的holder变量,变量名取id名称赋值
@@ -519,23 +503,74 @@ public class AndroidUtils {
 				.append(bean.getIdName())
 				.append(");\n");
 		}
-		sbAdapterInfo.append(formatSingleLine(3, "convertView.setTag(holder);"));
-		sbAdapterInfo.append(formatSingleLine(2, "} else {"));
-		sbAdapterInfo.append(formatSingleLine(3, "holder = (ViewHolder) convertView.getTag();"));
-		sbAdapterInfo.append(formatSingleLine(2, "}"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(3, "convertView.setTag(holder);"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "} else {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(3, "holder = (ViewHolder) convertView.getTag();"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "}"));
 		
 		sbAdapterInfo.append("\n");
-		sbAdapterInfo.append(formatSingleLine(2, "// TODO set data"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "// TODO set data"));
 		sbAdapterInfo.append("\n");
 		
-		sbAdapterInfo.append(formatSingleLine(2, "return convertView;"));
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "return convertView;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
 		sbAdapterInfo.append("\n");
 		sbAdapterInfo.append("\n");
-
+		
+		return sbAdapterInfo.toString();
+	}
+	
+	/**
+	 * 自动遍历xml中所有带id的控件,在adapter文件中生成最基本的代码<br>
+	 * <br>
+	 * 使用前需要将xml文件内容复制到本项目里的Android文件夹下的item.xml文件中<br>
+	 * 运行该方法后,根据布局文件生成的相关代码会在Android文件夹下Adapter.java中查看,可以复制到自己项目里使用
+	 */
+	public static void autoCreateRecyclerAdapter() {
+		String layoutXml = "Android" + File.separator + "item_recyclerview.xml";
+		
+		// 获取layout中控件信息,信息会保存至idNamingBeans集合中
+		idNamingBeans.clear();
+		parseElementFromXml(layoutXml, false);
+		
+		// 解析idNamingBeans集合中的信息,生成适配器文本信息
+		String adapterContent = createRecyclerAdapterContent(layoutXml);
+		
+		// 获取adapter文件
+		File javaFile = new File("Android" + File.separator + "RecyclerAdapter.java");
+		
+		// 将生成的内容写入至java类文件中
+		FileUtils.writeString2File(adapterContent, javaFile);
+	}
+	
+	/**
+	 * 生成RecyclerView的adapter文件内容
+	 */
+	private static String createRecyclerAdapterContent(String layoutXml) {
+		StringBuilder sbAdapterInfo = new StringBuilder();
+		sbAdapterInfo.append("\n");
+		
+		// 成员变量,只设置最基本的集合类和context
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "private Context context;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "private List<Object> datas;"));
+		sbAdapterInfo.append("\n");
+		
+		// 根据成员变量创建的构造函数
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public MyAdapter(Context context, List<Object> datas) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "this.context = context;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "this.datas = datas;"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写getItemCount方法
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public int getItemCount() {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "return datas.size();"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
 		
 		// ViewHolder class的申明处理
-		sbAdapterInfo.append(formatSingleLine(1, "public static class ViewHolder{"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public static class ViewHolder extends RecyclerView.ViewHolder {"));
 		for(IdNamingBean bean : idNamingBeans) {
 			// public TextView item_tv;
 			sbAdapterInfo.append("\t\t")
@@ -545,7 +580,40 @@ public class AndroidUtils {
 				.append(bean.getIdName())
 				.append(";\n");
 		}
-		sbAdapterInfo.append(formatSingleLine(1, "}"));
+		
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "public ViewHolder(final View itemView) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(3, "super(itemView);"));
+		for (IdNamingBean bean : idNamingBeans) {
+			// public TextView item_tv;
+			sbAdapterInfo.append("\t\t\t")
+				.append(bean.getIdName())
+				.append(" = (")
+				.append(bean.getViewName())
+				.append(") ")
+				.append("itemView.findViewById(R.id.")
+				.append(bean.getIdName())
+				.append(");\n");
+		}
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "}"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写onCreateViewHolder方法
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public CourseAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "View v = LayoutInflater.from(context).inflate(R.layout.item_xx, parent, false);"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "return new ViewHolder(v);"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
+		
+		// 重写onBindViewHolder方法
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "@Override"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "public void onBindViewHolder(ViewHolder holder, int position) {"));
+		sbAdapterInfo.append(StringUtils.formatSingleLine(2, "final Object data = datas.get(position);"));
+		sbAdapterInfo.append("\n");
+		sbAdapterInfo.append("\n");
+		sbAdapterInfo.append(StringUtils.formatSingleLine(1, "}"));
+		sbAdapterInfo.append("\n");
 		
 		return sbAdapterInfo.toString();
 	}

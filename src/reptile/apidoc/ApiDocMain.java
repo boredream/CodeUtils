@@ -9,8 +9,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import reptile.apidoc.ApiDocMain.RequestInfo.RequestParam;
-import utils.AndroidUtils;
 import utils.FileUtils;
+import utils.StringUtils;
 
 public class ApiDocMain {
 
@@ -29,11 +29,11 @@ public class ApiDocMain {
 			String urlName = info.getName();
 			String url = info.getUrl();
 
-			sbUrls.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sbUrls.append(AndroidUtils.formatSingleLine(1,
+			sbUrls.append(StringUtils.formatSingleLine(1, "/**"));
+			sbUrls.append(StringUtils.formatSingleLine(1,
 					" * " + info.getDes()));
-			sbUrls.append(AndroidUtils.formatSingleLine(1, " */"));
-			sbUrls.append(AndroidUtils.formatSingleLine(1,
+			sbUrls.append(StringUtils.formatSingleLine(1, " */"));
+			sbUrls.append(StringUtils.formatSingleLine(1,
 					"public static final String " + urlName + " = \"" + url
 							+ "\";"));
 			sbUrls.append("\n");
@@ -47,11 +47,11 @@ public class ApiDocMain {
 
 			ArrayList<RequestParam> params = info.getParams();
 			if (params != null && params.size() > 0) {
-				sbAnotation.append(AndroidUtils.formatSingleLine(1, " *"));
+				sbAnotation.append(StringUtils.formatSingleLine(1, " *"));
 				for (RequestParam param : params) {
 					// 方式注释里参数
 					// * @param name 姓名
-					sbAnotation.append(AndroidUtils.formatSingleLine(
+					sbAnotation.append(StringUtils.formatSingleLine(
 							1,
 							" * @param " + param.getName() + " "
 									+ param.getDes()));
@@ -61,7 +61,7 @@ public class ApiDocMain {
 							+ ", ");
 
 					// 方法内容里参数 params.put("phone", phone);
-					sbBody.append(AndroidUtils.formatSingleLine(
+					sbBody.append(StringUtils.formatSingleLine(
 							2,
 							"params.put(\"" + param.getName() + "\", "
 									+ param.getName() + ");"));
@@ -69,10 +69,10 @@ public class ApiDocMain {
 			}
 			sbParam.append("HttpListener<Object> listener");
 
-			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sb.append(AndroidUtils.formatSingleLine(1, " * " + info.getDes()));
+			sb.append(StringUtils.formatSingleLine(1, "/**"));
+			sb.append(StringUtils.formatSingleLine(1, " * " + info.getDes()));
 			sb.append(sbAnotation.toString());
-			sb.append(AndroidUtils.formatSingleLine(1, " */"));
+			sb.append(StringUtils.formatSingleLine(1, " */"));
 
 			StringBuilder methodNameSb = new StringBuilder();
 			String[] nameItems = url.substring(1).split("[/_]");
@@ -85,17 +85,16 @@ public class ApiDocMain {
 				methodNameSb.append(nameItem);
 			}
 
-			sb.append(AndroidUtils.formatSingleLine(1, "public static void "
+			sb.append(StringUtils.formatSingleLine(1, "public static void "
 					+ methodNameSb.toString() + "("
 					+ sbParam.toString() + ") {"));
-			sb.append(AndroidUtils
-					.formatSingleLine(2,
+			sb.append(StringUtils.formatSingleLine(2,
 							"HashMap<String, Object> params = new HashMap<String, Object>();"));
 			sb.append(sbBody.toString());
-			sb.append(AndroidUtils.formatSingleLine(2,
+			sb.append(StringUtils.formatSingleLine(2,
 					"doHttp(URLs.getUrl(URLs." + urlName + ")"
 					+ ", \"" + info.getMethod() + "\", params, Object.class, listener);"));
-			sb.append(AndroidUtils.formatSingleLine(1, "}"));
+			sb.append(StringUtils.formatSingleLine(1, "}"));
 			sb.append("\n");
 
 		}

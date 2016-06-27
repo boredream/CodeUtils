@@ -38,47 +38,49 @@ import com.google.gson.Gson;
 import utils.AndroidUtils;
 import utils.CharacterParser;
 import utils.FileUtils;
+import utils.StringUtils;
 import utils.XmlUtil;
 import entity.IdNamingBean;
 
 public class TempUtils {
-	
-	public static void main(String[] args) throws Exception {
-//		compareStrings();
-//		autoCreateSizeSet(true);
-//		desParams();
-//		extractAllString();
 
-//		String path = "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
-//		
-//		File rootFile = new File(path);
-//		for(File file : rootFile.listFiles()) {
-//			System.out.println(file.getName());
-//			if(file.isDirectory()) {
-//				for(File f : file.listFiles()) {
-//					System.out.println("  " + f.getName());
-//				}
-//			}
-//		}
-		
+	public static void main(String[] args) throws Exception {
+		// compareStrings();
+		// autoCreateSizeSet(true);
+		// desParams();
+		// extractAllString();
+
+		// String path =
+		// "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
+		//
+		// File rootFile = new File(path);
+		// for(File file : rootFile.listFiles()) {
+		// System.out.println(file.getName());
+		// if(file.isDirectory()) {
+		// for(File f : file.listFiles()) {
+		// System.out.println("  " + f.getName());
+		// }
+		// }
+		// }
+
 		exportXml();
 
-//		String str = FileUtils.readToString(new File("temp\\test.html"));
-//		String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
-//		Pattern pattern = Pattern.compile(regex);
-//		Matcher matcher = pattern.matcher(str);
-//		if(matcher.find()) {
-//			String body = matcher.group(1);
-//			String regex1 = "\"([\\s\\S]+)\"";
-//			Pattern pattern1 = Pattern.compile(regex1);
-//			Matcher matcher1 = pattern1.matcher(body);
-//			if(matcher1.find()) {
-//				System.out.println(matcher1.group(1));
-//			}
-//		}
-		
+		// String str = FileUtils.readToString(new File("temp\\test.html"));
+		// String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
+		// Pattern pattern = Pattern.compile(regex);
+		// Matcher matcher = pattern.matcher(str);
+		// if(matcher.find()) {
+		// String body = matcher.group(1);
+		// String regex1 = "\"([\\s\\S]+)\"";
+		// Pattern pattern1 = Pattern.compile(regex1);
+		// Matcher matcher1 = pattern1.matcher(body);
+		// if(matcher1.find()) {
+		// System.out.println(matcher1.group(1));
+		// }
+		// }
+
 	}
-	
+
 	class Person {
 		private String name;
 		private String gender;
@@ -107,11 +109,11 @@ public class TempUtils {
 		public void setNickNames(List<String> nickNames) {
 			this.nickNames = nickNames;
 		}
-		
+
 	}
 
 	public static void weiboEmoji() {
-		
+
 		// emoji
 		StringBuilder sb = new StringBuilder();
 
@@ -353,7 +355,7 @@ public class TempUtils {
 			String setSizeLine = idName + ".setTextSize(Constant.TEXT_SIZE["
 					+ indexOf
 					+ "] * TxtManager.getInstance().getTxtSize(this));";
-			sbSetTextSize.append(AndroidUtils.formatSingleLine(2, setSizeLine));
+			sbSetTextSize.append(StringUtils.formatSingleLine(2, setSizeLine));
 		}
 
 		// 如果要自动setId则将设置好id的xml写回布局layout_size_new.xml中
@@ -374,12 +376,12 @@ public class TempUtils {
 		// TxtManager.getInstance().getTxtSize(context))
 		// }
 		sbSetTextSize.insert(0,
-				AndroidUtils.formatSingleLine(2, "super.onResume();"));
+				StringUtils.formatSingleLine(2, "super.onResume();"));
 		sbSetTextSize
-				.insert(0, AndroidUtils.formatSingleLine(1,
+				.insert(0, StringUtils.formatSingleLine(1,
 						"protected void onResume() {"));
-		sbSetTextSize.insert(0, AndroidUtils.formatSingleLine(1, "@Override"));
-		sbSetTextSize.append(AndroidUtils.formatSingleLine(1, "}"));
+		sbSetTextSize.insert(0, StringUtils.formatSingleLine(1, "@Override"));
+		sbSetTextSize.append(StringUtils.formatSingleLine(1, "}"));
 
 		activityContent += sbSetTextSize.toString();
 
@@ -390,7 +392,7 @@ public class TempUtils {
 		System.out.println("--------------");
 		System.out.println("代码生成正确,请在SetSize/Layout_Size.java中查看");
 	}
-	
+
 	/**
 	 * 替换map中所有匹配的key，替换成value
 	 * 
@@ -400,7 +402,7 @@ public class TempUtils {
 	 */
 	public static String replaceAllMap(String oldStr, Map<String, String> replaceMap) {
 		String newStr = oldStr;
-		for(Map.Entry<String, String> entry : replaceMap.entrySet()) {
+		for (Map.Entry<String, String> entry : replaceMap.entrySet()) {
 			newStr = newStr.replace(entry.getKey(), entry.getValue());
 		}
 		return newStr;
@@ -408,16 +410,16 @@ public class TempUtils {
 
 	public static void replacePPT() {
 		Map<String, String> replaceMap = new HashMap<String, String>();
-//		replaceMap.put("实战名称", "微博实战：Android 视频播放");
-//		replaceMap.put("知识点1", "我页面的实现");
-		
+		// replaceMap.put("实战名称", "微博实战：Android 视频播放");
+		// replaceMap.put("知识点1", "我页面的实现");
+
 		replaceMap.put("我页面的实现", "知识点1");
 		replaceMap.put("个人中心页面的基本实现", "知识点2");
 		replaceMap.put("个人中心页面菜单栏相关效果", "知识点3");
 		replaceMap.put("个人中心页面背景图变化效果", "");
-//		replaceMap.put("知识点1", "我页面的实现");
+		// replaceMap.put("知识点1", "我页面的实现");
 		// TODO replaceMaps.put(被替换内容, 替换内容);
-		
+
 		try {
 			// 获取ppt文件
 			FileInputStream is = new FileInputStream("temp"
@@ -435,47 +437,47 @@ public class TempUtils {
 						XSLFTextShape txShape = (XSLFTextShape) shape;
 						// 获取其中的文字
 						String text = txShape.getText();
-						
+
 						// 替换文字内容
 						text = replaceAllMap(text, replaceMap);
 						txShape.setText(text);
-						
+
 						if (text.contains("{picture}")) {
-//							// 替换图片
-//							byte[] pictureData = IOUtils.toByteArray(
-//								new FileInputStream("E:\\33.png"));
-//							int idx = ppt.addPicture(pictureData,
-//									XSLFPictureData.PICTURE_TYPE_PNG);
-//							XSLFPictureShape pic = slide.createPicture(idx);
-//							// 设置XSLFPictureShape的位置信息
-//							pic.setAnchor(anchor);
-//							// 移除XSLFTextShape
-//							slide.removeShape(txShape);
+							// // 替换图片
+							// byte[] pictureData = IOUtils.toByteArray(
+							// new FileInputStream("E:\\33.png"));
+							// int idx = ppt.addPicture(pictureData,
+							// XSLFPictureData.PICTURE_TYPE_PNG);
+							// XSLFPictureShape pic = slide.createPicture(idx);
+							// // 设置XSLFPictureShape的位置信息
+							// pic.setAnchor(anchor);
+							// // 移除XSLFTextShape
+							// slide.removeShape(txShape);
 							System.out.println("替换图片");
 						}
 					} else if (shape instanceof XSLFGroupShape) {
 						System.out.println("替换group");
 						for (XSLFShape sunshape : ((XSLFGroupShape) shape).getShapes()) {
 							XSLFTextShape txSunShape = (XSLFTextShape) sunshape;
-							
+
 							// 获取其中的文字
 							String text = txSunShape.getText();
-							
+
 							// 替换文字内容
 							text = replaceAllMap(text, replaceMap);
 							txSunShape.setText(text);
-							
-//							if (text.contains("{picture}")) {
-//								// 替换图片
-//								byte[] pictureData = IOUtils
-//										.toByteArray(new FileInputStream(
-//												"E:\\33.png"));
-//								int idx = ppt.addPicture(pictureData,
-//										XSLFPictureData.PICTURE_TYPE_PNG);
-//								XSLFPictureShape pic = slide.createPicture(idx);
-//								slide.removeShape(txSunShape);
-//								pic.setAnchor(anchor);
-//							}
+
+							// if (text.contains("{picture}")) {
+							// // 替换图片
+							// byte[] pictureData = IOUtils
+							// .toByteArray(new FileInputStream(
+							// "E:\\33.png"));
+							// int idx = ppt.addPicture(pictureData,
+							// XSLFPictureData.PICTURE_TYPE_PNG);
+							// XSLFPictureShape pic = slide.createPicture(idx);
+							// slide.removeShape(txSunShape);
+							// pic.setAnchor(anchor);
+							// }
 						}
 					} else if (shape instanceof XSLFPictureShape) {
 						System.out.println("替换picture");
@@ -488,9 +490,9 @@ public class TempUtils {
 				}
 			}
 
-			File file = new File("temp" + File.separator + 
-				"office" + File.separator + "ppt2007plus_new.pptx");
-			if(!file.exists()) {
+			File file = new File("temp" + File.separator +
+					"office" + File.separator + "ppt2007plus_new.pptx");
+			if (!file.exists()) {
 				file.createNewFile();
 			}
 			FileOutputStream out = new FileOutputStream(file);
@@ -561,7 +563,7 @@ public class TempUtils {
 		// e.printStackTrace();
 		// }
 	}
-	
+
 	public static void exportXml() {
 		// save to
 		File file = new File(
@@ -571,23 +573,24 @@ public class TempUtils {
 
 		String regexChinese = "[\u4e00-\u9fa5]+";
 		Pattern patternChiese = Pattern.compile(regexChinese);
-		
+
 		List<Element> elements = rootElement.elements();
 		List<String> values = new ArrayList<String>();
 		for (Element e : elements) {
 			String text = e.getText();
 			Matcher matcher = patternChiese.matcher(text);
-			if(matcher.find() && !values.contains(text)) {
+			if (matcher.find() && !values.contains(text)) {
 				values.add(text);
 				System.out.println(text);
 			}
 		}
 	}
-	
+
 	public static void extractAllString() {
 		List<File> files = FileUtils.getAllFiles("D:\\work\\BusinessCMT2.0");
-//		List<File> files = FileUtils.getAllFiles("D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\view\\activity\\pay");
-		
+		// List<File> files =
+		// FileUtils.getAllFiles("D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\view\\activity\\pay");
+
 		Map<String, String> stringIdValueMap = new TreeMap<String, String>();
 		for (File file : files) {
 			if (file.getName().endsWith(".java")
@@ -619,8 +622,8 @@ public class TempUtils {
 					boolean multiLineAnno = false;
 					while ((line = bufferedreader.readLine()) != null) {
 
-						totoalLine ++;
-						
+						totoalLine++;
+
 						// 空行
 						if (line.trim().equals("")) {
 							newFileContent.append(line + "\n");
@@ -651,18 +654,18 @@ public class TempUtils {
 						}
 
 						// 有效代码
-						
+
 						// 判断是否为页面类
-						if(line.contains("extends") && line.contains("Activity")) {
+						if (line.contains("extends") && line.contains("Activity")) {
 							isActivity = true;
 						}
-						
+
 						// 中文字符"blablabla"
 						String regexEmoji = "\"([\\s\\S]+?)\"";
-						
+
 						Pattern pattern = Pattern.compile(regexEmoji);
 						Matcher matcher = pattern.matcher(line);
-						
+
 						String regexChinese = "[\u4e00-\u9fa5]+";
 						Pattern patternChiese = Pattern.compile(regexChinese);
 
@@ -672,145 +675,146 @@ public class TempUtils {
 
 							Matcher matcherChinese = patternChiese.matcher(chinese);
 							// TODO 如果包含的内容中没有中文,跳过
-							if(!matcherChinese.find()) {
+							if (!matcherChinese.find()) {
 								continue;
 							}
-							
+
 							// TODO 如果是日志内容,跳过
-							if(line.trim().startsWith("Log") || line.trim().startsWith("showLog")) {
+							if (line.trim().startsWith("Log") || line.trim().startsWith("showLog")) {
 								continue;
 							}
-							
-							if(file.getName().endsWith(".java")) {
+
+							if (file.getName().endsWith(".java")) {
 								// id规则,文件名小写_递增数字
 								String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
-								
-								if(isActivity) {
+
+								if (isActivity) {
 									// 如果是页面类,直接getResource
-									line = line.replace("\"" + chinese + "\"", "getResources().getString(R.string."+stringId+")");
+									line = line.replace("\"" + chinese + "\"", "getResources().getString(R.string." + stringId + ")");
 								} else {
 									// 非页面类,用application去getResource
-									line = line.replace("\"" + chinese + "\"", "BusinessCMTApplication.getInstance().getResources().getString(R.string."+stringId+")");
+									line = line.replace("\"" + chinese + "\"", "BusinessCMTApplication.getInstance().getResources().getString(R.string." + stringId + ")");
 								}
 								stringIdValueMap.put(stringId, chinese);
 								isReplace = true;
-							} else if(file.getName().endsWith(".xml")) {
+							} else if (file.getName().endsWith(".xml")) {
 								// id规则,文件名小写_递增数字
 								String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
 								// xml用@string/blabla替换,注意,不替换""
-								line = line.replace(chinese, "@string/"+stringId);
+								line = line.replace(chinese, "@string/" + stringId);
 								stringIdValueMap.put(stringId, chinese);
 								isReplace = true;
 							}
 						}
 						newFileContent.append(line + "\n");
-						
+
 					}
 					fr.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				
-				if(isReplace) {
+
+				if (isReplace) {
 					// TODO 写入回文件,如果有替换操作
-//					FileUtils.writeString2File(newFileContent.toString(), file, "UTF-8");
+					// FileUtils.writeString2File(newFileContent.toString(),
+					// file, "UTF-8");
 				}
 			}
 
 		}
-		
+
 		System.out.println(stringIdValueMap);
-		
+
 		// save to
 		File file = new File("D:\\work\\BusinessCMT2.0\\res\\values\\string.xml");
 		Document valuesDoc = XmlUtil.read(file);
 		Element rootElement = valuesDoc.getRootElement();
-		
+
 		List<Element> elements = rootElement.elements();
-		for(Map.Entry<String, String> entry : stringIdValueMap.entrySet()) {
+		for (Map.Entry<String, String> entry : stringIdValueMap.entrySet()) {
 			// 是否在values/xx.xml对应文件下下已有某个抽取过的值
 			boolean hasElement = false;
-			
-			for(Element element : elements) {
+
+			for (Element element : elements) {
 				Attribute nameAtt = element.attribute("name");
-				if(nameAtt.getValue().equals(entry.getKey())) {
+				if (nameAtt.getValue().equals(entry.getKey())) {
 					hasElement = true;
 					break;
 				}
 			}
-			
-			if(!hasElement) {
-	//			<string name="app_name">Stone Chat</string>
+
+			if (!hasElement) {
+				// <string name="app_name">Stone Chat</string>
 				Element element = rootElement.addElement("string");
 				element.addAttribute("name", entry.getKey());
 				element.setText(entry.getValue());
 			}
 		}
 		// TODO save string文件
-//		XmlUtil.write2xml(file, valuesDoc);
+		// XmlUtil.write2xml(file, valuesDoc);
 	}
-	
+
 	public static void compareStrings() {
-		
+
 		List<String> hasStrName = new ArrayList<String>();
-		
+
 		// save to
 		File file = new File("D:\\work\\BusinessCMT2.0\\res\\values-en\\strings.xml");
 		Document valuesDoc = XmlUtil.read(file);
 		Element rootElement = valuesDoc.getRootElement();
-		
+
 		List<Element> elements = rootElement.elements();
-		for(Element element : elements) {
+		for (Element element : elements) {
 			Attribute nameAtt = element.attribute("name");
 			String name = nameAtt.getValue();
 			hasStrName.add(name);
 		}
-		
+
 		// save to
 		File fileChn = new File("D:\\work\\BusinessCMT2.0\\res\\values\\strings.xml");
 		Document valuesDocChn = XmlUtil.read(fileChn);
 		Element rootElementChn = valuesDocChn.getRootElement();
-		
+
 		List<Element> elementsChn = rootElementChn.elements();
-		for(Element element : elementsChn) {
+		for (Element element : elementsChn) {
 			Attribute nameAtt = element.attribute("name");
 			String name = nameAtt.getValue();
-			if(!hasStrName.contains(name)) {
+			if (!hasStrName.contains(name)) {
 				System.out.println(element.getText());
 			}
 		}
-	
-		
-		
+
 	}
-	
+
 	public static void desParams() {
-//		String beanPath1 = "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\model";
+		// String beanPath1 =
+		// "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\model";
 		String beanPath = "D:\\work\\BusinessCMT2.0\\src\\com\\imohoo\\BusinessCMT\\db\\table";
-		
+
 		List<File> allFiles = FileUtils.getAllFiles(beanPath);
-		for(File file : allFiles) {
-			
+		for (File file : allFiles) {
+
 			String content = FileUtils.readToString(file, "UTF-8");
-			if(!content.contains("DatabaseTable")) {
+			if (!content.contains("DatabaseTable")) {
 				continue;
 			}
 
 			List<String> paramList = new ArrayList<String>();
-			
-//			System.out.println(file.getName() + " ----------------------------");
+
+			// System.out.println(file.getName() +
+			// " ----------------------------");
 			FileReader fr;
-			
+
 			try {
 				fr = new FileReader(file);
 				BufferedReader bufferedreader = new BufferedReader(fr);
 				String line;
-				while ((line=bufferedreader.readLine()) != null) {
-					if(line.contains("public void set") && line.contains("String")) {
+				while ((line = bufferedreader.readLine()) != null) {
+					if (line.contains("public void set") && line.contains("String")) {
 						int lastIndex = line.lastIndexOf(")");
 						int beforeIndex = line.indexOf("(String") + 8;
 						String param = line.substring(beforeIndex, lastIndex);
-//						System.out.println(param);
+						// System.out.println(param);
 						paramList.add(param);
 					}
 				}
@@ -818,37 +822,37 @@ public class TempUtils {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-//			System.out.println(paramList);
-//			System.out.println();
-			
-			if(paramList.size() > 0) {
-				for(String param : paramList) {
+			// System.out.println(paramList);
+			// System.out.println();
+
+			if (paramList.size() > 0) {
+				for (String param : paramList) {
 					// setter
 					// this.name = name;
 					String oldSetter = "this." + param + " = " + param + ";";
 					// this.name = Util.encryptDES(name);
 					String newSetter = "this." + param + " = " + "Util.encryptDES(" + param + ");";
-					if(content.contains(oldSetter)) {
+					if (content.contains(oldSetter)) {
 						content = content.replace(oldSetter, newSetter);
 					} else {
 						System.out.println(param + " 的setter方法格式不对");
 					}
-					
+
 					// getter
 					// return name;
 					String oldGetter = "return " + param + ";";
 					// return Util.decryptDES(name);
 					String newGetter = "return " + "Util.decryptDES(" + param + ");";
-					if(content.contains(oldGetter)) {
+					if (content.contains(oldGetter)) {
 						content = content.replace(oldGetter, newGetter);
 					} else {
 						System.out.println(param + " 的getter方法格式不对");
 					}
 				}
-				
+
 				FileUtils.writeString2File(content, file, "UTF-8");
 			}
 		}
 	}
-	
+
 }

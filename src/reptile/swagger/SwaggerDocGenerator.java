@@ -71,10 +71,10 @@ public class SwaggerDocGenerator {
 				url = url.replace(endParam, "");
 			}
 			
-			sbUrl.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sbUrl.append(AndroidUtils.formatSingleLine(1, " * " + name));
-			sbUrl.append(AndroidUtils.formatSingleLine(1, " */"));
-			sbUrl.append(AndroidUtils.formatSingleLine(1, "public static final String " 
+			sbUrl.append(StringUtils.formatSingleLine(1, "/**"));
+			sbUrl.append(StringUtils.formatSingleLine(1, " * " + name));
+			sbUrl.append(StringUtils.formatSingleLine(1, " */"));
+			sbUrl.append(StringUtils.formatSingleLine(1, "public static final String " 
 					+ urlName.toUpperCase() + " = \"" + url + "\";" 
 					+ (endParam == null ? "" : "// " + endParam)));
 			sbUrl.append("\n");
@@ -106,7 +106,7 @@ public class SwaggerDocGenerator {
 			
 			ArrayList<RequestParam> params = info.getParams();
 			if(params != null && params.size() > 0) {
-				sbAnotation.append(AndroidUtils.formatSingleLine(1, " *"));
+				sbAnotation.append(StringUtils.formatSingleLine(1, " *"));
 				for(RequestParam param : params) {
 					// 方式注释里参数
 					sbAnotation.append("\t * @param")
@@ -130,21 +130,21 @@ public class SwaggerDocGenerator {
 					sbParam.append(param.getType() + " " + param.getName() + ", ");
 					
 					// 方法内容里参数 params.put("phone", phone);
-					sbBody.append(AndroidUtils.formatSingleLine(2, 
+					sbBody.append(StringUtils.formatSingleLine(2, 
 							"params.put(\"" + param.getName() + "\", " + param.getName() + ");"));
 				}
 			}
 			sbParam.append("HttpListener<" + responseBeanName + "> listener");
 			
-			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sb.append(AndroidUtils.formatSingleLine(1, " * " + name));
+			sb.append(StringUtils.formatSingleLine(1, "/**"));
+			sb.append(StringUtils.formatSingleLine(1, " * " + name));
 			if(endParamName != null) {
-				sb.append(AndroidUtils.formatSingleLine(1, " *"))
+				sb.append(StringUtils.formatSingleLine(1, " *"))
 					.append("\t * @param").append(" ").append(endParamName);
 			} else {
 				sb.append(sbAnotation.toString());
 			}
-			sb.append(AndroidUtils.formatSingleLine(1, " */"));
+			sb.append(StringUtils.formatSingleLine(1, " */"));
 			
 			StringBuilder methodNameSb = new StringBuilder();
 			String[] nameItems = urlName.split("_");
@@ -156,15 +156,15 @@ public class SwaggerDocGenerator {
 				methodNameSb.append(nameItem);
 			}
 			
-			sb.append(AndroidUtils.formatSingleLine(1, "public static void " + methodNameSb.toString() +
+			sb.append(StringUtils.formatSingleLine(1, "public static void " + methodNameSb.toString() +
 					"("  + (endParamName==null?"":"String "+endParamName+", ") + sbParam.toString() + ") {"));
-			sb.append(AndroidUtils.formatSingleLine(2, 
+			sb.append(StringUtils.formatSingleLine(2, 
 					"HashMap<String, Object> params = new HashMap<String, Object>();"));
 			sb.append(sbBody.toString());
-			sb.append(AndroidUtils.formatSingleLine(2, 
+			sb.append(StringUtils.formatSingleLine(2, 
 					"doHttp(URLs.getUrl(URLs." + urlName.toUpperCase() 
 					+ ")" + (endParamName==null?"":" + "+endParamName) + ", \"" + info.getMethod() + "\", params, " + responseBeanName + ".class, listener);"));
-			sb.append(AndroidUtils.formatSingleLine(1, "}")); 
+			sb.append(StringUtils.formatSingleLine(1, "}")); 
 			sb.append("\n");
 		}
 		System.out.println(sbUrl.toString());

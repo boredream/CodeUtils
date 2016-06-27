@@ -2,7 +2,6 @@ package test;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Locale;
 
 import org.jsoup.Jsoup;
@@ -11,8 +10,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import test.JsoupUtils.RequestInfo.RequestParam;
-import utils.AndroidUtils;
 import utils.FileUtils;
+import utils.StringUtils;
 
 public class JsoupUtils {
 
@@ -37,10 +36,10 @@ public class JsoupUtils {
 			// 替换/为_同时转大写
 			String name = info.getUrlEnd().replace("/", "_").toUpperCase(Locale.CHINA).substring(1);
 			
-			sb.append(AndroidUtils.formatSingleLine(1, "/**"));
-			sb.append(AndroidUtils.formatSingleLine(1, " * " + info.getDes()));
-			sb.append(AndroidUtils.formatSingleLine(1, " */"));
-			sb.append(AndroidUtils.formatSingleLine(1, "public static final String " 
+			sb.append(StringUtils.formatSingleLine(1, "/**"));
+			sb.append(StringUtils.formatSingleLine(1, " * " + info.getDes()));
+			sb.append(StringUtils.formatSingleLine(1, " */"));
+			sb.append(StringUtils.formatSingleLine(1, "public static final String " 
 					+ name + " = \"" + urlEnd + "\";"));
 			sb.append("\n");
 			
@@ -49,9 +48,9 @@ public class JsoupUtils {
 //			postParams.put("page", page);
 //			postParams.put("keyword", searchKey);
 			
-			sb.append(AndroidUtils.formatSingleLine(2, "HashMap<String, Object> postParams = new HashMap<String, Object>();"));
+			sb.append(StringUtils.formatSingleLine(2, "HashMap<String, Object> postParams = new HashMap<String, Object>();"));
 			for(RequestParam param : info.getParams()) {
-				sb.append(AndroidUtils.formatSingleLine(2, 
+				sb.append(StringUtils.formatSingleLine(2, 
 						"postParams.put(\"" + param.getName() + "\", " + param.getName() + ");"
 								+ " // " + param.getDes()));
 			}
