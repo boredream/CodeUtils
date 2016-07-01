@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/libs/dom4j-1.6.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/gson-1.7.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/junit-4.11.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-examples-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-excelant-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-ooxml-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-ooxml-schemas-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/poi-scratchpad-3.11-20141221.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/xmlbeans-2.6.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/jsoup-1.8.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/commons-codec-1.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/commons-logging-1.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/fluent-hc-4.2.5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/httpclient-4.2.5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/httpclient-cache-4.2.5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/httpcore-4.2.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/httpmime-4.2.5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/greendao-generator-2.0.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/freemarker.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libs/greendao-2.0.0.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="dom4j-1.6.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gson-1.7.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/gson-1.7.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="junit-4.11.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/junit-4.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-examples-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-examples-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-excelant-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-excelant-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-ooxml-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-ooxml-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-ooxml-schemas-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-ooxml-schemas-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="poi-scratchpad-3.11-20141221.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/poi-scratchpad-3.11-20141221.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="xmlbeans-2.6.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/xmlbeans-2.6.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsoup-1.8.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/jsoup-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-codec-1.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/commons-codec-1.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/commons-logging-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="fluent-hc-4.2.5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/fluent-hc-4.2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpclient-4.2.5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/httpclient-4.2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpclient-cache-4.2.5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/httpclient-cache-4.2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpcore-4.2.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/httpcore-4.2.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpmime-4.2.5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/httpmime-4.2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="greendao-generator-2.0.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/greendao-generator-2.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="freemarker.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/freemarker.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="greendao-2.0.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/greendao-2.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+  </component>
+</module>

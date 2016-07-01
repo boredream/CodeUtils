@@ -12,6 +12,7 @@ public class ClassInfo {
 		public String scope;
 		public String type;
 		public String name;
+		public boolean isWhere;
 
 		@Override
 		public String toString() {
