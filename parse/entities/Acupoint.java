@@ -9,26 +9,17 @@ public class Acupoint extends BaseEntity {
 
     private String bodyArea;
     private int jingLuoIndex;
-
-    /**
-     * 五输穴类型
-     */
     private String wuShuType;
-    private String name;
-    private String pinyin;
 
     /**
-     * 经络
+     * 名称
      * [where]
      */
+    private String name;
+    private String pinyin;
     private String jingLuo;
     private String wuShuWuXing;
     private String jingLuoIndexDirection;
-
-    /**
-     * 功能类型
-     * [where]
-     */
     private String functionType;
     private String location;
 

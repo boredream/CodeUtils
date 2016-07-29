@@ -136,7 +136,7 @@ public class ParseUtlis {
                     sbWhere2.append(", where").append(firstUpperName);
 
                     if (whereFiles.size() == 1) {
-                        sbWheres.append(StringUtils.formatSingleLine(1, "String where = where" + firstUpperName));
+                        sbWheres.append(StringUtils.formatSingleLine(1, "String where = where" + firstUpperName + ";"));
                     }
                 }
 

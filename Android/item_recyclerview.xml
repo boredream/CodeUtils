@@ -1,45 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="96dp"
-    android:orientation="horizontal"
-    android:paddingBottom="@dimen/margin_small"
-    android:paddingLeft="@dimen/margin_medium"
-    android:paddingRight="@dimen/margin_medium"
-    android:paddingTop="@dimen/margin_small">
+              android:layout_width="match_parent"
+              android:layout_height="65dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp">
 
     <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="80dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop" />
+            android:id="@+id/iv_avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerCrop" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/margin_medium"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_title"
-            style="@style/TextViewSubhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/tv_name"
-            style="@style/TextViewBody"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small" />
+            android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_size"
-            style="@style/TextViewBody"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small" />
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#2D3039"
+                android:textSize="15sp" />
 
+        <TextView
+                android:id="@+id/tv_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="11sp" />
 
     </LinearLayout>
 

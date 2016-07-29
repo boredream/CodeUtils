@@ -13,16 +13,14 @@
 	}
 
 	public static class ViewHolder extends RecyclerView.ViewHolder {
-		public ImageView iv_image;
-		public TextView tv_title;
+		public ImageView iv_avatar;
 		public TextView tv_name;
-		public TextView tv_size;
+		public TextView tv_total_time;
 		public ViewHolder(final View itemView) {
 			super(itemView);
-			iv_image = (ImageView) itemView.findViewById(R.id.iv_image);
-			tv_title = (TextView) itemView.findViewById(R.id.tv_title);
+			iv_avatar = (ImageView) itemView.findViewById(R.id.iv_avatar);
 			tv_name = (TextView) itemView.findViewById(R.id.tv_name);
-			tv_size = (TextView) itemView.findViewById(R.id.tv_size);
+			tv_total_time = (TextView) itemView.findViewById(R.id.tv_total_time);
 		}
 	}
 
