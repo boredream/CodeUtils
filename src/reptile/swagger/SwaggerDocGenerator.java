@@ -6,18 +6,17 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import entity.RequestParam;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import utils.AndroidUtils;
 import utils.FileUtils;
 import utils.JsonUtils;
 import utils.StringUtils;
 import entity.Json2JavaElement;
 import entity.RequestInfo;
-import entity.RequestInfo.RequestParam;
 
 public class SwaggerDocGenerator {
 

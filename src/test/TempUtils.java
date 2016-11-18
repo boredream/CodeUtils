@@ -45,40 +45,37 @@ import entity.IdNamingBean;
 public class TempUtils {
 
 	public static void main(String[] args) throws Exception {
-		// compareStrings();
-		// autoCreateSizeSet(true);
-		// desParams();
-		// extractAllString();
 
-		// String path =
-		// "D:\\adt-bundle-windows-x86_64-20140702\\sdk\\samples\\android-22";
-		//
-		// File rootFile = new File(path);
-		// for(File file : rootFile.listFiles()) {
-		// System.out.println(file.getName());
-		// if(file.isDirectory()) {
-		// for(File f : file.listFiles()) {
-		// System.out.println("  " + f.getName());
-		// }
-		// }
-		// }
-
-		exportXml();
-
-		// String str = FileUtils.readToString(new File("temp\\test.html"));
-		// String regex = "function banner\\(\\)\\{([\\s\\S]+)\\};";
-		// Pattern pattern = Pattern.compile(regex);
-		// Matcher matcher = pattern.matcher(str);
-		// if(matcher.find()) {
-		// String body = matcher.group(1);
-		// String regex1 = "\"([\\s\\S]+)\"";
-		// Pattern pattern1 = Pattern.compile(regex1);
-		// Matcher matcher1 = pattern1.matcher(body);
-		// if(matcher1.find()) {
-		// System.out.println(matcher1.group(1));
-		// }
-		// }
-
+		String content = "faceMap.put('01','笑');\n" +
+				"faceMap.put('02','难过');\n" +
+				"faceMap.put('03','哭');\n" +
+				"faceMap.put('04','生气');\n" +
+				"faceMap.put('05','愤怒');\n" +
+				"faceMap.put('06','汗');\n" +
+				"faceMap.put('07','狂汗');\n" +
+				"faceMap.put('08','惊讶');\n" +
+				"faceMap.put('09','吓尿');\n" +
+				"faceMap.put('10','疑问');\n" +
+				"faceMap.put('11','阴险');\n" +
+				"faceMap.put('12','呕吐');\n" +
+				"faceMap.put('13','委屈');\n" +
+				"faceMap.put('14','黑线');\n" +
+				"faceMap.put('15','星星眼');\n" +
+				"faceMap.put('16','困');\n" +
+				"faceMap.put('17','鄙视');\n" +
+				"faceMap.put('18','傲骄');\n" +
+				"faceMap.put('19','财迷');\n" +
+				"faceMap.put('20','喷');\n" +
+				"faceMap.put('21','馋');\n" +
+				"faceMap.put('22','酷');\n" +
+				"faceMap.put('23','吐舌');\n" +
+				"faceMap.put('24','呵呵');\n" +
+				"faceMap.put('25','色');\n" +
+				"faceMap.put('26','懵逼');\n" +
+				"faceMap.put('27','赞');\n" +
+				"faceMap.put('28','斜眼');";
+		content = content.replaceAll("faceMap.put\\('\\d\\d','", "<item>").replaceAll("'\\);", "</item>");
+		System.out.println(content);
 	}
 
 	class Person {
@@ -248,7 +245,7 @@ public class TempUtils {
 	 * 自动生成TextView size设置代码
 	 * 
 	 * @param isAutoSetId
-	 *            是否自动给没有id的TextView添加id
+	 *    是否自动给没有id的TextView添加id
 	 */
 	public static void autoCreateSizeSet(boolean isAutoSetId) {
 		// TODO 自动设置文字id的前缀

@@ -1,16 +1,16 @@
 package reptile.apidoc;
 
-import java.io.File;
-import java.util.ArrayList;
-
+import entity.RequestInfo;
+import entity.RequestParam;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import reptile.apidoc.ApiDocMain.RequestInfo.RequestParam;
 import utils.FileUtils;
 import utils.StringUtils;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class ApiDocMain {
 
@@ -165,7 +165,7 @@ public class ApiDocMain {
 						// " ... "
 						// + paramType + " ... " + paramDes);
 						RequestParam param = new RequestParam(paramName, paramType,
-								paramDes);
+								paramDes, null);
 						params.add(param);
 					}
 				}
@@ -177,109 +177,6 @@ public class ApiDocMain {
 		}
 
 		return requestInfos;
-	}
-
-	static class RequestInfo {
-		private String name;
-		private String method;
-		private String url;
-		private String des;
-		private ArrayList<RequestParam> params;
-
-		static class RequestParam {
-			private String name;
-			private String type;
-			private String des;
-
-			public RequestParam(String name, String type, String des) {
-				this.name = name;
-				this.type = type;
-				this.des = des;
-			}
-
-			public String getName() {
-				return name;
-			}
-
-			public void setName(String name) {
-				this.name = name;
-			}
-
-			public String getType() {
-				if (type.equals("Number") || type.equals("NUmber")) {
-					return name.contains("id") ? "long" : "int";
-				} else if(type.equals("FILE")) {
-					return "File";
-				}
-				return type;
-			}
-
-			public void setType(String type) {
-				this.type = type;
-			}
-
-			public String getDes() {
-				return des;
-			}
-
-			public void setDes(String des) {
-				this.des = des;
-			}
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getMethod() {
-			return method;
-		}
-
-		public void setMethod(String method) {
-			this.method = method;
-		}
-
-		public String getUrl() {
-			return url;
-		}
-
-		// TODO
-		public String getUrlEnd() {
-			String host = "http://short.server.stone-chat.com";
-			return url.replace(host, "");
-		}
-
-		public void setUrl(String url) {
-			this.url = url;
-		}
-
-		public String getDes() {
-			return des;
-		}
-
-		public void setDes(String des) {
-			this.des = des;
-		}
-
-		public ArrayList<RequestParam> getParams() {
-			return params;
-		}
-
-		public void setParams(ArrayList<RequestParam> params) {
-			this.params = params;
-		}
-
-		@Override
-		public String toString() {
-			return "RequestInfo [name=" + name + ", method=" + method
-					+ ", url=" + url + ", des=" + des + ", params=" + params
-					+ "]";
-		}
-
 	}
 
 }

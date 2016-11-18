@@ -147,7 +147,7 @@ public class FileUtils {
 	 * @param rootPath		根目录的绝对路径
 	 * @param replaceString	key-原文字 value-需要替换的文字
 	 */
-	public static void replaceAllStringOfJava(String rootPath, Map<String, String> replaceString) {
+	public static void replaceAllStringOfJava(String rootPath, Map<String, String> replaceString, String charSet) {
 		// 获取全部文件
 		List<File> files = FileUtils.getAllFiles(rootPath);
 		
@@ -158,7 +158,7 @@ public class FileUtils {
 			}
 			
 			// 将文件读取为一整个字符串
-			String fileContent = readToString(file);
+			String fileContent = readToString(file, charSet);
 
 			// 是否有替换操作
 			boolean hasReplace = false;
@@ -172,7 +172,7 @@ public class FileUtils {
 			
 			// 如果有替换操作,则将替换后的新文件内容字符串写入回文件中去
 			if(hasReplace) {
-				writeString2File(fileContent, file);
+				writeString2File(fileContent, file, charSet);
 			}
 		}
 	}
@@ -402,7 +402,7 @@ public class FileUtils {
 			return null;
 		}
 	}
-	
+
 	public static String parseCharset(String oldString, String oldCharset, String newCharset) {
 		byte[] bytes;
 		try {

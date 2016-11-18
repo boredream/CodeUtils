@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import entity.RequestParam;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,7 +15,6 @@ import reptile.swagger.SwaggerDocGenerator;
 import utils.JsonUtils;
 import entity.Json2JavaElement;
 import entity.RequestInfo;
-import entity.RequestInfo.RequestParam;
 
 public class Main {
 	

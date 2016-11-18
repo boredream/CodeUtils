@@ -128,7 +128,11 @@ public class ParseUtlis {
 
                     sbWheres.append(StringUtils.formatSingleLine(1, "String where" + firstUpperName + " = \"{}\";"));
                     sbWheres.append(StringUtils.formatSingleLine(1, "if (!TextUtils.isEmpty(" + field.name + ")) {"));
-                    sbWheres.append(StringUtils.formatSingleLine(2, "where" + firstUpperName + " = \"{\\\"" + field.name + "\\\":\\\"\" + " + field.name + " + \"\\\"}\";"));
+                    if(field.type.equals("String")) {
+                        sbWheres.append(StringUtils.formatSingleLine(2, "where" + firstUpperName + " = \"{\\\"" + field.name + "\\\":\\\"\" + " + field.name + " + \"\\\"}\";"));
+                    } else {
+                        sbWheres.append(StringUtils.formatSingleLine(2, "where" + firstUpperName + " = \"{\\\"" + field.name + "\\\":\" + " + field.name + " + \"}\";"));
+                    }
                     sbWheres.append(StringUtils.formatSingleLine(1, "}"));
 
                     sbWhere1.append(", %s");
