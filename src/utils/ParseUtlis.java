@@ -18,14 +18,14 @@ public class ParseUtlis {
     }
 
     private static void genParseWithRetrofit() {
-        List<File> entityFiles = FileUtils.getAllFiles(
-                new File("parse" + File.separator + "entities"));
+        List<File> entityFiles = FileUtils.getAllFiles(new File(
+                "temp" + File.separator + "parse" + File.separator + "entities"));
 
         StringBuilder sbService = new StringBuilder();
         StringBuilder sbMethod = new StringBuilder();
 
         for (File file : entityFiles) {
-            ClassInfo info = readClassInfo(file);
+            ClassInfo info = ClassUtils.readClassInfo(file);
 
             // // 添加课程
             // @POST("/1/classes/Course")
@@ -241,57 +241,6 @@ public class ParseUtlis {
 
         System.out.println(sbService.toString());
         System.out.println(sbMethod.toString());
-    }
-
-    private static ClassInfo readClassInfo(File file) {
-        ClassInfo info = new ClassInfo();
-        String fileContent = FileUtils.readToString(file, "UTF-8");
-
-        Matcher matcherAnotation = Pattern.compile(
-                "(/\\*\\*[\\s\\S]+?\\*/)?[\\s]*public class ([\\S]+)").matcher(fileContent);
-        if (matcherAnotation.find()) {
-            if (matcherAnotation.group(1) != null) {
-                info.annotation = matcherAnotation.group(1)
-                        .replace("/**", "")
-                        .replace("*/", "")
-                        .replace("*", "")
-                        .trim();
-                info.annotation = info.annotation.split("\\s")[0];
-            } else {
-                info.annotation = null;
-            }
-            info.className = matcherAnotation.group(2).trim();
-
-            fileContent = fileContent.replace(matcherAnotation.group(), "");
-        }
-
-        Matcher matcherFields = Pattern.compile(
-                "(/\\*\\*[\\s\\S]+?\\*/)?[\\s]*(private|public) ([a-zA-Z_0-9]+) ([a-zA-Z_0-9]+)?;").matcher(fileContent);
-        List<ClassField> fields = new ArrayList<>();
-        while (matcherFields.find()) {
-            String str = matcherFields.group();
-
-            ClassField cf = new ClassField();
-            if (matcherFields.group(1) != null) {
-                cf.annotation = matcherFields.group(1)
-                        .replace("/**", "")
-                        .replace("*/", "")
-                        .replace("*", "")
-                        .trim();
-                if (cf.annotation.contains("[where]")) {
-                    cf.isWhere = true;
-                    cf.annotation = cf.annotation.replace("[where]", "").trim();
-                }
-            }
-            cf.scope = matcherFields.group(2);
-            cf.type = matcherFields.group(3);
-            cf.name = matcherFields.group(4);
-
-            fields.add(cf);
-        }
-        info.fields = fields;
-
-        return info;
     }
 
     private static String getApiName(ClassInfo info) {

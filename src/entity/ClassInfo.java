@@ -1,5 +1,7 @@
 package entity;
 
+import utils.StringUtils;
+
 import java.util.List;
 
 public class ClassInfo {
@@ -13,6 +15,23 @@ public class ClassInfo {
 		public String type;
 		public String name;
 		public boolean isWhere;
+		public boolean isPrimaryKey;
+
+		public String getGetMethod() {
+			if(name.startsWith("is")) {
+				return name + "()";
+			} else {
+				return "get" + StringUtils.firstToUpperCase(name) + "()";
+			}
+		}
+
+		public String getSetMethod() {
+			if(name.startsWith("is")) {
+				return name.replaceFirst("is", "set") + "(%s)";
+			} else {
+				return "set" + StringUtils.firstToUpperCase(name) + "(%s)";
+			}
+		}
 
 		@Override
 		public String toString() {

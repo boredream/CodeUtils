@@ -11,7 +11,7 @@ public class _GreenDaoMain {
 		addHerb(schema);
 		addHerbDetail(schema);
 
-		new DaoGenerator().generateAll(schema, "temp/greendao");
+		new DaoGenerator().generateAll(schema, "temp/db/entities");
 	}
 	
 	private static void addHerb(Schema schema) {

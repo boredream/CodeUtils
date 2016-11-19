@@ -31,4 +31,36 @@ public class StringUtils {
 		}
 		return sb.toString();
 	}
+
+	/**
+	 * 驼峰转下划线命名
+     */
+	public static String camelTo_(String src) {
+		StringBuilder sb = new StringBuilder();
+		StringBuilder sbWord = new StringBuilder();
+		char[] chars = src.trim().toCharArray();
+		for (int i = 0; i < chars.length; i++) {
+			char c = chars[i];
+			if(c >= 'A' && c <= 'Z') {
+				// 一旦遇到大写单词，保存之前已有字符组成的单词
+				if(sbWord.length() > 0) {
+					if(sb.length() > 0) {
+						sb.append("_");
+					}
+					sb.append(sbWord.toString());
+				}
+				sbWord = new StringBuilder();
+			}
+			sbWord.append(c);
+		}
+
+		if(sbWord.length() > 0) {
+			if(sb.length() > 0) {
+				sb.append("_");
+			}
+			sb.append(sbWord.toString());
+		}
+
+		return sb.toString();
+	}
 }
