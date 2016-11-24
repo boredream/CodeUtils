@@ -3,6 +3,7 @@ package utils;
 import entity.ClassInfo;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.util.List;
 
 public class DbUtils {
@@ -44,7 +45,7 @@ public class DbUtils {
             sbTable.append(StringUtils.formatSingleLine(2,
                     "+ DataModel." + info.className + "." + name + " + \" " + type + ",\""));
         }
-        sbTable.append(StringUtils.formatSingleLine(2, "+ \")\";"));
+        sbTable.replace(sbTable.lastIndexOf(",\""), sbTable.lastIndexOf(",\"") + 2, "\"\n\t\t+ \")\";");
         System.out.println(sbTable.toString());
     }
 
@@ -77,50 +78,76 @@ public class DbUtils {
     }
 
     private static void genCURDCode(ClassInfo info) {
-        // add or update data
-        StringBuilder sbAddOrUpdate = new StringBuilder();
-        sbAddOrUpdate.append(StringUtils.formatSingleLine(1,
-                "public void addOrUpdate" + info.className + "(" + info.className + " data) {"));
-        sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
-                "SQLiteDatabase db = helper.getWritableDatabase();"));
-        sbAddOrUpdate.append("\n");
-
-        sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
+        // get content value
+        StringBuilder sbContentValue = new StringBuilder();
+        sbContentValue.append(StringUtils.formatSingleLine(1,
+                "private ContentValues getContentValues(" + info.className + " data) {"));
+        sbContentValue.append(StringUtils.formatSingleLine(2,
                 "ContentValues value = new ContentValues();"));
         for (ClassInfo.ClassField field : info.fields) {
             String name = getColumnString(field);
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
+            sbContentValue.append(StringUtils.formatSingleLine(2,
                     "value.put(DataModel." + info.className + "." + name + ", " + getDataGetMethod(field) + ");"));
         }
-        sbAddOrUpdate.append("\n");
+        sbContentValue.append(StringUtils.formatSingleLine(2, "return value;"));
+        sbContentValue.append(StringUtils.formatSingleLine(1, "}"));
+        System.out.println(sbContentValue.toString());
+
+
+        // add
+        StringBuilder sbAdd = new StringBuilder();
+        sbAdd.append(StringUtils.formatSingleLine(1,
+                "public void add" + info.className + "(" + info.className + " data) {"));
+        sbAdd.append(StringUtils.formatSingleLine(2,
+                "SQLiteDatabase db = helper.getWritableDatabase();"));
+        sbAdd.append("\n");
+        sbAdd.append(StringUtils.formatSingleLine(2,
+                "ContentValues value = getContentValues(data);"));
+        sbAdd.append(StringUtils.formatSingleLine(2,
+                "db.insert(DataModel." + info.className + ".TABLE_NAME, null, value);"));
+        sbAdd.append(StringUtils.formatSingleLine(1, "}"));
+        System.out.println(sbAdd.toString());
+
 
         ClassInfo.ClassField primaryKeyField = getPrimaryKey(info);
         if (primaryKeyField != null) {
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
-                    "int update = db.update(DataModel." + info.className + ".TABLE_NAME,"));
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(4,
-                    "value,"));
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(4,
+            // 有自定义主键，才提供更新方法
+            // update
+            StringBuilder sbUpdate = new StringBuilder();
+            sbUpdate.append(StringUtils.formatSingleLine(1,
+                    "public void update" + info.className + "(" + info.className + " data) {"));
+            sbUpdate.append(StringUtils.formatSingleLine(2,
+                    "SQLiteDatabase db = helper.getWritableDatabase();"));
+            sbUpdate.append("\n");
+            sbUpdate.append(StringUtils.formatSingleLine(2,
+                    "ContentValues value = getContentValues(data);"));
+            sbUpdate.append(StringUtils.formatSingleLine(2,
+                    "db.update(DataModel." + info.className + ".TABLE_NAME,"));
+            sbUpdate.append(StringUtils.formatSingleLine(4, "value,"));
+            sbUpdate.append(StringUtils.formatSingleLine(4,
                     "DataModel." + info.className + "." + getColumnString(primaryKeyField) + " + \"=?\","));
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(4,
-                    "new String[]{" + getDataGetMethod(primaryKeyField) + "});"));
-            sbAddOrUpdate.append("\n");
+            sbUpdate.append(StringUtils.formatSingleLine(4,
+                    "new String[]{" + valueOfGet(primaryKeyField, "data." + primaryKeyField.getGetMethod()) + "});"));
+            sbUpdate.append(StringUtils.formatSingleLine(1, "}"));
+            System.out.println(sbUpdate.toString());
 
+
+            // add or update
+            StringBuilder sbAddOrUpdate = new StringBuilder();
+            sbAddOrUpdate.append(StringUtils.formatSingleLine(1,
+                    "public void addOrUpdate" + info.className + "(" + info.className + " data) {"));
             sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
-                    "if (update < 0) {"));
+                    "if(get" + info.className + "(data." + primaryKeyField.getGetMethod() + ") != null) {"));
             sbAddOrUpdate.append(StringUtils.formatSingleLine(3,
-                    "// 更新失败即代表无此数据，然后进行添加"));
+                    "update" + info.className + "(data);"));
+            sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
+                    "} else {"));
             sbAddOrUpdate.append(StringUtils.formatSingleLine(3,
-                    "db.insert(DataModel." + info.className + ".TABLE_NAME, null, value);"));
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
-                    "}"));
-        } else {
-            sbAddOrUpdate.append(StringUtils.formatSingleLine(2,
-                    "db.insert(DataModel." + info.className + ".TABLE_NAME, null, value);"));
+                    "add" + info.className + "(data);"));
+            sbAddOrUpdate.append(StringUtils.formatSingleLine(2, "}"));
+            sbAddOrUpdate.append(StringUtils.formatSingleLine(1, "}"));
+            System.out.println(sbAddOrUpdate.toString());
         }
-        sbAddOrUpdate.append(StringUtils.formatSingleLine(1,
-                "}"));
-        System.out.println(sbAddOrUpdate.toString());
 
 
         // add data list
@@ -136,18 +163,18 @@ public class DbUtils {
         sbAddList.append("\n");
 
         sbAddList.append(StringUtils.formatSingleLine(2,
-                "String sql = \"INSERT INTO \" + DataModel." + info.className + ".TABLE_NAME + \" (\""));
+                "String sql = \"INSERT INTO \" + DataModel." + info.className + ".TABLE_NAME +"));
         StringBuilder sbValue = new StringBuilder();
-        sbValue.append("+ \"VALUES (");
+        sbValue.append("\" VALUES (");
         for (int i = 0; i < info.fields.size(); i++) {
             ClassInfo.ClassField field = info.fields.get(i);
             if (i == info.fields.size() - 1) {
-                sbAddOrUpdate.append(StringUtils.formatSingleLine(4,
+                sbAdd.append(StringUtils.formatSingleLine(4,
                         "+ DataModel." + info.className + "." + getColumnString(field) + " + \") \""));
                 sbValue.append("?)\";");
             } else {
                 // TODO: 2016/11/19 要考虑哪些字段要剔除
-                sbAddOrUpdate.append(StringUtils.formatSingleLine(4,
+                sbAdd.append(StringUtils.formatSingleLine(4,
                         "+ DataModel." + info.className + "." + getColumnString(field) + " + \", \""));
                 sbValue.append("?, ");
             }
@@ -196,9 +223,9 @@ public class DbUtils {
         System.out.println(sbAddList.toString());
 
 
-        // get data
         if (primaryKeyField != null) {
             // 有自定义主键，才提供根据主键获取对象方法
+            // get data
             StringBuilder sbGet = new StringBuilder();
             sbGet.append(StringUtils.formatSingleLine(1, "public " + info.className +
                     " get" + info.className + "(" + primaryKeyField.type + " key) {"));
@@ -217,7 +244,7 @@ public class DbUtils {
             sbGet.append(StringUtils.formatSingleLine(5,
                     "DataModel." + info.className + "." + getColumnString(primaryKeyField) + " + \"=?\","));
             sbGet.append(StringUtils.formatSingleLine(5,
-                    "new String[]{String.valueOf(key)},"));
+                    "new String[]{" + valueOfGet(primaryKeyField, "key") + "},"));
             sbGet.append(StringUtils.formatSingleLine(5,
                     "null,"));
             sbGet.append(StringUtils.formatSingleLine(5,
@@ -298,6 +325,26 @@ public class DbUtils {
         System.out.println(sbGetList.toString());
 
 
+        if (primaryKeyField != null) {
+            // 有自定义主键，才提供根据主键删除对象方法
+            // delete data
+            StringBuilder sbDelete = new StringBuilder();
+            sbDelete.append(StringUtils.formatSingleLine(1,
+                    "public void delete" + info.className + "(" + info.className + " data) {"));
+            sbDelete.append(StringUtils.formatSingleLine(2,
+                    "SQLiteDatabase db = helper.getWritableDatabase();"));
+            sbDelete.append(StringUtils.formatSingleLine(2,
+                    "db.delete(DataModel." + info.className + ".TABLE_NAME,"));
+            sbDelete.append(StringUtils.formatSingleLine(4,
+                    "DataModel." + info.className + "." + getColumnString(primaryKeyField) + " + \"=?\","));
+            sbDelete.append(StringUtils.formatSingleLine(4,
+                    "new String[]{" + valueOfGet(primaryKeyField, "data." + primaryKeyField.getGetMethod()) + "});"));
+            sbDelete.append(StringUtils.formatSingleLine(1,
+                    "}"));
+            System.out.println(sbDelete.toString());
+        }
+
+
         // delete data list
         StringBuilder sbDeleteList = new StringBuilder();
         sbDeleteList.append(StringUtils.formatSingleLine(1, "public void delete" + info.className + "List() {"));
@@ -364,5 +411,13 @@ public class DbUtils {
 
     private static String getColumnString(ClassInfo.ClassField field) {
         return StringUtils.camelTo_(field.name).toUpperCase();
+    }
+
+    private static String valueOfGet(ClassInfo.ClassField field, String value) {
+        if(field.type.equals("String")) {
+            return value;
+        } else {
+            return "String.valueOf(" + value + ")";
+        }
     }
 }
