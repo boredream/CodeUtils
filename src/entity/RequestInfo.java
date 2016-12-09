@@ -75,4 +75,12 @@ public class RequestInfo {
 				+ url + ", des=" + des + ", params=" + params + "]";
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof RequestInfo) {
+			RequestInfo oInfo = (RequestInfo) o;
+			return this.url.equals(oInfo.url);
+		}
+		return super.equals(o);
+	}
 }

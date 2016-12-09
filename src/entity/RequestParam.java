@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class RequestParam {
     private String name;
     private String type;
+    private String restType = "Query";
     private String des;
     // 参数值为枚举型时
     private ArrayList<String> selectOptions;
@@ -37,6 +38,14 @@ public class RequestParam {
         this.type = type;
     }
 
+    public String getRestType() {
+        return restType;
+    }
+
+    public void setRestType(String restType) {
+        this.restType = restType;
+    }
+
     public String getDes() {
         return des;
     }
@@ -59,4 +68,12 @@ public class RequestParam {
                 + des + "]";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof RequestParam) {
+            RequestParam oParam = (RequestParam) o;
+            return this.name.equals(oParam.name);
+        }
+        return super.equals(o);
+    }
 }
