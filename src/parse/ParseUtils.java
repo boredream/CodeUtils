@@ -1,4 +1,4 @@
-package utils;
+package parse;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,10 +8,11 @@ import java.util.regex.Pattern;
 
 import entity.ClassInfo;
 import entity.ClassInfo.ClassField;
+import utils.ClassUtils;
+import utils.FileUtils;
+import utils.StringUtils;
 
-import javax.swing.plaf.TextUI;
-
-public class ParseUtlis {
+public class ParseUtils {
 
     public static void main(String[] args) {
         genParseWithRetrofit();

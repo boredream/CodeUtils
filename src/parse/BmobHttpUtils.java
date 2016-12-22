@@ -1,4 +1,4 @@
-package reptile.bmob;
+package parse;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -81,8 +81,7 @@ public class BmobHttpUtils {
 				connection.getResponseCode(), connection.getResponseMessage());
 		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
 		response.setEntity(entityFromConnection(connection));
-		for (Entry<String, List<String>> header : connection.getHeaderFields()
-				.entrySet()) {
+		for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
 			if (header.getKey() != null) {
 				Header h = new BasicHeader(header.getKey(), header.getValue()
 						.get(0));

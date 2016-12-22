@@ -17,16 +17,20 @@ import java.util.List;
 import java.util.Map;
 
 public class FileUtils {
-	
+
+	public static void main(String[] args) {
+		getCodeLinesDetail("E:\\code\\Github");
+	}
+
 	/**
 	 * 递归获取的文件列表集合
 	 */
-	private static List<File> allFiles = new ArrayList<File>();
+	private static List<File> allFiles = new ArrayList<>();
 	
 	/**
 	 * 获取指定目录下全部文件
 	 * 
-	 * @param rootFile	根目录路径
+	 * @param dir	根目录路径
 	 * @return			获取到的文件列表
 	 */
 	public static List<File> getAllFiles(String dir) {

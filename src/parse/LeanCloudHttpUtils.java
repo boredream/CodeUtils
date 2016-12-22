@@ -1,14 +1,6 @@
-package utils;
+package parse;
 
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
+import com.google.gson.Gson;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.ProtocolVersion;
@@ -19,9 +11,27 @@ import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
 import org.apache.http.protocol.HTTP;
 
-public class HttpUtils {
+import javax.activation.MimetypesFileTypeMap;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
-	private static final String HEADER_CONTENT_TYPE = "Content-Type";
+public class LeanCloudHttpUtils {
+
+	private static final String APP_ID = "BlD7074brSQyYI59jw1ymbGl-gzGzoHsz";
+	private static final String REST_API_KEY = "06MRT4c1eW9c8I3SHzOttAAM";
+
+	private static final String APP_ID_NAME = "X-LC-Id";
+	private static final String API_KEY_NAME = "X-LC-Key";
+
+	private static final String HEADER_CONTENT_TYPE = "application/json";
 	private static final String CHARSET = "UTF-8";
 
 	/**
@@ -33,28 +43,21 @@ public class HttpUtils {
 	}
 
 	public static String getString(String url) throws Exception {
-		return getOrPostString(Method.GET, url, null, null);
-	}
-	
-	public static String getString(String url, Map<String, String> headers) throws Exception {
-		return getOrPostString(Method.GET, url, null, headers);
+		return getOrPostString(Method.GET, url, null);
 	}
 
 	public static String postString(String url, Map<String, String> postParams)
 			throws Exception {
-		return getOrPostString(Method.POST, url, postParams, null);
-	}
-	
-	public static String postString(String url, Map<String, String> postParams, Map<String, String> headers)
-			throws Exception {
-		return getOrPostString(Method.POST, url, postParams, headers);
+		return getOrPostString(Method.POST, url, postParams);
 	}
 
-	private static String postFile(String url, File file, Map<String, String> headers) throws Exception {
-		HashMap<String, String> map = new HashMap<>();
-		if(headers != null) {
-			map.putAll(headers);
-		}
+	public static String postBean(Object object) throws Exception {
+		String url = "https://api.leancloud.cn/1.1/classes/";
+		url += object.getClass().getSimpleName();
+
+		HashMap<String, String> map = getHeaderMap();
+		map.put("Content-Type", HEADER_CONTENT_TYPE);
+
 		URL parsedUrl = new URL(url);
 		HttpURLConnection connection = openConnection(parsedUrl);
 
@@ -64,8 +67,109 @@ public class HttpUtils {
 
 		connection.setDoOutput(true);
 		connection.setRequestMethod("POST");
-		connection.addRequestProperty(HEADER_CONTENT_TYPE,
-				getBodyContentType());
+		connection.addRequestProperty("Content-Type", HEADER_CONTENT_TYPE);
+		DataOutputStream out = new DataOutputStream(connection.getOutputStream());
+		out.write(new Gson().toJson(object).getBytes());
+		out.close();
+
+		// Initialize HttpResponse with data from the HttpURLConnection.
+		ProtocolVersion protocolVersion = new ProtocolVersion("HTTP", 1, 1);
+		int responseCode = connection.getResponseCode();
+		if (responseCode == -1) {
+			// -1 is returned by getResponseCode() if the response code could
+			// not be retrieved.
+			// Signal to the caller that something was wrong with the
+			// connection.
+			throw new IOException(
+					"Could not retrieve response code from HttpUrlConnection.");
+		}
+		StatusLine responseStatus = new BasicStatusLine(protocolVersion,
+				connection.getResponseCode(), connection.getResponseMessage());
+		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
+		response.setEntity(entityFromConnection(connection));
+		for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
+			if (header.getKey() != null) {
+				Header h = new BasicHeader(header.getKey(), header.getValue().get(0));
+				response.addHeader(h);
+			}
+		}
+
+		Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
+		String responseCharset = parseCharset(contentTypeHeader);
+
+		byte[] bytes = entityToBytes(response.getEntity());
+		return new String(bytes, responseCharset);
+	}
+
+	public static String updateBean(Object object, String key) throws Exception {
+		String url = "https://api.leancloud.cn/1.1/classes/";
+		url += object.getClass().getSimpleName();
+		url += ("/" + key);
+
+		HashMap<String, String> map = getHeaderMap();
+		map.put("Content-Type", HEADER_CONTENT_TYPE);
+
+		URL parsedUrl = new URL(url);
+		HttpURLConnection connection = openConnection(parsedUrl);
+
+		for (String headerName : map.keySet()) {
+			connection.addRequestProperty(headerName, map.get(headerName));
+		}
+
+		connection.setDoOutput(true);
+		connection.setRequestMethod("PUT");
+		connection.addRequestProperty("Content-Type", HEADER_CONTENT_TYPE);
+		DataOutputStream out = new DataOutputStream(connection.getOutputStream());
+		out.write(new Gson().toJson(object).getBytes());
+		out.close();
+
+		// Initialize HttpResponse with data from the HttpURLConnection.
+		ProtocolVersion protocolVersion = new ProtocolVersion("HTTP", 1, 1);
+		int responseCode = connection.getResponseCode();
+		if (responseCode == -1) {
+			// -1 is returned by getResponseCode() if the response code could
+			// not be retrieved.
+			// Signal to the caller that something was wrong with the
+			// connection.
+			throw new IOException(
+					"Could not retrieve response code from HttpUrlConnection.");
+		}
+		StatusLine responseStatus = new BasicStatusLine(protocolVersion,
+				connection.getResponseCode(), connection.getResponseMessage());
+		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
+		response.setEntity(entityFromConnection(connection));
+		for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
+			if (header.getKey() != null) {
+				Header h = new BasicHeader(header.getKey(), header.getValue().get(0));
+				response.addHeader(h);
+			}
+		}
+
+		Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
+		String responseCharset = parseCharset(contentTypeHeader);
+
+		byte[] bytes = entityToBytes(response.getEntity());
+		String responseContent = new String(bytes, responseCharset);
+		return responseContent;
+	}
+
+	public static String postFile(String url, File file) throws Exception {
+		// LeanCloud上传限制, 最多1秒1个
+		Thread.sleep(1000);
+
+		HashMap<String, String> map = getHeaderMap();
+		map.put("Content-Type", new MimetypesFileTypeMap().getContentType(file));
+
+		URL parsedUrl = new URL(url);
+		HttpURLConnection connection = openConnection(parsedUrl);
+
+		for (String headerName : map.keySet()) {
+			connection.addRequestProperty(headerName, map.get(headerName));
+		}
+
+		connection.setDoOutput(true);
+		connection.setRequestMethod("POST");
+		connection.addRequestProperty("Content-Type", new MimetypesFileTypeMap().getContentType(file));
 		DataOutputStream out = new DataOutputStream(connection.getOutputStream());
 
 		int len;
@@ -107,11 +211,10 @@ public class HttpUtils {
 	}
 
 	private static String getOrPostString(int method, String url,
-			Map<String, String> postParams, Map<String, String> headers) throws Exception {
-		HashMap<String, String> map = new HashMap<String, String>();
-		if(headers != null) {
-			map.putAll(headers);
-		}
+			Map<String, String> postParams) throws Exception {
+		HashMap<String, String> map = getHeaderMap();
+		map.put("Content-Type", HEADER_CONTENT_TYPE);
+
 		URL parsedUrl = new URL(url);
 		HttpURLConnection connection = openConnection(parsedUrl);
 
@@ -135,8 +238,7 @@ public class HttpUtils {
 				connection.getResponseCode(), connection.getResponseMessage());
 		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
 		response.setEntity(entityFromConnection(connection));
-		for (Entry<String, List<String>> header : connection.getHeaderFields()
-				.entrySet()) {
+		for (Entry<String, List<String>> header : connection.getHeaderFields().entrySet()) {
 			if (header.getKey() != null) {
 				Header h = new BasicHeader(header.getKey(), header.getValue()
 						.get(0));
@@ -153,50 +255,12 @@ public class HttpUtils {
 		return responseContent;
 	}
 
-	public static byte[] getOrPostFile(int method, String url,
-			Map<String, String> postParams, Map<String, String> headers) throws Exception {
-		HashMap<String, String> map = new HashMap<String, String>();
-		if(headers != null) {
-			map.putAll(headers);
-		}
-		URL parsedUrl = new URL(url);
-		HttpURLConnection connection = openConnection(parsedUrl);
-
-		for (String headerName : map.keySet()) {
-			connection.addRequestProperty(headerName, map.get(headerName));
-		}
-
-		setConnectionParametersForRequest(connection, method, postParams);
-		// Initialize HttpResponse with data from the HttpURLConnection.
-		ProtocolVersion protocolVersion = new ProtocolVersion("HTTP", 1, 1);
-		int responseCode = connection.getResponseCode();
-		if (responseCode == -1) {
-			// -1 is returned by getResponseCode() if the response code could
-			// not be retrieved.
-			// Signal to the caller that something was wrong with the
-			// connection.
-			throw new IOException(
-					"Could not retrieve response code from HttpUrlConnection.");
-		}
-		StatusLine responseStatus = new BasicStatusLine(protocolVersion,
-				connection.getResponseCode(), connection.getResponseMessage());
-		BasicHttpResponse response = new BasicHttpResponse(responseStatus);
-		response.setEntity(entityFromConnection(connection));
-		for (Entry<String, List<String>> header : connection.getHeaderFields()
-				.entrySet()) {
-			if (header.getKey() != null) {
-				Header h = new BasicHeader(header.getKey(), header.getValue()
-						.get(0));
-				response.addHeader(h);
-
-			}
-		}
-
-		Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
-		String responseCharset = parseCharset(contentTypeHeader);
-
-		byte[] bytes = entityToBytes(response.getEntity());
-		return bytes;
+	private static HashMap<String, String> getHeaderMap() {
+		HashMap<String, String> map = new HashMap<>();
+		// header
+		map.put(APP_ID_NAME, APP_ID);
+		map.put(API_KEY_NAME, REST_API_KEY);
+		return map;
 	}
 
 	/**
@@ -238,7 +302,7 @@ public class HttpUtils {
 	/**
 	 * Initializes an {@link HttpEntity} from the given
 	 * {@link HttpURLConnection}.
-	 * 
+	 *
 	 * @param connection
 	 * @return an HttpEntity populated with data from <code>connection</code>.
 	 */
@@ -259,7 +323,7 @@ public class HttpUtils {
 
 	/**
 	 * Opens an {@link HttpURLConnection} with parameters.
-	 * 
+	 *
 	 * @param url
 	 * @return an open connection
 	 * @throws IOException
@@ -267,8 +331,8 @@ public class HttpUtils {
 	private static HttpURLConnection openConnection(URL url) throws IOException {
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-		connection.setConnectTimeout(60 * 1000);
-		connection.setReadTimeout(60 * 1000);
+		connection.setConnectTimeout(20 * 1000);
+		connection.setReadTimeout(20 * 1000);
 		connection.setUseCaches(false);
 		connection.setDoInput(true);
 
@@ -288,7 +352,7 @@ public class HttpUtils {
 			String paramsEncoding) {
 		StringBuilder encodedParams = new StringBuilder();
 		try {
-			for (Map.Entry<String, String> entry : params.entrySet()) {
+			for (Entry<String, String> entry : params.entrySet()) {
 				encodedParams.append(URLEncoder.encode(entry.getKey(),
 						paramsEncoding));
 				encodedParams.append('=');
@@ -313,10 +377,6 @@ public class HttpUtils {
 		return null;
 	}
 
-	private static String getBodyContentType() {
-		return "application/x-www-form-urlencoded; charset=" + CHARSET;
-	}
-
 	private static void setConnectionParametersForRequest(
 			HttpURLConnection connection, int method,
 			Map<String, String> postParams) throws IOException {
@@ -334,8 +394,6 @@ public class HttpUtils {
 				// output stream.
 				connection.setDoOutput(true);
 				connection.setRequestMethod("POST");
-				connection.addRequestProperty(HEADER_CONTENT_TYPE,
-						getBodyContentType());
 				DataOutputStream out = new DataOutputStream(
 						connection.getOutputStream());
 				out.write(postBody);
@@ -344,4 +402,6 @@ public class HttpUtils {
 			break;
 		}
 	}
+
+
 }

@@ -214,3 +214,5 @@ pip-log.txt
 .mr.developer.cfg
 *.txt
 *.png
+
+temp/
