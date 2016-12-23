@@ -1,41 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="65dp"
+              android:layout_height="80dp"
+              android:background="@drawable/bg_top_line"
               android:gravity="center_vertical"
-              android:orientation="horizontal"
-              android:paddingLeft="15dp"
-              android:paddingRight="15dp">
+              android:orientation="horizontal">
 
-    <ImageView
-            android:id="@+id/iv_avatar"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginRight="12dp"
-            android:scaleType="centerCrop" />
+    <RelativeLayout
+            android:layout_width="47dp"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/iv_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_geren_bangdan_1"
+                android:visibility="gone" />
+
+        <TextView
+                android:id="@+id/tv_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_938c97"
+                android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_paihangbang_weishangbang_touxiang" />
+
+        <ImageView
+                android:id="@+id/iv_top_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/iv_avatar"
+                android:layout_alignTop="@id/iv_avatar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-12dp"
+                android:src="@drawable/icon_geren_bangdan_huangguan1"
+                android:visibility="gone" />
+
+        <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/iv_avatar"
+                android:layout_alignRight="@id/iv_avatar" />
+    </RelativeLayout>
 
     <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-        <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
+        <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:textColor="#2D3039"
-                android:textSize="15sp" />
+                android:gravity="left">
 
-        <TextView
-                android:id="@+id/tv_total_time"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                    android:id="@+id/ll_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/bg_level"
+                    android:gravity="center"
+                    android:minWidth="33dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_guanzhu_renshu" />
+
+                <TextView
+                        android:id="@+id/tv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ll_level"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="小学"
+                    android:textColor="@color/txt_black"
+                    android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:singleLine="true"
-                android:textColor="#999999"
-                android:textSize="11sp" />
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/iv_coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_geren_bangdan_qdou" />
+
+            <TextView
+                    android:id="@+id/tv_coin_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/color_fe6778"
+                    android:textSize="14sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_h44_shadow"
+            android:text="加关注"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    <Button
+            android:id="@+id/btn_followed"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/correct_gray_stroke"
+            android:text="已关注"
+            android:textColor="@color/color_938d97"
+            android:textSize="12sp"
+            android:visibility="gone" />
 
 </LinearLayout>

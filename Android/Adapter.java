@@ -14,13 +14,12 @@
 	}
 
 	public static class ViewHolder{
-		public ImageView iv_bg_avatar;
-		public ImageView tv_avatar;
+		public TextView tv_index;
 		public TextView tv_name;
-		public TextView tv_age;
-		public TextView tv_training_years;
-		public TextView tv_cert_level;
-		public TextView tv_career;
+		public TextView tv_singer;
+		public Button btn_download;
+		public Button btn_play;
+		public ProgressBar pb_download;
 	}
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -28,13 +27,12 @@
 		if(convertView == null) {
 			holder = new ViewHolder();
 			convertView = View.inflate(context, R.layout.item, null);
-			holder.iv_bg_avatar = (ImageView) convertView.findViewById(R.id.iv_bg_avatar);
-			holder.tv_avatar = (ImageView) convertView.findViewById(R.id.tv_avatar);
+			holder.tv_index = (TextView) convertView.findViewById(R.id.tv_index);
 			holder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
-			holder.tv_age = (TextView) convertView.findViewById(R.id.tv_age);
-			holder.tv_training_years = (TextView) convertView.findViewById(R.id.tv_training_years);
-			holder.tv_cert_level = (TextView) convertView.findViewById(R.id.tv_cert_level);
-			holder.tv_career = (TextView) convertView.findViewById(R.id.tv_career);
+			holder.tv_singer = (TextView) convertView.findViewById(R.id.tv_singer);
+			holder.btn_download = (Button) convertView.findViewById(R.id.btn_download);
+			holder.btn_play = (Button) convertView.findViewById(R.id.btn_play);
+			holder.pb_download = (ProgressBar) convertView.findViewById(R.id.pb_download);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();

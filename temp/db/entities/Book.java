@@ -1,19 +1,16 @@
 package com.diandian.childrenread.entity;
 
 import com.diandian.childrenread.base.BaseEntity;
+import com.diandian.childrenread.constants.BookConstants;
 
 public class Book extends BaseEntity {
-
-    /**
-     * [id]
-     */
-    private String objectId;
 
     /**
      * 绘本类型
      * [where]
      * 1 - 整段音乐类型
      * 2 - 分段音乐+图片类型
+     * 3 - 整段+分段
      */
     private int musicType;
 
@@ -23,10 +20,12 @@ public class Book extends BaseEntity {
      */
     private long categoryId;
     private String surfaceImg;
-    private boolean isFree;
-    private boolean isHot;
-    private boolean isNew;
-    private boolean isOnly;
+    private float price;
+
+    /**
+     * 1-热门 2-免费 3-独家 4-New
+     */
+    private int tagType;
 
     /**
      * 年龄范围
@@ -106,36 +105,20 @@ public class Book extends BaseEntity {
         this.engName = engName;
     }
 
-    public boolean isFree() {
-        return isFree;
+    public float getPrice() {
+        return price;
     }
 
-    public void setFree(boolean free) {
-        isFree = free;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
-    public boolean isHot() {
-        return isHot;
+    public int getTagType() {
+        return tagType;
     }
 
-    public void setHot(boolean hot) {
-        isHot = hot;
-    }
-
-    public boolean isNew() {
-        return isNew;
-    }
-
-    public void setNew(boolean aNew) {
-        isNew = aNew;
-    }
-
-    public boolean isOnly() {
-        return isOnly;
-    }
-
-    public void setOnly(boolean only) {
-        isOnly = only;
+    public void setTagType(int tagType) {
+        this.tagType = tagType;
     }
 
     public int getAgeRange() {
@@ -176,5 +159,22 @@ public class Book extends BaseEntity {
 
     public void setUnitSize(int unitSize) {
         this.unitSize = unitSize;
+    }
+
+
+    public boolean isFree() {
+        return tagType == BookConstants.TAG_TYPE_FREE;
+    }
+
+    public boolean isHot() {
+        return tagType == BookConstants.TAG_TYPE_HOT;
+    }
+
+    public boolean isNew() {
+        return tagType == BookConstants.TAG_TYPE_NEW;
+    }
+
+    public boolean isOnly() {
+        return tagType == BookConstants.TAG_TYPE_ONLY;
     }
 }

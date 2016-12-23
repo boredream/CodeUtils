@@ -1,7 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CodeUtils:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="" />
+    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="LeanCloutUtils">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C0.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C1.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C10.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C11.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C12.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C13.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C14.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C15.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C16.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C17.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C18.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C19.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C2.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C3.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C4.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C5.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C6.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C7.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C8.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/C9.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E0.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E1.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E10.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E11.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E12.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E13.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E14.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E15.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E16.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E17.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E18.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E19.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E2.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E3.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E4.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E5.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E6.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E7.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E8.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/E9.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/Never lonely again.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/P9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/不再孤单.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/封面.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/不再孤单_Never lonely again/睡眠封面.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Json/JsonBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Json/jsonString.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/parse/entities/Acupoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/parse/entities/Book.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/Adapter.java" afterPath="$PROJECT_DIR$/Android/Adapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/RecyclerAdapter.java" afterPath="$PROJECT_DIR$/Android/RecyclerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/item.xml" afterPath="$PROJECT_DIR$/Android/item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/item_recyclerview.xml" afterPath="$PROJECT_DIR$/Android/item_recyclerview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/diandianbo/Main.java" afterPath="$PROJECT_DIR$/src/parse/diandianbo/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/db/entities/Book.java" afterPath="$PROJECT_DIR$/temp/db/entities/Book.java" />
+    </list>
     <ignored path="CodeUtils.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -23,13 +104,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/androidtest/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/parse/diandianbo/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="89" column="140" selection-start-line="89" selection-start-column="140" selection-end-line="89" selection-end-column="140" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="434">
+              <caret line="175" column="23" selection-start-line="175" selection-start-column="23" selection-end-line="175" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeanCloudHttpUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parse/LeanCloudHttpUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="155" column="54" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,21 +143,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/entity/ClassInfo.java" />
-        <option value="$PROJECT_DIR$/parse/entities/OpenDate" />
-        <option value="$PROJECT_DIR$/parse/entities/Community.java" />
-        <option value="$PROJECT_DIR$/src/utils/ParseUtlis.java" />
-        <option value="$PROJECT_DIR$/src/test/Main.java" />
-        <option value="$PROJECT_DIR$/Android/layout.xml" />
-        <option value="$PROJECT_DIR$/Android/item_recyclerview.xml" />
-        <option value="$PROJECT_DIR$/parse/entities/DesignRes.java" />
-        <option value="$PROJECT_DIR$/parse/entities/Acupoint.java" />
-        <option value="$PROJECT_DIR$/src/utils/OfficeUtils.java" />
-        <option value="$PROJECT_DIR$/src/entity/AndroidAssertion.java" />
         <option value="$PROJECT_DIR$/src/entity/AndroidTestInfo.java" />
         <option value="$PROJECT_DIR$/src/entity/AndroidTestAssertion.java" />
         <option value="$PROJECT_DIR$/src/entity/AndroidTestAction.java" />
         <option value="$PROJECT_DIR$/src/androidtest/Main.java" />
+        <option value="$PROJECT_DIR$/Android/Adapter.java" />
+        <option value="$PROJECT_DIR$/parse/entities/Friends.java" />
+        <option value="$PROJECT_DIR$/src/reptile/swagger/SwaggerDocGenerator.java" />
+        <option value="$PROJECT_DIR$/src/reptile/apidoc/Main.java" />
+        <option value="$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java" />
+        <option value="$PROJECT_DIR$/src/entity/ResultInfo.java" />
+        <option value="$PROJECT_DIR$/parse/entities/Friendship.java" />
+        <option value="$PROJECT_DIR$/src/test/TempUtils.java" />
+        <option value="$PROJECT_DIR$/Android/item.xml" />
+        <option value="$PROJECT_DIR$/parse/entities/BookUnit.java" />
+        <option value="$PROJECT_DIR$/src/utils/ClassUtils.java" />
+        <option value="$PROJECT_DIR$/parse/entities/Book.java" />
+        <option value="$PROJECT_DIR$/db/entities/Book.java" />
+        <option value="$PROJECT_DIR$/src/entity/ClassInfo.java" />
+        <option value="$PROJECT_DIR$/src/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/utils/ParseUtlis.java" />
+        <option value="$PROJECT_DIR$/src/de/greenrobot/daogenerator/_GreenDaoMain.java" />
+        <option value="$PROJECT_DIR$/src/utils/DbUtils.java" />
+        <option value="$PROJECT_DIR$/temp/parse/entities/BookBanner.java" />
+        <option value="$PROJECT_DIR$/src/entity/RequestInfo.java" />
+        <option value="$PROJECT_DIR$/temp/db/entities/LiveMusic.java" />
+        <option value="$PROJECT_DIR$/src/entity/RequestParam.java" />
+        <option value="$PROJECT_DIR$/temp/db/entities/Book.java" />
+        <option value="$PROJECT_DIR$/temp/parse/entities/RechargeInfo" />
+        <option value="$PROJECT_DIR$/temp/parse/entities/RechargeInfo.java" />
+        <option value="$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java" />
+        <option value="$PROJECT_DIR$/Android/item_recyclerview.xml" />
+        <option value="$PROJECT_DIR$/Android/RecyclerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/temp/apidoc/wikiapi.txt" />
+        <option value="$PROJECT_DIR$/src/reptile/bmob/BmobHttpUtils.java" />
+        <option value="$PROJECT_DIR$/temp/diandian/diandian.txt" />
+        <option value="$PROJECT_DIR$/temp/diandian/不再孤单/不再孤单" />
+        <option value="$PROJECT_DIR$/src/utils/HttpManager.java" />
+        <option value="$PROJECT_DIR$/src/utils/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/temp/diandian/奇怪的叶子_The Cactus's Leaves/奇怪的叶子.txt" />
+        <option value="$PROJECT_DIR$/src/reptile/bmob/LeanCloudHttpUtils.java" />
+        <option value="$PROJECT_DIR$/temp/parse/entities/RecBook.java" />
+        <option value="$PROJECT_DIR$/src/temp/diandianbo/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/Main.java" />
+        <option value="$PROJECT_DIR$/src/parse/BmobHttpUtils.java" />
+        <option value="$PROJECT_DIR$/src/parse/Main.java" />
+        <option value="$PROJECT_DIR$/src/parse/ParseUtlis.java" />
+        <option value="$PROJECT_DIR$/src/parse/ParseUtils.java" />
+        <option value="$PROJECT_DIR$/src/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/parse/LeanCloudHttpUtils.java" />
+        <option value="$PROJECT_DIR$/src/parse/diandianbo/Main.java" />
       </list>
     </option>
   </component>
@@ -79,11 +204,13 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="959" />
-    <option name="y" value="1" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
-    <option name="height" value="1037" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -92,7 +219,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -110,7 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -139,7 +266,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -156,10 +283,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="androidtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -171,44 +294,96 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
+              <option name="myItemId" value="books" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AndroidToolsPlugin-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="codeutils" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code\Github\CodeUtils\books" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="temp.diandianbo" />
+      <recent name="reptile.bmob" />
+      <recent name="reptile.apidoc" />
       <recent name="entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\code\Github\CodeUtils\temp\test" />
-      <recent name="E:\code\Github\CodeUtils\parse\entities" />
+      <recent name="E:\code\Github\CodeUtils\temp\diandian" />
+      <recent name="E:\code\Github\CodeUtils\temp\diandian\奇怪的叶子_The Cactus's Leaves" />
+      <recent name="E:\code\Github\CodeUtils\temp\db\entities" />
+      <recent name="E:\code\Github\CodeUtils\temp\parse\entities" />
+      <recent name="E:\code\Github\CodeUtils\temp" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration default="false" name="ParseUtlis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ParseUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="utils.*" />
+          <option name="PATTERN" value="parse.diandianbo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="utils.ParseUtlis" />
+      <option name="MAIN_CLASS_NAME" value="parse.ParseUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CodeUtils" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="WikiApiDocMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="reptile.apidoc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="reptile.apidoc.WikiApiDocMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CodeUtils" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="parse.diandianbo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="utils.FileUtils" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -229,46 +404,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="test.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CodeUtils" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="AndroidUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="utils.AndroidUtils" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CodeUtils" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="androidtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="androidtest.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -515,18 +650,39 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.ParseUtlis" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="Application.AndroidUtils" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
+    <configuration default="false" name="Main (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="parse.diandianbo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="parse.diandianbo.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CodeUtils" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ParseUtils" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WikiApiDocMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.FileUtils" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ParseUtlis" />
-        <item index="2" class="java.lang.String" itemvalue="Application.AndroidUtils" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ParseUtils" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.WikiApiDocMain" />
+        <item index="3" class="java.lang.String" itemvalue="Application.FileUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -544,6 +700,14 @@
       <option name="presentableId" value="Default" />
       <updated>1467274238388</updated>
     </task>
+    <task id="LOCAL-00001" summary="LeanCloutUtils">
+      <created>1482395122284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1482395122284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -556,33 +720,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="959" y="1" width="974" height="1037" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47566372" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28774616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29540482" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25820568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36615044" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31947485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44247788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39761648" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38678223" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -596,397 +761,422 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LeanCloutUtils" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeanCloutUtils" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/ParseUtlis.java</url>
-          <line>269</line>
+          <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
+          <line>502</line>
           <properties />
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
+          <line>155</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/Main.java</url>
+          <properties />
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="73" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="o1.getName().substring(0, o1.getName().indexOf(&quot;.&quot;))" language="JAVA" custom="" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Android/RecyclerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/temp/Json/JsonBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/StringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/JsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="190">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Android/Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/builder/AndroidProjectBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="95">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/HerbDetail.java" />
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/DaoMaster.java" />
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/DaoSession.java" />
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/Herb.java" />
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/HerbDetailDao.java" />
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/com/boredream/herb/db/HerbDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/de/greenrobot/daogenerator/_GreenDaoMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/parse/entities/BookBanner.java" />
+    <entry file="file://$PROJECT_DIR$/src/reptile/apidoc/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="166" column="24" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/LiveMusic.java" />
+    <entry file="file://$PROJECT_DIR$/src/entity/RequestInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="183" column="18" selection-start-line="183" selection-start-column="18" selection-end-line="183" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="529" column="27" selection-start-line="529" selection-start-column="27" selection-end-line="529" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/RequestParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/parse/entities/RechargeInfo.java" />
     <entry file="file://$PROJECT_DIR$/Android/item_recyclerview.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="98">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/AndroidUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="95">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Android/RecyclerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="190">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/DesignRes.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/StringUtils.java">
+    <entry file="file://$PROJECT_DIR$/temp/db/entities/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="2193">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Android/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/item_recyclerview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/AndroidUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/RecyclerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/DesignRes.java" />
-    <entry file="file://$PROJECT_DIR$/Android/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/item_recyclerview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/ClassInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/Acupoint.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/ClassInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/Acupoint.java" />
-    <entry file="file://$PROJECT_DIR$/parse/HttpRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/entity/ClassInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/Community.java" />
-    <entry file="file://$PROJECT_DIR$/parse/entities/OpenDate.java" />
-    <entry file="file://$PROJECT_DIR$/Android/layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/item_recyclerview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Android/RecyclerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/DesignRes.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/AndroidUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/DbUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/apidoc/wikiapi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21242">
+          <caret line="1118" column="1864" selection-start-line="1118" selection-start-column="1864" selection-end-line="1118" selection-end-column="1864" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParseUtlis.java">
+    <entry file="file://$PROJECT_DIR$/src/parse/LeanCloudHttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reptile/zhihu/ZhiHuReptile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4824#4825#0" expanded="false" />
-            <element signature="e#4894#4895#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reptile/xinlangweibo/XLWBReptile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reptile/bcgm/BCGMUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/TempUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-608">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="236">
+          <caret line="571" column="62" selection-start-line="570" selection-start-column="8" selection-end-line="571" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/gson-1.7.1.jar!/com/google/gson/Gson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/JsoupUtils.java">
+    <entry file="file://$PROJECT_DIR$/temp/diandian/diandian.txt" />
+    <entry file="file://$PROJECT_DIR$/books/不再孤单_Never lonely again/P0.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/utils/HttpManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        <state relative-caret-position="232">
+          <caret line="451" column="36" selection-start-line="451" selection-start-column="36" selection-end-line="451" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/io/DataOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="1096" column="16" selection-start-line="1096" selection-start-column="16" selection-end-line="1096" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="1612" column="25" selection-start-line="1612" selection-start-column="25" selection-end-line="1612" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/不再孤单_Never lonely again/不再孤单.txt" />
+    <entry file="file://$PROJECT_DIR$/temp/api_stone.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/diandian/奇怪的叶子_The Cactus's Leaves/奇怪的叶子.txt" />
+    <entry file="file://$PROJECT_DIR$/temp/parse/entities/RecBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="61" />
+        <state relative-caret-position="114">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/OfficeUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/parse/BmobHttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#527#556#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse/entities/Acupoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/poi-ooxml-3.11-20141221.jar!/org/apache/poi/xssf/usermodel/XSSFSheet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="754" column="38" selection-start-line="754" selection-start-column="15" selection-end-line="754" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/AndroidTestInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/AndroidTestAssertion.java">
+    <entry file="file://$PROJECT_DIR$/src/parse/ParseUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#360#361#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="633" column="19" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
+          <folding>
+            <element signature="e#23072#23073#0" expanded="false" />
+            <element signature="e#23112#23113#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding>
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parse/LeanCloudHttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="155" column="54" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/AndroidTestAction.java">
+    <entry file="file://$PROJECT_DIR$/src/parse/diandianbo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="30" />
-          <folding>
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/androidtest/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="89" column="140" selection-start-line="89" selection-start-column="140" selection-end-line="89" selection-end-column="140" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="434">
+          <caret line="175" column="23" selection-start-line="175" selection-start-column="23" selection-end-line="175" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>CodeUtils:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CodeUtils</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
