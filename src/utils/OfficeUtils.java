@@ -8,6 +8,9 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.*;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
@@ -16,7 +19,35 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class OfficeUtils {
 
     public static void main(String[] args) {
+        File file = new File("temp" + File.separator + "office" + File.separator + "maidian.xlsx");
+        XSSFWorkbook xssfWorkbook = openXlsx(file);
+        XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(0);
+        int totalRows = xssfSheet.getPhysicalNumberOfRows();
+        for (int rowNum = 2; rowNum < totalRows; rowNum++) {
+            XSSFRow row = xssfSheet.getRow(rowNum);
+            int cellNum = row.getLastCellNum();
+            if(cellNum == 6) {
+                String name = getCellString(row.getCell(4));
+                String eventid = getCellString(row.getCell(5));
 
+//                /**
+//                 * aa
+//                 */
+//                public static final String a = "a";
+                System.out.println("/**");
+                System.out.println(" * " + name);
+                System.out.println(" */");
+                System.out.println("public static final String " + eventid.toUpperCase() + " = \"" + eventid + "\"");
+                System.out.println();
+            }
+        }
+    }
+
+    private static String getCellString(XSSFCell cell) {
+        if(cell == null) {
+            return "";
+        }
+        return cell.getStringCellValue();
     }
 
     public static XSSFWorkbook openXlsx(File file) {

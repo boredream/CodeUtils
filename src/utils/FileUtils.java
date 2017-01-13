@@ -19,7 +19,7 @@ import java.util.Map;
 public class FileUtils {
 
 	public static void main(String[] args) {
-		getCodeLinesDetail("E:\\code\\Github");
+		getCodeLinesDetail("E:\\work\\ChildrenRead\\app\\src\\main");
 	}
 
 	/**

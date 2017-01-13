@@ -14,10 +14,8 @@ import org.apache.http.protocol.HTTP;
 import javax.activation.MimetypesFileTypeMap;
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -260,6 +258,7 @@ public class LeanCloudHttpUtils {
 		// header
 		map.put(APP_ID_NAME, APP_ID);
 		map.put(API_KEY_NAME, REST_API_KEY);
+		map.put("user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36");
 		return map;
 	}
 

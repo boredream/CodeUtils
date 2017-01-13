@@ -131,7 +131,9 @@ public class WikiApiDocMain {
         }
 
         for (int i = 0; i < requestInfos.size(); i++) {
-            requestInfos.get(i).setName(titleList.get(i));
+            if(i < titleList.size()) {
+                requestInfos.get(i).setName(titleList.get(i));
+            }
         }
 
         return requestInfos;
