@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import parse.LeanCloudHttpUtils;
 import parse.Pointer;
-import parse.Relation;
 import utils.FileUtils;
 import utils.StringUtils;
 
@@ -89,7 +88,7 @@ public class SetMain {
             switch (kv[0].trim()) {
                 case "language_type":
                     try {
-                        if (kv.length < 2) {
+                        if (kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: language_type 为必填项");
                             return null;
                         }
@@ -106,15 +105,10 @@ public class SetMain {
                     break;
                 case "tag_type":
                     try {
-                        if (kv.length < 2) {
-                            System.out.println("配置信息错误: tag_type 为必填项");
-                            return null;
-                        }
-
-                        tag_type = Integer.parseInt(kv[1].trim());
-                        if (tag_type < 1 || tag_type > 4) {
-                            System.out.println("配置信息错误: tag_type 必须在1~4范围内");
-                            return null;
+                        if (kv.length < 2 || kv[1].trim().equals("")) {
+                            tag_type = 0;
+                        } else {
+                            tag_type = Integer.parseInt(kv[1].trim());
                         }
                     } catch (Exception e) {
                         System.out.println("配置信息错误: tag_type 必须为数字");
@@ -123,7 +117,7 @@ public class SetMain {
                     break;
                 case "age_range":
                     try {
-                        if (kv.length < 2) {
+                        if (kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: age_range 为必填项");
                             return null;
                         }
@@ -139,37 +133,33 @@ public class SetMain {
                     }
                     break;
                 case "price":
-                    if (tag_type == 2) {
-                        continue;
-                    }
+                    if (kv.length < 2 || kv[1].trim().equals("")) {
+                        // 没填价格
+                        price = 0;
+                    } else {
+                        try {
+                            String priceStr = kv[1].trim();
+                            price = Float.parseFloat(priceStr);
+                            if (price < 0) {
+                                System.out.println("配置信息错误: price 必须大于0");
+                                return null;
+                            }
 
-                    try {
-                        if (kv.length < 2) {
-                            System.out.println("配置信息错误: 非免费时 price 为必填项");
+                            int index = priceStr.indexOf(".");
+                            if (index != -1 && priceStr.split("\\.")[1].length() > 2) {
+                                System.out.println("配置信息错误: price 小数点最多支持2位");
+                                return null;
+                            }
+
+                        } catch (Exception e) {
+                            System.out.println("配置信息错误: price 必须为数字, 可以是2位以内的小数");
                             return null;
                         }
-
-                        String priceStr = kv[1].trim();
-                        price = Float.parseFloat(kv[1].trim());
-                        if (price <= 0) {
-                            System.out.println("配置信息错误: price 必须大于0");
-                            return null;
-                        }
-
-                        int index = priceStr.indexOf(".");
-                        if (index != -1 && priceStr.split("\\.")[1].length() > 2) {
-                            System.out.println("配置信息错误: price 小数点最多支持2位");
-                            return null;
-                        }
-
-                    } catch (Exception e) {
-                        System.out.println("配置信息错误: age_range 必须为数字, 可以是2位以内的小数");
-                        return null;
                     }
                     break;
                 case "book_category_id":
                     try {
-                        if (kv.length == 2) {
+                        if (kv.length == 2 && !kv[1].trim().equals("")) {
                             book_category_id = Integer.parseInt(kv[1].trim());
                         }
                     } catch (Exception e) {
@@ -184,7 +174,7 @@ public class SetMain {
                     break;
                 case "book_name_chn":
                     if (language_type <= 2) {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: book_name_chn 不能为空");
                             return null;
                         }
@@ -193,7 +183,7 @@ public class SetMain {
                     break;
                 case "book_name_eng":
                     if (language_type >= 2) {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: book_name_eng 不能为空");
                             return null;
                         }
@@ -203,28 +193,28 @@ public class SetMain {
             }
         }
 
-        ArrayList<LeanFile> oldFiles = new ArrayList<>();
-        try {
-            // 先获取本书相关的所有文件
-            String whereName = language_type <= 2 ? nameChn : nameEng;
-            // 文件名不能有空格
-            whereName = getEncodeWithoutPerName(whereName);
-            String where = "{\"name\":{\"$regex\":\"" + whereName + "_.*\"}}";
-            Type type = new TypeToken<ListResponse<LeanFile>>() {}.getType();
-            String fileResponse = LeanCloudHttpUtils.getString("https://api.leancloud.cn/1.1/files?where=" + where);
-            ListResponse<LeanFile> response = new Gson().fromJson(fileResponse, type);
-
-            if(response.results != null) {
-                oldFiles.addAll(response.results);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (oldFiles == null) {
-            System.out.println("获取已有文件失败");
-            return null;
-        }
+//        ArrayList<LeanFile> oldFiles = new ArrayList<>();
+//        try {
+//            // 先获取本书相关的所有文件
+//            String whereName = language_type <= 2 ? nameChn : nameEng;
+//            // 文件名不能有空格
+//            whereName = getEncodeWithoutPerName(whereName);
+//            String where = "{\"name\":{\"$regex\":\"" + whereName + "_.*\"}}";
+//            Type type = new TypeToken<ListResponse<LeanFile>>() {}.getType();
+//            String fileResponse = LeanCloudHttpUtils.getString("https://api.leancloud.cn/1.1/files?where=" + where);
+//            ListResponse<LeanFile> response = new Gson().fromJson(fileResponse, type);
+//
+//            if(response.results != null) {
+//                oldFiles.addAll(response.results);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        if (oldFiles == null) {
+//            System.out.println("获取已有文件失败");
+//            return null;
+//        }
 
         File surface = null;
 
@@ -252,7 +242,7 @@ public class SetMain {
         book.bookSetDesc = bookSetDesc;
 
         String surfaceName = (language_type <= 2 ? book.name : book.engName) + "_封面";
-        book.surfaceImg = getUrl(oldFiles, surface, surfaceName);
+        book.surfaceImg = getUrl(surface, surfaceName);
         if (StringUtils.isEmpty(book.surfaceImg)) {
             System.out.println("封面图片文件上传失败");
             return null;
@@ -361,7 +351,7 @@ public class SetMain {
             switch (kv[0].trim()) {
                 case "language_type":
                     try {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: language_type 为必填项");
                             return;
                         }
@@ -378,7 +368,7 @@ public class SetMain {
                     break;
                 case "music_type":
                     try {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: music_type 为必填项");
                             return;
                         }
@@ -396,7 +386,7 @@ public class SetMain {
                 case "book_unit_size":
                     if (music_type >= 2) {
                         try {
-                            if (kv.length < 2) {
+                            if ( kv.length < 2 || kv[1].trim().equals("")) {
                                 System.out.println("配置信息错误: 分段音乐类型时 book_unit_size 为必填项");
                                 return;
                             }
@@ -414,7 +404,7 @@ public class SetMain {
                     break;
                 case "book_name_chn":
                     if (language_type <= 2) {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: book_name_chn 不能为空");
                             return;
                         }
@@ -423,7 +413,7 @@ public class SetMain {
                     break;
                 case "book_name_eng":
                     if (language_type >= 2) {
-                        if (kv.length < 2) {
+                        if ( kv.length < 2 || kv[1].trim().equals("")) {
                             System.out.println("配置信息错误: book_name_eng 不能为空");
                             return;
                         }
@@ -433,29 +423,29 @@ public class SetMain {
             }
         }
 
-        ArrayList<LeanFile> oldFiles = new ArrayList<>();
-        try {
-            // 先获取本书相关的所有文件
-            String whereName = language_type <= 2 ? nameChn : nameEng;
-            // 文件名不能有空格
-            whereName = getEncodeWithoutPerName(whereName);
-            String where = "{\"name\":{\"$regex\":\"" + whereName + "_.*\"}}";
-            Type type = new TypeToken<ListResponse<LeanFile>>() {
-            }.getType();
-            String fileResponse = LeanCloudHttpUtils.getString("https://api.leancloud.cn/1.1/files?where=" + where);
-            ListResponse<LeanFile> response = new Gson().fromJson(fileResponse, type);
-
-            if(response.results != null) {
-                oldFiles.addAll(response.results);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (oldFiles == null) {
-            System.out.println("获取已有文件失败");
-            return;
-        }
+//        ArrayList<LeanFile> oldFiles = new ArrayList<>();
+//        try {
+//            // 先获取本书相关的所有文件
+//            String whereName = language_type <= 2 ? nameChn : nameEng;
+//            // 文件名不能有空格
+//            whereName = getEncodeWithoutPerName(whereName);
+//            String where = "{\"name\":{\"$regex\":\"" + whereName + "_.*\"}}";
+//            Type type = new TypeToken<ListResponse<LeanFile>>() {
+//            }.getType();
+//            String fileResponse = LeanCloudHttpUtils.getString("https://api.leancloud.cn/1.1/files?where=" + where);
+//            ListResponse<LeanFile> response = new Gson().fromJson(fileResponse, type);
+//
+//            if(response.results != null) {
+//                oldFiles.addAll(response.results);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        if (oldFiles == null) {
+//            System.out.println("获取已有文件失败");
+//            return;
+//        }
 
         File surface = null;
         File surfaceSleep = null;
@@ -612,7 +602,7 @@ public class SetMain {
         book.engName = nameEng;
 
         String surfaceName = (language_type <= 2 ? book.name : book.engName) + "_封面";
-        book.surfaceImg = getUrl(oldFiles, surface, surfaceName);
+        book.surfaceImg = getUrl(surface, surfaceName);
         if (StringUtils.isEmpty(book.surfaceImg)) {
             System.out.println("封面图片文件上传失败");
             return;
@@ -620,7 +610,7 @@ public class SetMain {
 
         if(music_type <= 2) {
             String surfaceSleepName = (language_type <= 2 ? book.name : book.engName) + "_睡眠封面";
-            book.surfaceSleepImg = getUrl(oldFiles, surfaceSleep, surfaceSleepName);
+            book.surfaceSleepImg = getUrl(surfaceSleep, surfaceSleepName);
             if (StringUtils.isEmpty(book.surfaceSleepImg)) {
                 System.out.println("睡眠封面图片文件上传失败");
                 return;
@@ -629,7 +619,7 @@ public class SetMain {
 
         if (music_type <= 2 && language_type <= 2) {
             String musicName = book.name + "_音乐";
-            book.musicUrl = getUrl(oldFiles, mp3File, musicName);
+            book.musicUrl = getUrl(mp3File, musicName);
             if (StringUtils.isEmpty(book.musicUrl)) {
                 System.out.println("中文音乐文件上传失败");
                 return;
@@ -638,7 +628,7 @@ public class SetMain {
 
         if (music_type <= 2 && language_type >= 2) {
             String musicEngName = (language_type <= 2 ? book.name : book.engName)  + "_英文音乐";
-            book.musicUrlEng = getUrl(oldFiles, mp3FileEng, musicEngName);
+            book.musicUrlEng = getUrl(mp3FileEng, musicEngName);
             if (StringUtils.isEmpty(book.musicUrlEng)) {
                 System.out.println("英文音乐文件上传失败");
                 return;
@@ -712,12 +702,12 @@ public class SetMain {
                     System.out.println();
                     BookUnit bookUnit = bookUnits.get(i);
 
-                    bookUnit.imgUrl = getUrl(oldFiles, picFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + picFiles.get(i).getName());
+                    bookUnit.imgUrl = getUrl(picFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + picFiles.get(i).getName());
                     if(language_type <= 2) {
-                        bookUnit.musicUrl = getUrl(oldFiles, mp3ChnFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + mp3ChnFiles.get(i).getName());
+                        bookUnit.musicUrl = getUrl(mp3ChnFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + mp3ChnFiles.get(i).getName());
                     }
                     if(language_type >= 2) {
-                        bookUnit.musicUrlEng = getUrl(oldFiles, mp3EngFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + mp3EngFiles.get(i).getName());
+                        bookUnit.musicUrlEng = getUrl(mp3EngFiles.get(i), (language_type <= 2 ? book.name : book.engName) + "_" + mp3EngFiles.get(i).getName());
                     }
 
                     bookUnit.book = new Pointer("Book", bookId);
@@ -741,20 +731,20 @@ public class SetMain {
         }
     }
 
-    private static String getUrl(ArrayList<LeanFile> oldFiles, File uploadFile, String filename) {
+    private static String getUrl(File uploadFile, String filename) {
         String url = null;
         try {
-            // 如果文件已存在, 直接使用url, 否则新上传
-            LeanFile leanFile = hasFile(oldFiles, filename);
-            if (leanFile == null) {
+//            // 如果文件已存在, 直接使用url, 否则新上传
+//            LeanFile leanFile = hasFile(oldFiles, filename);
+//            if (leanFile == null) {
                 url = new Gson().fromJson(uploadFileWithFileName(filename, uploadFile), LeanFile.class).url;
-                System.out.println(filename + " ... 文件不存在,上传成功");
-            } else {
-                url = leanFile.url;
-                System.out.println(filename + " ... 文件已存在,使用已有url");
-            }
+                System.out.println(filename + " ... 文件上传成功");
+//            } else {
+//                url = leanFile.url;
+//                System.out.println(filename + " ... 文件已存在,使用已有url");
+//            }
         } catch (Exception e) {
-            System.out.println(filename + " ... 文件不存在,上传失败");
+            System.out.println(filename + " ... 文件上传失败");
         }
         return url;
     }
@@ -770,22 +760,22 @@ public class SetMain {
         return null;
     }
 
-    private static LeanFile hasFile(ArrayList<LeanFile> files, String fileName) {
-        if (files == null) {
-            return null;
-        }
-
-        for (LeanFile file : files) {
-            try {
-                if (file.name.equals(getEncodeWithoutPerName(fileName))) {
-                    return file;
-                }
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-        return null;
-    }
+//    private static LeanFile hasFile(ArrayList<LeanFile> files, String fileName) {
+//        if (files == null) {
+//            return null;
+//        }
+//
+//        for (LeanFile file : files) {
+//            try {
+//                if (file.name.equals(getEncodeWithoutPerName(fileName))) {
+//                    return file;
+//                }
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return null;
+//    }
 
     private static String uploadFileWithFileName(String fileName, File file) throws Exception {
         fileName = getEncodeWithoutPerName(fileName);
