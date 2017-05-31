@@ -19,7 +19,18 @@ import java.util.Map;
 public class FileUtils {
 
 	public static void main(String[] args) {
-		getCodeLinesDetail("E:\\work\\ChildrenRead\\app\\src\\main");
+		batchRename("E:\\work\\icons", "video_living_%s");
+	}
+
+	/**
+	 * 批量重命名
+	 * @param formatter 重命名格式，xxx %s xxx，其中%s为原有名称
+     */
+	private static void batchRename(String dirPath, String formatter) {
+		for (File file : getAllFiles(dirPath)) {
+			File newFile = new File(file.getParentFile(), String.format(formatter, file.getName()));
+			copyFileByChannel(file, newFile);
+		}
 	}
 
 	/**
