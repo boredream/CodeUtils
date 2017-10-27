@@ -1,15 +1,6 @@
 package utils;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
+
+import java.io.*;
 import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -19,7 +10,28 @@ import java.util.Map;
 public class FileUtils {
 
 	public static void main(String[] args) {
-		batchRename("E:\\work\\icons", "video_living_%s");
+		StringBuilder sb = new StringBuilder();
+		ArrayList<String> lines = readToStringLines(new File(
+				"E:\\work\\ChildrenRead\\app\\src\\main\\java\\com\\diandian\\childrenread\\db\\BookDao.java"));
+
+		for (String line : lines) {
+			if(line.trim().length() == 0) {
+				sb.append("sb.append(\"\\n\");").append("\n");
+				continue;
+			}
+
+			int count = 0;
+			for (char c : line.toCharArray()) {
+				if(c == ' ') count ++;
+				else break;
+			}
+			int tabCount = count/4;
+
+			String text = "sb.append(StringUtils.formatSingleLine(%d, \"%s\"));";
+			sb.append(String.format(text, tabCount, line.trim())).append("\n");
+		}
+		System.out.println(sb.toString());
+
 	}
 
 	/**
