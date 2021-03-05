@@ -120,7 +120,7 @@ public class Json2JavaElement {
 	public String toString() {
 		return "\n"
 				+ "Json2JavaElement [isArray=" + isArray
-				+ ", arrayDeep=" + arrayDeep + ", name=" + name + ", type="
+				+ ", arrayDeep=" + arrayDeep + ", path=" + name + ", type="
 				+ type + "]";
 	}
 

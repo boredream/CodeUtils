@@ -17,7 +17,7 @@ public class _GreenDaoMain {
 	private static void addHerb(Schema schema) {
 		Entity herb = schema.addEntity("Herb");
 		herb.addStringProperty("type");
-		herb.addStringProperty("name").primaryKey();
+		herb.addStringProperty("path").primaryKey();
 		herb.addStringProperty("letter");
 		herb.addStringProperty("href");
 		herb.addStringProperty("img");
@@ -26,7 +26,7 @@ public class _GreenDaoMain {
 	private static void addHerbDetail(Schema schema) {
 		Entity herb = schema.addEntity("HerbDetail");
 		herb.addStringProperty("type");
-		herb.addStringProperty("name").primaryKey();
+		herb.addStringProperty("path").primaryKey();
 		herb.addStringProperty("letter");
 		herb.addStringProperty("href");
 		herb.addStringProperty("img");

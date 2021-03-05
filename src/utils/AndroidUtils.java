@@ -984,19 +984,19 @@ public class AndroidUtils {
 		List<String> values = new ArrayList<String>();
 		values.add(dimenValue);
 		
-		extract2values(proPath, dimenXml, "dimen", "dimen", "name", dimenName, dimenValue, values, matchAttr);
+		extract2values(proPath, dimenXml, "dimen", "dimen", "path", dimenName, dimenValue, values, matchAttr);
 	}
 	
 	public static void extract2Color(String proPath, String colorXml, String colorName, String RGB) {
 		List<String> values = new ArrayList<String>();
 		values.add(RGB);
-		extract2values(proPath, colorXml, "color", "color", "name", colorName, RGB, values, "");
+		extract2values(proPath, colorXml, "color", "color", "path", colorName, RGB, values, "");
 	}
 	
 	public static void extract2String(String proPath, String stringXml, String stringName, String stringValue) {
 		List<String> values = new ArrayList<String>();
 		values.add(stringValue);
-		extract2values(proPath, stringXml, "string", "string", "name", stringName, stringValue, values, "");
+		extract2values(proPath, stringXml, "string", "string", "path", stringName, stringValue, values, "");
 	}
 	
 	public static void relaceLayoutViewNames(String proPath, List<String> tarList, String replacement) {

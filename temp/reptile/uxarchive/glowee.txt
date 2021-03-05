@@ -1,8 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/1/5a155a3d9ccff9025cb6bf96c12da8817aca722e.png?1378943428,Splash screen,Onboarding,1
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/2/0ac8f8b50dad9136f56a963cff7d7264556e5487.png?1378943431,Tutorial,Onboarding,2
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/3/c4349508db96cb99c88ecbfdec5aec26fe45b526.png?1378943433,Tutorial,Onboarding,3
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/4/9d528d98d015bbf1cac119d577a4c0e6219518fc.png?1378943435,Tutorial,Onboarding,4
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/5/4b87a3c93b8c1f1747877cc8fbf497fc2ab7c9f5.png?1378943437,Tutorial,Onboarding,5
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/6/8351dfbc0372d3e5047c9b701a997d4c37cc41c8.png?1378943439,Screen light,Onboarding,6
-http://s3.amazonaws.com/uxarchive2/flows/105/1/2/medium/7/67350cebc8cff14a87fcf4cfb06300b65ad395aa.png?1378943440,Color palette,Onboarding,7

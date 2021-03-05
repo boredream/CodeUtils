@@ -71,7 +71,7 @@ public class RequestInfo {
 
 	@Override
 	public String toString() {
-		return "RequestInfo [name=" + name + ", method=" + method + ", url="
+		return "RequestInfo [path=" + name + ", method=" + method + ", url="
 				+ url + ", des=" + des + ", params=" + params + "]";
 	}
 

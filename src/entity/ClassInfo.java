@@ -35,7 +35,7 @@ public class ClassInfo {
 
 		@Override
 		public String toString() {
-			return "ClassField [name=" + name + "]";
+			return "ClassField [path=" + name + "]";
 		}
 
 	}

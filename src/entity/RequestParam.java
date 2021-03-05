@@ -64,7 +64,7 @@ public class RequestParam {
 
     @Override
     public String toString() {
-        return "RequestParam [name=" + name + ", type=" + type + ", des="
+        return "RequestParam [path=" + name + ", type=" + type + ", des="
                 + des + "]";
     }
 

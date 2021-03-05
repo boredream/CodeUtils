@@ -1,7 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/1/3012e1f8b4a46778c42f19d8822457b505665d2a.png?1355176825,Autorizing Location,Onboarding,1
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/2/28574830d64eae258a9e509790efd3d5ac8580fc.png?1355176827,Welcome,Onboarding,2
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/3/a4e0d32d410ec1ca7a3733342e2204f174afad8c.png?1355176830,Login Default,Onboarding,3
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/4/a2739892ec7a6c9250b90a56d3752e0184456983.png?1355176832,Login Filled,Onboarding,4
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/5/ada82c618808c6afb5392c65689e7d7aa7535fe3.png?1355176834,Push Notification Request,Onboarding,5
-http://s3.amazonaws.com/uxarchive2/flows/12/1/1/medium/6/8c1b1506d8029a81de6bc8c759a95ca0e57873f4.png?1355176836,Ready To Swipe,Onboarding,6

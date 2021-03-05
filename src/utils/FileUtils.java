@@ -10,28 +10,7 @@ import java.util.Map;
 public class FileUtils {
 
 	public static void main(String[] args) {
-		StringBuilder sb = new StringBuilder();
-		ArrayList<String> lines = readToStringLines(new File(
-				"E:\\work\\ChildrenRead\\app\\src\\main\\java\\com\\diandian\\childrenread\\db\\BookDao.java"));
-
-		for (String line : lines) {
-			if(line.trim().length() == 0) {
-				sb.append("sb.append(\"\\n\");").append("\n");
-				continue;
-			}
-
-			int count = 0;
-			for (char c : line.toCharArray()) {
-				if(c == ' ') count ++;
-				else break;
-			}
-			int tabCount = count/4;
-
-			String text = "sb.append(StringUtils.formatSingleLine(%d, \"%s\"));";
-			sb.append(String.format(text, tabCount, line.trim())).append("\n");
-		}
-		System.out.println(sb.toString());
-
+		getCodeLines("/Users/lcy/Documents/code/LoveCookBook/lib");
 	}
 
 	/**
@@ -246,7 +225,7 @@ public class FileUtils {
 		int allCodeLines = 0;
 		// 全部文件中注释行数
 		int allAnnoLines = 0;
-		
+
 		List<File> files = FileUtils.getAllFiles(rootPath);
 		for (File file : files) {
 			// TODO 只统计java和xml代码
@@ -300,7 +279,7 @@ public class FileUtils {
 				}
 			}
 		}
-		
+
 		System.out.println("文件总行数为：" + allLines);
 		System.out.println("文件空行数为：" + allEmptyLines);
 		System.out.println("文件注释行数为：" + allAnnoLines);
@@ -322,7 +301,7 @@ public class FileUtils {
 		int allLines = 0;
 		List<File> files = getAllFiles(rootPath);
 		for (File file : files) {
-			if(file.getName().endsWith(".java") || file.getName().endsWith(".xml")) {
+			if(file.getName().endsWith(".dart") || file.getName().endsWith(".xml")) {
 				int lines = getLines(file);
 				allLines += lines;
 			}

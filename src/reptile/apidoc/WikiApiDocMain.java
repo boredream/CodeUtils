@@ -77,7 +77,7 @@ public class WikiApiDocMain {
             }
             requestInfo.setUrl(url);
 
-            // name
+            // path
             requestInfo.setName("");
 
             // method
@@ -157,7 +157,7 @@ public class WikiApiDocMain {
                         bodyParams.add(param);
                     } else {
                         // 方式注释里参数
-                        // * @param name 姓名
+                        // * @param path 姓名
                         sbAnnotation.append(StringUtils.formatSingleLine(
                                 1, " * @param " + param.getName() + " " + param.getDes()));
                     }
@@ -241,7 +241,7 @@ public class WikiApiDocMain {
                 sbAnotation.append(StringUtils.formatSingleLine(1, " *"));
                 for (RequestParam param : params) {
                     // 方式注释里参数
-                    // * @param name 姓名
+                    // * @param path 姓名
                     sbAnotation.append(StringUtils.formatSingleLine(
                             1,
                             " * @param " + param.getName() + " "

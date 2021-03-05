@@ -41,7 +41,7 @@ public class CaoImg {
 
 	@Override
 	public String toString() {
-		return "CaoImg [name=" + name + "]";
+		return "CaoImg [path=" + name + "]";
 	}
 
 	@Override

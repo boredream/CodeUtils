@@ -147,7 +147,7 @@ public class ZhiHuReptile {
 
 		@Override
 		public String toString() {
-			return "Topic [name=" + name + ", topic_id=" + topic_id + "]";
+			return "Topic [path=" + name + ", topic_id=" + topic_id + "]";
 		}
 
 	}

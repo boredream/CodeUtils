@@ -50,7 +50,7 @@ public class ApiDocMain {
 				sbAnotation.append(StringUtils.formatSingleLine(1, " *"));
 				for (RequestParam param : params) {
 					// 方式注释里参数
-					// * @param name 姓名
+					// * @param path 姓名
 					sbAnotation.append(StringUtils.formatSingleLine(
 							1,
 							" * @param " + param.getName() + " "
@@ -129,7 +129,7 @@ public class ApiDocMain {
 				// System.out.println("-----> url = " + url);
 				requestInfo.setUrl(url);
 				
-				// System.out.println("---> name = " + attrId);
+				// System.out.println("---> path = " + attrId);
 				String name = url.substring(1).replace("/", "_").toUpperCase();
 				requestInfo.setName(name);
 				

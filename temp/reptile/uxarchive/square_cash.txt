@@ -1,7 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/156/1/2/medium/1/906fdc2d06594233d8365f22340d51cde01a79b8.png?1410496359,Splash screen,Onboarding,1
-http://s3.amazonaws.com/uxarchive2/flows/156/1/2/medium/2/4663cadb5872f32ee1893c421ddd8fe579610908.png?1410496360,Tutorial,Onboarding,2
-http://s3.amazonaws.com/uxarchive2/flows/156/1/2/medium/3/e198ee905e0997a5de9b679a2301265161bbdfeb.png?1410496362,Amount edit,Onboarding,3
-http://s3.amazonaws.com/uxarchive2/flows/156/10/2/medium/1/9eea417d06861ed27d0280a09bcb06dd34626936.png?1410496074,Amount edit,Purchasing,1
-http://s3.amazonaws.com/uxarchive2/flows/156/10/2/medium/2/ce619f27bb3dd2625dec0b13aaaa382f75d17110.png?1410496076,Recipient,Purchasing,2
-http://s3.amazonaws.com/uxarchive2/flows/156/10/2/medium/3/d9dbb9c794db34e8c4d09590e492fe235068e20a.png?1410496078,Confirmation,Purchasing,3

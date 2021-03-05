@@ -1,8 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/1/a0706db5c809476854fdafdb6762f2cce244b30c.png?1355176839,Email List,Sharing,1
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/2/bbf601847ff72329208245b0ec167a848757d61a.png?1355176841,Choose Recipient,Sharing,2
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/3/cca309269efcc08bb57478d0df953bf215a9b62d.png?1355176843,Input Recipient,Sharing,3
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/4/2043a6febc60a0d5dacb9c6aeeb2c4308ef9a47d.png?1355176845,Recipient Filled Out,Sharing,4
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/5/ee66f7669d91b66540af36a855922eb6ae9c0a20.png?1355176848,Message Default,Sharing,5
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/6/150705316c17c5e041aeb120ee14e3ef0aa58089.png?1355176850,Message Filled,Sharing,6
-http://s3.amazonaws.com/uxarchive/flows/13/4/1/medium/7/368142675bd83a85ab1334b8c6d5c96051f5e5a3.png?1355176852,Message Sent,Sharing,7

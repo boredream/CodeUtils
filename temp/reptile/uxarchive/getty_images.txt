@@ -1,5 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/219/2/2/medium/1/785b64380b8d5c17c51da57531957078a0e13650.png?1413867191,Home,Searching,1
-http://s3.amazonaws.com/uxarchive2/flows/219/2/2/medium/2/7150b52ba055b9ad3acdca9f60a66b9f2b49bd59.png?1413867198,Search,Searching,2
-http://s3.amazonaws.com/uxarchive2/flows/219/2/2/medium/3/2bc5c8956e98f80c2213ef58c3dba5a776571cb4.png?1413867204,Search results,Searching,3
-http://s3.amazonaws.com/uxarchive2/flows/219/2/2/medium/4/65866b351145c56d5b92e143469b7c3bd58bbedd.png?1413867210,Image,Searching,4

@@ -230,7 +230,7 @@ public class Main {
 		}
 		@Override
 		public String toString() {
-			return "NameTypeDes [name=" + name + ", type=" + type + ", des="
+			return "NameTypeDes [path=" + name + ", type=" + type + ", des="
 					+ des + "]";
 		}
 		

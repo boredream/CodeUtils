@@ -223,7 +223,7 @@ public class Main {
 //            String whereName = language_type <= 2 ? nameChn : nameEng;
 //            // 文件名不能有空格
 //            whereName = getEncodeWithoutPerName(whereName);
-//            String where = "{\"name\":{\"$regex\":\"" + whereName + "_.*\"}}";
+//            String where = "{\"path\":{\"$regex\":\"" + whereName + "_.*\"}}";
 //            Type type = new TypeToken<ListResponse<LeanFile>>() {
 //            }.getType();
 //            String fileResponse = LeanCloudHttpUtils.getString("https://api.leancloud.cn/1.1/files?where=" + where);
@@ -435,7 +435,7 @@ public class Main {
             // 根据名字获取已有Book
             String where;
             if(language_type <= 2) {
-                where = "{\"name\":\"" + book.name + "\"}";
+                where = "{\"path\":\"" + book.name + "\"}";
             } else {
                 where = "{\"engName\":\"" + book.engName + "\"}";
             }
@@ -558,7 +558,7 @@ public class Main {
 //
 //        for (LeanFile file : files) {
 //            try {
-//                if (file.name.equals(getEncodeWithoutPerName(fileName))) {
+//                if (file.path.equals(getEncodeWithoutPerName(fileName))) {
 //                    return file;
 //                }
 //            } catch (UnsupportedEncodingException e) {

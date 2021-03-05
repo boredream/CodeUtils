@@ -1,6 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/118/2/2/medium/1/2e69b3fedfd54acf29c650ef66e4985edb1b867a.png?1379478850,Artists,Searching,1
-http://s3.amazonaws.com/uxarchive2/flows/118/2/2/medium/2/9181ff90e361e4a61f86c9c7a1cd5fb824adbe78.png?1379478854,Search,Searching,2
-http://s3.amazonaws.com/uxarchive2/flows/118/2/2/medium/3/7f640ec0573b2a997d12ed52e294d1d6aec938d2.png?1379478858,Searching,Searching,3
-http://s3.amazonaws.com/uxarchive2/flows/118/2/2/medium/4/3e62448761927f28478a460231ff506ca4f60d12.png?1379478862,Artist,Searching,4
-http://s3.amazonaws.com/uxarchive2/flows/118/2/2/medium/5/8800000b9d637885fffe8b898467ba649d57d70d.png?1379478867,Player,Searching,5

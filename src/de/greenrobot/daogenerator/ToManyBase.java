@@ -46,7 +46,7 @@ public abstract class ToManyBase {
     }
 
     /**
-     * Sets the name of the relation, which is used as the property name in the entity (the source entity owning the
+     * Sets the path of the relation, which is used as the property path in the entity (the source entity owning the
      * to-many relationship).
      */
     public void setName(String name) {

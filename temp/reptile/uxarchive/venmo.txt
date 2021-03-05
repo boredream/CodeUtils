@@ -1,8 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/1/60a094722cb54763fb74b70ae37f58920889c585.png?1380264527,Transaction feed,Purchasing,1
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/2/dab209eedd16568775aee4334fae2beef0b6e31d.png?1380264529,Transaction edit,Purchasing,2
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/3/a3d4e3e36903f6e1e1f5becc0de4292ae70cc9ce.png?1380264530,Receiver edit,Purchasing,3
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/4/a06ab4180de3db57a2b13c1bcc867550cfffccf7.png?1380264532,Amount edit,Purchasing,4
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/5/6d655fc4f2be09b0ba2718c998acc3b3858370e1.png?1380264534,Note edit,Purchasing,5
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/6/783f8f87eab94466d72531e59a2a14ce27b2d970.png?1380264535,Transaction confirmation,Purchasing,6
-http://s3.amazonaws.com/uxarchive2/flows/48/10/2/medium/7/31af3d5e5f5f9ffaa922adc340cba76227acb832.png?1380264537,Transaction feed,Purchasing,7

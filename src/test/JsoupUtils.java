@@ -77,7 +77,7 @@ public class JsoupUtils {
 			if (e.tagName().equals("div") && attrId.startsWith(mainName)) {
 				RequestInfo requestInfo = new RequestInfo();
 
-//				System.out.println("---> name = " + attrId);
+//				System.out.println("---> path = " + attrId);
 				requestInfo.setName(attrId);
 
 				// method post/get
@@ -229,7 +229,7 @@ public class JsoupUtils {
 
 		@Override
 		public String toString() {
-			return "RequestInfo [name=" + name + ", method=" + method
+			return "RequestInfo [path=" + name + ", method=" + method
 					+ ", url=" + url + ", des=" + des + ", params=" + params
 					+ "]";
 		}

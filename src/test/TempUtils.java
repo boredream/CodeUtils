@@ -7,14 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,119 +38,9 @@ import entity.IdNamingBean;
 public class TempUtils {
 
 	public static void main(String[] args) throws Exception {
-
-		String content = "faceMap.put('01','笑');\n" +
-				"faceMap.put('02','难过');\n" +
-				"faceMap.put('03','哭');\n" +
-				"faceMap.put('04','生气');\n" +
-				"faceMap.put('05','愤怒');\n" +
-				"faceMap.put('06','汗');\n" +
-				"faceMap.put('07','狂汗');\n" +
-				"faceMap.put('08','惊讶');\n" +
-				"faceMap.put('09','吓尿');\n" +
-				"faceMap.put('10','疑问');\n" +
-				"faceMap.put('11','阴险');\n" +
-				"faceMap.put('12','呕吐');\n" +
-				"faceMap.put('13','委屈');\n" +
-				"faceMap.put('14','黑线');\n" +
-				"faceMap.put('15','星星眼');\n" +
-				"faceMap.put('16','困');\n" +
-				"faceMap.put('17','鄙视');\n" +
-				"faceMap.put('18','傲骄');\n" +
-				"faceMap.put('19','财迷');\n" +
-				"faceMap.put('20','喷');\n" +
-				"faceMap.put('21','馋');\n" +
-				"faceMap.put('22','酷');\n" +
-				"faceMap.put('23','吐舌');\n" +
-				"faceMap.put('24','呵呵');\n" +
-				"faceMap.put('25','色');\n" +
-				"faceMap.put('26','懵逼');\n" +
-				"faceMap.put('27','赞');\n" +
-				"faceMap.put('28','斜眼');";
-		content = content.replaceAll("faceMap.put\\('\\d\\d','", "<item>").replaceAll("'\\);", "</item>");
-		System.out.println(content);
+		extractAllString();
 	}
 
-	class Person {
-		private String name;
-		private String gender;
-		private List<String> nickNames;
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getGender() {
-			return gender;
-		}
-
-		public void setGender(String gender) {
-			this.gender = gender;
-		}
-
-		public List<String> getNickNames() {
-			return nickNames;
-		}
-
-		public void setNickNames(List<String> nickNames) {
-			this.nickNames = nickNames;
-		}
-
-	}
-
-	public static void weiboEmoji() {
-
-		// emoji
-		StringBuilder sb = new StringBuilder();
-
-		String names = "[羞羞哒甜馨][萌神奥莉][带着微博去旅行][爱红包][拍照][马到成功]→_→[呵呵][嘻嘻][哈哈][爱你][挖鼻屎][吃惊][晕][泪][馋嘴][抓狂][哼][可爱][怒][汗][害羞][睡觉][钱][偷笑][笑cry][doge][喵喵][酷][衰][闭嘴][鄙视][花心][鼓掌][悲伤][思考][生病][亲亲][怒骂][太开心]"
-				+ "[懒得理你][右哼哼][左哼哼][嘘][委屈][吐][可怜][打哈气][挤眼][失望][顶][疑问][困][感冒][拜拜][黑线][阴险][打脸][傻眼][互粉][心][伤心][猪头][熊猫][兔子]";
-
-		String regexEmoji = "\\[([\u4e00-\u9fa5a-zA-Z0-9])+\\]";
-		Pattern patternEmoji = Pattern.compile(regexEmoji);
-		Matcher matcherEmoji = patternEmoji.matcher(names);
-
-		CharacterParser parser = CharacterParser.getInstance();
-		List<File> files = FileUtils.getAllFiles("temp");
-		while (matcherEmoji.find()) { // 如果可以匹配到
-			String key = matcherEmoji.group(); // 获取匹配到的具体字符
-
-			String pinyinName = "d_"
-					+ parser.getSpelling(key).replace("[", "").replace("]", "");
-
-			boolean hasName = false;
-			for (File file : files) {
-				String fileName = FileUtils.getName(file);
-				if (fileName.equals(pinyinName)) {
-					hasName = true;
-					break;
-				}
-			}
-
-			sb.append("emojiMap.put(\"" + key + "\", R.drawable." + pinyinName
-					+ ");\n");
-			if (!hasName) {
-				System.out.println(key);
-			}
-		}
-		System.out.println(sb.toString());
-	}
-
-	public static void batchRename() {
-		List<File> files = FileUtils.getAllFiles("C:" + File.separator
-				+ "Users" + File.separator + "root" + File.separator
-				+ "Documents" + File.separator + "QQEIM Files" + File.separator
-				+ "2851657065" + File.separator + "FileRecv" + File.separator
-				+ "images_7.14" + File.separator + "normal");
-		for (File file : files) {
-			File nFile = new File(file.getParent(), "ic_" + file.getName());
-			file.renameTo(nFile);
-		}
-	}
 
 	/**
 	 * 复制项目代码
@@ -172,7 +55,6 @@ public class TempUtils {
 				+ File.separator + "nodrinkout" + File.separator + "fragment");
 		for (File file : allFiles) {
 			for (String subPath : subPaths) {
-
 			}
 
 			String string = FileUtils.readToString(file);
@@ -733,7 +615,7 @@ public class TempUtils {
 			boolean hasElement = false;
 
 			for (Element element : elements) {
-				Attribute nameAtt = element.attribute("name");
+				Attribute nameAtt = element.attribute("path");
 				if (nameAtt.getValue().equals(entry.getKey())) {
 					hasElement = true;
 					break;
@@ -741,9 +623,9 @@ public class TempUtils {
 			}
 
 			if (!hasElement) {
-				// <string name="app_name">Stone Chat</string>
+				// <string path="app_name">Stone Chat</string>
 				Element element = rootElement.addElement("string");
-				element.addAttribute("name", entry.getKey());
+				element.addAttribute("path", entry.getKey());
 				element.setText(entry.getValue());
 			}
 		}
@@ -762,7 +644,7 @@ public class TempUtils {
 
 		List<Element> elements = rootElement.elements();
 		for (Element element : elements) {
-			Attribute nameAtt = element.attribute("name");
+			Attribute nameAtt = element.attribute("path");
 			String name = nameAtt.getValue();
 			hasStrName.add(name);
 		}
@@ -774,7 +656,7 @@ public class TempUtils {
 
 		List<Element> elementsChn = rootElementChn.elements();
 		for (Element element : elementsChn) {
-			Attribute nameAtt = element.attribute("name");
+			Attribute nameAtt = element.attribute("path");
 			String name = nameAtt.getValue();
 			if (!hasStrName.contains(name)) {
 				System.out.println(element.getText());
@@ -825,9 +707,9 @@ public class TempUtils {
 			if (paramList.size() > 0) {
 				for (String param : paramList) {
 					// setter
-					// this.name = name;
+					// this.path = path;
 					String oldSetter = "this." + param + " = " + param + ";";
-					// this.name = Util.encryptDES(name);
+					// this.path = Util.encryptDES(path);
 					String newSetter = "this." + param + " = " + "Util.encryptDES(" + param + ");";
 					if (content.contains(oldSetter)) {
 						content = content.replace(oldSetter, newSetter);
@@ -836,9 +718,9 @@ public class TempUtils {
 					}
 
 					// getter
-					// return name;
+					// return path;
 					String oldGetter = "return " + param + ";";
-					// return Util.decryptDES(name);
+					// return Util.decryptDES(path);
 					String newGetter = "return " + "Util.decryptDES(" + param + ");";
 					if (content.contains(oldGetter)) {
 						content = content.replace(oldGetter, newGetter);

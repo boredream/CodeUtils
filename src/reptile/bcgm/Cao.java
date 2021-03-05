@@ -49,6 +49,6 @@ public class Cao {
 
 	@Override
 	public String toString() {
-		return "Cao [type=" + type + ", name=" + name + "]";
+		return "Cao [type=" + type + ", path=" + name + "]";
 	}
 }

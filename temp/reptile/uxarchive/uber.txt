@@ -1,7 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/1/451a511083c1b3d342f305a46dd469d39f2ca8f3.png?1380520489,Map,Booking,1
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/2/79876eac100cbedaf58a00bf3a141449501ba2e4.png?1380520491,Pickup location,Booking,2
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/3/fe6cfbf083fa4d74189f074f232360e536f7eab1.png?1380520492,Ride details,Booking,3
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/4/6b12c0c9a3ffd63631dc58fa7fef2907077043e1.png?1380520493,Confirmation,Booking,4
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/5/7210e84941ea687d2990103f7dbe7e1f05337972.png?1380520495,Sending request,Booking,5
-http://s3.amazonaws.com/uxarchive2/flows/141/21/2/medium/6/08b5ad0ae31f6d67edc22cd74d299f8b55f8a185.png?1380520496,Map， wait time,Booking,6

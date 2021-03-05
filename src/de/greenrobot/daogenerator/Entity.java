@@ -584,7 +584,7 @@ public class Entity {
         for (ToOne toOne : toOneRelations) {
             toOne.init3ndPass();
             if (!toOneNames.add(toOne.getName().toLowerCase())) {
-                throw new RuntimeException("Duplicate name for " + toOne);
+                throw new RuntimeException("Duplicate path for " + toOne);
             }
         }
 
@@ -600,7 +600,7 @@ public class Entity {
                 }
             }
             if (!toManyNames.add(toMany.getName().toLowerCase())) {
-                throw new RuntimeException("Duplicate name for " + toMany);
+                throw new RuntimeException("Duplicate path for " + toMany);
             }
         }
     }

@@ -1,7 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/1/50c6558572650304dcdf3671067c965ce608f065.png?1410464660,Splash screen,Onboarding,1
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/2/9617f20c5aea7113608b704a57aee151af4044fe.png?1410464663,Tutorial,Onboarding,2
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/3/85c68eb02ba3af079e5d30a16771a54a89251e60.png?1410464665,Tutorial,Onboarding,3
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/4/62d36ec73e8b34bd161ea5e0a0cf11d7a0703092.png?1410464667,Tutorial,Onboarding,4
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/5/f27570a4969acbbf628b2ba8d769ccb638ddfac1.png?1410464668,Camera access,Onboarding,5
-http://s3.amazonaws.com/uxarchive2/flows/196/1/2/medium/6/73ed7adb985dbdcfb47cb4314192037268b6e648.png?1410464670,Camera,Onboarding,6

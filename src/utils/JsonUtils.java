@@ -20,7 +20,7 @@ public class JsonUtils {
     public static void main(String[] args) {
         /// 读取json字符串
         String json = FileUtils.readToString(new File(
-                "temp" + File.separator + "Json" + File.separator + "JsonString.txt"), "UTF-8");
+                "temp" + File.separator + "Json" + File.separator + "JsonString.json"), "UTF-8");
         parseJson2Java(json);
     }
 
@@ -158,13 +158,13 @@ public class JsonUtils {
         }
 
         // 申明变量
-        // private String name;
+        // private String path;
         sb.append(StringUtils.formatSingleLine(1 + extraTabNum,
                 "private " + getTypeName(j2j) + " " + j2j.getName() + ";"));
 
         // 生成变量对应的getter和setter方法
         // public String getName() {
-        //     return name;
+        //     return path;
         // }
         sbGetterAndSetter.append("\n");
         sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum,
@@ -172,8 +172,8 @@ public class JsonUtils {
         sbGetterAndSetter.append(StringUtils.formatSingleLine(2 + extraTabNum, "return " + j2j.getName() + ";"));
         sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum, "}"));
 
-        // public void setName(String name) {
-        //     this.name = name;
+        // public void setName(String path) {
+        //     this.path = path;
         // }
         sbGetterAndSetter.append("\n");
         sbGetterAndSetter.append(StringUtils.formatSingleLine(1 + extraTabNum,

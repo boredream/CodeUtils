@@ -1,5 +1,0 @@
-imgUrl,name,flowName,seqInFlow
-http://s3.amazonaws.com/uxarchive2/flows/167/1/2/medium/1/901650374608212fc942bbed3a96171a563c40ac.png?1383783402,Splash screen,Onboarding,1
-http://s3.amazonaws.com/uxarchive2/flows/167/1/2/medium/2/0a7b7ad1353248bbf0886971ea1bb6a727cc4a56.png?1383783405,Instructions,Onboarding,2
-http://s3.amazonaws.com/uxarchive2/flows/167/1/2/medium/3/800558ece7ac4678247185c54f03794d6109419c.png?1383783410,Instructions,Onboarding,3
-http://s3.amazonaws.com/uxarchive2/flows/167/1/2/medium/4/806e501d130bbaec4a4450ade88f8dba3ce793cf.png?1383783415,Active computers,Onboarding,4
