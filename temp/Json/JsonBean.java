@@ -1,74 +1,176 @@
 
-	private String typeName;
-	private String updatedAt;
-	private String photoPath;
-	private String objectId;
-	private String createdAt;
-	private String title;
-	private String typeInfo;
-	private String community_id;
+	private Fields fields;
 
-	public String getTypeName() {
-		return typeName;
+	public static class Fields {
+		private Parent parent;
+		private Project project;
+		private String summary;
+		private Issuetype issuetype;
+		private Assignee assignee;
+		private Reporter reporter;
+		private Priority priority;
+		private String customfield_10607;
+		private String customfield_10609;
+		private String customfield_10006;
+
+		public Parent getParent() {
+			return parent;
+		}
+
+		public void setParent(Parent parent) {
+			this.parent = parent;
+		}
+
+		public Project getProject() {
+			return project;
+		}
+
+		public void setProject(Project project) {
+			this.project = project;
+		}
+
+		public String getSummary() {
+			return summary;
+		}
+
+		public void setSummary(String summary) {
+			this.summary = summary;
+		}
+
+		public Issuetype getIssuetype() {
+			return issuetype;
+		}
+
+		public void setIssuetype(Issuetype issuetype) {
+			this.issuetype = issuetype;
+		}
+
+		public Assignee getAssignee() {
+			return assignee;
+		}
+
+		public void setAssignee(Assignee assignee) {
+			this.assignee = assignee;
+		}
+
+		public Reporter getReporter() {
+			return reporter;
+		}
+
+		public void setReporter(Reporter reporter) {
+			this.reporter = reporter;
+		}
+
+		public Priority getPriority() {
+			return priority;
+		}
+
+		public void setPriority(Priority priority) {
+			this.priority = priority;
+		}
+
+		public String getCustomfield_10607() {
+			return customfield_10607;
+		}
+
+		public void setCustomfield_10607(String customfield_10607) {
+			this.customfield_10607 = customfield_10607;
+		}
+
+		public String getCustomfield_10609() {
+			return customfield_10609;
+		}
+
+		public void setCustomfield_10609(String customfield_10609) {
+			this.customfield_10609 = customfield_10609;
+		}
+
+		public String getCustomfield_10006() {
+			return customfield_10006;
+		}
+
+		public void setCustomfield_10006(String customfield_10006) {
+			this.customfield_10006 = customfield_10006;
+		}
 	}
 
-	public void setTypeName(String typeName) {
-		this.typeName = typeName;
+	public static class Parent {
+		private String key;
+
+		public String getKey() {
+			return key;
+		}
+
+		public void setKey(String key) {
+			this.key = key;
+		}
 	}
 
-	public String getUpdatedAt() {
-		return updatedAt;
+	public static class Project {
+		private String id;
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
 	}
 
-	public void setUpdatedAt(String updatedAt) {
-		this.updatedAt = updatedAt;
+	public static class Issuetype {
+		private String id;
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
 	}
 
-	public String getPhotoPath() {
-		return photoPath;
+	public static class Assignee {
+		private String name;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
 	}
 
-	public void setPhotoPath(String photoPath) {
-		this.photoPath = photoPath;
+	public static class Reporter {
+		private String name;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
 	}
 
-	public String getObjectId() {
-		return objectId;
+	public static class Priority {
+		private String id;
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
 	}
 
-	public void setObjectId(String objectId) {
-		this.objectId = objectId;
+	public Fields getFields() {
+		return fields;
 	}
 
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getTypeInfo() {
-		return typeInfo;
-	}
-
-	public void setTypeInfo(String typeInfo) {
-		this.typeInfo = typeInfo;
-	}
-
-	public String getCommunity_id() {
-		return community_id;
-	}
-
-	public void setCommunity_id(String community_id) {
-		this.community_id = community_id;
+	public void setFields(Fields fields) {
+		this.fields = fields;
 	}
 

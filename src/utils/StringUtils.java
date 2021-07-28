@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtils {
@@ -37,6 +38,14 @@ public class StringUtils {
 		return sb.toString();
 	}
 
+	public static String _ToCamel(String src) {
+		StringBuilder sb = new StringBuilder();
+		for(String s : src.trim().split("_")) {
+			sb.append(firstToUpperCase(s));
+		}
+		return firstToLowerCase(sb.toString());
+	}
+
 	/**
 	 * 驼峰转下划线命名
      */
@@ -66,13 +75,22 @@ public class StringUtils {
 			sb.append(sbWord.toString());
 		}
 
-		return sb.toString();
+		return sb.toString().toLowerCase();
 	}
 
 	public static boolean hasChinese(String s) {
 		String regexChinese = "[\u4e00-\u9fa5]+";
 		Pattern patternChinese = Pattern.compile(regexChinese);
 		return patternChinese.matcher(s).find();
+	}
+
+	public static String regexGet(String regex, String content) {
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(content);
+		if(matcher.find()) {
+			return matcher.group(1);
+		}
+		return null;
 	}
 
 	public static boolean isEmpty(String s) {

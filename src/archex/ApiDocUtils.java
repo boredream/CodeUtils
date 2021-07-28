@@ -9,6 +9,11 @@ import java.util.*;
 
 public class ApiDocUtils {
 
+    /**
+     * 忽略的字段
+     */
+    public static final List<String> ignoreFields = Arrays.asList("createDate", "updateDate");
+
     static class ApiField {
         String name;
         String desc;
@@ -26,10 +31,27 @@ public class ApiDocUtils {
         public String toString() {
             return name;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            ApiField apiField = (ApiField) o;
+            if (!Objects.equals(name, apiField.name)) return false;
+            return Objects.equals(type, apiField.type);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = name != null ? name.hashCode() : 0;
+            result = 31 * result + (type != null ? type.hashCode() : 0);
+            return result;
+        }
     }
 
     public static void main(String[] args) throws Exception {
-//        docApi();
+        docApi();
     }
 
     private static ApiField parseParam(boolean response, String line) {
@@ -211,6 +233,7 @@ public class ApiDocUtils {
                 if (deep < currentDeep) {
                     className = preClassNameStack.pop();
                 }
+                currentDeep = deep;
 
                 // 获取某个类型下params集合
                 ArrayList<ApiField> apiFields = apiParamsMap.computeIfAbsent(className, k -> new ArrayList<>());
@@ -222,10 +245,18 @@ public class ApiDocUtils {
                 }
 
                 // 记录params字段
-                apiFields.add(param);
+                if (!apiFields.contains(param)) {
+                    // 可能多个字段对应同一个class，会有重复
+                    apiFields.add(param);
+                }
             }
         }
 
+        genClass(apiParamsMap);
+        genIosClass(apiParamsMap);
+    }
+
+    private static void genClass(TreeMap<String, ArrayList<ApiField>> apiParamsMap) {
         for (Map.Entry<String, ArrayList<ApiField>> entry : apiParamsMap.entrySet()) {
             String className = entry.getKey();
             StringBuilder sbClass = new StringBuilder();
@@ -236,6 +267,10 @@ public class ApiDocUtils {
                     .append("\n")
                     .append("public class ").append(className).append(" implements Serializable {\n\n");
             for (ApiField field : entry.getValue()) {
+                if (ignoreFields.contains(field.name)) {
+                    continue;
+                }
+
                 String type = getType(field);
 
                 if (field.scheme != null && field.scheme.contains("对象")) {
@@ -256,6 +291,36 @@ public class ApiDocUtils {
         }
     }
 
+    private static void genIosClass(TreeMap<String, ArrayList<ApiField>> apiParamsMap) {
+        StringBuilder sbClass = new StringBuilder();
+        for (Map.Entry<String, ArrayList<ApiField>> entry : apiParamsMap.entrySet()) {
+            String className = entry.getKey();
+            sbClass.append("class " + className + ": NSObject, Codable {\n");
+            for (ApiField field : entry.getValue()) {
+                if (ignoreFields.contains(field.name)) {
+                    continue;
+                }
+
+                String type = getIosType(field);
+
+                if (field.scheme != null && field.scheme.contains("对象")) {
+                    type = field.scheme.replace("对象", "").trim();
+                    if ("array".equals(field.type)) {
+                        type = "[" + type + "]";
+                    }
+                }
+
+                if (StringUtils.hasChinese(field.desc)) {
+                    sbClass.append("\t/// ").append(field.desc).append("\n");
+                }
+                sbClass.append("\tvar ").append(field.name).append(": ").append(type).append("?\n\n");
+            }
+            sbClass.append("}\n\n");
+        }
+
+        FileUtils.writeString2File(sbClass.toString(), new File("temp/apidoc/iosClass/classTxt.txt"), "utf-8");
+    }
+
     private static String getType(ApiField field) {
         String type = field.type;
         if (type.contains("string") || field.name.contains("uid") || field.name.contains("Uid")) {
@@ -268,8 +333,20 @@ public class ApiDocUtils {
             type = "double";
         }
         return type;
+    }
 
-        // integer(int32)
+    private static String getIosType(ApiField field) {
+        String type = field.type;
+        if (type.contains("string") || field.name.contains("uid") || field.name.contains("Uid")) {
+            type = "String";
+        } else if ("integer(int64)".equals(type)) {
+            type = "Int";
+        } else if (type.contains("integer")) {
+            type = "Int";
+        } else if ("number".equals(type)) {
+            type = "Double";
+        }
+        return type;
     }
 
     private static void swaggerApi() {
