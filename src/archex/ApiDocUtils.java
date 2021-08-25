@@ -4,7 +4,6 @@ import utils.FileUtils;
 import utils.StringUtils;
 
 import java.io.File;
-import java.math.BigDecimal;
 import java.util.*;
 
 public class ApiDocUtils {
@@ -18,13 +17,13 @@ public class ApiDocUtils {
         String name;
         String desc;
         String type;
-        String scheme;
+        String schema;
 
-        public ApiField(String name, String desc, String type, String scheme) {
+        public ApiField(String name, String desc, String type, String schema) {
             this.name = name;
             this.desc = desc;
             this.type = type;
-            this.scheme = scheme;
+            this.schema = schema;
         }
 
         @Override
@@ -82,6 +81,22 @@ public class ApiDocUtils {
                 }
             }
         }
+
+        // 初步加工参数
+        if (param != null) {
+            if (param.type.contains("Page«")) {
+                param.type = "ListResponse";
+            }
+
+            if (param.schema != null) {
+                param.schema = param.schema
+                        .replace("对象", "")
+                        .replace("Page«", "")
+                        .replace("»", "")
+                        .trim();
+            }
+        }
+
         return param;
     }
 
@@ -134,15 +149,15 @@ public class ApiDocUtils {
 
         // Api
         String apiMethodName = url.split("/")[url.split("/").length - 1];
-        String apiClassName = apiMethodName.replaceFirst("submit", "").replaceFirst("get", "");
-        String requestType = apiClassName;
+        String apiClassName = StringUtils.firstToUpperCase(apiMethodName
+                .replaceFirst("submit", "")
+                .replaceFirst("get", ""));
         String responseType = apiClassName;
         StringBuilder sbRequest = new StringBuilder();
         if ("POST".equals(httpMethod)) {
             // POST一般是body的参数，则接口这里直接取对象
             responseType = "String";
-            requestType = apiClassName + "Request";
-            sbRequest.append("\n        @Body ").append(requestType).append(" info");
+            sbRequest.append("\n        @Body ").append(apiClassName).append(" info");
         } else {
             // GET一般是query的参数，挨个拼接
             for (int i = 0; i < requestParams.size(); i++) {
@@ -158,10 +173,7 @@ public class ApiDocUtils {
                 if ("code".equals(param.name) || "msg".equals(param.name)) {
                     iterator.remove();
                 } else if ("data".equals(param.name)) {
-                    responseType = param.scheme.replace("对象", "").trim();
-                    if ("array".equals(param.type)) {
-                        responseType = "ArrayList<" + responseType + ">";
-                    }
+                    responseType = getType(param);
                     iterator.remove();
                 }
             }
@@ -180,7 +192,7 @@ public class ApiDocUtils {
         if ("POST".equals(httpMethod)) {
             // body的一般是对象，需要对应创建
             Stack<String> preClassNameStack = new Stack<>();
-            String className = requestType;
+            String className = apiClassName;
             // 当前深度，根据前面 &emsp; 数量判断
             int currentDeep = 0;
             for (ApiField param : requestParams) {
@@ -196,14 +208,15 @@ public class ApiDocUtils {
                 if (deep < currentDeep) {
                     className = preClassNameStack.pop();
                 }
+                currentDeep = deep;
 
                 // 获取某个类型下params集合
                 ArrayList<ApiField> apiFields = apiParamsMap.computeIfAbsent(className, k -> new ArrayList<>());
 
                 // 遇到对象，创建新的加入map
-                if (param.scheme != null && param.scheme.contains("对象")) {
+                if (param.schema != null) {
                     preClassNameStack.push(className);
-                    className = param.scheme.replace("对象", "").trim();
+                    className = param.schema;
                 }
 
                 // 记录params字段
@@ -239,9 +252,9 @@ public class ApiDocUtils {
                 ArrayList<ApiField> apiFields = apiParamsMap.computeIfAbsent(className, k -> new ArrayList<>());
 
                 // 遇到对象，创建新的加入map
-                if (param.scheme != null && param.scheme.contains("对象")) {
+                if (param.schema != null) {
                     preClassNameStack.push(className);
-                    className = param.scheme.replace("对象", "").trim();
+                    className = param.schema;
                 }
 
                 // 记录params字段
@@ -272,14 +285,6 @@ public class ApiDocUtils {
                 }
 
                 String type = getType(field);
-
-                if (field.scheme != null && field.scheme.contains("对象")) {
-                    type = field.scheme.replace("对象", "").trim();
-                    if ("array".equals(field.type)) {
-                        type = "ArrayList<" + type + ">";
-                    }
-                }
-
                 if (StringUtils.hasChinese(field.desc)) {
                     sbClass.append("\t// ").append(field.desc).append("\n");
                 }
@@ -302,14 +307,6 @@ public class ApiDocUtils {
                 }
 
                 String type = getIosType(field);
-
-                if (field.scheme != null && field.scheme.contains("对象")) {
-                    type = field.scheme.replace("对象", "").trim();
-                    if ("array".equals(field.type)) {
-                        type = "[" + type + "]";
-                    }
-                }
-
                 if (StringUtils.hasChinese(field.desc)) {
                     sbClass.append("\t/// ").append(field.desc).append("\n");
                 }
@@ -332,6 +329,16 @@ public class ApiDocUtils {
         } else if ("number".equals(type)) {
             type = "double";
         }
+
+        if (field.schema != null) {
+            type = field.schema;
+            if ("array".equals(field.type)) {
+                type = "ArrayList<" + type + ">";
+            } else if ("ListResponse".equals(field.type)) {
+                type = "ListResponse<" + type + ">";
+            }
+        }
+
         return type;
     }
 
@@ -346,6 +353,16 @@ public class ApiDocUtils {
         } else if ("number".equals(type)) {
             type = "Double";
         }
+
+        if (field.schema != null) {
+            type = field.schema.replace("对象", "").trim();
+            if ("array".equals(field.type)) {
+                type = "[" + type + "]";
+            }
+        }
+
+        // TODO: chunyang 2021/7/28  ListResponse
+
         return type;
     }
 
