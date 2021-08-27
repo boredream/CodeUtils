@@ -6,37 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="LeanCloutUtils">
-      <change afterPath="$PROJECT_DIR$/src/archex/JiraIssue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/archex/JiraUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/MapUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="api doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/archex/UiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/archex/UiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builder/AndroidProjectBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CharacterParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CharacterParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/Json/JsonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/temp/Json/JsonBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/androidtest/test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/temp/androidtest/test.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/api_company.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/api_company.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/api_search.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/api_search.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/api_stone.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/api_stone.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/apidoc/swagger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp/apidoc/swagger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/correct_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/correct_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/correct_red2red_dark_sel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/correct_red2red_dark_sel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/correct_red_dark.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/correct_red_dark.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/office/Android 开发实战微博之我页面和个人中心页面的开发.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/temp/office/Android 开发实战微博之我页面和个人中心页面的开发.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/office/ppt2007.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/temp/office/ppt2007.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/office/ppt2007plus_new.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/temp/office/ppt2007plus_new.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/office/tran.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/temp/office/tran.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rectangle_red2red_dark_sel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/rectangle_red2red_dark_sel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/reptile/zhihu_topics_answers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/strings_eng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/temp/strings_eng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +165,13 @@
       <listeners />
       <method />
     </configuration>
-    <configuration name="ApiDocUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="archex.ApiDocUtils" />
+    <configuration name="ApiDocMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="reptile.apidoc.ApiDocMain" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="archex.*" />
+          <option name="PATTERN" value="reptile.apidoc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,13 +179,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.FileUtils" />
+    <configuration name="ApiDocUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="archex.ApiDocUtils" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utils.*" />
+          <option name="PATTERN" value="archex.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -342,19 +316,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.FileUtils" />
-      <item itemvalue="Application.MapUtils" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.ApiDocMain" />
       <item itemvalue="Application.ApiDocUtils" />
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MapUtils" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiDocUtils" />
+        <item itemvalue="Application.ApiDocMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.MapUtils" />
-        <item itemvalue="Application.FileUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1482395122284</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="api doc">
+      <created>1627453052191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627453052191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ApiDocUtils - bean 嵌套情况优化">
+      <created>1629884402545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629884402545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -399,109 +387,131 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LeanCloutUtils" />
-    <option name="LAST_COMMIT_MESSAGE" value="LeanCloutUtils" />
+    <MESSAGE value="api doc" />
+    <MESSAGE value="ApiDocUtils - bean 嵌套情况优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="ApiDocUtils - bean 嵌套情况优化" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2450" y="53" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1627441629057">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="564" y="427" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629277694465">
+      <screen x="0" y="25" width="1387" height="875" />
     </state>
+    <state x="564" y="427" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1387.875@0.25.1387.875" timestamp="1629277694465" />
     <state x="2450" y="53" key="#com.intellij.fileTypes.FileTypeChooser/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627441629057" />
-    <state x="2755" y="-627" key="#com.intellij.ide.util.MemberChooser" timestamp="1618813364773">
-      <screen x="1440" y="-1164" width="2480" height="1415" />
-    </state>
-    <state x="2755" y="-627" key="#com.intellij.ide.util.MemberChooser/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618813364773" />
-    <state x="2528" y="-208" key="CommitChangelistDialog2" timestamp="1627453030384">
+    <state x="2702" y="-597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627453730955">
       <screen x="1440" y="-597" width="2483" height="1415" />
     </state>
-    <state x="2527" y="-775" key="CommitChangelistDialog2/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618814115561" />
-    <state x="2528" y="-208" key="CommitChangelistDialog2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453030384" />
-    <state width="502" height="466" key="DebuggerActiveHint" timestamp="1627452220701">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="2702" y="-597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453730955" />
+    <state x="2538" y="-208" key="CommitChangelistDialog2" timestamp="1629884402338">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="501" height="466" key="DebuggerActiveHint/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618815452523" />
-    <state width="502" height="466" key="DebuggerActiveHint/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452220701" />
-    <state x="2368" y="-145" key="DiffContextDialog" timestamp="1627453029528">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="2528" y="-208" key="CommitChangelistDialog2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627454229023" />
+    <state x="2538" y="-208" key="CommitChangelistDialog2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884402338" />
+    <state width="809" height="702" key="DebuggerActiveHint" timestamp="1629884085645">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state x="2367" y="-712" key="DiffContextDialog/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618814115057" />
-    <state x="2368" y="-145" key="DiffContextDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453029528" />
-    <state width="1763" height="336" key="GridCell.Tab.0.bottom" timestamp="1627452898128">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="502" height="466" key="DebuggerActiveHint/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627454289381" />
+    <state width="809" height="702" key="DebuggerActiveHint/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884085645" />
+    <state x="2377" y="-145" key="DiffContextDialog" timestamp="1629884379561">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="359" key="GridCell.Tab.0.bottom/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509452" />
+    <state x="2368" y="-145" key="DiffContextDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627454228812" />
+    <state x="2377" y="-145" key="DiffContextDialog/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884379561" />
+    <state width="1601" height="268" key="GridCell.Tab.0.bottom" timestamp="1629973794601">
+      <screen x="1440" y="-597" width="2506" height="1415" />
+    </state>
+    <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.25.1387.875@0.25.1387.875" timestamp="1629282630480" />
+    <state width="1347" height="175" key="GridCell.Tab.0.bottom/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
     <state width="1763" height="672" key="GridCell.Tab.0.bottom/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.bottom/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428350" />
-    <state width="1763" height="336" key="GridCell.Tab.0.bottom/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898128" />
-    <state width="1763" height="336" key="GridCell.Tab.0.center" timestamp="1627452898127">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.0.bottom/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
+    <state width="1601" height="268" key="GridCell.Tab.0.bottom/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794601" />
+    <state width="1601" height="268" key="GridCell.Tab.0.center" timestamp="1629973794600">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="359" key="GridCell.Tab.0.center/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509451" />
+    <state width="1345" height="178" key="GridCell.Tab.0.center/0.25.1387.875@0.25.1387.875" timestamp="1629282630479" />
+    <state width="1347" height="175" key="GridCell.Tab.0.center/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
     <state width="1763" height="672" key="GridCell.Tab.0.center/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.center/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428349" />
-    <state width="1763" height="336" key="GridCell.Tab.0.center/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898127" />
-    <state width="1763" height="336" key="GridCell.Tab.0.left" timestamp="1627452898126">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.0.center/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321907" />
+    <state width="1601" height="268" key="GridCell.Tab.0.center/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794600" />
+    <state width="1601" height="268" key="GridCell.Tab.0.left" timestamp="1629973794599">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="359" key="GridCell.Tab.0.left/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509451" />
+    <state width="1345" height="178" key="GridCell.Tab.0.left/0.25.1387.875@0.25.1387.875" timestamp="1629282630478" />
+    <state width="1347" height="175" key="GridCell.Tab.0.left/0.25.1389.875@0.25.1389.875" timestamp="1629188823922" />
     <state width="1763" height="672" key="GridCell.Tab.0.left/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326241" />
     <state width="1763" height="299" key="GridCell.Tab.0.left/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428348" />
-    <state width="1763" height="336" key="GridCell.Tab.0.left/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898126" />
-    <state width="1763" height="336" key="GridCell.Tab.0.right" timestamp="1627452898128">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.0.left/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321907" />
+    <state width="1601" height="268" key="GridCell.Tab.0.left/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794599" />
+    <state width="1601" height="268" key="GridCell.Tab.0.right" timestamp="1629973794600">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="359" key="GridCell.Tab.0.right/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509452" />
+    <state width="1345" height="178" key="GridCell.Tab.0.right/0.25.1387.875@0.25.1387.875" timestamp="1629282630479" />
+    <state width="1347" height="175" key="GridCell.Tab.0.right/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
     <state width="1763" height="672" key="GridCell.Tab.0.right/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.right/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428349" />
-    <state width="1763" height="336" key="GridCell.Tab.0.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898128" />
-    <state width="1763" height="336" key="GridCell.Tab.1.bottom" timestamp="1627452898131">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.0.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
+    <state width="1601" height="268" key="GridCell.Tab.0.right/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794600" />
+    <state width="1601" height="312" key="GridCell.Tab.1.bottom" timestamp="1629887373524">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="223" key="GridCell.Tab.1.bottom/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509447" />
-    <state width="1763" height="336" key="GridCell.Tab.1.bottom/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898131" />
-    <state width="1763" height="336" key="GridCell.Tab.1.center" timestamp="1627452898130">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.1.bottom/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321909" />
+    <state width="1601" height="312" key="GridCell.Tab.1.bottom/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629887373524" />
+    <state width="1601" height="312" key="GridCell.Tab.1.center" timestamp="1629887373523">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="223" key="GridCell.Tab.1.center/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509446" />
-    <state width="1763" height="336" key="GridCell.Tab.1.center/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898130" />
-    <state width="1763" height="336" key="GridCell.Tab.1.left" timestamp="1627452898129">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.1.center/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
+    <state width="1601" height="312" key="GridCell.Tab.1.center/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629887373523" />
+    <state width="1601" height="312" key="GridCell.Tab.1.left" timestamp="1629887373522">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="223" key="GridCell.Tab.1.left/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509446" />
-    <state width="1763" height="336" key="GridCell.Tab.1.left/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898129" />
-    <state width="1763" height="336" key="GridCell.Tab.1.right" timestamp="1627452898131">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state width="1763" height="211" key="GridCell.Tab.1.left/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
+    <state width="1601" height="312" key="GridCell.Tab.1.left/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629887373522" />
+    <state width="1601" height="312" key="GridCell.Tab.1.right" timestamp="1629887373524">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state width="1763" height="223" key="GridCell.Tab.1.right/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618819509447" />
-    <state width="1763" height="336" key="GridCell.Tab.1.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452898131" />
+    <state width="1763" height="211" key="GridCell.Tab.1.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321909" />
+    <state width="1601" height="312" key="GridCell.Tab.1.right/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629887373524" />
     <state x="2442" y="-17" width="540" height="524" key="StructurePopup" timestamp="1627451496285">
       <screen x="1440" y="-597" width="2483" height="1415" />
     </state>
     <state x="2442" y="-17" width="540" height="524" key="StructurePopup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627451496285" />
-    <state x="1952" y="17" key="Vcs.Push.Dialog.v2" timestamp="1627452513350">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="1957" y="17" key="Vcs.Push.Dialog.v2" timestamp="1630027085425">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state x="1952" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452513350" />
-    <state x="1550" y="-158" width="1605" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627452696973">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="1952" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453057679" />
+    <state x="1957" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630027085425" />
+    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1629884315820">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
     <state x="1550" y="-158" width="1605" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452696973" />
-    <state x="2573" y="-37" key="extract.method.dialog" timestamp="1627441586643">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884315820" />
+    <state x="496" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629188807404">
+      <screen x="0" y="25" width="1389" height="875" />
     </state>
+    <state x="496" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1389.875@0.25.1389.875" timestamp="1629188807404" />
+    <state x="634" y="371" key="extract.method.dialog" timestamp="1629188671162">
+      <screen x="0" y="25" width="1389" height="875" />
+    </state>
+    <state x="634" y="371" key="extract.method.dialog/0.25.1389.875@0.25.1389.875" timestamp="1629188671162" />
     <state x="2573" y="-604" key="extract.method.dialog/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624334438315" />
     <state x="2573" y="-37" key="extract.method.dialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627441586643" />
-    <state x="2680" y="-48" width="599" height="518" key="find.popup" timestamp="1627441896749">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="2691" y="-48" width="605" height="518" key="find.popup" timestamp="1629883488851">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state x="2679" y="-615" width="599" height="490" key="find.popup/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1618811735302" />
     <state x="2680" y="-615" width="599" height="490" key="find.popup/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1623998125073" />
     <state x="2680" y="-48" width="599" height="518" key="find.popup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627441896749" />
-    <state x="2630" y="-25" width="673" height="676" key="search.everywhere.popup" timestamp="1627451503859">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="2691" y="-48" width="605" height="518" key="find.popup/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629883488851" />
+    <state x="1976" y="-124" key="new project wizard" timestamp="1629973748468">
+      <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
-    <state x="2629" y="-592" width="672" height="676" key="search.everywhere.popup/1440.-1164.2480.1415/0.25.1440.875@1440.-1164.2480.1415" timestamp="1620960684834" />
-    <state x="2630" y="-592" width="672" height="676" key="search.everywhere.popup/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1618813064739" />
-    <state x="2630" y="-25" width="673" height="676" key="search.everywhere.popup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627451503859" />
+    <state x="1976" y="-124" key="new project wizard/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973748468" />
+    <state x="2642" y="-25" width="1211" height="678" key="search.everywhere.popup" timestamp="1629961666649">
+      <screen x="1440" y="-597" width="2506" height="1415" />
+    </state>
+    <state x="665" y="379" width="670" height="419" key="search.everywhere.popup/0.25.1387.875@0.25.1387.875" timestamp="1629280315760" />
+    <state x="2630" y="-25" width="673" height="676" key="search.everywhere.popup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627898195367" />
+    <state x="2642" y="-25" width="1211" height="678" key="search.everywhere.popup/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629961666649" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -526,14 +536,19 @@
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/archex/ApiDocUtils.java</url>
-          <line>224</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/HttpUtils.java</url>
           <line>60</line>
           <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/archex/ApiDocUtils.java</url>
+          <line>318</line>
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

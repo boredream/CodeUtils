@@ -12,10 +12,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,6 +24,11 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+        System.out.println(new Date(1629252680753l));
+        System.out.println(new Date(1629252680813l));
+    }
+
+    private static void method2() throws Exception {
         String string = FileUtils.readToString(new File("temp/html/hxsd.html"), "utf-8");
         HashMap<String, String> nameUrlMap = new HashMap<>();
         for (String p : string.split(" <div class=\"ibox\">")) {

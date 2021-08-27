@@ -8,11 +8,10 @@ import java.util.*;
 
 public class ApiDocUtils {
 
-    /**
-     * 忽略的字段
-     */
+    // 忽略解析的字段
     public static final List<String> ignoreFields = Arrays.asList("createDate", "updateDate");
 
+    // api字段实体类
     static class ApiField {
         String name;
         String desc;
@@ -50,60 +49,14 @@ public class ApiDocUtils {
     }
 
     public static void main(String[] args) throws Exception {
-        docApi();
+        parseAndGenApiCode();
     }
 
-    private static ApiField parseParam(boolean response, String line) {
-        ApiField param = null;
-        if (line.startsWith("|") &&
-                !line.contains("参数名称") &&
-                !line.contains("token|header") &&
-                !line.contains(" -------- ")) {
-            // 先记录所有参数
-            line = line.substring(1, line.length() - 1).trim();
-            String[] strs = line.split("\\|");
-            if (response) {
-                if (strs.length >= 3) {
-                    String name = strs[0];
-                    String desc = strs[1];
-                    String type = strs[2];
-                    String schema = strs.length >= 4 ? strs[3] : null;
-                    param = new ApiField(name, desc, type, schema);
-                }
-            } else {
-                if (strs.length >= 5) {
-                    String name = strs[0];
-                    String desc = strs[1];
-                    String requestType = strs[2];
-                    String type = strs[4];
-                    String schema = strs.length >= 6 ? strs[5] : null;
-                    param = new ApiField(name, desc, type, schema);
-                }
-            }
-        }
-
-        // 初步加工参数
-        if (param != null) {
-            if (param.type.contains("Page«")) {
-                param.type = "ListResponse";
-            }
-
-            if (param.schema != null) {
-                param.schema = param.schema
-                        .replace("对象", "")
-                        .replace("Page«", "")
-                        .replace("»", "")
-                        .trim();
-            }
-        }
-
-        return param;
-    }
-
-    private static void docApi() {
+    private static void parseAndGenApiCode() {
+        // 读取接口信息
         String str = FileUtils.readToString(new File("temp/apidoc/apidoc.txt"), "utf-8");
 
-        // 逐行解析，保存数据
+        // 解析字符串，提取接口具体信息（名称、地址、method、request字段、response字段等）
         String title = "";
         String url = "";
         String httpMethod = "";
@@ -269,6 +222,54 @@ public class ApiDocUtils {
         genIosClass(apiParamsMap);
     }
 
+    private static ApiField parseParam(boolean response, String line) {
+        ApiField param = null;
+        if (line.startsWith("|") &&
+                !line.contains("参数名称") &&
+                !line.contains("token|header") &&
+                !line.contains(" -------- ")) {
+            // 先记录所有参数
+            line = line.substring(1, line.length() - 1).trim();
+            String[] strs = line.split("\\|");
+            if (response) {
+                if (strs.length >= 3) {
+                    String name = strs[0];
+                    String desc = strs[1];
+                    String type = strs[2];
+                    String schema = strs.length >= 4 ? strs[3] : null;
+                    param = new ApiField(name, desc, type, schema);
+                }
+            } else {
+                if (strs.length >= 5) {
+                    String name = strs[0];
+                    String desc = strs[1];
+                    String requestType = strs[2];
+                    String type = strs[4];
+                    String schema = strs.length >= 6 ? strs[5] : null;
+                    param = new ApiField(name, desc, type, schema);
+                }
+            }
+        }
+
+        // 初步加工参数
+        if (param != null) {
+            if (param.type.contains("Page«")) {
+                param.type = "ListResponse";
+            }
+
+            if (param.schema != null) {
+                param.schema = param.schema
+                        .replace("对象", "")
+                        .replace("Page«", "")
+                        .replace("»", "")
+                        .trim();
+            }
+        }
+
+        return param;
+    }
+
+    // 生成 javabean
     private static void genClass(TreeMap<String, ArrayList<ApiField>> apiParamsMap) {
         for (Map.Entry<String, ArrayList<ApiField>> entry : apiParamsMap.entrySet()) {
             String className = entry.getKey();
@@ -296,6 +297,7 @@ public class ApiDocUtils {
         }
     }
 
+    // 生成 iOS实体类
     private static void genIosClass(TreeMap<String, ArrayList<ApiField>> apiParamsMap) {
         StringBuilder sbClass = new StringBuilder();
         for (Map.Entry<String, ArrayList<ApiField>> entry : apiParamsMap.entrySet()) {
@@ -364,98 +366,6 @@ public class ApiDocUtils {
         // TODO: chunyang 2021/7/28  ListResponse
 
         return type;
-    }
-
-    private static void swaggerApi() {
-        String str = "bodyStyleCdSh\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "产品类型\n" +
-                "\n" +
-                "bottlesStockQty\tinteger($int32)\n" +
-                "allowEmptyValue: false\n" +
-                "库存量(瓶）\n" +
-                "\n" +
-                "boxStockQty\tinteger($int32)\n" +
-                "allowEmptyValue: false\n" +
-                "库存量(箱）\n" +
-                "\n" +
-                "createDate\tstring($date-time)\n" +
-                "allowEmptyValue: false\n" +
-                "创建日期\n" +
-                "\n" +
-                "flag\tinteger($int32)\n" +
-                "allowEmptyValue: false\n" +
-                "状态 1 使用 0 未使用\n" +
-                "\n" +
-                "maximumUnit\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "基本单位- 大\n" +
-                "\n" +
-                "mfcStockHeaderUid\tinteger($int64)\n" +
-                "allowEmptyValue: false\n" +
-                "库存盘点UID\n" +
-                "\n" +
-                "minimumUnit\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "基本单位 - 小\n" +
-                "\n" +
-                "saleSiebleUid\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "工号\n" +
-                "\n" +
-                "skuName\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "sku名称\n" +
-                "\n" +
-                "skuSiebleUid\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "sku编码\n" +
-                "\n" +
-                "storeSiebleUid\tstring\n" +
-                "allowEmptyValue: false\n" +
-                "门店\n" +
-                "\n" +
-                "uid\tinteger($int64)\n" +
-                "allowEmptyValue: false\n" +
-                "主键\n" +
-                "\n" +
-                "unitConversion\tinteger($int64)\n" +
-                "allowEmptyValue: false\n" +
-                "单位换算\n" +
-                "\n" +
-                "updateDate\tstring($date-time)\n" +
-                "allowEmptyValue: false\n" +
-                "更新日期\n" +
-                "\n" +
-                "visitUid\tinteger($int64)\n" +
-                "allowEmptyValue: false\n" +
-                "拜访uid";
-        str = str.replace("allowEmptyValue: false\n", "");
-        List<String> list = new ArrayList<>();
-        for (String line : str.split("\n")) {
-            if (line.contains("\tstring")
-                    || line.contains("\tnumber")
-                    || line.contains("\tnumber")
-                    || line.contains("\tinteger")
-                    || line.contains("\tbool")) {
-                String name = line.split("\t")[0];
-                String type = line.split("\t")[1]
-                        .replace("string", "String")
-                        .replace("number", "double")
-                        .replace("integer($int64)", "int")
-                        .replace("integer($int32)", "String");
-//                type = "String";
-                list.add("private " + type + " " + name + ";");
-            } else if (line.trim().length() > 0) {
-                list.add("// " + line.trim());
-            } else {
-                list.add("");
-            }
-        }
-        Collections.reverse(list);
-        for (String s : list) {
-            System.out.println(s);
-        }
     }
 
 }
