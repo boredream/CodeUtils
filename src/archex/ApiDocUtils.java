@@ -49,10 +49,13 @@ public class ApiDocUtils {
     }
 
     public static void main(String[] args) throws Exception {
-        parseAndGenApiCode();
+        TreeMap<String, ArrayList<ApiField>> apiParamsMap = parseApiCode();
+        genClass(apiParamsMap);
+        genIosClass(apiParamsMap);
     }
 
-    private static void parseAndGenApiCode() {
+    // 解析接口数据
+    private static TreeMap<String, ArrayList<ApiField>> parseApiCode() {
         // 读取接口信息
         String str = FileUtils.readToString(new File("temp/apidoc/apidoc.txt"), "utf-8");
 
@@ -218,58 +221,10 @@ public class ApiDocUtils {
             }
         }
 
-        genClass(apiParamsMap);
-        genIosClass(apiParamsMap);
+        return apiParamsMap;
     }
 
-    private static ApiField parseParam(boolean response, String line) {
-        ApiField param = null;
-        if (line.startsWith("|") &&
-                !line.contains("参数名称") &&
-                !line.contains("token|header") &&
-                !line.contains(" -------- ")) {
-            // 先记录所有参数
-            line = line.substring(1, line.length() - 1).trim();
-            String[] strs = line.split("\\|");
-            if (response) {
-                if (strs.length >= 3) {
-                    String name = strs[0];
-                    String desc = strs[1];
-                    String type = strs[2];
-                    String schema = strs.length >= 4 ? strs[3] : null;
-                    param = new ApiField(name, desc, type, schema);
-                }
-            } else {
-                if (strs.length >= 5) {
-                    String name = strs[0];
-                    String desc = strs[1];
-                    String requestType = strs[2];
-                    String type = strs[4];
-                    String schema = strs.length >= 6 ? strs[5] : null;
-                    param = new ApiField(name, desc, type, schema);
-                }
-            }
-        }
-
-        // 初步加工参数
-        if (param != null) {
-            if (param.type.contains("Page«")) {
-                param.type = "ListResponse";
-            }
-
-            if (param.schema != null) {
-                param.schema = param.schema
-                        .replace("对象", "")
-                        .replace("Page«", "")
-                        .replace("»", "")
-                        .trim();
-            }
-        }
-
-        return param;
-    }
-
-    // 生成 javabean
+    // 生成实体类
     private static void genClass(TreeMap<String, ArrayList<ApiField>> apiParamsMap) {
         for (Map.Entry<String, ArrayList<ApiField>> entry : apiParamsMap.entrySet()) {
             String className = entry.getKey();
@@ -320,6 +275,7 @@ public class ApiDocUtils {
         FileUtils.writeString2File(sbClass.toString(), new File("temp/apidoc/iosClass/classTxt.txt"), "utf-8");
     }
 
+    // 获取类型
     private static String getType(ApiField field) {
         String type = field.type;
         if (type.contains("string") || field.name.contains("uid") || field.name.contains("Uid")) {
@@ -344,6 +300,7 @@ public class ApiDocUtils {
         return type;
     }
 
+    // 获取iOS类型
     private static String getIosType(ApiField field) {
         String type = field.type;
         if (type.contains("string") || field.name.contains("uid") || field.name.contains("Uid")) {
@@ -366,6 +323,54 @@ public class ApiDocUtils {
         // TODO: chunyang 2021/7/28  ListResponse
 
         return type;
+    }
+
+    // 解析接口参数
+    private static ApiField parseParam(boolean response, String line) {
+        ApiField param = null;
+        if (line.startsWith("|") &&
+                !line.contains("参数名称") &&
+                !line.contains("token|header") &&
+                !line.contains(" -------- ")) {
+            // 先记录所有参数
+            line = line.substring(1, line.length() - 1).trim();
+            String[] strs = line.split("\\|");
+            if (response) {
+                if (strs.length >= 3) {
+                    String name = strs[0];
+                    String desc = strs[1];
+                    String type = strs[2];
+                    String schema = strs.length >= 4 ? strs[3] : null;
+                    param = new ApiField(name, desc, type, schema);
+                }
+            } else {
+                if (strs.length >= 5) {
+                    String name = strs[0];
+                    String desc = strs[1];
+                    String requestType = strs[2];
+                    String type = strs[4];
+                    String schema = strs.length >= 6 ? strs[5] : null;
+                    param = new ApiField(name, desc, type, schema);
+                }
+            }
+        }
+
+        // 初步加工参数
+        if (param != null) {
+            if (param.type.contains("Page«")) {
+                param.type = "ListResponse";
+            }
+
+            if (param.schema != null) {
+                param.schema = param.schema
+                        .replace("对象", "")
+                        .replace("Page«", "")
+                        .replace("»", "")
+                        .trim();
+            }
+        }
+
+        return param;
     }
 
 }
