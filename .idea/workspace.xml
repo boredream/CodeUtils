@@ -6,11 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="api doc">
+    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="opt">
+      <change afterPath="$PROJECT_DIR$/src/reptile/HXSD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builder/AndroidProjectBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FileUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <recent name="E:\code\Github\CodeUtils\books" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiDocUtils">
+  <component name="RunManager" selected="Application.HXSD">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -193,6 +193,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.FileUtils" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HXSD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="reptile.HXSD" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="reptile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="parse.diandianbo.Main" />
       <module name="CodeUtils" />
@@ -207,20 +235,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reptile.uxarchive.Main" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="reptile.uxarchive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="CodeUtils" />
@@ -228,20 +242,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.MapUtils" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -318,17 +318,17 @@
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.ApiDocMain" />
       <item itemvalue="Application.ApiDocUtils" />
-      <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.MapUtils" />
+      <item itemvalue="Application.FileUtils" />
+      <item itemvalue="Application.HXSD" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HXSD" />
+        <item itemvalue="Application.FileUtils" />
         <item itemvalue="Application.ApiDocUtils" />
         <item itemvalue="Application.ApiDocMain" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.MapUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +365,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629884402545</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="opt">
+      <created>1630056280902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630056280902</updated>
+    </task>
+    <task id="LOCAL-00005" summary="opt">
+      <created>1630056830607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630056830607</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -389,7 +403,8 @@
     <MESSAGE value="LeanCloutUtils" />
     <MESSAGE value="api doc" />
     <MESSAGE value="ApiDocUtils - bean 嵌套情况优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="ApiDocUtils - bean 嵌套情况优化" />
+    <MESSAGE value="opt" />
+    <option name="LAST_COMMIT_MESSAGE" value="opt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="564" y="427" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629277694465">
@@ -401,11 +416,11 @@
       <screen x="1440" y="-597" width="2483" height="1415" />
     </state>
     <state x="2702" y="-597" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453730955" />
-    <state x="2538" y="-208" key="CommitChangelistDialog2" timestamp="1629884402338">
+    <state x="2538" y="-208" key="CommitChangelistDialog2" timestamp="1630056830496">
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
     <state x="2528" y="-208" key="CommitChangelistDialog2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627454229023" />
-    <state x="2538" y="-208" key="CommitChangelistDialog2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884402338" />
+    <state x="2538" y="-208" key="CommitChangelistDialog2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630056830496" />
     <state width="809" height="702" key="DebuggerActiveHint" timestamp="1629884085645">
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
@@ -416,42 +431,46 @@
     </state>
     <state x="2368" y="-145" key="DiffContextDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627454228812" />
     <state x="2377" y="-145" key="DiffContextDialog/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884379561" />
-    <state width="1601" height="268" key="GridCell.Tab.0.bottom" timestamp="1629973794601">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state width="1348" height="325" key="GridCell.Tab.0.bottom" timestamp="1630309289979">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.25.1387.875@0.25.1387.875" timestamp="1629282630480" />
     <state width="1347" height="175" key="GridCell.Tab.0.bottom/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
+    <state width="1348" height="325" key="GridCell.Tab.0.bottom/0.25.1390.875@0.25.1390.875" timestamp="1630309289979" />
     <state width="1763" height="672" key="GridCell.Tab.0.bottom/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.bottom/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428350" />
     <state width="1763" height="211" key="GridCell.Tab.0.bottom/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
-    <state width="1601" height="268" key="GridCell.Tab.0.bottom/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794601" />
-    <state width="1601" height="268" key="GridCell.Tab.0.center" timestamp="1629973794600">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state width="1601" height="226" key="GridCell.Tab.0.bottom/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630060191338" />
+    <state width="1348" height="325" key="GridCell.Tab.0.center" timestamp="1630309289978">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1345" height="178" key="GridCell.Tab.0.center/0.25.1387.875@0.25.1387.875" timestamp="1629282630479" />
     <state width="1347" height="175" key="GridCell.Tab.0.center/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
+    <state width="1348" height="325" key="GridCell.Tab.0.center/0.25.1390.875@0.25.1390.875" timestamp="1630309289978" />
     <state width="1763" height="672" key="GridCell.Tab.0.center/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.center/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428349" />
     <state width="1763" height="211" key="GridCell.Tab.0.center/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321907" />
-    <state width="1601" height="268" key="GridCell.Tab.0.center/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794600" />
-    <state width="1601" height="268" key="GridCell.Tab.0.left" timestamp="1629973794599">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state width="1601" height="226" key="GridCell.Tab.0.center/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630060191337" />
+    <state width="1348" height="325" key="GridCell.Tab.0.left" timestamp="1630309289977">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1345" height="178" key="GridCell.Tab.0.left/0.25.1387.875@0.25.1387.875" timestamp="1629282630478" />
     <state width="1347" height="175" key="GridCell.Tab.0.left/0.25.1389.875@0.25.1389.875" timestamp="1629188823922" />
+    <state width="1348" height="325" key="GridCell.Tab.0.left/0.25.1390.875@0.25.1390.875" timestamp="1630309289977" />
     <state width="1763" height="672" key="GridCell.Tab.0.left/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326241" />
     <state width="1763" height="299" key="GridCell.Tab.0.left/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428348" />
     <state width="1763" height="211" key="GridCell.Tab.0.left/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321907" />
-    <state width="1601" height="268" key="GridCell.Tab.0.left/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794599" />
-    <state width="1601" height="268" key="GridCell.Tab.0.right" timestamp="1629973794600">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state width="1601" height="226" key="GridCell.Tab.0.left/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630060191337" />
+    <state width="1348" height="325" key="GridCell.Tab.0.right" timestamp="1630309289979">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state width="1345" height="178" key="GridCell.Tab.0.right/0.25.1387.875@0.25.1387.875" timestamp="1629282630479" />
     <state width="1347" height="175" key="GridCell.Tab.0.right/0.25.1389.875@0.25.1389.875" timestamp="1629188823923" />
+    <state width="1348" height="325" key="GridCell.Tab.0.right/0.25.1390.875@0.25.1390.875" timestamp="1630309289979" />
     <state width="1763" height="672" key="GridCell.Tab.0.right/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624340326242" />
     <state width="1763" height="299" key="GridCell.Tab.0.right/1440.-1164.2485.1415/0.25.1440.875@1440.-1164.2485.1415" timestamp="1624005428349" />
     <state width="1763" height="211" key="GridCell.Tab.0.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321908" />
-    <state width="1601" height="268" key="GridCell.Tab.0.right/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973794600" />
+    <state width="1601" height="226" key="GridCell.Tab.0.right/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630060191338" />
     <state width="1601" height="312" key="GridCell.Tab.1.bottom" timestamp="1629887373524">
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
@@ -472,33 +491,36 @@
     </state>
     <state width="1763" height="211" key="GridCell.Tab.1.right/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627460321909" />
     <state width="1601" height="312" key="GridCell.Tab.1.right/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629887373524" />
-    <state x="2442" y="-17" width="540" height="524" key="StructurePopup" timestamp="1627451496285">
-      <screen x="1440" y="-597" width="2483" height="1415" />
+    <state x="561" y="384" width="510" height="325" key="StructurePopup" timestamp="1630305954060">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
+    <state x="561" y="384" width="510" height="325" key="StructurePopup/0.25.1390.875@0.25.1390.875" timestamp="1630305954060" />
     <state x="2442" y="-17" width="540" height="524" key="StructurePopup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627451496285" />
-    <state x="1957" y="17" key="Vcs.Push.Dialog.v2" timestamp="1630027085425">
+    <state x="1957" y="17" key="Vcs.Push.Dialog.v2" timestamp="1630056282972">
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
     <state x="1952" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627453057679" />
-    <state x="1957" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630027085425" />
-    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1629884315820">
+    <state x="1957" y="17" key="Vcs.Push.Dialog.v2/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630056282972" />
+    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1630060127848">
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
     <state x="1550" y="-158" width="1605" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627452696973" />
-    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629884315820" />
+    <state x="1720" y="-281" width="1620" height="876" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1630060127848" />
     <state x="496" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629188807404">
       <screen x="0" y="25" width="1389" height="875" />
     </state>
     <state x="496" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1389.875@0.25.1389.875" timestamp="1629188807404" />
-    <state x="634" y="371" key="extract.method.dialog" timestamp="1629188671162">
-      <screen x="0" y="25" width="1389" height="875" />
+    <state x="634" y="371" key="extract.method.dialog" timestamp="1630309232070">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state x="634" y="371" key="extract.method.dialog/0.25.1389.875@0.25.1389.875" timestamp="1629188671162" />
+    <state x="634" y="371" key="extract.method.dialog/0.25.1390.875@0.25.1390.875" timestamp="1630309232070" />
     <state x="2573" y="-604" key="extract.method.dialog/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1624334438315" />
     <state x="2573" y="-37" key="extract.method.dialog/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627441586643" />
-    <state x="2691" y="-48" width="605" height="518" key="find.popup" timestamp="1629883488851">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state x="694" y="364" width="567" height="490" key="find.popup" timestamp="1630309472876">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
+    <state x="694" y="364" width="567" height="490" key="find.popup/0.25.1390.875@0.25.1390.875" timestamp="1630309472876" />
     <state x="2680" y="-615" width="599" height="490" key="find.popup/1440.-1164.2483.1415/0.25.1440.875@1440.-1164.2483.1415" timestamp="1623998125073" />
     <state x="2680" y="-48" width="599" height="518" key="find.popup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627441896749" />
     <state x="2691" y="-48" width="605" height="518" key="find.popup/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629883488851" />
@@ -506,10 +528,11 @@
       <screen x="1440" y="-597" width="2506" height="1415" />
     </state>
     <state x="1976" y="-124" key="new project wizard/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629973748468" />
-    <state x="2642" y="-25" width="1211" height="678" key="search.everywhere.popup" timestamp="1629961666649">
-      <screen x="1440" y="-597" width="2506" height="1415" />
+    <state x="667" y="379" width="672" height="420" key="search.everywhere.popup" timestamp="1630309304364">
+      <screen x="0" y="25" width="1390" height="875" />
     </state>
     <state x="665" y="379" width="670" height="419" key="search.everywhere.popup/0.25.1387.875@0.25.1387.875" timestamp="1629280315760" />
+    <state x="667" y="379" width="672" height="420" key="search.everywhere.popup/0.25.1390.875@0.25.1390.875" timestamp="1630309304364" />
     <state x="2630" y="-25" width="673" height="676" key="search.everywhere.popup/1440.-597.2483.1415/0.25.1440.875@1440.-597.2483.1415" timestamp="1627898195367" />
     <state x="2642" y="-25" width="1211" height="678" key="search.everywhere.popup/1440.-597.2506.1415/0.25.1440.875@1440.-597.2506.1415" timestamp="1629961666649" />
   </component>
@@ -518,12 +541,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
-          <line>482</line>
+          <line>529</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
-          <line>135</line>
+          <line>180</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -544,11 +567,6 @@
           <url>file://$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java</url>
           <line>107</line>
           <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/archex/ApiDocUtils.java</url>
-          <line>318</line>
-          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
