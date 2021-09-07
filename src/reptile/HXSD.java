@@ -1,6 +1,9 @@
 package reptile;
 
-import test.JsoupUtils;
+import com.sun.istack.internal.NotNull;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import utils.FileUtils;
 import utils.HttpUtils;
 
@@ -13,38 +16,32 @@ import java.util.regex.Pattern;
 public class HXSD {
 
     public static void main(String[] args) throws Exception {
-        parse(true);
+        parse("m2", false);
     }
 
-    private static void parse(boolean justPrint) throws Exception {
-        // String string = FileUtils.readToString(new File("temp/html/hxsd.html"), "utf-8");
-        String string = HttpUtils.getString("http://me.hxsd.com/", getHeader());
+    private static void parse(@NotNull String pre, boolean justPrint) throws Exception {
+         String string = FileUtils.readToString(new File("temp/html/hxsd.html"), "utf-8");
+//        String string = HttpUtils.getString("http://me.hxsd.com/", getHeader());
 
-
-
-
+        Document parse = Jsoup.parse(string);
         HashMap<String, String> nameUrlMap = new HashMap<>();
-        for (String p : string.split(" <div class=\"ibox\">")) {
-            String url;
-            String name = "name" + nameUrlMap.size();
 
-            String regex = "href=\"(.*?)\">";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(p);
-            if (matcher.find()) {
-                url = matcher.group(1);
-            } else {
-                continue;
-            }
+        // 五星作品榜
+        Element element5x = parse.getElementsByAttributeValueMatching("class", "banner_wrap").get(0);
+        for (Element element : element5x.getElementsByAttributeValueMatching("class", "ibox")) {
+            String name = element.getElementsByTag("p").get(0).text();
+            String link = element.getElementsByTag("a").get(0).attr("href");
+            name = pre + "-五星-" + name;
+            nameUrlMap.put(name, link);
+        }
 
-            String regex2 = "姓名：</strong--><span>(.*?)</span>";
-            Pattern pattern2 = Pattern.compile(regex2);
-            Matcher matcher2 = pattern2.matcher(p);
-            if (matcher2.find()) {
-                name = matcher2.group(1);
-            }
-
-            nameUrlMap.put(name, url);
+        // 优秀作品榜
+        Element elementGood = parse.getElementsByAttributeValueMatching("class", "banner_wrap").get(1);
+        for (Element element : elementGood.getElementsByAttributeValueMatching("class", "ibox")) {
+            String name = element.getElementsByTag("p").get(0).text();
+            String link = element.getElementsByTag("a").get(0).attr("href");
+            name = pre + "-优秀-" + name;
+            nameUrlMap.put(name, link);
         }
 
         for (Map.Entry<String, String> entry : nameUrlMap.entrySet()) {
@@ -57,7 +54,7 @@ public class HXSD {
             Matcher matcher = pattern.matcher(html);
             if (matcher.find()) {
                 // 下载
-                String name = "m1优秀作业-" + entry.getKey() + ".pdf";
+                String name = entry.getKey() + ".pdf";
                 String fileUrl = matcher.group(1);
                 if(justPrint) {
                     System.out.println(name + " = " + fileUrl);
