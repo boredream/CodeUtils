@@ -1,5 +1,6 @@
-package archex;
+package apidoc;
 
+import apidoc.ApiField;
 import utils.FileUtils;
 import utils.StringUtils;
 
@@ -9,44 +10,7 @@ import java.util.*;
 public class ApiDocUtils {
 
     // 忽略解析的字段
-    public static final List<String> ignoreFields = Arrays.asList("createDate", "updateDate");
-
-    // api字段实体类
-    static class ApiField {
-        String name;
-        String desc;
-        String type;
-        String schema;
-
-        public ApiField(String name, String desc, String type, String schema) {
-            this.name = name;
-            this.desc = desc;
-            this.type = type;
-            this.schema = schema;
-        }
-
-        @Override
-        public String toString() {
-            return name;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            ApiField apiField = (ApiField) o;
-            if (!Objects.equals(name, apiField.name)) return false;
-            return Objects.equals(type, apiField.type);
-        }
-
-        @Override
-        public int hashCode() {
-            int result = name != null ? name.hashCode() : 0;
-            result = 31 * result + (type != null ? type.hashCode() : 0);
-            return result;
-        }
-    }
+    public static final List<String> ignoreFields = Arrays.asList("createDate", "updateDate", "curUserId");
 
     public static void main(String[] args) throws Exception {
         TreeMap<String, ArrayList<ApiField>> apiParamsMap = parseApiCode();

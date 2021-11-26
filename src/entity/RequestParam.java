@@ -4,16 +4,19 @@ import java.util.ArrayList;
 
 public class RequestParam {
     private String name;
-    private String type;
-    private String restType = "Query";
+    private String fieldType;
+    private String paramType = "Query";
     private String des;
     // 参数值为枚举型时
     private ArrayList<String> selectOptions;
 
+    public RequestParam() {
+    }
+
     public RequestParam(String name, String type, String des,
                         ArrayList<String> selectOptions) {
         this.name = name;
-        this.type = type;
+        this.fieldType = type;
         this.des = des;
         this.selectOptions = selectOptions;
     }
@@ -26,24 +29,24 @@ public class RequestParam {
         this.name = name;
     }
 
-    public String getType() {
+    public String getFieldType() {
         // TODO string -> String
-        if(type.equals("string")) {
+        if(fieldType.equals("string")) {
             return "String";
         }
-        return type;
+        return fieldType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setFieldType(String fieldType) {
+        this.fieldType = fieldType;
     }
 
-    public String getRestType() {
-        return restType;
+    public String getParamType() {
+        return paramType;
     }
 
-    public void setRestType(String restType) {
-        this.restType = restType;
+    public void setParamType(String paramType) {
+        this.paramType = paramType;
     }
 
     public String getDes() {
@@ -64,7 +67,7 @@ public class RequestParam {
 
     @Override
     public String toString() {
-        return "RequestParam [path=" + name + ", type=" + type + ", des="
+        return "RequestParam [path=" + name + ", type=" + fieldType + ", des="
                 + des + "]";
     }
 

@@ -1,5 +1,10 @@
 package utils;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
@@ -573,4 +578,23 @@ public class FileUtils {
         }
     }
 
+    /**
+     * 从路径中解析java项目的包名
+     *
+     * @return com.xxx.xxx
+     */
+    public static String getPackageFromPath(String path, String endPath) {
+        String[] pathList = path.split("/src/main/java/")[1].split("/");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < pathList.length - 1; i++) {
+            if (pathList[i].equalsIgnoreCase(endPath)) {
+                break;
+            }
+            if (i > 0) {
+                sb.append(".");
+            }
+            sb.append(pathList[i]);
+        }
+        return sb.toString();
+    }
 }

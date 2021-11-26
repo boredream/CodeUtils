@@ -16,7 +16,7 @@ public class JiraUtils {
     private static Map<String, String> headers = new HashMap<>();
 
     static {
-        headers.put("Cookie", "UM_distinctid=17603b2c602203-08887d4e395dfc-16144b58-384000-17603b2c60356b; gr_user_id=5fe47c2e-d1ad-4cbb-b04e-ff88567520d7; grwng_uid=dabd4bb7-1f02-4ff6-988b-902f488a128f; seraph.rememberme.cookie=19187:a5486934e06c60d2db89a7ea6e4fa22be760d91d; atlassian.xsrf.token=B6QL-CTZW-3V74-RQS9_0dff963eb6cf1619ed5884b41d66535b81873e42_lin; cookiesession1=0F41021FNHLHHCK3N44U7C9LCC1YC971; jira.editor.user.mode=wysiwyg; AJS.conglomerate.cookie=\"|hipchat.inapp.links.first.clicked.18010089=false\"; JSESSIONID=06539762B460FC6BDC45B68AA94CE3E2");
+        headers.put("Cookie", "gr_user_id=5fe47c2e-d1ad-4cbb-b04e-ff88567520d7; grwng_uid=dabd4bb7-1f02-4ff6-988b-902f488a128f; jira.editor.user.mode=wysiwyg; UM_distinctid=17a368eeb54305-0ace9dda7281a4-34657400-384000-17a368eeb55a4f; cookiesession1=67C4FDDEQ0IMWGH2C3KZRRQJD722ED6D; JSESSIONID=A24A32906929B8B39E2713BC2AB92592; seraph.rememberme.cookie=20639:807810271145ffea3969afb19d96cfe3ac0864ea; atlassian.xsrf.token=B6QL-CTZW-3V74-RQS9_932d6ba8a7328addbfc352928db9aece51c1a4a2_lin");
     }
 
     interface AListener<T> {

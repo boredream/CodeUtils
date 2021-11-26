@@ -10,12 +10,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="hxsd">
-      <change afterPath="$PROJECT_DIR$/src/kotlin/KotlinParse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spring/SpringBoot.java" afterDir="false" />
+    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="spring boot">
+      <change afterPath="$PROJECT_DIR$/src/apidoc/ApiField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apidoc/ApiInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apidoc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apidoc/SwaggerParse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/apidoc/ApiDocUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/archex/JiraUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/archex/JiraUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/RequestParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/RequestParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reptile/HXSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reptile/HXSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reptile/swagger/SwaggerDocGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spring/SpringBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spring/SpringBoot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/Json/JsonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/temp/Json/JsonBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,33 +71,33 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/temp" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/temp" />
       <recent name="E:\code\Github\CodeUtils\temp\diandian" />
       <recent name="E:\code\Github\CodeUtils\temp\diandian\奇怪的叶子_The Cactus's Leaves" />
       <recent name="E:\code\Github\CodeUtils\temp\db\entities" />
       <recent name="E:\code\Github\CodeUtils\temp\parse\entities" />
-      <recent name="E:\code\Github\CodeUtils\temp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="temp.diandianbo" />
-      <recent name="reptile.bmob" />
-      <recent name="reptile.apidoc" />
-      <recent name="entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/temp" />
       <recent name="E:\code\Github\CodeUtils\books" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="apidoc" />
+      <recent name="temp.diandianbo" />
+      <recent name="reptile.bmob" />
+      <recent name="reptile.apidoc" />
+      <recent name="entity" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.ApiDocUtils">
+  <component name="RunManager" selected="Application.ServerBean2ClientBean">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -181,48 +192,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration name="ApiDocMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reptile.apidoc.ApiDocMain" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="reptile.apidoc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiDocUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="archex.ApiDocUtils" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="archex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.FileUtils" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HXSD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="reptile.HXSD" />
       <module name="CodeUtils" />
@@ -251,13 +220,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="spring.SpringBoot" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="apidoc.Main" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spring.*" />
+          <option name="PATTERN" value="apidoc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerBean2ClientBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="apidoc.ServerBean2ClientBean" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="apidoc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwaggerParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="apidoc.SwaggerParse" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="apidoc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WikiApiDocMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="apidoc.WikiApiDocMain" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="apidoc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,34 +291,6 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -331,24 +314,27 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ApiDocMain" />
-      <item itemvalue="Application.ApiDocUtils" />
-      <item itemvalue="Application.FileUtils" />
-      <item itemvalue="Application.HXSD" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.SpringBoot" />
+      <item itemvalue="Application.HXSD" />
+      <item itemvalue="Application.SwaggerParse" />
+      <item itemvalue="Application.WikiApiDocMain" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ServerBean2ClientBean" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiDocUtils" />
-        <item itemvalue="Application.SpringBoot" />
+        <item itemvalue="Application.ServerBean2ClientBean" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.WikiApiDocMain" />
+        <item itemvalue="Application.SwaggerParse" />
         <item itemvalue="Application.HXSD" />
-        <item itemvalue="Application.FileUtils" />
-        <item itemvalue="Application.ApiDocMain" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -364,6 +350,14 @@
       <workItem from="1630463118585" duration="1325000" />
       <workItem from="1630509708761" duration="44000" />
       <workItem from="1630544782436" duration="2044000" />
+      <workItem from="1630997297366" duration="1744000" />
+      <workItem from="1631151582503" duration="1068000" />
+      <workItem from="1631238180555" duration="23000" />
+      <workItem from="1632965752660" duration="3438000" />
+      <workItem from="1633679663808" duration="587000" />
+      <workItem from="1635933551114" duration="1433000" />
+      <workItem from="1637894095935" duration="3577000" />
+      <workItem from="1637897689816" duration="5337000" />
     </task>
     <task id="LOCAL-00001" summary="LeanCloutUtils">
       <created>1482395122284</created>
@@ -407,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630309571759</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring boot">
+      <created>1630978527702</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630978527702</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -478,25 +479,16 @@
     <MESSAGE value="ApiDocUtils - bean 嵌套情况优化" />
     <MESSAGE value="opt" />
     <MESSAGE value="hxsd" />
-    <option name="LAST_COMMIT_MESSAGE" value="hxsd" />
+    <MESSAGE value="spring boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring boot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
-          <line>482</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/FileUtils.java</url>
-          <line>133</line>
+          <line>138</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/Main.java</url>
@@ -508,17 +500,22 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java</url>
+          <url>file://$PROJECT_DIR$/src/apidoc/ApiDocMain.java</url>
           <line>107</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/spring/SpringBoot.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/reptile/HXSD.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="parse.getElementsByAttributeValueMatching(&quot;id&quot;, &quot;banner_index&quot;)" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

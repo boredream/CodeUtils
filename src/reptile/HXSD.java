@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 public class HXSD {
 
     public static void main(String[] args) throws Exception {
-        parse("m2", false);
+        parse("m4", false);
     }
 
     private static void parse(@NotNull String pre, boolean justPrint) throws Exception {
@@ -67,7 +67,7 @@ public class HXSD {
 
     private static HashMap<String, String> getHeader() {
         HashMap<String, String> header = new HashMap<>();
-        header.put("Cookie", "UM_distinctid=1796a0399071f4-03fcf35e1a40ac-37607201-384000-1796a039908b85; Hm_lvt_7c236d6a92ae1cc0a68da9d174500895=1620981310; Hm_lpvt_7c236d6a92ae1cc0a68da9d174500895=1620981352; pt_s_1d5c43ca=vt=1620981352710&cad=; pt_1d5c43ca=uid=F91HWSJoQ3R0Lcge-gdmow&nid=0&vid=baFYvgEQGPcknPdpV3lU9g&vn=2&pvn=1&sact=1620981994332&to_flag=1&pl=tzPy4kOK3YfaoFsgYZ0d6A*pt*1620981923713; PHPSESSID=asil7n0ct270ts4fun8ne42hd6; user_token_passport=a%3A1%3A%7Bs%3A5%3A%22token%22%3Bs%3A45%3A%22f75qo9og554wsa9446c8a2aae91ed9cf2684cada55405%22%3B%7D; student_info=a%3A4%3A%7Bs%3A10%3A%22student_id%22%3Bi%3A2523195%3Bs%3A12%3A%22student_name%22%3Bs%3A9%3A%22%E5%80%AA%E6%B0%B8%E6%81%92%22%3Bs%3A14%3A%22student_number%22%3Bs%3A13%3A%220021121070194%22%3Bs%3A5%3A%22token%22%3Bs%3A45%3A%22f75qo9og554wsa9446c8a2aae91ed9cf2684cada55405%22%3B%7D; csrf_cookie_name=898df323c1b0a204d9d8590a6c1a8e67; acw_tc=7b39758516274426377794889eeea52aedae727c8666a298f77f8be7e9a5d7; ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22c38a8c38ba0c32c0f56fb2189d733f93%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A14%3A%22123.57.117.133%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A120%3A%22Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_15_7%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F92.0.4515.107+Safari%2F537.3%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1627442638%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D06a1c5f403eaa100caa744c07b2d6470a3fe8ec7");
+        header.put("Cookie", "UM_distinctid=1796a0399071f4-03fcf35e1a40ac-37607201-384000-1796a039908b85; PHPSESSID=asil7n0ct270ts4fun8ne42hd6; user_token_passport=a:1:{s:5:\"token\";s:45:\"f75qo9og554wsa9446c8a2aae91ed9cf2684cada55405\";}; student_info=a:4:{s:10:\"student_id\";i:2523195;s:12:\"student_name\";s:9:\"倪永恒\";s:14:\"student_number\";s:13:\"0021121070194\";s:5:\"token\";s:45:\"f75qo9og554wsa9446c8a2aae91ed9cf2684cada55405\";}; Hm_lvt_7c236d6a92ae1cc0a68da9d174500895=1629699758; Hm_lpvt_7c236d6a92ae1cc0a68da9d174500895=1629699904; pt_1d5c43ca=uid=F91HWSJoQ3R0Lcge-gdmow&nid=0&vid=UnyJpDP1k6U7YzKx9ayd6w&vn=5&pvn=1&sact=1630984733930&to_flag=0&pl=8bfZ9mfokuUF0fCvAbyN8A*pt*1630984733930; pt_s_1d5c43ca=vt=1630984733930&cad=; acw_tc=7b39758316359334899614916e22409c87fdf26a0583ea2a981d7fcef08acc; csrf_cookie_name=dd0c92a924da9b7c39803cd34186e7e9; ci_session=a:5:{s:10:\"session_id\";s:32:\"0b3fae25bb69e1f87fc7462dd3904378\";s:10:\"ip_address\";s:14:\"123.57.117.131\";s:10:\"user_agent\";s:120:\"Mozilla/5.0+(Macintosh;+Intel+Mac+OS+X+10_15_7)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/94.0.4606.81+Safari/537.36\";s:13:\"last_activity\";i:1635933492;s:9:\"user_data\";s:0:\"\";}e6acc9545d1f0355032f6ca93e0272d025677026");
         header.put("Host", "me.hxsd.com");
         return header;
     }
