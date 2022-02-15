@@ -15,7 +15,7 @@ import java.util.Map;
 public class FileUtils {
 
     public static void main(String[] args) {
-
+        getCodeLinesDetail("/Users/lcy/Documents/code/BaseApplication/app/src/main");
     }
 
     /**

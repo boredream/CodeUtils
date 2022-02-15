@@ -15,10 +15,16 @@ public class ServerBean2ClientBean {
             String fileContent = FileUtils.readToString(file, "UTF-8");
             StringBuilder sb = new StringBuilder();
             for (String line : fileContent.split("\n")) {
-                if(line.contains("import io.swagger.annotations.ApiModelProperty;")) {
+                if(line.contains("import io.swagger.")) {
                     continue;
                 }
-                if(line.contains("import lombok.Data;")) {
+                if(line.contains("import lombok.")) {
+                    continue;
+                }
+                if(line.contains("import com.baomidou.")) {
+                    continue;
+                }
+                if(line.contains("import org.slf4j.")) {
                     continue;
                 }
                 if(line.contains(" * @since")) {
@@ -30,7 +36,16 @@ public class ServerBean2ClientBean {
                 if(line.contains("@EqualsAndHashCode(callSuper = true)")) {
                     continue;
                 }
+                if(line.contains("private static final Logger log")) {
+                    continue;
+                }
                 if(line.contains("serialVersionUID")) {
+                    continue;
+                }
+                if(line.contains("@TableId")) {
+                    continue;
+                }
+                if(line.contains("@TableField")) {
                     continue;
                 }
                 if(line.contains("@ApiModel(value=")) {
@@ -40,26 +55,31 @@ public class ServerBean2ClientBean {
                 if(line.contains(" @ApiModelProperty(value = \"")) {
                     line = line.split("value = \"")[1];
                     line = "\t// " + line.substring(0, line.length() - 2);
+                    if(line.endsWith("\"")) {
+                        line = line.substring(0, line.length() - 1);
+                    }
                 }
 
                 sb.append(line).append("\n");
             }
-            tarPath = file.getAbsolutePath().replace(srcPath, tarPath);
+            String tarFilePath = file.getAbsolutePath().replace(srcPath, tarPath);
 
             String srcPackage = FileUtils.getPackageFromPath(file.getAbsolutePath(), "entity");
-            String tarPackage = FileUtils.getPackageFromPath(tarPath, "entity");
+            String tarPackage = FileUtils.getPackageFromPath(tarFilePath, "entity");
             fileContent = sb.toString().replaceFirst(srcPackage, tarPackage);
 
-            File tarFile = new File(tarPath);
+            File tarFile = new File(tarFilePath);
+            if(tarFile.exists()) {
+                System.out.println("exist!\n=> " + tarFile.getAbsolutePath() + "\n");
+                continue;
+            }
+
             File dir = tarFile.getParentFile();
             if(!dir.exists()) {
                 dir.mkdirs();
             }
             FileUtils.writeString2File(fileContent, tarFile, "UTF-8");
-
             System.out.println("convert " + file.getAbsolutePath() + " to \n=> " + tarFile.getAbsolutePath() + "\n");
-
-            break;
         }
 
     }

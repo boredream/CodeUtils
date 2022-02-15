@@ -15,7 +15,7 @@ public class ApiDocUtils {
     public static void main(String[] args) throws Exception {
         TreeMap<String, ArrayList<ApiField>> apiParamsMap = parseApiCode();
         genClass(apiParamsMap);
-        genIosClass(apiParamsMap);
+//        genIosClass(apiParamsMap);
     }
 
     // 解析接口数据
