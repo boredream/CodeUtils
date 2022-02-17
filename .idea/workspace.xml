@@ -10,23 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="spring boot">
-      <change afterPath="$PROJECT_DIR$/src/apidoc/ApiField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apidoc/ApiInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apidoc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apidoc/SwaggerParse.java" afterDir="false" />
+    <list default="true" id="02704a2f-c689-489b-bc1d-83262512a024" name="Default" comment="api doc swagger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/archex/ApiDocUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/apidoc/ApiDocUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/archex/JiraUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/archex/JiraUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/RequestParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/RequestParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reptile/HXSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reptile/HXSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/ApiDocMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reptile/apidoc/WikiApiDocMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reptile/swagger/SwaggerDocGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spring/SpringBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spring/SpringBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/Json/JsonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/temp/Json/JsonBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TempUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TempUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ProjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ProjectUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +84,7 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServerBean2ClientBean">
+  <component name="RunManager" selected="Application.ProjectUtils">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -192,13 +179,27 @@
       <listeners />
       <method />
     </configuration>
-    <configuration name="HXSD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reptile.HXSD" />
+    <configuration name="ApiDocUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="apidoc.ApiDocUtils" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="reptile.*" />
+          <option name="PATTERN" value="apidoc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.FileUtils" />
+      <module name="CodeUtils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -220,13 +221,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apidoc.Main" />
+    <configuration name="ProjectUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.ProjectUtils" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apidoc.*" />
+          <option name="PATTERN" value="utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -248,27 +249,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SwaggerParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apidoc.SwaggerParse" />
+    <configuration name="TempUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TempUtils" />
       <module name="CodeUtils" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apidoc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WikiApiDocMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apidoc.WikiApiDocMain" />
-      <module name="CodeUtils" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="apidoc.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -315,19 +302,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.HXSD" />
-      <item itemvalue="Application.SwaggerParse" />
-      <item itemvalue="Application.WikiApiDocMain" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.ServerBean2ClientBean" />
+      <item itemvalue="Application.FileUtils" />
+      <item itemvalue="Application.ApiDocUtils" />
+      <item itemvalue="Application.TempUtils" />
+      <item itemvalue="Application.ProjectUtils" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProjectUtils" />
+        <item itemvalue="Application.TempUtils" />
+        <item itemvalue="Application.ApiDocUtils" />
+        <item itemvalue="Application.FileUtils" />
         <item itemvalue="Application.ServerBean2ClientBean" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.WikiApiDocMain" />
-        <item itemvalue="Application.SwaggerParse" />
-        <item itemvalue="Application.HXSD" />
       </list>
     </recent_temporary>
   </component>
@@ -357,7 +344,18 @@
       <workItem from="1633679663808" duration="587000" />
       <workItem from="1635933551114" duration="1433000" />
       <workItem from="1637894095935" duration="3577000" />
-      <workItem from="1637897689816" duration="5337000" />
+      <workItem from="1637897689816" duration="6651000" />
+      <workItem from="1638326405845" duration="2656000" />
+      <workItem from="1638769491053" duration="31000" />
+      <workItem from="1638936152203" duration="1724000" />
+      <workItem from="1640935653521" duration="714000" />
+      <workItem from="1642130549868" duration="1440000" />
+      <workItem from="1642557032876" duration="924000" />
+      <workItem from="1642581553542" duration="1331000" />
+      <workItem from="1643089561561" duration="16000" />
+      <workItem from="1644393793306" duration="1346000" />
+      <workItem from="1644802559684" duration="6000" />
+      <workItem from="1644892281630" duration="11645000" />
     </task>
     <task id="LOCAL-00001" summary="LeanCloutUtils">
       <created>1482395122284</created>
@@ -408,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1630978527702</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="api doc swagger">
+      <created>1637908145898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637908145898</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: project utils">
+      <created>1644892779692</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644892779692</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -480,7 +492,9 @@
     <MESSAGE value="opt" />
     <MESSAGE value="hxsd" />
     <MESSAGE value="spring boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring boot" />
+    <MESSAGE value="api doc swagger" />
+    <MESSAGE value="feat: project utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: project utils" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -513,6 +527,16 @@
           <url>file://$PROJECT_DIR$/src/reptile/HXSD.java</url>
           <line>23</line>
           <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/ProjectUtils.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/ProjectUtils.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

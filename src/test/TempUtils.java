@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 public class TempUtils {
 
 	public static void main(String[] args) throws Exception {
-
 	}
 
 	/**
