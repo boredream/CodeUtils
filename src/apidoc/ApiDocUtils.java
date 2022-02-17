@@ -1,6 +1,5 @@
 package apidoc;
 
-import apidoc.ApiField;
 import utils.FileUtils;
 import utils.StringUtils;
 

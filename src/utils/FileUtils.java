@@ -1,10 +1,5 @@
 package utils;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
