@@ -42,8 +42,7 @@ public class HttpUtils {
         return getOrPostString(Method.GET, url, null, headers);
     }
 
-    public static String postJson(String url, String json, Map<String, String> headers)
-            throws Exception {
+    public static String postJson(String url, String json, Map<String, String> headers) {
         DefaultHttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);
         if (headers != null) {

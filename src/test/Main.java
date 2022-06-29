@@ -1,8 +1,6 @@
 package test;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import utils.FileUtils;
 import utils.HttpUtils;
 
@@ -23,9 +21,201 @@ public class Main {
         String name;
     }
 
+    static class Customer {
+        public String type;
+        public Aio customer_aio;
+        public List<Address> customer_address;
+        public List<CirCumBusiness> customer_circum_business_states;
+    }
+
+    static class Aio {
+        public String locate_at;
+    }
+
+    static class Address {
+        public String detailed_address;
+    }
+
+    static class CirCumBusiness {
+        public SfaBaseCompartment sfaBaseCompartmentDto;
+    }
+
+    static class SfaBaseCompartment {
+        public String name;
+    }
+
     public static void main(String[] args) throws Exception {
-        System.out.println(new Date(1629252680753l));
-        System.out.println(new Date(1629252680813l));
+        String data = "{\n" +
+                "\t\t\t\"name\": \"(测试数据）82\",\n" +
+                "\t\t\t\"type\": \"A_C_CT_2\",\n" +
+                "\t\t\t\"channel_attribute\": \"A_C_CT_2_6\",\n" +
+                "\t\t\t\"sub_type\": \"A_C_CT_2_6_1\",\n" +
+                "\t\t\t\"photo_key\": \"5f22faa3-4119-4ced-841d-7e6a40750bc6.jpeg\",\n" +
+                "\t\t\t\"from_uid\": \"TSFACS220328000004\",\n" +
+                "\t\t\t\"customer_gt\": {},\n" +
+                "\t\t\t\"customer_r\": {\n" +
+                "\t\t\t\t\"format\": \"R_CR_1\",\n" +
+                "\t\t\t\t\"main_features\": \"G_A_A_78\",\n" +
+                "\t\t\t\t\"atmosphere\": \"R_CR_38\",\n" +
+                "\t\t\t\t\"main_cuisine\": \"G_A_A_46\",\n" +
+                "\t\t\t\t\"customer_groups\": \"R_CR_49\",\n" +
+                "\t\t\t\t\"hotel_area\": \"49\",\n" +
+                "\t\t\t\t\"table_quantity\": \"13\",\n" +
+                "\t\t\t\t\"cooker_quantity\": \"62\",\n" +
+                "\t\t\t\t\"turnover\": \"56\",\n" +
+                "\t\t\t\t\"spices_month\": \"\",\n" +
+                "\t\t\t\t\"consumption\": \"87\",\n" +
+                "\t\t\t\t\"set_occupancy\": \"41\",\n" +
+                "\t\t\t\t\"brand_attributes\": \"\",\n" +
+                "\t\t\t\t\"manage_purchase_type\": \"\",\n" +
+                "\t\t\t\t\"channel\": \"C_R_1\",\n" +
+                "\t\t\t\t\"sub_channel\": \"S_C_R_1\"\n" +
+                "\t\t\t},\n" +
+                "\t\t\t\"customer_ws\": {},\n" +
+                "\t\t\t\"customer_aio\": {\n" +
+                "\t\t\t\t\"locate_at\": \"MDWZ_001\",\n" +
+                "\t\t\t\t\"aio_channel_type\": \"AIO_CHANNEL_TYPE_tqd\"\n" +
+                "\t\t\t},\n" +
+                "\t\t\t\"customer_address\": [{\n" +
+                "\t\t\t\t\"province\": \"020\",\n" +
+                "\t\t\t\t\"province_name\": \"上海\",\n" +
+                "\t\t\t\t\"city\": \"City000077\",\n" +
+                "\t\t\t\t\"city_name\": \"上海市\",\n" +
+                "\t\t\t\t\"county\": \"QU000741\",\n" +
+                "\t\t\t\t\"county_name\": \"长宁区\",\n" +
+                "\t\t\t\t\"town\": \"XZ002567\",\n" +
+                "\t\t\t\t\"town_name\": \"周家桥街道\",\n" +
+                "\t\t\t\t\"detailed_address\": \"上海市长宁区紫云路400弄14号\",\n" +
+                "\t\t\t\t\"main_flag\": \"Y\",\n" +
+                "\t\t\t\t\"ifdel\": \"N\"\n" +
+                "\t\t\t}],\n" +
+                "\t\t\t\"customer_contact\": [{\n" +
+                "\t\t\t\t\"name\": \"联系人姓名(测试数据）30\",\n" +
+                "\t\t\t\t\"mobile_phone\": \"54\",\n" +
+                "\t\t\t\t\"contacts_type\": \"G_A_A_109\",\n" +
+                "\t\t\t\t\"role_type\": \"\",\n" +
+                "\t\t\t\t\"main_flag\": \"Y\",\n" +
+                "\t\t\t\t\"ifdel\": \"N\"\n" +
+                "\t\t\t}],\n" +
+                "\t\t\t\"customer_rep\": [{\n" +
+                "\t\t\t\t\"login\": \"15070144\",\n" +
+                "\t\t\t\t\"main_flag\": \"Y\",\n" +
+                "\t\t\t\t\"name\": \"姜金利\",\n" +
+                "\t\t\t\t\"ifdel\": \"N\"\n" +
+                "\t\t\t}],\n" +
+                "\t\t\t\"customer_supplier\": [{\n" +
+                "\t\t\t\t\"supplier_id\": \"1\",\n" +
+                "\t\t\t\t\"name\": \"测试人员\",\n" +
+                "\t\t\t\t\"main_flag\": \"Y\",\n" +
+                "\t\t\t\t\"ifdel\": \"N\"\n" +
+                "\t\t\t}],\n" +
+                "\t\t\t\"customer_circum_business_states\": [{\n" +
+                "\t\t\t\t\"compartment_id\": \"498144367245099008\",\n" +
+                "\t\t\t\t\"sfaBaseCompartmentDto\": {\n" +
+                "\t\t\t\t\t\"id\": \"498144367245099008\",\n" +
+                "\t\t\t\t\t\"code\": \"1110000262\",\n" +
+                "\t\t\t\t\t\"name\": \"广缘农贸市场NM1037\",\n" +
+                "\t\t\t\t\t\"type\": \"农贸市场\",\n" +
+                "\t\t\t\t\t\"subType\": \"批发市场\",\n" +
+                "\t\t\t\t\t\"level\": null,\n" +
+                "\t\t\t\t\t\"countryId\": null,\n" +
+                "\t\t\t\t\t\"country\": null,\n" +
+                "\t\t\t\t\t\"provinceId\": \"070\",\n" +
+                "\t\t\t\t\t\"province\": null,\n" +
+                "\t\t\t\t\t\"cityId\": null,\n" +
+                "\t\t\t\t\t\"city\": null,\n" +
+                "\t\t\t\t\t\"areaId\": null,\n" +
+                "\t\t\t\t\t\"area\": null,\n" +
+                "\t\t\t\t\t\"villageId\": null,\n" +
+                "\t\t\t\t\t\"village\": null,\n" +
+                "\t\t\t\t\t\"villageCommitteeId\": null,\n" +
+                "\t\t\t\t\t\"villageCommittee\": null,\n" +
+                "\t\t\t\t\t\"detailedAddress\": null,\n" +
+                "\t\t\t\t\t\"remark\": null,\n" +
+                "\t\t\t\t\t\"servicesChannel\": null,\n" +
+                "\t\t\t\t\t\"commercialTenantCount\": null,\n" +
+                "\t\t\t\t\t\"condimentsCommercialTenantCount\": null,\n" +
+                "\t\t\t\t\t\"mealType\": null,\n" +
+                "\t\t\t\t\t\"businessState\": null,\n" +
+                "\t\t\t\t\t\"mainBusinessFeature\": null,\n" +
+                "\t\t\t\t\t\"customerGroup\": null,\n" +
+                "\t\t\t\t\t\"characteristic\": null,\n" +
+                "\t\t\t\t\t\"location\": null,\n" +
+                "\t\t\t\t\t\"findDate\": null,\n" +
+                "\t\t\t\t\t\"closeDate\": null,\n" +
+                "\t\t\t\t\t\"businessStartDate\": null,\n" +
+                "\t\t\t\t\t\"businessEndDate\": null,\n" +
+                "\t\t\t\t\t\"enableFlag\": null,\n" +
+                "\t\t\t\t\t\"delFlag\": null\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t}],\n" +
+                "\t\t\t\"longitude\": \"121.414207\",\n" +
+                "\t\t\t\"latitude\": \"31.21231\"\n" +
+                "\t\t}";
+        JsonObject jo = new JsonParser().parse(data).getAsJsonObject();
+
+        // type
+        // customer_aio.locate_at
+        // customer_address/.detailed_address
+        // customer_circum_business_states/.sfaBaseCompartmentDto.name
+//        String key = "type";
+//        String key = "customer_aio.locate_at";
+//        String key = "customer_address/.detailed_address";
+        String key = "customer_circum_business_states/.sfaBaseCompartmentDto.name";
+
+        String result = parseJsonValueFromBean(key, jo);
+        System.out.println(result);
+    }
+
+    /**
+     * 从bean中解析config对应key的字段对应的值，可能是多个
+     */
+    private static String parseJsonValueFromBean(String key, JsonObject joDto) {
+        String data = null;
+        String[] filedList = key.split("\\.");
+        for (int i = 0; i < filedList.length; i++) {
+            String field = filedList[i];
+            if (field.endsWith("/")) {
+                // 数组直接判断element类型，不使用 /
+                field = field.substring(0, field.length() - 1);
+            }
+            JsonElement element = joDto.get(field);
+
+            // 直接是null或者主类型数据，返回
+            if (element.isJsonNull()) {
+                break;
+            }
+
+            if (element.isJsonPrimitive()) {
+                data = element.getAsString();
+                break;
+            }
+
+            if (element.isJsonArray()) {
+                // 直接是空数组，或主数据类型数组，返回
+                JsonArray array = element.getAsJsonArray();
+                if (array.size() == 0) {
+                    break;
+                }
+
+                JsonElement arrayJe = array.get(0);
+                if (arrayJe.isJsonNull()) {
+                    break;
+                }
+
+                if (arrayJe.isJsonPrimitive()) {
+                    data = arrayJe.getAsString();
+                    break;
+                }
+
+                // 数组对象类型，继续遍历下一个字段
+                joDto = array.get(0).getAsJsonObject();
+            } else {
+                // 对象类型，继续遍历下一个字段
+                joDto = element.getAsJsonObject();
+            }
+        }
+        return data;
     }
 
     private static void method() {

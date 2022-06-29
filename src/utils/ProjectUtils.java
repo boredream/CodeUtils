@@ -1,6 +1,5 @@
 package utils;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -15,36 +14,35 @@ import java.util.regex.Pattern;
 
 public class ProjectUtils {
 
+    private static List<String> ignoreFileNames = Arrays.asList("strings.xml", "ApiService.java", "OcrHelper.java");
+
     public static void main(String[] args) {
-//        String projectPath = "/Users/lcy/Documents/mobile-android/app/src/main";
-        String projectPath = "/Users/lcy/Documents/mobile-android/core/src/main";
+        String projectPath = "/Users/lcy/Documents/mobile-android/app/src/main";
+//        String projectPath = "/Users/lcy/Documents/mobile-android/core/src/main";
         extractAllString(projectPath);
+
+        // TODO: chunyang 2022/2/18 暂时不做去重
+//        removeSameFileDuplicate(projectPath);
     }
 
     public static void extractAllString(String projectPath) {
+        int totalCount = 0;
         List<File> files = FileUtils.getAllFiles(projectPath);
         Map<String, String> stringIdValueMap = new TreeMap<String, String>();
-        int totalCount = 0;
-        List<String> ignoreFileNames = Arrays.asList("strings.xml", "ApiService.java", "OcrHelper.java");
         for (File file : files) {
+            // 只检测java和xml文件
             if (!file.getName().endsWith(".java") && !file.getName().endsWith(".xml")) {
                 continue;
             }
+            // 过滤不检测的文件
             if (ignoreFileNames.contains(file.getName())) {
                 continue;
             }
-
-            System.out.println(file.getName());
-
             FileReader fr;
             StringBuilder newFileContent = new StringBuilder();
-            /**
-             * 是否有替换string操作
-             */
+            // 是否有替换string操作
             boolean isReplace = false;
-            /**
-             * string抽取的id后缀
-             */
+            // string抽取的id后缀
             int stringIdEnd = 0;
             try {
                 fr = new FileReader(file);
@@ -53,20 +51,21 @@ public class ProjectUtils {
                 String line;
                 // 是否属于多行注释
                 boolean multiLineAnno = false;
+                // 按行遍历文件内容
                 while ((line = bufferedreader.readLine()) != null) {
-                    // 空行
+                    // 空行跳过
                     if ("".equals(line.trim())) {
                         newFileContent.append(line).append("\n");
                         continue;
                     }
 
-                    // 单行注释,//开头
+                    // 单行注释,//开头，跳过
                     if (line.trim().startsWith("//")) {
                         newFileContent.append(line).append("\n");
                         continue;
                     }
 
-                    // 如果还是在多行注释中
+                    // 如果还是在多行注释中，跳过
                     if (multiLineAnno) {
                         // 如果本行包含多行注释结束符,结束
                         if (line.contains("*/")) {
@@ -76,16 +75,15 @@ public class ProjectUtils {
                         continue;
                     }
 
-                    // 多行注释开始(包括/*和/**)
+                    // 多行注释开始(包括/*和/**)，跳过
                     if (line.contains("/*")) {
                         multiLineAnno = true;
                         newFileContent.append(line).append("\n");
                         continue;
                     }
 
-                    // 有效代码
+                    // 至此为有效代码
 
-                    // 中文字符"blablabla"
                     String regexEmoji = "\"([\\s\\S]+?)\"";
 
                     Pattern pattern = Pattern.compile(regexEmoji);
@@ -94,38 +92,39 @@ public class ProjectUtils {
                     String regexChinese = "[\u4e00-\u9fa5]+";
                     Pattern patternChiese = Pattern.compile(regexChinese);
 
-                    // 如果该行包含字符串"blablabla"
+                    // 正则获取到所有引号"括起来的内容
                     while (matcher.find()) {
                         String chinese = matcher.group(1);
 
                         Matcher matcherChinese = patternChiese.matcher(chinese);
-                        // 如果包含的内容中没有中文,跳过
+                        // 如果引号包含的内容中没有中文,跳过
                         if (!matcherChinese.find()) {
                             continue;
                         }
 
-                        // 如果是日志内容,跳过
+                        // 如果是日志打印,跳过
                         if (line.trim().startsWith("Log") || line.trim().startsWith("showLog") || line.trim().startsWith("logger.log")) {
                             continue;
                         }
 
+                        // 至此代表该行包含待替换中文
                         if (file.getName().endsWith(".java")) {
-                            // id规则,文件名小写_递增数字
+                            // 给字符串取名，规则为：文件名小写_递增数字
                             String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
 
-                            // 如果是页面类,直接getResource
+                            // 将中文替换为映射的key
                             line = line.replace("\"" + chinese + "\"", "AppKeeper.getApp().getString(R.string." + stringId + ")");
                             stringIdValueMap.put(stringId, chinese);
                             isReplace = true;
                         } else if (file.getName().endsWith(".xml")) {
-                            // tools:text 的跳过
+                            // tools:text 的说明类文字跳过
                             if (line.contains("tools:text=\"")) {
                                 continue;
                             }
 
-                            // id规则,文件名小写_递增数字
+                            // 给字符串取名，规则为：文件名小写_递增数字
                             String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
-                            // xml用@string/blabla替换,注意,不替换""
+                            // xml用@string/blabla 替换中文。注意,不替换空字符""
                             line = line.replace(chinese, "@string/" + stringId);
                             stringIdValueMap.put(stringId, chinese);
                             isReplace = true;
@@ -141,26 +140,31 @@ public class ProjectUtils {
             if (isReplace) {
                 // 如果有替换操作
                 totalCount++;
-//                if(totalCount >= 300) {
-//                    // FIXME: 2022/2/16 控制一次替换文件数量
+//                if(totalCount >= 10) {
+//                    // FIXME: 2022/2/16 控制一次替换文件数量，测试脚本时使用
 //                    break;
 //                }
 
-                // 判断添加import
+                // java文件需要判断添加import
                 if (file.getName().endsWith(".java")) {
                     String importAppKeeper = "import com.archex.core.constants.AppKeeper;\n";
-                    String importR = "import com.archex.core.R;\n";
-//                    String importR = "import com.archex.fsfa.R;\n";
+
+                    String importR;
+                    if(file.getAbsolutePath().contains("/core/")) {
+                        importR = "import com.archex.core.R;\n";
+                    } else {
+                        importR = "import com.archex.fsfa.R;\n";
+                    }
                     int index = newFileContent.indexOf("\n\n");
-                    if(newFileContent.indexOf(importAppKeeper) == -1) {
+                    if (newFileContent.indexOf(importAppKeeper) == -1) {
                         newFileContent.insert(index + 2, importAppKeeper);
                     }
-                    if(newFileContent.indexOf(importR) == -1) {
+                    if (newFileContent.indexOf(importR) == -1) {
                         newFileContent.insert(index + 2, importR);
                     }
                 }
 
-                // 写入回文件
+                // 写入回文件，完成替换操作
                 FileUtils.writeString2File(newFileContent.toString(), file, "UTF-8");
             }
         }
@@ -168,7 +172,7 @@ public class ProjectUtils {
         System.out.println(totalCount);
         System.out.println(stringIdValueMap);
 
-        // save to string
+        // 记录映射表 strings.xml
         // project = "/Users/lcy/Documents/mobile-android/app/src/main"
         String stringXmlPath = projectPath + "/res/values/strings.xml";
         File file = new File(stringXmlPath);
@@ -177,7 +181,7 @@ public class ProjectUtils {
 
         List<Element> elements = rootElement.elements();
         for (Map.Entry<String, String> entry : stringIdValueMap.entrySet()) {
-            // 是否在values/xx.xml对应文件下下已有某个抽取过的值
+            // 是否在values/xx.xml对应文件下下已有某个抽取过的值，保证key不重复
             boolean hasElement = false;
 
             for (Element element : elements) {
@@ -189,15 +193,100 @@ public class ProjectUtils {
             }
 
             if (!hasElement) {
+                // 插入映射表中一条数据
                 Element element = rootElement.addElement("string");
                 element.addAttribute("name", entry.getKey());
                 element.setText(entry.getValue());
             }
         }
-        // save string文件
+        // 保存写入映射表文件
         XmlUtil.write2xml(file, valuesDoc);
     }
 
+    // 暂时无用   移除同一个文件下的重复文字
+    public static void removeSameFileDuplicate(String projectPath) {
+        String stringXmlPath = projectPath + "/res/values/strings.xml";
+        File stringFile = new File(stringXmlPath);
+        Document valuesDoc = XmlUtil.read(stringFile);
+        Element rootElement = valuesDoc.getRootElement();
+
+        HashMap<String, HashMap<String, String>> fileNamesMap = new HashMap<>();
+        HashMap<String, HashMap<String, String>> fileReplaceMap = new HashMap<>();
+        List<Element> elements = rootElement.elements();
+        for (Element element : elements) {
+            Attribute nameAtt = element.attribute("name");
+            String name = nameAtt.getValue();
+            int index = name.lastIndexOf("_");
+            if (index == -1) {
+                continue;
+            }
+            String filename = name.substring(0, index); // 去掉最后的数字
+            HashMap<String, String> strings = fileNamesMap.computeIfAbsent(filename, k -> new HashMap<>());
+            String text = element.getText();
+            if(strings.containsKey(text)) {
+                // 单个文件内有重复的值，进行替换操作
+                HashMap<String, String> replaceMap = fileReplaceMap.computeIfAbsent(filename, k -> new HashMap<>());
+                replaceMap.put(name, strings.get(text));
+
+                // 删除重复的字符
+                rootElement.remove(element);
+            } else {
+                // 无重复的值，记录
+                strings.put(text, name);
+            }
+        }
+        // save string文件
+        XmlUtil.write2xml(stringFile, valuesDoc);
+
+        // 同步替换其它strings
+        // TODO: chunyang 2022/2/18 代码有误
+        Document valuesDocFT = XmlUtil.read(new File(stringXmlPath.replace("/values/", "/values-zh-rTW/")));
+        Element rootElementFT = valuesDocFT.getRootElement();
+        for (Object obj : rootElementFT.elements()) {
+            if(obj instanceof Element) {
+                Element element = (Element) obj;
+                for (Map.Entry<String, HashMap<String, String>> entry : fileReplaceMap.entrySet()) {
+                    HashMap<String, String> names = entry.getValue();
+                    if(names.containsKey(element.attribute("name").getValue())) {
+                        rootElementFT.remove(element);
+                    }
+                }
+            }
+        }
+
+        if (1==1) {
+            return;
+        }
+
+        // 先遍历所有文件
+        List<File> files = FileUtils.getAllFiles(projectPath);
+        for (File file : files) {
+            if (!file.getName().endsWith(".java") && !file.getName().endsWith(".xml")) {
+                continue;
+            }
+            if (ignoreFileNames.contains(file.getName())) {
+                continue;
+            }
+
+            // 找到需要替换字符串的文件
+            String filename = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA));
+            if(fileReplaceMap.containsKey(filename)) {
+                System.out.println(filename);
+                for (Map.Entry<String, String> stringEntry : fileReplaceMap.get(filename).entrySet()) {
+                    // 需要把oldName替换为newName
+                    String oldName = stringEntry.getKey();
+                    String newName = stringEntry.getValue();
+
+                    String fileContent = FileUtils.readToString(file, "utf-8");
+                    fileContent = fileContent.replace("getString(R.string." + oldName + ")", "getString(R.string." + newName + ")")
+                            .replace("\"@string/" + oldName + "\"", "\"@string/" + newName + "\"");
+                    FileUtils.writeString2File(fileContent, file, "utf-8");
+                }
+            }
+        }
+    }
+
+    // 暂时无用
     public static void compareStrings() {
 
         List<String> hasStrName = new ArrayList<String>();
