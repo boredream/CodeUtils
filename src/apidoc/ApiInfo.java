@@ -11,6 +11,10 @@ public class ApiInfo {
     private List<ApiField> requestParams = new ArrayList<>();
     private List<ApiField> responseParams = new ArrayList<>();
 
+    String priMethod() {
+        return "1";
+    }
+
     public String getName() {
         return name;
     }

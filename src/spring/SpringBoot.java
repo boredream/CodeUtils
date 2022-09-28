@@ -1,19 +1,224 @@
 package spring;
 
+import apidoc.ApiField;
+import apidoc.ApiInfo;
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import utils.FileUtils;
 import utils.StringUtils;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SpringBoot {
 
     public static void main(String[] args) {
-
+        String info = "[\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#corporate_concern\",\n" +
+                "    \"title\": \"客户等级\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"onlyRead\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer\",\n" +
+                "    \"selectItem\": \"customer_level\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#format\",\n" +
+                "    \"title\": \"业态\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"business_type\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"type\": \"divider\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#main_features\",\n" +
+                "    \"title\": \"主营特色\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"food_type\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#store_type\",\n" +
+                "    \"title\": \"门店类型\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"onlyRead\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"store_type\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#atmosphere\",\n" +
+                "    \"title\": \"氛围\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"atmosphere\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#main_cuisine\",\n" +
+                "    \"title\": \"酒店主营菜系\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"global\",\n" +
+                "    \"selectItem\": \"main_cuisine\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#meal_classification\",\n" +
+                "    \"title\": \"餐饮分类\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"meal_type\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#customer_groups\",\n" +
+                "    \"title\": \"顾客群体\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer_restaurant\",\n" +
+                "    \"selectItem\": \"crowd_type\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"type\": \"divider\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#hotel_area\",\n" +
+                "    \"title\": \"酒店总面积\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"㎡\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#table_quantity\",\n" +
+                "    \"title\": \"餐位数量\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#cooker_quantity\",\n" +
+                "    \"title\": \"厨师总数\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"人\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"type\": \"divider\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#turnover\",\n" +
+                "    \"title\": \"日均餐饮营业额\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"元\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#spices_month\",\n" +
+                "    \"title\": \"全部调味品月开销金额\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"元\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#spices_limt_time\",\n" +
+                "    \"title\": \"调味品采购周期\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"天\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#consumption\",\n" +
+                "    \"title\": \"人均消费\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"元\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#set_occupancy\",\n" +
+                "    \"title\": \"上座率\",\n" +
+                "    \"necessary\": true,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"％\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#customer_relationship\",\n" +
+                "    \"title\": \"客情关系分类\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"select\",\n" +
+                "    \"selectModule\": \"customer\",\n" +
+                "    \"selectItem\": \"customer_relationship\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"type\": \"divider\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#ming_display\",\n" +
+                "    \"title\": \"明档陈列\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#variety_display\",\n" +
+                "    \"title\": \"菜品展示区陈列\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#special_display\",\n" +
+                "    \"title\": \"特殊形象陈列\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#table_display\",\n" +
+                "    \"title\": \"桌上陈列\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"key\": \"customer_r#shelf_display\",\n" +
+                "    \"title\": \"货架陈列\",\n" +
+                "    \"necessary\": false,\n" +
+                "    \"type\": \"input\",\n" +
+                "    \"inputFilter\": \"number\",\n" +
+                "    \"unit\": \"个\"\n" +
+                "  }\n" +
+                "]";
+        List<HashMap<String, String>> list = new Gson().fromJson(info, new TypeToken<List<HashMap<String, String>>>() {
+        }.getType());
+        for (HashMap<String, String> map : list) {
+            if(!map.containsKey("title")) continue;
+            String necessary = map.getOrDefault("necessary", "false");
+            System.out.println(("true".equals(necessary)?"必填":"非必填") + "\t\t" + map.get("title"));
+        }
     }
 
     private static void csvReorder() {

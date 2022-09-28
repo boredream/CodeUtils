@@ -23,6 +23,7 @@ import java.util.Map.Entry;
 
 public class HttpUtils {
 
+    public static final String CUSTOMER_RESPONSE_HEADER = "@@responseCharset";
     private static final String HEADER_CONTENT_TYPE = "Content-Type";
     private static final String CHARSET = "UTF-8";
 
@@ -151,15 +152,18 @@ public class HttpUtils {
 
         Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
         String responseCharset = parseCharset(contentTypeHeader);
+        if(headers != null && headers.containsKey(CUSTOMER_RESPONSE_HEADER)) {
+            // 自定义相应字符编码
+            responseCharset = headers.get(CUSTOMER_RESPONSE_HEADER);
+        }
 
         byte[] bytes = entityToBytes(response.getEntity());
-        String responseContent = new String(bytes, responseCharset);
-        return responseContent;
+        return new String(bytes, responseCharset);
     }
 
     private static String getOrPostString(int method, String url,
                                           Map<String, String> postParams, Map<String, String> headers) throws Exception {
-        HashMap<String, String> map = new HashMap<String, String>();
+        HashMap<String, String> map = new HashMap<>();
         if (headers != null) {
             map.putAll(headers);
         }
@@ -198,6 +202,10 @@ public class HttpUtils {
 
         Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
         String responseCharset = parseCharset(contentTypeHeader);
+        if(headers != null && headers.containsKey(CUSTOMER_RESPONSE_HEADER)) {
+            // 自定义相应字符编码
+            responseCharset = headers.get(CUSTOMER_RESPONSE_HEADER);
+        }
 
         byte[] bytes = entityToBytes(response.getEntity());
         String responseContent = new String(bytes, responseCharset);
@@ -210,7 +218,7 @@ public class HttpUtils {
 
     public static byte[] getOrPostFile(int method, String url,
                                        Map<String, String> postParams, Map<String, String> headers) throws Exception {
-        HashMap<String, String> map = new HashMap<String, String>();
+        HashMap<String, String> map = new HashMap<>();
         if (headers != null) {
             map.putAll(headers);
         }
@@ -247,11 +255,7 @@ public class HttpUtils {
             }
         }
 
-        Header contentTypeHeader = response.getHeaders(HTTP.CONTENT_TYPE)[0];
-        String responseCharset = parseCharset(contentTypeHeader);
-
-        byte[] bytes = entityToBytes(response.getEntity());
-        return bytes;
+        return entityToBytes(response.getEntity());
     }
 
     /**
