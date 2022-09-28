@@ -140,4 +140,8 @@ public class StringUtils {
     public static boolean isEmpty(String s) {
         return s == null || s.length() == 0;
     }
+
+    public static String getStringOrEmpty(String str, String def) {
+        return StringUtils.isEmpty(str) ? def : str;
+    }
 }

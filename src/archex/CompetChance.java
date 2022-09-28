@@ -59,28 +59,9 @@ public class CompetChance {
 
     public static void main(String[] args) {
         // xlsx解析成list<list>
-        List<List<String>> list = new ArrayList<>();
-        XSSFWorkbook xlsx = OfficeUtils.openXlsx(new File("temp/archex/compet_chance/compet_chance.xlsx"));
-        XSSFSheet sheet = xlsx.getSheet("0921竞品活动");
-        Iterator<Row> rowIterator = sheet.iterator();
-        int rowCount = 0;
-        int columnCount = 0;
-        for(;rowIterator.hasNext();) {
-            Row row = rowIterator.next();
-            Iterator<Cell> cellIterator = row.cellIterator();
-            List<String> rowList = new ArrayList<>();
-            columnCount = 0;
-            for(;cellIterator.hasNext();) {
-                Cell cell = cellIterator.next();
-                String value = cell.getStringCellValue();
-                // TODO: chunyang 2022/9/28 是否保留\n后的预设值信息？
-                value = value.split("\n")[0];
-                rowList.add(value);
-                columnCount ++;
-            }
-            rowCount++;
-            list.add(rowList);
-        }
+        List<List<String>> list = parseXlsx("temp/archex/compet_chance/compet_chance.xlsx");
+        int rowCount = list.size();
+        int columnCount = list.get(0).size();
         System.out.println("rowCount " + rowCount + " columnCount " + columnCount);
 
         // 配置，每列一个配置
@@ -99,23 +80,12 @@ public class CompetChance {
             if(type1List.get(i).trim().length() > 0) {
                 type1Index = i;
             }
-            String type1 = type1List.get(type1Index);
-            if(type1 == null) {
-                type1 = "无";
-            }
-
+            String type1 = StringUtils.getStringOrEmpty(type1List.get(type1Index), "无");
             if(type2List.get(i).trim().length() > 0) {
                 type2Index = i;
             }
-            String type2 = type2List.get(type2Index);
-            if(type2 == null) {
-                type2 = "无";
-            }
-
-            String type3 = type3List.get(i);
-            if(type3 == null) {
-                type3 = "无";
-            }
+            String type2 = StringUtils.getStringOrEmpty(type2List.get(type2Index), "无");
+            String type3 = StringUtils.getStringOrEmpty(type3List.get(i), "无");
 
             Config config = new Config();
 //            config.type1 = StringUtils.isEmpty(type1) ? "无" : type1;
@@ -169,6 +139,31 @@ public class CompetChance {
 
         File file = new File("temp/archex/compet_chance/compet_act_config.json");
         FileUtils.writeString2File(new Gson().toJson(configList), file, "utf-8");
+    }
+
+    // xlsx解析成list<list>
+    private static List<List<String>> parseXlsx(String filepath) {
+        List<List<String>> list = new ArrayList<>();
+        XSSFWorkbook xlsx = OfficeUtils.openXlsx(new File(filepath));
+        if (xlsx == null) {
+            return list;
+        }
+        XSSFSheet sheet = xlsx.getSheet("0921竞品活动");
+        Iterator<Row> rowIterator = sheet.iterator();
+        for(;rowIterator.hasNext();) {
+            Row row = rowIterator.next();
+            Iterator<Cell> cellIterator = row.cellIterator();
+            List<String> rowList = new ArrayList<>();
+            for(;cellIterator.hasNext();) {
+                Cell cell = cellIterator.next();
+                String value = cell.getStringCellValue();
+                // TODO: chunyang 2022/9/28 是否保留\n后的预设值信息？
+                value = value.split("\n")[0];
+                rowList.add(value);
+            }
+            list.add(rowList);
+        }
+        return list;
     }
 
     // 解析集合组件的情况
@@ -279,7 +274,7 @@ public class CompetChance {
                             continue;
                         }
                         next.groupTitle = null;
-                        next.title = next.title.replaceFirst(String.valueOf(next.groupNumber), "%s");
+                        next.title = next.title.replaceFirst(String.valueOf(next.groupNumber), "%d");
                         next.groupNumber = null;
                     }
                 } else {
