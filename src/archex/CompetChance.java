@@ -36,7 +36,7 @@ public class CompetChance {
         String type;
         String necessary;
         String groupTitle;
-        int groupNumber;
+        Integer groupNumber;
         Boolean isGroupFirst;
         Integer groupMaxCount;
         Integer groupMinNecessaryCount;
@@ -72,7 +72,10 @@ public class CompetChance {
             columnCount = 0;
             for(;cellIterator.hasNext();) {
                 Cell cell = cellIterator.next();
-                rowList.add(cell.getStringCellValue());
+                String value = cell.getStringCellValue();
+                // TODO: chunyang 2022/9/28 是否保留\n后的预设值信息？
+                value = value.split("\n")[0];
+                rowList.add(value);
                 columnCount ++;
             }
             rowCount++;
@@ -97,19 +100,29 @@ public class CompetChance {
                 type1Index = i;
             }
             String type1 = type1List.get(type1Index);
+            if(type1 == null) {
+                type1 = "无";
+            }
 
             if(type2List.get(i).trim().length() > 0) {
                 type2Index = i;
             }
             String type2 = type2List.get(type2Index);
+            if(type2 == null) {
+                type2 = "无";
+            }
 
             String type3 = type3List.get(i);
+            if(type3 == null) {
+                type3 = "无";
+            }
 
             Config config = new Config();
-            config.type1 = StringUtils.isEmpty(type1) ? "无" : type1;
-            config.type2 = StringUtils.isEmpty(type2) ? "无" : type2;
-            config.type3 = StringUtils.isEmpty(type3) ? "无" : type3;
-            config.key = config.type1 + "_" +config.type2 + "_" +config.type3;
+//            config.type1 = StringUtils.isEmpty(type1) ? "无" : type1;
+//            config.type2 = StringUtils.isEmpty(type2) ? "无" : type2;
+//            config.type3 = StringUtils.isEmpty(type3) ? "无" : type3;
+//            config.key = config.type1 + "_" +config.type2 + "_" +config.type3;
+            config.key = type1 + "_" + type2 + "_" + type3;
             configList.add(config);
         }
 
@@ -137,7 +150,8 @@ public class CompetChance {
                 // 字段名
                 input.title = inputTitleList.get(row - startIndex);
                 // 字段类型
-                input.type = inputTypeList.get(row - startIndex);
+                // TODO: chunyang 2022/9/28 暂时去掉字段类型，客户端写死组件
+                // input.type = inputTypeList.get(row - startIndex);
                 // 必填情况
                 input.necessary = list.get(row).get(column);
 
@@ -153,7 +167,7 @@ public class CompetChance {
         // 打印
         print(configList);
 
-        File file = new File("temp/archex/compet_chance/compet_chance_config.json");
+        File file = new File("temp/archex/compet_chance/compet_act_config.json");
         FileUtils.writeString2File(new Gson().toJson(configList), file, "utf-8");
     }
 
@@ -222,6 +236,7 @@ public class CompetChance {
                 groupInput.title = input.title;
                 groupInput.type = input.type;
                 groupInput.necessary = input.necessary;
+                groupInput.groupNumber = input.groupNumber;
 
                 // 先记录到临时集合
                 tempGroupInputList.add(0, groupInput);
@@ -229,26 +244,44 @@ public class CompetChance {
                 // 遇到字段组合第一个字段时，保存临时集合并处理总的字段
                 if (input.isGroupFirst) {
                     input.groupInputList = new ArrayList<>(tempGroupInputList);
-                    if (input.groupInputList.get(input.groupInputList.size() - 1).necessary.contains("选填")) {
+                    Input lastGroupInput = input.groupInputList.get(input.groupInputList.size() - 1);
+                    if (lastGroupInput.necessary.contains("选填")) {
                         // 最后一个是选填，则最大数量无限
                         input.groupMaxCount = -1;
                         // 继续向前找到必填位置
                         for (int j = input.groupInputList.size() - 2; j >= 0; j--) {
                             if (input.groupInputList.get(j).necessary.contains("必填")) {
-                                input.groupMinNecessaryCount = j;
+                                input.groupMinNecessaryCount = input.groupInputList.get(j).groupNumber;
+                                break;
                             }
                         }
                     } else {
                         // 最后一个是必填，则最大数量限定
-                        input.groupMaxCount = input.groupMinNecessaryCount = input.groupInputList.size();
+                        input.groupMaxCount = input.groupMinNecessaryCount = lastGroupInput.groupNumber;
                     }
 
                     input.title = input.title.split(String.valueOf(number))[0];
-                    input.type = "group";
+                    // TODO: chunyang 2022/9/28 暂时去掉字段类型，客户端写死组件
+                    // input.type = "group";
                     input.necessary = null;
                     input.isGroupFirst = null;
+                    input.groupNumber = null;
+                    input.groupTitle = null;
 
                     tempGroupInputList.clear();
+
+                    // 集合内的2、3...也删除，只保留基础字段信息
+                    Iterator<Input> groupInputIterator = input.groupInputList.iterator();
+                    for(;groupInputIterator.hasNext();) {
+                        Input next = groupInputIterator.next();
+                        if(next.groupNumber > 1) {
+                            groupInputIterator.remove();
+                            continue;
+                        }
+                        next.groupTitle = null;
+                        next.title = next.title.replaceFirst(String.valueOf(next.groupNumber), "%s");
+                        next.groupNumber = null;
+                    }
                 } else {
                     // 冗余字段的title置为null，用于后面删除
                     input.title = null;
