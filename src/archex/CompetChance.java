@@ -125,6 +125,14 @@ public class CompetChance {
                 // 必填情况
                 input.necessary = list.get(row).get(column);
 
+                // 自定义过滤
+                // 档期开始日期 + 档期结束日期 合并为 档期起止日期
+                if("档期开始日期".equals(input.title)) {
+                    input.title = "档期起止日期";
+                } else if("档期结束日期".equals(input.title)) {
+                    continue;
+                }
+
                 if(!StringUtils.isEmpty(input.necessary)) {
                     inputList.add(input);
                 }
@@ -276,6 +284,7 @@ public class CompetChance {
                         next.groupTitle = null;
                         next.title = next.title.replaceFirst(String.valueOf(next.groupNumber), "%d");
                         next.groupNumber = null;
+                        next.necessary = null;
                     }
                 } else {
                     // 冗余字段的title置为null，用于后面删除
