@@ -17,18 +17,73 @@ public class ProjectUtils {
     private static List<String> ignoreFileNames = Arrays.asList("strings.xml", "ApiService.java", "OcrHelper.java");
 
     public static void main(String[] args) {
-        String projectPath = "/Users/lcy/Documents/mobile-android/app/src/main";
+//        String projectPath = "/Users/lcy/Documents/mobile-android/app/src/main";
 //        String projectPath = "/Users/lcy/Documents/mobile-android/core/src/main";
-        extractAllString(projectPath);
+//        extractAllString(projectPath);
 
-        // TODO: chunyang 2022/2/18 暂时不做去重
-//        removeSameFileDuplicate(projectPath);
+        // 去重后提取成表格
+        parseStringsToXml();
+    }
+
+    static class StringKV {
+        String name;
+        String value;
+
+        public StringKV(String name, String value) {
+            this.name = name;
+            this.value = value;
+        }
+    }
+
+    public static void parseStringsToXml() {
+        List<Element> elements1 = XmlUtil
+                .read(new File("/Users/lcy/Documents/mobile-android/app/src/main" + "/res/values/strings.xml"))
+                .getRootElement()
+                .elements();
+        List<Element> elements2 = XmlUtil
+                .read(new File("/Users/lcy/Documents/mobile-android/core/src/main" + "/res/values/strings.xml"))
+                .getRootElement()
+                .elements();
+        List<Element> elements = new ArrayList<>();
+        elements.addAll(elements1);
+        elements.addAll(elements2);
+
+        // 先记录所有string的键
+        HashSet<String> valueSet = new HashSet<>();
+        List<StringKV> dataList = new ArrayList<>();
+        for (Element element : elements) {
+            String value = element.getText();
+            if(valueSet.contains(value)) {
+                continue;
+            }
+            valueSet.add(value);
+
+            String name = element.attribute("name").getValue();
+            dataList.add(new StringKV(name, value));
+        }
+        File targetCsvFile = new File("temp" + File.separator + "office" + File.separator + "strings.csv");
+        OfficeUtils.saveCVS(dataList, targetCsvFile);
     }
 
     public static void extractAllString(String projectPath) {
+        // 先读取映射表 strings.xml
+        // project = "/Users/lcy/Documents/mobile-android/app/src/main"
+        String stringXmlPath = projectPath + "/res/values/strings.xml";
+        File stringXmlFile = new File(stringXmlPath);
+        Document valuesDoc = XmlUtil.read(stringXmlFile);
+        Element rootElement = valuesDoc.getRootElement();
+        List<Element> elements = rootElement.elements();
+
+        // 先记录所有string的键
+        HashSet<String> stringKeySet = new HashSet<>();
+        for (Element element : elements) {
+            Attribute nameAtt = element.attribute("name");
+            stringKeySet.add(nameAtt.getValue());
+        }
+
         int totalCount = 0;
         List<File> files = FileUtils.getAllFiles(projectPath);
-        Map<String, String> stringIdValueMap = new TreeMap<String, String>();
+        Map<String, String> stringIdValueMap = new TreeMap<>();
         for (File file : files) {
             // 只检测java和xml文件
             if (!file.getName().endsWith(".java") && !file.getName().endsWith(".xml")) {
@@ -43,7 +98,17 @@ public class ProjectUtils {
             // 是否有替换string操作
             boolean isReplace = false;
             // string抽取的id后缀
-            int stringIdEnd = 0;
+            int stringIdEndIndex;
+            // 先尝试生成当前文件的name前缀
+            String stringNamePre = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_";
+            // 如果当前文件之前提取过文字，则 stringIdEndIndex 需要计算开始的index
+            int startIndex = 0;
+            String stringName;
+            do {
+                stringName = stringNamePre + startIndex++;
+            } while (stringKeySet.contains(stringName));
+            stringIdEndIndex = startIndex - 1;
+
             try {
                 fr = new FileReader(file);
                 BufferedReader bufferedreader = new BufferedReader(fr);
@@ -110,7 +175,7 @@ public class ProjectUtils {
                         // 至此代表该行包含待替换中文
                         if (file.getName().endsWith(".java")) {
                             // 给字符串取名，规则为：文件名小写_递增数字
-                            String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
+                            String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEndIndex++;
 
                             // 将中文替换为映射的key
                             line = line.replace("\"" + chinese + "\"", "AppKeeper.getApp().getString(R.string." + stringId + ")");
@@ -123,7 +188,7 @@ public class ProjectUtils {
                             }
 
                             // 给字符串取名，规则为：文件名小写_递增数字
-                            String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEnd++;
+                            String stringId = FileUtils.getName(file.getName().toLowerCase(Locale.CHINA)) + "_" + stringIdEndIndex++;
                             // xml用@string/blabla 替换中文。注意,不替换空字符""
                             line = line.replace(chinese, "@string/" + stringId);
                             stringIdValueMap.put(stringId, chinese);
@@ -172,16 +237,8 @@ public class ProjectUtils {
         System.out.println(totalCount);
         System.out.println(stringIdValueMap);
 
-        // 记录映射表 strings.xml
-        // project = "/Users/lcy/Documents/mobile-android/app/src/main"
-        String stringXmlPath = projectPath + "/res/values/strings.xml";
-        File file = new File(stringXmlPath);
-        Document valuesDoc = XmlUtil.read(file);
-        Element rootElement = valuesDoc.getRootElement();
-
-        List<Element> elements = rootElement.elements();
+        // 处理是否在values/xx.xml对应文件下下已有某个抽取过的值，保证key不重复
         for (Map.Entry<String, String> entry : stringIdValueMap.entrySet()) {
-            // 是否在values/xx.xml对应文件下下已有某个抽取过的值，保证key不重复
             boolean hasElement = false;
 
             for (Element element : elements) {
@@ -200,7 +257,7 @@ public class ProjectUtils {
             }
         }
         // 保存写入映射表文件
-        XmlUtil.write2xml(file, valuesDoc);
+        XmlUtil.write2xml(stringXmlFile, valuesDoc);
     }
 
     // 暂时无用   移除同一个文件下的重复文字

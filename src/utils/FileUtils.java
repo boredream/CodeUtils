@@ -505,14 +505,17 @@ public class FileUtils {
     public static String getCharSet(File file) {
         String chatSet = null;
         try {
-            InputStream in = new java.io.FileInputStream(file);
-            byte[] b = new byte[3];
-            in.read(b);
-            in.close();
-            if (b[0] == -17 && b[1] == -69 && b[2] == -65)
-                chatSet = "UTF-8";
-            else
-                chatSet = "GBK";
+            if (file != null) {
+                InputStream in = new java.io.FileInputStream(file);
+                byte[] b = new byte[3];
+                in.read(b);
+                in.close();
+                if (b[0] == -17 && b[1] == -69 && b[2] == -65) {
+                    chatSet = "UTF-8";
+                } else {
+                    chatSet = "GBK";
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

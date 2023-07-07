@@ -45,6 +45,9 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+    }
+
+    private static void extracted() {
         ArrayList<String> lines = FileUtils.readToStringLines(new File("temp/query_result.csv"));
         ArrayList<String> errorList = new ArrayList<>();
         StringBuilder errorCodes = new StringBuilder();

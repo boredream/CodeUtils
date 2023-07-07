@@ -11,18 +11,12 @@ import utils.StringUtils;
 
 import java.io.File;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class CompetChance {
 
     static class Config implements Serializable {
         String key;
-        String type1;
-        String type2;
-        String type3;
         List<Input> inputList;
 
         @Override
@@ -41,6 +35,7 @@ public class CompetChance {
         Integer groupMaxCount;
         Integer groupMinNecessaryCount;
         List<Input> groupInputList;
+        Map<String, Object> extraData;
 
         @Override
         public String toString() {
@@ -88,10 +83,6 @@ public class CompetChance {
             String type3 = StringUtils.getStringOrEmpty(type3List.get(i), "无");
 
             Config config = new Config();
-//            config.type1 = StringUtils.isEmpty(type1) ? "无" : type1;
-//            config.type2 = StringUtils.isEmpty(type2) ? "无" : type2;
-//            config.type3 = StringUtils.isEmpty(type3) ? "无" : type3;
-//            config.key = config.type1 + "_" +config.type2 + "_" +config.type3;
             config.key = type1 + "_" + type2 + "_" + type3;
             configList.add(config);
         }
@@ -143,7 +134,47 @@ public class CompetChance {
         combineGroup(configList);
 
         // 打印
-        print(configList);
+        // print(configList);
+
+        // TODO: chunyang 2022/10/20 特殊处理
+        for (Config config : configList) {
+            // 有品牌，且有必填产品，则删除品牌字段（产品里携带）
+            if("品牌".equals(config.inputList.get(0).title)
+                    && "产品".equals(config.inputList.get(1).title)) {
+                if(config.inputList.get(1).groupMinNecessaryCount != null
+                        && config.inputList.get(1).groupMinNecessaryCount > 0) {
+                    config.inputList.remove(0);
+                }
+            }
+
+            // 抽取研发菜品+月均推广Top，放在产品下一级
+            Input product = null;
+            Input dish = null;
+            Input topDish = null;
+            Iterator<Input> iterator = config.inputList.iterator();
+            while(iterator.hasNext()) {
+                Input input = iterator.next();
+                if("产品".equals(input.title)) {
+                    product = input;
+                } else if("研发菜品".equals(input.title)) {
+                    // 删除
+                    dish = input;
+                    iterator.remove();
+                } else if("月均推广TOP".equals(input.title)) {
+                    // 删除
+                    topDish = input;
+                    iterator.remove();
+                }
+            }
+            if(product != null) {
+                if(dish != null) {
+                    product.groupInputList.add(dish);
+                }
+                if(topDish != null) {
+                    product.groupInputList.add(topDish);
+                }
+            }
+        }
 
         File file = new File("temp/archex/compet_chance/compet_act_config.json");
         FileUtils.writeString2File(new Gson().toJson(configList), file, "utf-8");
@@ -156,7 +187,7 @@ public class CompetChance {
         if (xlsx == null) {
             return list;
         }
-        XSSFSheet sheet = xlsx.getSheet("0921竞品活动");
+        XSSFSheet sheet = xlsx.getSheet("1020竞品活动");
         Iterator<Row> rowIterator = sheet.iterator();
         for(;rowIterator.hasNext();) {
             Row row = rowIterator.next();
@@ -179,7 +210,7 @@ public class CompetChance {
         // 先记录组合字段前缀名称
         // TODO: chunyang 2022/9/28 前缀可能错乱？
         List<String> groupInputTitlePre = Arrays.asList(
-                "产品", "赠送产品", "赠送物品", "研发菜品", "月均推广TOP", "赞助品牌");
+                "产品", "赠送产品", "赠送物品", "研发菜品", "月均推广TOP", "主办品牌", "参与品牌", "赞助品牌");
 //        for (int i = 0; i < inputTitleList.size(); i++) {
 //             TODO: chunyang 2022/9/28 自动解析
 //        }
@@ -249,8 +280,9 @@ public class CompetChance {
                     input.groupInputList = new ArrayList<>(tempGroupInputList);
                     Input lastGroupInput = input.groupInputList.get(input.groupInputList.size() - 1);
                     if (lastGroupInput.necessary.contains("选填")) {
-                        // 最后一个是选填，则最大数量无限
-                        input.groupMaxCount = -1;
+                        // 最后一个是选填
+                        // 根据该组的数量，确定最大数
+                        input.groupMaxCount = input.groupInputList.size() > 1 ? -1 : 1;
                         // 继续向前找到必填位置
                         for (int j = input.groupInputList.size() - 2; j >= 0; j--) {
                             if (input.groupInputList.get(j).necessary.contains("必填")) {
@@ -285,6 +317,15 @@ public class CompetChance {
                         next.title = next.title.replaceFirst(String.valueOf(next.groupNumber), "%d");
                         next.groupNumber = null;
                         next.necessary = null;
+
+                        // 额外处理
+                        if(config.key.contains("单瓶") && next.title.contains("箱数")) {
+                            // 记录单位
+                            next.extraData = Collections.singletonMap("unit", "瓶");
+                        } else if(next.title.contains("件数")) {
+                            // 记录单位
+                            next.extraData = Collections.singletonMap("unit", "件");
+                        }
                     }
                 } else {
                     // 冗余字段的title置为null，用于后面删除
