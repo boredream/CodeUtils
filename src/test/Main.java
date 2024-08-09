@@ -45,6 +45,157 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+        String json = "{\n" +
+                "  \"words_result\": [\n" +
+                "    {\n" +
+                "      \"words\": \"欣\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 0,\n" +
+                "        \"left\": 899,\n" +
+                "        \"width\": 200,\n" +
+                "        \"height\": 247\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"20240712\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1101,\n" +
+                "        \"left\": 421,\n" +
+                "        \"width\": 563,\n" +
+                "        \"height\": 103\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"08:02FJ71\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1205,\n" +
+                "        \"left\": 406,\n" +
+                "        \"width\": 614,\n" +
+                "        \"height\": 107\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"酿造\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1597,\n" +
+                "        \"left\": 547,\n" +
+                "        \"width\": 178,\n" +
+                "        \"height\": 65\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"味\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1507,\n" +
+                "        \"left\": 889,\n" +
+                "        \"width\": 494,\n" +
+                "        \"height\": 405\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"欣和\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1541,\n" +
+                "        \"left\": 1145,\n" +
+                "        \"width\": 127,\n" +
+                "        \"height\": 100\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"酱油\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1655,\n" +
+                "        \"left\": 557,\n" +
+                "        \"width\": 172,\n" +
+                "        \"height\": 64\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"WEIDAME\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1753,\n" +
+                "        \"left\": 1061,\n" +
+                "        \"width\": 189,\n" +
+                "        \"height\": 148\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"味极鲜\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1785,\n" +
+                "        \"left\": 746,\n" +
+                "        \"width\": 536,\n" +
+                "        \"height\": 365\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"words\": \"0%添加防\",\n" +
+                "      \"location\": {\n" +
+                "        \"top\": 1867,\n" +
+                "        \"left\": 918,\n" +
+                "        \"width\": 348,\n" +
+                "        \"height\": 282\n" +
+                "      }\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"words_result_num\": 10,\n" +
+                "  \"log_id\": \"1821425667022652512\"\n" +
+                "}";
+
+        // 第一轮先用正则筛出来目标字符
+        // 瓶罐：上 日期年月日 + 下 时分 4个字母数字
+        // 袋装：左 日期年月日 + 右 4个字母数字
+        // 4个字母数字的规则：
+        // 酱油：产线（1位）+班组（1位）+工厂代码（2位）
+        // 酱&醋：产线（1位）+工厂代码（2位）+班组（1位）
+
+        String regexDate = "[1-2]\\d{7}";
+        String regexTime = "(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9][A-Z]\\d{2}";
+        String regex4Code = "[0-9A-Z]{4}";
+        String regexSpace = "\\s*";
+
+        // 可能匹配到的字符串：
+        // 1.瓶罐 年月日
+        // 2.瓶罐 时分+4字母数字
+        // 3.袋装 年月日+4字母数字（可能被识别为两组）
+        // 4.袋装 年月日
+        // 5.袋装 4字母数字
+        JsonObject date = null;
+        String finalRegexDate = "^" + regexDate + "$";
+        JsonObject time4Code = null;
+        // 08:02FJ71
+        String finalRegexTime4Code = "^" + regexTime + regexSpace + regex4Code + "$";
+        System.out.println("finalRegexTime4Code " + finalRegexTime4Code);
+        JsonObject date4Code = null;
+        String finalRegexDate4Code = "^" + regexDate + regexSpace + regex4Code + "$";
+        JsonObject code4 = null;
+        String finalRegex4Code = "^" + regex4Code + "$";
+
+        JsonObject jsonObject = new JsonParser().parse(json).getAsJsonObject();
+        JsonArray jsonArray = jsonObject.getAsJsonArray("words_result");
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JsonObject joWord = jsonArray.get(i).getAsJsonObject();
+            String words = joWord.get("words").getAsString();
+            JsonObject joLocation = joWord.get("location").getAsJsonObject();
+
+            if (words.matches(finalRegexDate)) {
+                date = joWord;
+            }
+            if (words.matches(finalRegexTime4Code)) {
+                time4Code = joWord;
+            }
+            if (words.matches(finalRegexDate4Code)) {
+                date4Code = joWord;
+            }
+            if (words.matches(finalRegex4Code)) {
+                code4 = joWord;
+            }
+        }
+
+        System.out.println("date=" + date);
+        System.out.println("time4Code=" + time4Code);
+        System.out.println("date4Code=" + date4Code);
+        System.out.println("code4=" + code4);
     }
 
     private static void extracted() {
