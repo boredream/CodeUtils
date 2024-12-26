@@ -6,12 +6,17 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import utils.FileUtils;
 import utils.ShUser;
+import utils.HttpUtils;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 public class WorkMain {
 
@@ -36,7 +41,13 @@ public class WorkMain {
     }
 
     public static void main(String[] args) {
-        String html = FileUtils.readToString(new File("src/work/confluence.html"), "UTF-8");
+        // 从网站获取HTML内容
+        String html = getHtmlFromWeb();
+        if (html == null) {
+            System.out.println("获取网页内容失败");
+            return;
+        }
+        
         Document doc = Jsoup.parse(html);
         
         List<TaskInfo> taskList = new ArrayList<>();
@@ -146,6 +157,43 @@ public class WorkMain {
             System.out.println("故事：" + userStoryMap.get(name).size());
             System.out.println();
         });
+    }
+
+    private static String getHtmlFromWeb() {
+        try {
+            System.out.println("开始获取网页内容...");
+            
+            // 从配置文件读取Cookie
+            Properties props = new Properties();
+            String configPath = "src/work/config.properties";
+            System.out.println("正在读取配置文件: " + configPath);
+            
+            props.load(new FileInputStream(configPath));
+            String cookie = props.getProperty("confluence.cookie");
+            System.out.println("Cookie长度: " + (cookie != null ? cookie.length() : 0));
+            
+            Map<String, String> headers = new HashMap<>();
+            headers.put("Cookie", cookie);
+            headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+            headers.put("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+            headers.put("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8");
+            
+            String url = "http://confluence.shinho.net.cn/pages/viewpage.action?pageId=117943117";
+            System.out.println("正在请求URL: " + url);
+            
+            // 设置超时时间
+            System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
+            System.setProperty("sun.net.client.defaultReadTimeout", "10000");
+            
+            String result = HttpUtils.getString(url, headers);
+            System.out.println("请求完成，返回内容长度: " + (result != null ? result.length() : 0));
+            
+            return result;
+        } catch (Exception e) {
+            System.out.println("获取网页内容出错: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

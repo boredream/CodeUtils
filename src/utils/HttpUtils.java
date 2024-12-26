@@ -39,8 +39,47 @@ public class HttpUtils {
         return getOrPostString(Method.GET, url, null, null);
     }
 
-    public static String getString(String url, Map<String, String> headers) throws Exception {
-        return getOrPostString(Method.GET, url, null, headers);
+    public static String getString(String url, Map<String, String> headers) throws IOException {
+        HttpURLConnection conn = null;
+        try {
+            URL urlObj = new URL(url);
+            conn = (HttpURLConnection) urlObj.openConnection();
+            
+            // 设置超时
+            conn.setConnectTimeout(10000);
+            conn.setReadTimeout(10000);
+            
+            // 设置请求方法
+            conn.setRequestMethod("GET");
+            
+            // 设置请求头
+            if (headers != null) {
+                for (Map.Entry<String, String> entry : headers.entrySet()) {
+                    conn.setRequestProperty(entry.getKey(), entry.getValue());
+                }
+            }
+            
+            // 获取响应码
+            int responseCode = conn.getResponseCode();
+            System.out.println("Response Code: " + responseCode);
+            
+            // 读取响应内容
+            StringBuilder response = new StringBuilder();
+            try (BufferedReader in = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), "UTF-8"))) {
+                String line;
+                while ((line = in.readLine()) != null) {
+                    response.append(line);
+                    response.append("\n");
+                }
+            }
+            
+            return response.toString();
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
+        }
     }
 
     public static String postJson(String url, String json, Map<String, String> headers) {
