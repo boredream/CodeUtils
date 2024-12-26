@@ -106,12 +106,16 @@
             if (cells.length === 0) continue;
 
             const firstCell = cells[0];
-            const firstValue = firstCell.textContent.trim();
+            let firstValue = firstCell.textContent.trim();
 
             if (firstCell.classList.contains('highlight-grey') && firstValue.includes('A2-')) {
-                const parts = firstValue.split(' - ');
-                story = parts[0].trim();
-                storyName = parts.length > 1 ? parts[1].trim() : '';
+                firstValue = firstValue
+                    .replace(/[\r\n]+/g, ' ')  // 将所有换行和回车替换为空格
+                    .replace(/\s+/g, ' ')      // 将多个连续空格替换为单个空格
+                    .trim();
+
+                story = firstValue.split(' - ')[0]
+                storyName = firstValue.split(' - ')[1]
 
                 const lastCell = cells[cells.length - 1];
                 if (lastCell && lastCell.textContent.trim()) {

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ShUser {
 
-   static HashMap<String, String> nameMap = new HashMap<>();
+   public static HashMap<String, String> nameMap = new HashMap<>();
    static {
       nameMap.put("李春阳", "18010089");
       nameMap.put("胡翔", "18020013");
