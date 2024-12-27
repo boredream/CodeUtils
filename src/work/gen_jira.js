@@ -29,6 +29,7 @@
             top: 50px;
             right: 10px;
             width: 1000px;
+            max-height: 80vh;
             background: white;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -38,7 +39,69 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             transition: all 0.3s ease;
+            overflow-y: overlay;
+            resize: both;
+            cursor: move;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
         `;
+        
+        // 添加Webkit滚动条样式
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            #workHoursPanel::-webkit-scrollbar {
+                width: 8px;
+            }
+            #workHoursPanel::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+            #workHoursPanel::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+            #workHoursPanel::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // 添加拖动功能
+        let isDragging = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+
+        panel.addEventListener('mousedown', function(e) {
+            if (e.target === panel || e.target.tagName === 'H3') {
+                isDragging = true;
+                initialX = e.clientX - panel.offsetLeft;
+                initialY = e.clientY - panel.offsetTop;
+            }
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                e.preventDefault();
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+                
+                // 确保面板不会被拖出视窗
+                currentX = Math.max(0, Math.min(currentX, window.innerWidth - panel.offsetWidth));
+                currentY = Math.max(0, Math.min(currentY, window.innerHeight - panel.offsetHeight));
+                
+                panel.style.left = currentX + 'px';
+                panel.style.top = currentY + 'px';
+                panel.style.right = 'auto';
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+
         document.body.appendChild(panel);
         return panel;
     }
@@ -394,65 +457,40 @@
         }, {});
 
         return `
-            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 15px;">
+            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 8px;">
                 ${Object.entries(userStats).map(([user, data], index) => `
                     <div class="person-card" style="
                         background: #f4f5f7;
                         border: 1px solid #dfe1e6;
                         border-radius: 3px;
-                        padding: 15px;
+                        padding: 10px;
                     ">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
+                            <div style="display: flex; gap: 15px; align-items: center;">
                                 <div style="font-weight: 500; color: #172B4D;">${user}</div>
-                                <div style="color: #5e6c84;">总SP: ${data.sp.toFixed(1)}</div>
+                                <div style="color: #5e6c84;">SP: ${data.sp.toFixed(1)}</div>
                             </div>
-                            <div style="display: flex; gap: 10px;">
-                                <button
-                                    class="toggle-details-button"
-                                    data-target="person-details-${index}"
-                                    style="
-                                        padding: 4px 8px;
-                                        background: #0052cc;
-                                        color: white;
-                                        border: none;
-                                        border-radius: 3px;
-                                        cursor: pointer;
-                                        font-size: 12px;
-                                    "
-                                >展开</button>
-                                <button
-                                    class="copy-button"
-                                    data-tasks='${JSON.stringify(data.tasks)}'
-                                    style="
-                                        padding: 4px 8px;
-                                        background: #0052cc;
-                                        color: white;
-                                        border: none;
-                                        border-radius: 3px;
-                                        cursor: pointer;
-                                        font-size: 12px;
-                                    "
-                                >复制</button>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="toggle-details-button" data-target="person-details-${index}"
+                                    style="padding: 4px 8px; background: #0052cc; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
+                                    展开
+                                </button>
+                                <button class="copy-button" data-tasks='${JSON.stringify(data.tasks)}'
+                                    style="padding: 4px 8px; background: #0052cc; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
+                                    复制
+                                </button>
                             </div>
                         </div>
-                        <div id="person-details-${index}" style="display: none; margin-top: 10px;">
+                        <div id="person-details-${index}" style="display: none; margin-top: 8px;">
                             ${data.tasks.map(task => `
-                                <div style="
-                                    padding: 8px;
-                                    margin: 4px 0;
-                                    background-color: white;
-                                    border: 1px solid #dfe1e6;
-                                    border-radius: 3px;
-                                ">
-                                    <div style="margin-bottom: 4px;">
-                                        <span style="color: #5e6c84;">任务：</span>
+                                <div style="padding: 6px; margin: 4px 0; background-color: white; border: 1px solid #dfe1e6; border-radius: 3px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
                                         <span style="font-weight: 500;">【前端】${task.subtask}</span>
+                                        <span style="color: #5e6c84;">SP: ${task.sp}</span>
                                     </div>
-                                    <div style="font-size: 12px; color: #5e6c84;">
-                                        <div>编号：${task.number}</div>
-                                        <div>故事：${task.story}</div>
-                                        <div>SP：${task.sp}</div>
+                                    <div style="display: flex; gap: 15px; font-size: 12px; color: #5e6c84; margin-top: 4px;">
+                                        <div>${task.number}</div>
+                                        <div>${task.story}</div>
                                     </div>
                                 </div>
                             `).join('')}
@@ -479,65 +517,40 @@
         }, {});
 
         return `
-            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 15px;">
+            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 8px;">
                 ${Object.entries(storyStats).map(([story, data], index) => `
                     <div class="story-card" style="
                         background: #f4f5f7;
                         border: 1px solid #dfe1e6;
                         border-radius: 3px;
-                        padding: 15px;
+                        padding: 10px;
                     ">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
+                            <div style="display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0;">
                                 <div style="font-weight: 500; color: #172B4D;">${data.number}</div>
-                                <div style="color: #5e6c84;">${story}</div>
-                                <div style="color: #5e6c84;">总SP: ${data.sp.toFixed(1)}</div>
+                                <div style="color: #42526E; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${story}</div>
+                                <div style="color: #5e6c84; white-space: nowrap;">SP: ${data.sp.toFixed(1)}</div>
                             </div>
-                            <div style="display: flex; gap: 10px;">
-                                <button
-                                    class="toggle-details-button"
-                                    data-target="story-details-${index}"
-                                    style="
-                                        padding: 4px 8px;
-                                        background: #0052cc;
-                                        color: white;
-                                        border: none;
-                                        border-radius: 3px;
-                                        cursor: pointer;
-                                        font-size: 12px;
-                                    "
-                                >展开</button>
-                                <button
-                                    class="copy-button"
-                                    data-tasks='${JSON.stringify(data.tasks)}'
-                                    style="
-                                        padding: 4px 8px;
-                                        background: #0052cc;
-                                        color: white;
-                                        border: none;
-                                        border-radius: 3px;
-                                        cursor: pointer;
-                                        font-size: 12px;
-                                    "
-                                >复制</button>
+                            <div style="display: flex; gap: 8px; margin-left: 12px;">
+                                <button class="toggle-details-button" data-target="story-details-${index}"
+                                    style="padding: 4px 8px; background: #0052cc; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
+                                    展开
+                                </button>
+                                <button class="copy-button" data-tasks='${JSON.stringify(data.tasks)}'
+                                    style="padding: 4px 8px; background: #0052cc; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">
+                                    复制
+                                </button>
                             </div>
                         </div>
-                        <div id="story-details-${index}" style="display: none; margin-top: 10px;">
+                        <div id="story-details-${index}" style="display: none; margin-top: 8px;">
                             ${data.tasks.map(task => `
-                                <div style="
-                                    padding: 8px;
-                                    margin: 4px 0;
-                                    background-color: white;
-                                    border: 1px solid #dfe1e6;
-                                    border-radius: 3px;
-                                ">
-                                    <div style="margin-bottom: 4px;">
-                                        <span style="color: #5e6c84;">任务：</span>
+                                <div style="padding: 6px; margin: 4px 0; background-color: white; border: 1px solid #dfe1e6; border-radius: 3px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
                                         <span style="font-weight: 500;">【前端】${task.subtask}</span>
+                                        <span style="color: #5e6c84;">SP: ${task.sp}</span>
                                     </div>
-                                    <div style="font-size: 12px; color: #5e6c84;">
+                                    <div style="display: flex; gap: 15px; font-size: 12px; color: #5e6c84; margin-top: 4px;">
                                         <div>执行人：${task.userName}(${task.userId})</div>
-                                        <div>SP：${task.sp}</div>
                                     </div>
                                 </div>
                             `).join('')}
