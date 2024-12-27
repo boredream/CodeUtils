@@ -251,7 +251,7 @@
         const panel = document.getElementById('workHoursPanel') || createResultPanel();
         panel.style.display = 'block';
 
-        // 添加折叠/展开按钮和标题栏
+        // 基础框架HTML
         let html = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                 <h3 style="margin: 0; color: #172B4D;">工时统计结果</h3>
@@ -274,14 +274,111 @@
                     ">关闭</button>
                 </div>
             </div>
+
+            <!-- Tab切换按钮 -->
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #dfe1e6;">
+                <button id="personTab" class="tab-button active" style="
+                    padding: 8px 16px;
+                    background: none;
+                    border: none;
+                    border-bottom: 2px solid #0052cc;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    color: #0052cc;
+                    font-weight: 500;
+                ">按人员统计</button>
+                <button id="storyTab" class="tab-button" style="
+                    padding: 8px 16px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    color: #42526E;
+                ">按故事统计</button>
+            </div>
+
             <div id="panelContent">
+                <!-- 人员维度内容 -->
+                <div id="personContent" class="tab-content">
+                    ${generatePersonView(tasks)}
+                </div>
+
+                <!-- 故事维度内容 -->
+                <div id="storyContent" class="tab-content" style="display: none;">
+                    ${generateStoryView(tasks)}
+                </div>
+            </div>
         `;
 
-        // 总计
-        const totalSP = tasks.reduce((sum, task) => sum + task.sp, 0);
-        html += `<p style="font-size: 16px;"><strong>总SP：${totalSP.toFixed(1)}</strong></p>`;
+        panel.innerHTML = html;
 
-        // 按人员统计
+        // 添加Tab切换事件
+        const personTab = panel.querySelector('#personTab');
+        const storyTab = panel.querySelector('#storyTab');
+        const personContent = panel.querySelector('#personContent');
+        const storyContent = panel.querySelector('#storyContent');
+
+        personTab.addEventListener('click', () => {
+            personTab.style.borderBottom = '2px solid #0052cc';
+            personTab.style.color = '#0052cc';
+            storyTab.style.borderBottom = 'none';
+            storyTab.style.color = '#42526E';
+            personContent.style.display = 'block';
+            storyContent.style.display = 'none';
+        });
+
+        storyTab.addEventListener('click', () => {
+            storyTab.style.borderBottom = '2px solid #0052cc';
+            storyTab.style.color = '#0052cc';
+            personTab.style.borderBottom = 'none';
+            personTab.style.color = '#42526E';
+            storyContent.style.display = 'block';
+            personContent.style.display = 'none';
+        });
+
+        // 添加折叠/展开功能
+        const toggleBtn = panel.querySelector('#togglePanel');
+        const content = panel.querySelector('#panelContent');
+        let isCollapsed = false;
+
+        toggleBtn.addEventListener('click', () => {
+            if (isCollapsed) {
+                content.style.display = 'block';
+                panel.style.maxHeight = '80vh';
+                toggleBtn.textContent = '折叠';
+                panel.style.width = '1000px';
+            } else {
+                content.style.display = 'none';
+                panel.style.maxHeight = 'auto';
+                toggleBtn.textContent = '展开';
+                panel.style.width = '200px';
+            }
+            isCollapsed = !isCollapsed;
+        });
+
+        // 添加复制按钮事件
+        panel.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tasksData = JSON.parse(this.getAttribute('data-tasks'));
+                copyUserTasks(this, tasksData);
+            });
+        });
+
+        // 添加展开/折叠按钮事件
+        panel.querySelectorAll('.toggle-details-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const detailsDiv = document.getElementById(targetId);
+                const isExpanded = detailsDiv.style.display !== 'none';
+                
+                detailsDiv.style.display = isExpanded ? 'none' : 'block';
+                this.textContent = isExpanded ? '展开' : '折叠';
+            });
+        });
+    }
+
+    // 生成人员维度视图
+    function generatePersonView(tasks) {
         const userStats = tasks.reduce((stats, task) => {
             const key = `${task.userName}(${task.userId})`;
             if (!stats[key]) {
@@ -296,24 +393,34 @@
             return stats;
         }, {});
 
-        // 显示人员统计
-        html += `
-            <div style="margin: 15px 0;">
-                <h4 style="margin: 0 0 10px 0; color: #172B4D;">人员工时统计：</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                    ${Object.entries(userStats)
-            .sort((a, b) => b[1].sp - a[1].sp)
-            .map(([user, data], index) => `
-                            <div style="
-                                background-color: #f4f5f7;
-                                padding: 8px 12px;
-                                border-radius: 3px;
-                                border: 1px solid #dfe1e6;
-                                display: flex;
-                                align-items: center;
-                                gap: 10px;
-                            ">
-                                <span><strong>${user}：</strong>${data.sp.toFixed(1)} SP</span>
+        return `
+            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 15px;">
+                ${Object.entries(userStats).map(([user, data], index) => `
+                    <div class="person-card" style="
+                        background: #f4f5f7;
+                        border: 1px solid #dfe1e6;
+                        border-radius: 3px;
+                        padding: 15px;
+                    ">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; color: #172B4D;">${user}</div>
+                                <div style="color: #5e6c84;">总SP: ${data.sp.toFixed(1)}</div>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <button
+                                    class="toggle-details-button"
+                                    data-target="person-details-${index}"
+                                    style="
+                                        padding: 4px 8px;
+                                        background: #0052cc;
+                                        color: white;
+                                        border: none;
+                                        border-radius: 3px;
+                                        cursor: pointer;
+                                        font-size: 12px;
+                                    "
+                                >展开</button>
                                 <button
                                     class="copy-button"
                                     data-tasks='${JSON.stringify(data.tasks)}'
@@ -326,115 +433,119 @@
                                         cursor: pointer;
                                         font-size: 12px;
                                     "
-                                >
-                                    复制
-                                </button>
+                                >复制</button>
                             </div>
-                        `).join('')}
-                </div>
+                        </div>
+                        <div id="person-details-${index}" style="display: none; margin-top: 10px;">
+                            ${data.tasks.map(task => `
+                                <div style="
+                                    padding: 8px;
+                                    margin: 4px 0;
+                                    background-color: white;
+                                    border: 1px solid #dfe1e6;
+                                    border-radius: 3px;
+                                ">
+                                    <div style="margin-bottom: 4px;">
+                                        <span style="color: #5e6c84;">任务：</span>
+                                        <span style="font-weight: 500;">【前端】${task.subtask}</span>
+                                    </div>
+                                    <div style="font-size: 12px; color: #5e6c84;">
+                                        <div>编号：${task.number}</div>
+                                        <div>故事：${task.story}</div>
+                                        <div>SP：${task.sp}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('')}
             </div>
-            <hr style="border: 0; border-top: 1px solid #dfe1e6; margin: 15px 0;">
         `;
+    }
 
-        // 列表视图
-        html += `<h4 style="margin: 15px 0 10px 0; color: #172B4D;">任务明细：</h4>`;
-        html += `<div style="display: flex; flex-direction: column; gap: 10px;">`;
-
-        // 按故事分组显示任务
-        const tasksByStory = tasks.reduce((acc, task) => {
-            if (!acc[task.story]) {
-                acc[task.story] = [];
+    // 生成故事维度视图
+    function generateStoryView(tasks) {
+        const storyStats = tasks.reduce((stats, task) => {
+            if (!stats[task.story]) {
+                stats[task.story] = {
+                    number: task.number,
+                    sp: 0,
+                    tasks: []
+                };
             }
-            acc[task.story].push(task);
-            return acc;
+            stats[task.story].sp += task.sp;
+            stats[task.story].tasks.push(task);
+            return stats;
         }, {});
 
-        Object.entries(tasksByStory).forEach(([story, storyTasks]) => {
-            const storyTotalSP = storyTasks.reduce((sum, task) => sum + task.sp, 0);
-
-            html += `
-                <div style="
-                    background-color: #f4f5f7;
-                    border: 1px solid #dfe1e6;
-                    border-radius: 3px;
-                    margin-bottom: 10px;
-                ">
-                    <div style="
-                        padding: 8px 12px;
-                        background-color: #e9eaed;
-                        border-bottom: 1px solid #dfe1e6;
-                        font-weight: bold;
+        return `
+            <div class="summary-cards" style="display: flex; flex-direction: column; gap: 15px;">
+                ${Object.entries(storyStats).map(([story, data], index) => `
+                    <div class="story-card" style="
+                        background: #f4f5f7;
+                        border: 1px solid #dfe1e6;
+                        border-radius: 3px;
+                        padding: 15px;
                     ">
-                        ${story} (总SP: ${storyTotalSP.toFixed(1)})
-                    </div>
-                    <div style="padding: 8px 12px;">
-                        ${storyTasks.map(task => `
-                            <div style="
-                                padding: 8px;
-                                margin: 4px 0;
-                                background-color: white;
-                                border: 1px solid #dfe1e6;
-                                border-radius: 3px;
-                            ">
-                                <div style="margin-bottom: 4px;">
-                                    <span style="color: #5e6c84;">任务：</span>
-                                    <span style="font-weight: 500;">【后端】${task.subtask}</span>
-                                </div>
-                                <div style="
-                                    display: grid;
-                                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                                    gap: 8px;
-                                    font-size: 12px;
-                                    color: #5e6c84;
-                                ">
-                                    <div>编号：${task.number}</div>
-                                    <div>执行人：${task.userName}</div>
-                                    <div>工号：${task.userId}</div>
-                                    <div>SP：${task.sp}</div>
-                                </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; color: #172B4D;">${data.number}</div>
+                                <div style="color: #5e6c84;">${story}</div>
+                                <div style="color: #5e6c84;">总SP: ${data.sp.toFixed(1)}</div>
                             </div>
-                        `).join('')}
+                            <div style="display: flex; gap: 10px;">
+                                <button
+                                    class="toggle-details-button"
+                                    data-target="story-details-${index}"
+                                    style="
+                                        padding: 4px 8px;
+                                        background: #0052cc;
+                                        color: white;
+                                        border: none;
+                                        border-radius: 3px;
+                                        cursor: pointer;
+                                        font-size: 12px;
+                                    "
+                                >展开</button>
+                                <button
+                                    class="copy-button"
+                                    data-tasks='${JSON.stringify(data.tasks)}'
+                                    style="
+                                        padding: 4px 8px;
+                                        background: #0052cc;
+                                        color: white;
+                                        border: none;
+                                        border-radius: 3px;
+                                        cursor: pointer;
+                                        font-size: 12px;
+                                    "
+                                >复制</button>
+                            </div>
+                        </div>
+                        <div id="story-details-${index}" style="display: none; margin-top: 10px;">
+                            ${data.tasks.map(task => `
+                                <div style="
+                                    padding: 8px;
+                                    margin: 4px 0;
+                                    background-color: white;
+                                    border: 1px solid #dfe1e6;
+                                    border-radius: 3px;
+                                ">
+                                    <div style="margin-bottom: 4px;">
+                                        <span style="color: #5e6c84;">任务：</span>
+                                        <span style="font-weight: 500;">【前端】${task.subtask}</span>
+                                    </div>
+                                    <div style="font-size: 12px; color: #5e6c84;">
+                                        <div>执行人：${task.userName}(${task.userId})</div>
+                                        <div>SP：${task.sp}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
-                </div>
-            `;
-        });
-
-        html += `</div>`;
-
-        // 在最后添加结束div
-        html += '</div>';
-
-        panel.innerHTML = html;
-
-        // 添加折叠/展开功能
-        const toggleBtn = panel.querySelector('#togglePanel');
-        const content = panel.querySelector('#panelContent');
-        let isCollapsed = false;
-
-        toggleBtn.addEventListener('click', () => {
-            if (isCollapsed) {
-                // 展开
-                content.style.display = 'block';
-                panel.style.maxHeight = '80vh';
-                toggleBtn.textContent = '折叠';
-                panel.style.width = '1000px';
-            } else {
-                // 折叠
-                content.style.display = 'none';
-                panel.style.maxHeight = 'auto';
-                toggleBtn.textContent = '展开';
-                panel.style.width = '200px';
-            }
-            isCollapsed = !isCollapsed;
-        });
-
-        // 添加复制按钮的事件监听器
-        panel.querySelectorAll('.copy-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const tasksData = JSON.parse(this.getAttribute('data-tasks'));
-                copyUserTasks(this, tasksData);
-            });
-        });
+                `).join('')}
+            </div>
+        `;
     }
 
     // 修改 parseTable 函数中的解析部分
